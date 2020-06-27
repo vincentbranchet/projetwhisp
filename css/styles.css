@@ -1,0 +1,30 @@
+.mainWrapper {
+    width: 80vw;
+    height: 50vh;
+    margin: auto;
+    margin-top: 20vh;
+}
+
+.headerWrapper {
+    height: 20%;
+    width: 100%;
+}
+
+.pagesWrapper {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.newsFeedWrapper, .portfolioWrapper, .shopWrapper {
+    height: 100%;
+    width: 33%;
+    border: 1px solid black;
+}
+
+.navWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}

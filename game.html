@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <link rel="stylesheet" href="css/styles.css">
+
+        <script src="js/Lib/jQuery.js"></script>
+
+        <script src="js/Lib/App.js"></script>
+        <script src="js/Lib/AppChild.js"></script>
+        <script src="js/AppController.js"></script>
+        <script src="js/Lib/Player.js"></script>
+        <script src="js/Lib/Portfolio.js"></script>
+        <script src="js/Modules/Portfolio/Model/PortfolioManager.js"></script>
+        <script src="js/Lib/Profile.js"></script>
+        <script src="js/Modules/Profile/Model/ProfileManager.js"></script>
+        <script src="js/Modules/Shop/Model/ShopManager.js"></script>
+
+        <title>Life Advisor Prototype</title>
+    </head>
+    <body>
+        <div class="mainWrapper">
+            <div class="headerWrapper">
+                <div class="pvWrapper">
+                    <div>Portfolio : </div><span></span>
+                </div>
+                <div class="cvWrapper">
+                    <div>Cash : </div><span></span>
+                </div>
+            </div>
+            <div class="pagesWrapper">
+                <div class="newsFeedWrapper">
+
+                </div>
+                <div class="portfolioWrapper">
+    
+                </div>
+                <div class="shopWrapper">
+    
+                </div>
+            </div>
+            <div class="navWrapper">
+                <div class="newsFeedButtonWrapper">News</div>
+                <div class="portfolioButtonWrapper">Portfolio</div>
+                <div class="shopButtonWrapper">Shop</div>
+            </div>
+        </div>
+    </body>
+
+    <script>
+        $(function() {
+            var game = new App();
+            game.init();
+        });
+           
+    </script>
+</html>
