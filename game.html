@@ -10,12 +10,14 @@
         <script src="js/Lib/App.js"></script>
         <script src="js/Lib/AppChild.js"></script>
         <script src="js/AppController.js"></script>
+        <script src="js/AppUIController.js"></script>
         <script src="js/Lib/Player.js"></script>
         <script src="js/Lib/Portfolio.js"></script>
+        <script src="js/Modules/Portfolio/PortfolioController.js"></script>
         <script src="js/Modules/Portfolio/Model/PortfolioManager.js"></script>
         <script src="js/Lib/Profile.js"></script>
-        <script src="js/Modules/Profile/Model/ProfileManager.js"></script>
         <script src="js/Modules/Shop/Model/ShopManager.js"></script>
+        <script src="js/Modules/Shop/ShopController.js"></script>
 
         <title>Life Advisor Prototype</title>
     </head>
@@ -23,10 +25,10 @@
         <div class="mainWrapper">
             <div class="headerWrapper">
                 <div class="pvWrapper">
-                    <div>Portfolio : </div><span></span>
+                    <div>Portfolio : </div><span id="pv"></span>
                 </div>
                 <div class="cvWrapper">
-                    <div>Cash : </div><span></span>
+                    <div>Cash : </div><span id="cv"></span>
                 </div>
             </div>
             <div class="pagesWrapper">

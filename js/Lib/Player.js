@@ -2,39 +2,31 @@ class Player {
     constructor() {
 
         this.__portfolio = new Portfolio();
-        this.__cash = 0;
+
+        this.__portfolioValue = 0;
+        this.__cashValue = 0;
     }
 
     init() {
         // init from config
     }
 
-    reset() {
-        // new game
-    }
-
-    buy() {
-        // player buys profile
-    }
-
-    sell() {
-        // player sells profile
-    }
-
-    reco() {
-        // player sends reco
-    }
-
     //setters
-    set cash(newCash) {
-        this.__cash = newCash;
+    set cashValue(newCash) {
+        this.__cashValue = newCash;
+    }
+    set portfolioValue(newPv) {
+        this.__portfolioValue = newPv;
     }
 
     //getters
     get portfolio() {
         return this.__portfolio;
     }
-    get cash() {
-        return this.__cash;
+    get portfolioValue() {
+        return this.__portfolioValue;
+    }
+    get cashValue() {
+        return this.__cashValue;
     }
 }

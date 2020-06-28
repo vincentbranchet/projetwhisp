@@ -1,19 +1,19 @@
 class PortfolioManager {
     constructor() {
-        this.profiles = [];
+        this.__profiles = [];
     }
     
     add(profile) {
         if(profile instanceof Profile)
-            this.profiles.push(profile);
+            this.__profiles.push(profile);
     }
 
     remove(target) {
         if(target instanceof Profile) {
-            this.profiles.forEach(profile => {
+            this.__profiles.forEach(profile => {
                 if(profile.id == target.id) {
-                    var targetIndex = this.profiles.indexOf(profile);
-                    this.profiles.splice(0, targetIndex);
+                    var targetIndex = this.__profiles.indexOf(profile);
+                    this.__profiles.splice(0, targetIndex);
                 }
             });
         }
@@ -23,7 +23,7 @@ class PortfolioManager {
 
     //getters
     get profiles() {
-        return this.profiles;
+        return this.__profiles;
     }
 
     // get specific profile
