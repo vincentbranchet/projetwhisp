@@ -8,20 +8,15 @@ class ShopManager {
         //get from json (ok way)
 
         //bad hack way
-        this.create("Thomas", 100);
-        this.create("Virginie", 200);
-        this.create("Zafar", 300);
+        this.create(1, "Thomas", 100);
+        this.create(2, "Virginie", 200);
+        this.create(3, "Zafar", 300);
     }
     
-    create(name, value) {
-        this.__profiles.push(new Profile(name, value));
+    create(id, name, value) {
+        this.__profiles.push(new Profile(id, name, value));
     }
     
-    add(profile) {
-        if(profile instanceof Profile)
-            this.__profiles.push(profile);
-    }
-
     remove(target) {
         if(target instanceof Profile) {
             this.__profiles.forEach(profile => {
@@ -32,14 +27,25 @@ class ShopManager {
             });
         }
     }
+    
+    // get specific profile
+    getFromId(profileId) {
+        var targetProfile;
+        this.__profiles.forEach(profile => {
+            if(profile.__id == profileId) {
+                targetProfile = profile; 
+            }                
+        });
+        return targetProfile;
+    }
 
     //setters
-
+    set profiles(profiles) {
+        this.__profiles = profiles
+    }
     //getters
     get profiles() {
         return this.__profiles;
     }
-    
-    // get specific profile
 
 }

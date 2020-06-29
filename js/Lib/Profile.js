@@ -1,7 +1,12 @@
 class Profile {
-    constructor(name, value) {
+    constructor(id, name, value) {
+        this.__id = id;
         this.__name = name;
         this.__value = value;
+    }
+
+    get id() {
+        return this.__id;
     }
 
     get name() {

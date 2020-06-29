@@ -1,10 +1,7 @@
 class Player {
     constructor() {
-
-        this.__portfolio = new Portfolio();
-
         this.__portfolioValue = 0;
-        this.__cashValue = 0;
+        this.__cashValue = 500;
     }
 
     init() {

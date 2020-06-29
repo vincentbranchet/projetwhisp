@@ -3,13 +3,29 @@ class PortfolioController extends AppChild {
         super(app);
     }
 
-    add(profile) {
-        if(profile instanceof Profile) {
-            this.__app.__portfolioManager.add(profile);
-        }
+    updateValue() {
+        var self = this;
+        self.__app.__player.__portfolioValue = 0;
+        
+        this.__app.__portfolioManager.__profiles.forEach(profile => {
+            self.__app.__player.__portfolioValue = self.__app.__player.__portfolioValue + profile.__value;
+        });
     }
 
-    remove(profile) {
+    add(profile) {
+        if(profile instanceof Profile)
+            this.__app.__portfolioManager.__profiles.push(profile);
+    }
 
+    remove(target) {
+        var self = this;
+        if(target instanceof Profile) {
+            this.__app.__portfolioManager.__profiles.forEach(profile => {
+                if(profile.__id == target.__id) {
+                    let targetIndex = self.__app.__portfolioManager.__profiles.indexOf(profile);
+                    self.__app.__portfolioManager.__profiles.splice(targetIndex, 1);
+                }
+            });
+        }
     }
 }

@@ -2,11 +2,13 @@ class App {
     constructor() {
 
         this.__player = new Player();
+        this.__config = new Config();
 
         this.__appController = new AppController(this);
-        this.__appUIController = new AppUIController(this);
+        this.__UIController = new AppUIController(this);
         this.__shopController = new ShopController(this);
         this.__portfolioController = new PortfolioController(this);
+        this.__playerController = new PlayerController(this);
 
         this.__shopManager = new ShopManager();
         this.__portfolioManager = new PortfolioManager();
@@ -14,11 +16,10 @@ class App {
     }
 
     init() {
+        this.__appController.init();
         this.__shopManager.init();
 
-        this.__appUIController.printHeader();
-        this.__appUIController.printShop();
-        this.__appUIController.printPortfolio();
+        this.__UIController.update();
 
         console.log(this);
     }
