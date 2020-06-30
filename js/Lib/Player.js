@@ -4,10 +4,6 @@ class Player {
         this.__cashValue = 500;
     }
 
-    init() {
-        // init from config
-    }
-
     //setters
     set cashValue(newCash) {
         this.__cashValue = newCash;

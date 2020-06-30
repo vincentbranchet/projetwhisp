@@ -5,16 +5,7 @@ class ShopManager {
 
     
     init() {
-        //get from json (ok way)
 
-        //bad hack way
-        this.create(1, "Thomas", 100);
-        this.create(2, "Virginie", 200);
-        this.create(3, "Zafar", 300);
-    }
-    
-    create(id, name, value) {
-        this.__profiles.push(new Profile(id, name, value));
     }
     
     remove(target) {
@@ -41,7 +32,7 @@ class ShopManager {
 
     //setters
     set profiles(profiles) {
-        this.__profiles = profiles
+        this.__profiles = profiles;
     }
     //getters
     get profiles() {

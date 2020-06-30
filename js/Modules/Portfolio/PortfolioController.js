@@ -28,4 +28,8 @@ class PortfolioController extends AppChild {
             });
         }
     }
+
+    findFromId(profileId) {
+        
+    }
 }

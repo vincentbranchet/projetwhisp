@@ -12,13 +12,17 @@ class App {
 
         this.__shopManager = new ShopManager();
         this.__portfolioManager = new PortfolioManager();
-        
+        this.__attributeManager = new AttributeManager();
     }
 
     init() {
+        this.__player.__cashValue = this.__config.__cashStart;
+
         this.__appController.init();
         this.__shopManager.init();
+        this.__attributeManager.init();
 
+        this.__shopController.fill();
         this.__UIController.update();
 
         console.log(this);

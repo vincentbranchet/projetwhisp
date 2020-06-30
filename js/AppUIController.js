@@ -1,46 +1,21 @@
 class AppUIController extends AppChild {
     constructor(app) {
         super(app);
+
+        this.__shopUIController = new ShopUIController(this);
+        this.__portfolioUIController = new PortfolioUIController(this);
+        this.__profileUIController = new ProfileUIController(this);
+
         // header
         this.__headerPortfolioValue = $("#pv")[0];
-        this.__headerCashValue = $("#cv")[0];
-        // portfolio
-        this.__portfolioWrapper = $(".portfolioWrapper")[0];
-        // shop
-        this.__shopWrapper = $(".shopWrapper")[0];
+        this.__headerCashValue = $("#cv")[0];   
     }
 
     update() {
-        this.clearShop();
-        this.clearPortfolio();
+        this.__shopUIController.refresh();
+        this.__portfolioUIController.refresh();
 
         this.printHeader();
-        this.printShop();
-        this.printPortfolio();
-    }
-
-    clearShop() {
-        this.__shopWrapper.innerHTML = "";
-    }
-
-    clearPortfolio() {
-        this.__portfolioWrapper.innerHTML = "";
-    }
-
-    shopProfileClicked(self) {
-
-        return function() {       
-            let profileId = this.id.split("_")[1];
-            self.__app.__playerController.buy(profileId);
-        }
-    }
-
-    portfolioProfileClicked(self) {
-
-        return function() {
-            let profileId = this.id.split("_")[1];
-            self.__app.__playerController.sell(profileId);
-        }
     }
 
     printHeader() {
@@ -49,40 +24,14 @@ class AppUIController extends AppChild {
         this.__headerCashValue.innerHTML = this.__app.__player.cashValue;
     }
 
-    printShop() {
-        var self = this;
-        let htmlProfile;
-        
-        //for each profile in shop, create dom elt and add it to shop wrapper
-        this.__app.__shopManager.__profiles.forEach(profile => {
-            
-            htmlProfile = document.createElement("div");
-            htmlProfile.id = "profile_" + profile.__id;
-            htmlProfile.innerText = profile.__name + ", " + profile.__value;
-
-            (function(self) {
-                htmlProfile.addEventListener("click", self.shopProfileClicked(self));
-            })(self);    
-
-            self.__shopWrapper.append(htmlProfile);
-        });
+    // getters
+    get shopUIController() {
+        return this.__shopUIController;
     }
-
-    printPortfolio() {
-        var self = this;
-        let htmlProfile;
-
-        this.__app.__portfolioManager.__profiles.forEach(profile => {
-            
-            htmlProfile = document.createElement("div");
-            htmlProfile.id = "profile_" + profile.__id;
-            htmlProfile.innerText = profile.__name + ", " + profile.__value;
-
-            (function(self) {
-                htmlProfile.addEventListener("click", self.portfolioProfileClicked(self));
-            })(self);
-
-            self.__portfolioWrapper.append(htmlProfile);
-        });
+    get portfolioUIController() {
+        return this.__portfolioUIController;
+    }
+    get profileUIController() {
+        return this.__profileUIController;
     }
 }

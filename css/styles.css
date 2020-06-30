@@ -17,10 +17,14 @@
     flex-direction: row;
 }
 
-.newsFeedWrapper, .portfolioWrapper, .shopWrapper {
+.newsFeedWrapper, .portfolioWrapper, .shopWrapper, .profileWrapper {
     height: 100%;
     width: 33%;
     border: 1px solid black;
+}
+
+.profileWrapper {
+    display: none;
 }
 
 .navWrapper {
