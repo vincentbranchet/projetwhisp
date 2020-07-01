@@ -7,6 +7,7 @@ class ShopUIController extends ControllerChild {
 
     refresh() {
         this.clear();
+        this.show();
         this.print();
     }
 
@@ -22,8 +23,8 @@ class ShopUIController extends ControllerChild {
             htmlProfile.innerText = profile.__name + ", " + profile.__value;
 
             (function(self) {
-                htmlProfile.addEventListener("click", self.profileClicked(self));
-            })(self);    
+                htmlProfile.addEventListener("click", self.clickToShow(self));
+            })(self);
 
             self.__shopWrapper.append(htmlProfile);
         });
@@ -32,12 +33,22 @@ class ShopUIController extends ControllerChild {
     clear() {
         this.__shopWrapper.innerHTML = "";
     }
-    
-    profileClicked(self) {
 
-        return function() {       
+    hide() {
+        this.__shopWrapper.style.display = "none";
+    }
+
+    show() {
+        this.__shopWrapper.style.display = "block";
+    }
+
+    clickToShow(self) {
+
+        return function() {
+
             let profileId = this.id.split("_")[1];
-            self.__controller.__app.__playerController.buy(profileId);
+            self.hide();
+            self.__controller.__profileUIController.showInShop(profileId);
         }
     }
 }

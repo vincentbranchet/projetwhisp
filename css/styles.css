@@ -17,13 +17,13 @@
     flex-direction: row;
 }
 
-.newsFeedWrapper, .portfolioWrapper, .shopWrapper, .profileWrapper {
+.newsFeedWrapper, .portfolioWrapper, .shopWrapper, .profileWrapper, .profileVitrineWrapper {
     height: 100%;
     width: 33%;
     border: 1px solid black;
 }
 
-.profileWrapper {
+.profileWrapper, .profileVitrineWrapper {
     display: none;
 }
 

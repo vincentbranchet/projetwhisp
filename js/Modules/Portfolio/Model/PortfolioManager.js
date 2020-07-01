@@ -7,7 +7,6 @@ class PortfolioManager {
     getFromId(profileId) {
         var targetProfile;
         this.__profiles.forEach(profile => {
-            console.log(profile, profileId);
             if(profile.__id == profileId) {
                 targetProfile = profile; 
             }                

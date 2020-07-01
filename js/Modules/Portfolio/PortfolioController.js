@@ -12,6 +12,10 @@ class PortfolioController extends AppChild {
         });
     }
 
+    getProfiles() {
+        return this.__app.__portfolioManager.__profiles;
+    }
+
     add(profile) {
         if(profile instanceof Profile)
             this.__app.__portfolioManager.__profiles.push(profile);

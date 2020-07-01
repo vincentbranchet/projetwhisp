@@ -4,7 +4,7 @@ class PlayerController extends AppChild {
     }
 
     buy(profileId) {
-        console.log("buy");
+
         let profile = this.__app.__shopManager.getFromId(profileId);
 
         if(profile instanceof Profile && this.__app.__player.__cashValue >= profile.__value) {
@@ -22,7 +22,7 @@ class PlayerController extends AppChild {
     }
 
     sell(profileId) {
-        console.log("sell");
+        
         let profile = this.__app.__portfolioManager.getFromId(profileId);
 
         if(profile instanceof Profile) {

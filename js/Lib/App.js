@@ -9,23 +9,25 @@ class App {
         this.__shopController = new ShopController(this);
         this.__portfolioController = new PortfolioController(this);
         this.__playerController = new PlayerController(this);
+        this.__recoController = new RecoController(this);
 
         this.__shopManager = new ShopManager();
         this.__portfolioManager = new PortfolioManager();
         this.__attributeManager = new AttributeManager();
+        this.__recoManager = new RecoManager();
     }
 
     init() {
         this.__player.__cashValue = this.__config.__cashStart;
 
         this.__appController.init();
+
         this.__shopManager.init();
         this.__attributeManager.init();
 
         this.__shopController.fill();
         this.__UIController.update();
-
-        console.log(this);
+        this.__UIController.initMenu();
     }
 
     //setters
