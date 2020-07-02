@@ -15,6 +15,7 @@ class App {
         this.__portfolioManager = new PortfolioManager();
         this.__attributeManager = new AttributeManager();
         this.__recoManager = new RecoManager();
+        this.__levelsManager = new LevelsManager();
     }
 
     init() {
@@ -24,6 +25,8 @@ class App {
 
         this.__shopManager.init();
         this.__attributeManager.init();
+        this.__levelsManager.init();
+        this.__recoManager.init();
 
         this.__shopController.fill();
         this.__UIController.update();

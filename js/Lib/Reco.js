@@ -7,6 +7,14 @@ class Reco {
         this.__required = []; // att ids required to show reco
     }
 
+    fillRequired(...ids) {
+        var self = this;
+
+        ids.forEach(id => {
+            self.__required.push(id);
+        });
+    }
+
     get required() {
         return this.__required;
     }

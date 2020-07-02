@@ -2,6 +2,7 @@ class Player {
     constructor() {
         this.__portfolioValue = 0;
         this.__cashValue = 500;
+        this.__level = 1;
     }
 
     //setters
@@ -11,15 +12,18 @@ class Player {
     set portfolioValue(newPv) {
         this.__portfolioValue = newPv;
     }
+    set level(newLv) {
+        this.__level = newLv;
+    }
 
     //getters
-    get portfolio() {
-        return this.__portfolio;
-    }
     get portfolioValue() {
         return this.__portfolioValue;
     }
     get cashValue() {
         return this.__cashValue;
+    }
+    get level() {
+        return this.__level;
     }
 }

@@ -27,10 +27,15 @@ class ProfileUIController extends ControllerChild {
     print(profileId) {
         //profile id is the profile ID as int
         var self = this;
-        let htmlProfileInfo = document.createElement("div");
-        let htmlSellButton = document.createElement("div");
+        let htmlProfileInfo, htmlSellButton, htmlTitle, htmlRecoTitle;
 
-        //find profile in portfolio and get its info
+        htmlProfileInfo = document.createElement("div");
+        htmlSellButton = document.createElement("div");
+        htmlTitle = document.createElement("p");
+
+        htmlTitle.innerText = "PROFIL";
+        self.__profileWrapper.append(htmlTitle);
+
         let profile = this.__controller.__app.__portfolioManager.getFromId(profileId);
         htmlProfileInfo.innerText = profile.__name;
 
@@ -42,8 +47,14 @@ class ProfileUIController extends ControllerChild {
             self.__profileWrapper.append(htmlAtt);
         });
 
+        htmlRecoTitle = document.createElement("div");
+        htmlRecoTitle.innerText = "RECOMMENDATIONS";
+        this.__profileWrapper.append(htmlRecoTitle);
+
+        this.printRecosOf(profile);
+
         htmlSellButton.innerText = "Vendre (" + profile.__value + ")";
-        $(htmlSellButton).addClass("profileSellButton profile_" + profileId);
+        $(htmlSellButton).addClass("profileSellButton button profile_" + profileId);
 
         (function(self) {
             htmlSellButton.addEventListener("click", self.clickToSell(self));
@@ -54,8 +65,14 @@ class ProfileUIController extends ControllerChild {
 
     printInShop(profileId) {
         var self = this;
-        let htmlProfileInfo = document.createElement("div");
-        let htmlSellButton = document.createElement("div");
+        let htmlProfileInfo, htmlSellButton, htmlTitle;
+
+        htmlTitle = document.createElement("p");
+        htmlProfileInfo = document.createElement("div");
+        htmlSellButton = document.createElement("div");
+
+        htmlTitle.innerText = "PROFIL";
+        self.__profileVitrineWrapper.append(htmlTitle);
 
         //find profile in portfolio and get its info
         let profile = this.__controller.__app.__shopManager.getFromId(profileId);
@@ -70,7 +87,7 @@ class ProfileUIController extends ControllerChild {
         });
 
         htmlSellButton.innerText = "Acheter (" + profile.__value + ")";
-        $(htmlSellButton).addClass("profileBuyButton profile_" + profileId);
+        $(htmlSellButton).addClass("profileBuyButton button profile_" + profileId);
 
         (function(self) {
             htmlSellButton.addEventListener("click", self.clickToBuy(self));
@@ -92,6 +109,24 @@ class ProfileUIController extends ControllerChild {
         return function() {
             let profileId = this.className.split("_")[1];
             self.__controller.__app.__playerController.buy(profileId);
+        }
+    }
+
+    printRecosOf(profile) {
+        var self = this;
+        let htmlReco;
+        let availableRecosId = self.__controller.__app.__recoController.getAvailableOf(profile);
+
+        if(availableRecosId.length >= 1) {
+            availableRecosId.forEach(recoId => {
+                let reco = self.__controller.__app.__recoManager.getFromId(recoId);
+    
+                htmlReco = document.createElement("p");
+                htmlReco.id = "reco_" + recoId;
+                htmlReco.innerText = reco.__name + " (" + reco.__cld + "s)";
+
+                self.__profileWrapper.append(htmlReco);
+            });
         }
     }
 

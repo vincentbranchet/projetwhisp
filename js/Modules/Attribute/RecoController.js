@@ -3,30 +3,39 @@ class RecoController extends AppChild {
         super(app);
     }
 
-    getAvailable() {
-        let portfolioAttributes = [];
+    getAvailableOf(profile) {
+        // returns available recos ids
+        let profileAttributes = profile.__attributes;
+        let profileAttId = [];
+        
         let availableRecoId = [];
-        let profiles = this.__app.__portfolioController.getProfiles();
 
-        profiles.forEach(profile => {
-            portfolioAttributes.push(profile.__attributes);
+        profileAttributes.forEach(att => {
+            profileAttId.push(att.__id);
         });
 
-        console.log(portfolioAttributes);
-
-        this.__app.__recosManager.__recos.forEach(reco => {
+        this.__app.__recoManager.__recos.forEach(reco => {
         // for each reco
-        let requiredAvailable = [];
+        
+            let totalRequired = reco.__required.length;
+            let requiredAvailable = 0;
+            
             for(let i = 0; i < reco.__required.length; i++) {
             // check each required attribute id
-                for(let y = 0; y < portfolioAttributes.length; y++) {
-                // and see if found in available attribute array                    
-                    if(portfolioAttributes[y] == reco.__required[i]) {
-                    // if found, push reco id in array
-                        requiredAvailable.push(reco.__id);
+                for(let y = 0; y < profileAttId.length; y++) {
+                // and see if found in available attribute id array                    
+                    if(profileAttId[y] == reco.__required[i]) {
+                    // if found, increment number of required att found
+                        requiredAvailable++;
                     }
                 }
             }
+
+            if(requiredAvailable == totalRequired) {
+                availableRecoId.push(reco.__id);
+            }
         });
+
+        return availableRecoId;
     }
 }

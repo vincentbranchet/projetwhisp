@@ -14,15 +14,18 @@
         <script src="js/Lib/Config.js"></script>
         <script src="js/Lib/ControllerChild.js"></script>
         <script src="js/Lib/Attribute.js"></script>
+        <script src="js/Lib/Level.js"></script>
+        <script src="js/Lib/Reco.js"></script>
 
         <script src="js/AppController.js"></script>
-        <script src="js/PlayerController.js"></script>
+        <script src="js/Modules/Player/PlayerController.js"></script>
         <script src="js/AppUIController.js"></script>
         <script src="js/Modules/Shop/ShopUIController.js"></script>
         <script src="js/Modules/Portfolio/PortfolioUIController.js"></script>
         <script src="js/Modules/Profile/ProfileUIController.js"></script>
         <script src="js/Modules/Attribute/RecoController.js"></script>
         <script src="js/Modules/Attribute/Model/RecoManager.js"></script>
+        <script src="js/Modules/Player/Model/LevelsManager.js"></script>
 
         <script src="js/Modules/Portfolio/PortfolioController.js"></script>
         <script src="js/Modules/Portfolio/Model/PortfolioManager.js"></script>
@@ -33,20 +36,25 @@
         <script src="js/Modules/Attribute/AttributeController.js"></script>
         <script src="js/Modules/Attribute/Model/AttributeManager.js"></script>
 
+        <script src="js/Modules/News/NewsUIController.js"></script>
+
         <title>Projet Whisp</title>
     </head>
     <body>
         <div class="mainWrapper">
             <div class="headerWrapper">
+                <div class="lvWrapper">
+                    <div>Niveau <span id="lv"></span> : <span id="lvTitle"></span></div>
+                </div>
                 <div class="pvWrapper">
-                    <div>Portfolio : </div><span id="pv"></span>
+                    <div>Portfolio : <span id="pv"></span></div>
                 </div>
                 <div class="cvWrapper">
-                    <div>Cash : </div><span id="cv"></span>
+                    <div>Cash : <span id="cv"></span></div>
                 </div>
             </div>
             <div class="pagesWrapper">
-                <div class="newsFeedWrapper">
+                <div class="newsWrapper">
 
                 </div>
                 <div class="portfolioWrapper">
@@ -63,9 +71,9 @@
                 </div>
             </div>
             <div class="navWrapper">
-                <div class="newsFeedButtonWrapper">News</div>
-                <div class="portfolioButtonWrapper">Portfolio</div>
-                <div class="shopButtonWrapper">Shop</div>
+                <div class="newsButtonWrapper button">News</div>
+                <div class="portfolioButtonWrapper button">Portfolio</div>
+                <div class="shopButtonWrapper button">Shop</div>
             </div>
         </div>
     </body>

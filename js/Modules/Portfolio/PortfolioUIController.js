@@ -7,24 +7,28 @@ class PortfolioUIController extends ControllerChild {
 
     refresh() {
         this.clear();
-        this.show();
         this.print();
     }
 
     print() {
         var self = this;
-        let htmlProfile;
+        let htmlProfile, htmlTitle;
+
+        htmlTitle = document.createElement("p");
+        htmlTitle.innerText = "VOS PROFILS";
+        self.__portfolioWrapper.append(htmlTitle);
 
         this.__controller.__app.__portfolioManager.__profiles.forEach(profile => {
             
             htmlProfile = document.createElement("div");
             htmlProfile.id = "profile_" + profile.__id;
-            htmlProfile.innerText = profile.__name + ", " + profile.__value;
+            htmlProfile.innerText = profile.__name + " (" + profile.__value + ")";
 
             (function(self) {
                 htmlProfile.addEventListener("click", self.clickToProfile(self));
             })(self);
 
+            $(htmlProfile).addClass("button");
             self.__portfolioWrapper.append(htmlProfile);
         });
     }

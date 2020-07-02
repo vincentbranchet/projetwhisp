@@ -7,25 +7,29 @@ class ShopUIController extends ControllerChild {
 
     refresh() {
         this.clear();
-        this.show();
         this.print();
     }
 
     print() {
         var self = this;
-        let htmlProfile;
+        let htmlProfile, htmlTitle;
+
+        htmlTitle = document.createElement("p");
+        htmlTitle.innerText = "A VENDRE";
+        self.__shopWrapper.append(htmlTitle);
         
         //for each profile in shop, create dom elt and add it to shop wrapper
         this.__controller.__app.__shopManager.__profiles.forEach(profile => {
             
             htmlProfile = document.createElement("div");
             htmlProfile.id = "profile_" + profile.__id;
-            htmlProfile.innerText = profile.__name + ", " + profile.__value;
+            htmlProfile.innerText = profile.__name + " (" + profile.__value + ")";
 
             (function(self) {
                 htmlProfile.addEventListener("click", self.clickToShow(self));
             })(self);
 
+            $(htmlProfile).addClass("button");
             self.__shopWrapper.append(htmlProfile);
         });
     }
