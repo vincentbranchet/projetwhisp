@@ -1,8 +1,9 @@
 class Reco {
-    constructor(id, name, cld) {
+    constructor(id, name, cld, evtId) {
         this.__id = id;
         this.__name = name;
         this.__cld = cld;
+        this.__evtId = evtId; // id of consequence event
         this.__isActive = 0;
         this.__required = []; // att ids required to show reco
     }
@@ -26,5 +27,8 @@ class Reco {
     }
     get cld() {
         return this.__cld;
+    }
+    get evtId() {
+        return this.__evtId;
     }
 }

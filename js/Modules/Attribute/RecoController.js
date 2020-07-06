@@ -3,6 +3,24 @@ class RecoController extends AppChild {
         super(app);
     }
 
+    scan() {
+        var self = this;
+
+        // loop through portfolio profiles
+        this.__app.__portfolioManager.__profiles.forEach(profile => {
+            if(profile.__launchedEvents.length >= 1) {
+            // and through profiles launched events
+                for(let event of profile.__launchedEvents) {
+                // check if event timer >= delay
+                    if(event.__timer.duration >= event.__delay) {
+                    // if so, resolve event 
+                        self.__app.__eventController.__recoController.resolve(event.__id, profile.__id);
+                    }
+                }
+            }
+        });
+    }
+
     getAvailableOf(profile) {
         // returns available recos ids
         let profileAttributes = profile.__attributes;

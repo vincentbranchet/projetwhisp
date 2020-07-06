@@ -10,6 +10,8 @@ class PortfolioController extends AppChild {
         this.__app.__portfolioManager.__profiles.forEach(profile => {
             self.__app.__player.__portfolioValue = self.__app.__player.__portfolioValue + profile.__value;
         });
+
+        // check if profiles have native events, if so launch them
     }
 
     getProfiles() {

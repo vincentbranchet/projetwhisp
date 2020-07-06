@@ -4,6 +4,10 @@ class Profile {
         this.__name = name;
         this.__attributes = [];
         this.__value = 0;
+        this.__nativeEvents = []; // native events history
+        this.__recoEvents = []; // reco events history
+        this.__macroEvents = []; // macro events history
+        this.__launchedEvents = []; // currently running unsolved events
     }
 
     init(...attributes) {
@@ -25,6 +29,36 @@ class Profile {
         });
     }
 
+    addAttribute(att) {
+        if(att instanceof Attribute) {
+            this.__attributes.push(att);
+        }
+    }
+
+    deleteAttribute(att) {
+        if(att instanceof Attribute) {
+            this.__attributes.push(att);
+        }
+    }
+
+    addNativeEvent(evt) {
+        if(evt instanceof NativeEvent) {
+            this.__nativeEvents.push(evt);
+        }
+    }
+
+    addRecoEvent(evt) {
+        if(evt instanceof RecoEvent) {
+            this.__recoEvents.push(evt);
+        }
+    }
+
+    addMacroEvent(evt) {
+        if(evt instanceof MacroEvent) {
+            this.__macroEvents.push(evt);
+        }
+    }
+
     get attributes() {
         return this.__attributes;
     }
@@ -36,5 +70,17 @@ class Profile {
     }
     get value() {
         return this.__value;
+    }
+    get nativeEvents() {
+        return this.__nativeEvents;
+    }
+    get recoEvents() {
+        return this.__recoEvents;
+    }
+    get macroEvents() {
+        return this.__macroEvents;
+    }
+    get launchedEvents() {
+        return this.__launchedEvents;
     }
 }

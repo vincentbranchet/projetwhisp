@@ -9,7 +9,10 @@ class AppController extends AppChild {
         setInterval(function() {
             self.yieldCash();
             self.checkIfLvUp();
-            self.__app.__UIController.printHeader();
+            self.__app.__recoController.scan();
+            self.__app.__portfolioController.updateValue();
+            self.__app.__UIController.printHeader(); // refresh portfolio/cash/lv values
+            self.__app.__UIController.__portfolioUIController.refresh(); // refresh portfolio content (profile clds)
             
         }, self.__app.__config.__tickTime);
     }

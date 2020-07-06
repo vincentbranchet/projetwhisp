@@ -122,11 +122,26 @@ class ProfileUIController extends ControllerChild {
                 let reco = self.__controller.__app.__recoManager.getFromId(recoId);
     
                 htmlReco = document.createElement("p");
-                htmlReco.id = "reco_" + recoId;
+                $(htmlReco).addClass("button reco_" + recoId + "_" + profile.__id);
+                //htmlReco.id = "button reco_" + recoId + "_" + profile.__id; // class="reco_recoId_profileId"
                 htmlReco.innerText = reco.__name + " (" + reco.__cld + "s)";
+
+                (function(self) {
+                    htmlReco.addEventListener("click", self.clickToLaunch(self));
+                }(self));
 
                 self.__profileWrapper.append(htmlReco);
             });
+        }
+    }
+
+    clickToLaunch(self) {
+
+        return function() {
+            let recoId = this.className.split("_")[1];
+            let profileId = this.className.split("_")[2];
+            console.log(recoId + ", " + profileId);
+            self.__controller.__app.__eventController.__recoController.launch(recoId, profileId);
         }
     }
 

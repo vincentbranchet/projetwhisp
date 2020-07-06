@@ -1,8 +1,9 @@
 class Attribute {
-    constructor(id, name, value) {
+    constructor(id, name, value, eventId) {
         this.__id = id; // int
         this.__name = name; // string
         this.__value = value; // int
+        this.__eventId = eventId; // 0 : no native event, 1 or more = native event id
     }
 
     get id() {
@@ -13,5 +14,8 @@ class Attribute {
     }
     get value() {
         return this.__value;
+    }
+    get eventId() {
+        return this.__eventId;
     }
 }

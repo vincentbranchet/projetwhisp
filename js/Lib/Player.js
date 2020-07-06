@@ -6,8 +6,8 @@ class Player {
     }
 
     //setters
-    set cashValue(newCash) {
-        this.__cashValue = newCash;
+    set cashValue(newCash) { // round to 2 decimal max
+        this.__cashValue = Math.round(newCash * 100) / 100;
     }
     set portfolioValue(newPv) {
         this.__portfolioValue = newPv;
