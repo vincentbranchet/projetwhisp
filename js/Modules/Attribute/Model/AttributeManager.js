@@ -8,7 +8,7 @@ class AttributeManager {
 
         //bad way
         this.create(1, "Cool", 50);
-        this.create(2, "Employé", 150);
+        this.create(2, "Employé", 150, 1);
         this.create(3, "Compétent", 200);
         this.create(4, "Riche", 500);
         this.create(5, "Marié.e", 75);
@@ -16,8 +16,8 @@ class AttributeManager {
         this.create(7, "Nouveau Job", 300);
     }
 
-    create(id, name, value) {
-        this.__attributes.push(new Attribute(id, name, value));
+    create(id, name, value, evtId) {
+        this.__attributes.push(new Attribute(id, name, value, evtId));
     }
 
     getFromId(attId) {

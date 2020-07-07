@@ -28,9 +28,9 @@ class PortfolioUIController extends ControllerChild {
             htmlProfile = document.createElement("div");
             htmlProfile.id = "profile_" + profile.__id;
 
-            if(profile.__launchedEvents.length > 0) {
+            if(profile.__launchedReco.length > 0) {
             // if profile has running event, dont enable click event, print cooldown
-                let profileEvent = profile.__launchedEvents[0];
+                let profileEvent = profile.__launchedReco[0];
                 let cld = profileEvent.__delay - profileEvent.__timer.__duration;
                 htmlProfile.innerText = profile.__name + " (" + profileEvent.__name + " : " + cld + "s)";
             }

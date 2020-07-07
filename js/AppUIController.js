@@ -9,6 +9,8 @@ class AppUIController extends AppChild {
         this.__profileUIController = new ProfileUIController(this);
 
         // header
+        this.__headerGtMin = $("#gtMin")[0];
+        this.__headerGtSec = $("#gtSec")[0];
         this.__headerLv = $("#lv")[0];
         this.__headerLvTitle = $("#lvTitle")[0];
         this.__headerPortfolioValue = $("#pv")[0];
@@ -119,6 +121,9 @@ class AppUIController extends AppChild {
     }
 
     printHeader() {
+        this.__headerGtMin.innerHTML = this.__app.__player.__gameTime.__min;
+        this.__headerGtSec.innerHTML = this.__app.__player.__gameTime.__sec;
+
         this.__headerLv.innerHTML = this.__app.__player.__level;
        
         this.__headerLvTitle.innerHTML = this.__app.__levelsManager.getTitleOf(this.__app.__player.__level);

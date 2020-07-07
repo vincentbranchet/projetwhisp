@@ -3,24 +3,6 @@ class RecoController extends AppChild {
         super(app);
     }
 
-    scan() {
-        var self = this;
-
-        // loop through portfolio profiles
-        this.__app.__portfolioManager.__profiles.forEach(profile => {
-            if(profile.__launchedEvents.length >= 1) {
-            // and through profiles launched events
-                for(let event of profile.__launchedEvents) {
-                // check if event timer >= delay
-                    if(event.__timer.duration >= event.__delay) {
-                    // if so, resolve event 
-                        self.__app.__eventController.__recoController.resolve(event.__id, profile.__id);
-                    }
-                }
-            }
-        });
-    }
-
     getAvailableOf(profile) {
         // returns available recos ids
         let profileAttributes = profile.__attributes;
@@ -33,15 +15,16 @@ class RecoController extends AppChild {
         });
 
         this.__app.__recoManager.__recos.forEach(reco => {
-        // for each reco
+        // for each reco in the game
         
             let totalRequired = reco.__required.length;
             let requiredAvailable = 0;
             
             for(let i = 0; i < reco.__required.length; i++) {
-            // check each required attribute id
+                console.log(reco.__name, reco.__required.length);
+            // and each of their required attribute id
                 for(let y = 0; y < profileAttId.length; y++) {
-                // and see if found in available attribute id array                    
+                // see if attribute is found in profile attributes array                    
                     if(profileAttId[y] == reco.__required[i]) {
                     // if found, increment number of required att found
                         requiredAvailable++;
@@ -50,6 +33,7 @@ class RecoController extends AppChild {
             }
 
             if(requiredAvailable == totalRequired) {
+            // if all required attribute were found
                 availableRecoId.push(reco.__id);
             }
         });

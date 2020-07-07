@@ -48,7 +48,7 @@ class ProfileUIController extends ControllerChild {
         });
 
         htmlRecoTitle = document.createElement("div");
-        htmlRecoTitle.innerText = "RECOMMENDATIONS";
+        htmlRecoTitle.innerText = "RECOMMANDATIONS";
         this.__profileWrapper.append(htmlRecoTitle);
 
         this.printRecosOf(profile);
@@ -114,23 +114,33 @@ class ProfileUIController extends ControllerChild {
 
     printRecosOf(profile) {
         var self = this;
-        let htmlReco;
+        let htmlReco, htmlRecoTitle, htmlRecoDesc, htmlRecoSend;
         let availableRecosId = self.__controller.__app.__recoController.getAvailableOf(profile);
 
         if(availableRecosId.length >= 1) {
             availableRecosId.forEach(recoId => {
                 let reco = self.__controller.__app.__recoManager.getFromId(recoId);
     
-                htmlReco = document.createElement("p");
-                $(htmlReco).addClass("button reco_" + recoId + "_" + profile.__id);
-                //htmlReco.id = "button reco_" + recoId + "_" + profile.__id; // class="reco_recoId_profileId"
-                htmlReco.innerText = reco.__name + " (" + reco.__cld + "s)";
+                htmlReco = document.createElement("div");
+                htmlRecoTitle = document.createElement("div");
+                htmlRecoDesc = document.createElement("div");
+                htmlRecoSend = document.createElement("div");
+
+                $(htmlReco).addClass("recoWrapper");
+                $(htmlRecoSend).addClass("button reco_" + recoId + "_" + profile.__id);
+
+                htmlRecoTitle.innerText = reco.__name;
+                htmlRecoDesc.innerText = reco.__desc;
+                htmlRecoSend.innerText = "ENVOYER" + " (" + reco.__cld + "s)";
 
                 (function(self) {
-                    htmlReco.addEventListener("click", self.clickToLaunch(self));
+                    htmlRecoSend.addEventListener("click", self.clickToLaunch(self), true);
                 }(self));
 
                 self.__profileWrapper.append(htmlReco);
+                $(htmlReco).append(htmlRecoTitle);
+                $(htmlReco).append(htmlRecoDesc);
+                $(htmlReco).append(htmlRecoSend);
             });
         }
     }
@@ -140,7 +150,7 @@ class ProfileUIController extends ControllerChild {
         return function() {
             let recoId = this.className.split("_")[1];
             let profileId = this.className.split("_")[2];
-            console.log(recoId + ", " + profileId);
+
             self.__controller.__app.__eventController.__recoController.launch(recoId, profileId);
         }
     }

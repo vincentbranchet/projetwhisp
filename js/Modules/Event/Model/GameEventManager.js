@@ -10,6 +10,7 @@ class GameEventManager {
 
     init() {
         this.__recoManager.init();
+        this.__nativeManager.init();
     }
 
     toLaunched(evtId) {

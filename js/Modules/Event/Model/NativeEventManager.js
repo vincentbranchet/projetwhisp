@@ -6,8 +6,9 @@ class NativeEventManager extends EventManagerChild {
     }
 
     init() {
-
         // get all native events
+        this.create(1, "Devenir riche", 5, 2);
+        this.__nativeEvents[0].addToSpawn(4);
     }
 
     create(id, name, delay, attId) {

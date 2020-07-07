@@ -7,7 +7,8 @@ class Profile {
         this.__nativeEvents = []; // native events history
         this.__recoEvents = []; // reco events history
         this.__macroEvents = []; // macro events history
-        this.__launchedEvents = []; // currently running unsolved events
+        this.__launchedReco = []; // currently running unsolved reco events
+        this.__launchedNative = [];
     }
 
     init(...attributes) {

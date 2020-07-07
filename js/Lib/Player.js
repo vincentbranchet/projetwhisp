@@ -3,6 +3,7 @@ class Player {
         this.__portfolioValue = 0;
         this.__cashValue = 500;
         this.__level = 1;
+        this.__gameTime = new Timer();
     }
 
     //setters
@@ -25,5 +26,8 @@ class Player {
     }
     get level() {
         return this.__level;
+    }
+    get gameTime() {
+        return this.__gameTime;
     }
 }

@@ -1,7 +1,8 @@
 class Reco {
-    constructor(id, name, cld, evtId) {
+    constructor(id, name, desc, cld, evtId) {
         this.__id = id;
         this.__name = name;
+        this.__desc = desc;
         this.__cld = cld;
         this.__evtId = evtId; // id of consequence event
         this.__isActive = 0;
@@ -24,6 +25,9 @@ class Reco {
     }
     get name() {
         return this.__name;
+    }
+    get desc() {
+        return this.__desc;
     }
     get cld() {
         return this.__cld;

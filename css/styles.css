@@ -12,8 +12,8 @@
     flex-direction: column;
 }
 
-.lvWrapper, .pvWrapper, .cvWrapper {
-    height: 33%;
+.gtWrapper, .lvWrapper, .pvWrapper, .cvWrapper {
+    height: 25%;
 }
 
 .pagesWrapper {
@@ -41,4 +41,8 @@
 
 .button {
     cursor: pointer;
+}
+
+.recoWrapper {
+    margin: 2vh 0 2vh 0;
 }
