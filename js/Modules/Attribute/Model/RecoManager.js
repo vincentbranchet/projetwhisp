@@ -15,10 +15,9 @@ class RecoManager {
         this.__recos[2].fillRequired(3, 4);
         this.create(4, "Organiser une fête", "Une idée pour cultiver vos relations sociales", 12, 3);
         this.__recos[3].fillRequired(2, 6);
+        this.__recos[3].fillForbidden(2);
         this.create(5, "Devenir influenceur", "Montrez votre vie de rêve à tout le monde !", 10, 4);
         this.__recos[4].fillRequired(4, 1);
-        
-        console.log(this.__recos);
     }
 
     create(id, name, desc, cld, evtId) {

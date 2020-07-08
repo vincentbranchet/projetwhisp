@@ -18,22 +18,32 @@ class RecoController extends AppChild {
         // for each reco in the game
         
             let totalRequired = reco.__required.length;
-            let requiredAvailable = 0;
+            let requiredAvailable = 0; // required attributes present in profile
+            let hasForbidden = 0; // forbidden attributes present in profile
             
-            for(let i = 0; i < reco.__required.length; i++) {
-                console.log(reco.__name, reco.__required.length);
-            // and each of their required attribute id
-                for(let y = 0; y < profileAttId.length; y++) {
-                // see if attribute is found in profile attributes array                    
-                    if(profileAttId[y] == reco.__required[i]) {
-                    // if found, increment number of required att found
-                        requiredAvailable++;
-                    }
+            for(let z = 0; z < reco.__forbidden.length; z++) {
+            // and each of their forbidden attributes
+                if(profileAttId[z] == reco.__forbidden[z]) {
+                // see if forbidden attribute is found in profile array
+                    hasForbidden = profileAttId[z];
                 }
+            }
+            if(hasForbidden == 0) {
+            // if no forbidden attributes were found
+                for(let i = 0; i < reco.__required.length; i++) {
+                // loop through required attribute ids for reco
+                    for(let y = 0; y < profileAttId.length; y++) {
+                    // see if attribute is found in profile attributes array                    
+                        if(profileAttId[y] == reco.__required[i]) {
+                        // if found, increment number of required att found
+                            requiredAvailable++;
+                        }
+                    }
+                    }
             }
 
             if(requiredAvailable == totalRequired) {
-            // if all required attribute were found
+            // if correct number of required attribute were found (& no forbidden attributes were found)
                 availableRecoId.push(reco.__id);
             }
         });

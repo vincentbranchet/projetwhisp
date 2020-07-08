@@ -6,12 +6,15 @@ class NativeEventController extends EventControllerChild {
     launch(evtId, profileId) {
         let event = this.__controller.__app.__eventManager.__nativeManager.getFromId(evtId);
         let profile = this.__controller.__app.__portfolioManager.getFromId(profileId);
-        // start nativeEvent
-        event.__timer.start();
 
-        event.__hasLaunched = 1;
-        // push native event to profile
-        profile.__launchedNative.push(event);
+        if(event.__hasLaunched == 0) {
+            // start nativeEvent
+            event.__timer.start();
+
+            event.__hasLaunched = 1;
+            // push native event to profile
+            profile.__launchedNative.push(event);
+        }
     }
 
     resolve(evtId, profileId) {
