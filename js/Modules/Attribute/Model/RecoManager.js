@@ -6,7 +6,7 @@ class RecoManager {
     init() {
         // get from json
 
-        // bad way
+        // bad way : IF ABSENT SET TO 0
         this.create(1, "Promouvoir", "Vous méritez un nouveau poste !", 10);
         this.__recos[0].fillRequired(2, 3);
         this.create(2, "Relooker", "Envie de s'embellir ?", 10, 1);
@@ -20,8 +20,8 @@ class RecoManager {
         this.__recos[4].fillRequired(4, 1);
     }
 
-    create(id, name, desc, cld, evtId) {
-        this.__recos.push(new Reco(id, name, desc, cld, evtId));
+    create(id, name, desc, cld, evtId, newsId) {
+        this.__recos.push(new Reco(id, name, desc, cld, evtId, newsId));
     }
 
     getFromId(recoId) {

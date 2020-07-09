@@ -73,6 +73,11 @@ class RecoEventController extends EventControllerChild {
 
         profile.refresh();
 
+        // if news must be printed after event, set news controller to print it
+        if(event.__newsId != 0) {
+            this.__controller.__app.__newsController.print(event.__newsId);
+        }
+
         // mark as resolved, delete from launched and push to resolved
         event.__timer.stop();
         event.__timer.reset();
