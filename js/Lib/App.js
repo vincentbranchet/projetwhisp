@@ -18,6 +18,8 @@ class App {
         this.__recoManager = new RecoManager();
         this.__levelsManager = new LevelsManager();
         this.__eventManager = new GameEventManager();
+        this.__newsManager = new NewsManager();
+        this.__notificationManager = new NotificationManager();
     }
 
     init() {
@@ -30,6 +32,7 @@ class App {
         this.__attributeManager.init();
         this.__levelsManager.init();
         this.__recoManager.init();
+        this.__newsManager.init();
 
         this.__shopController.fill();
         this.__UIController.update();

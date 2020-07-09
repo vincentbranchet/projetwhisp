@@ -1,4 +1,4 @@
-class NewController extends AppChild {
+class NewsController extends AppChild {
     constructor(app) {
         super(app);
     }
@@ -14,8 +14,6 @@ class NewController extends AppChild {
     print(newsId) {
         // get news from manager
         let news = this.__app.__newsManager.getFromId(newsId);
-        let compDate = new Date();
-        let formatDate = compDate.getHours() + ":" + compDate.getMinutes() + ":" + compDate.getSeconds();
 
         // gather data and check if an event must be launched
         if(this.__app.__player.__lv >= news.__lv) {
@@ -24,7 +22,7 @@ class NewController extends AppChild {
                 this.__app.__eventController.__macroController.launch(news.__launchId);
             }
 
-            news.__date = formatDate;
+            news.__date = new Date();
             news.__wasPrinted = 1;
             
             // push to printed

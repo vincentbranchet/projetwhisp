@@ -9,33 +9,79 @@ class NewsUIController extends ControllerChild {
 
     refresh() {
         this.clear();
-        this.print();
+        this.printAll();
     }
 
-    print() {
+    printAll() {
+        let self = this;
         let htmltitle;
-        let news, notifs = [];
+        let news, notifs, merge = [];
         news = this.__controller.__app.__newsManager.__printed;
         notifs = this.__controller.__app.__notificationManager.__printed;
+        merge = news.concat(notifs);
 
         // SORT NEWS AND NOTIFS BY DATE
+        merge.sort(function(a, b) {
+            a = merge.date;
+            b = merge.date;
+            return a > b ? -1 : a < b ? 1 : 0;
+        });
         
         htmltitle = document.createElement("p");
         htmltitle.innerText = "LES ACTUALITES";
 
-        this.__newsWrapper.append(htmltitle);
+        this.__pageWrapper.append(htmltitle);
 
-        for(let i = this.__controller.__app.__newsManager.__printed.length - 1; i >= 0; i--) {
-        // loop in reverse through printed news
-            let newsWrapper, newsTitle, newsImg, newsContent;
+        merge.forEach(elt => {
+            if(elf instanceof News) {
+                self.printNews(elt);
+            }
+            else if(elt instanceof Notification) {
+                self.printNotif(elt);
+            }
+        });
 
-            newsWrapper = document.createElement("div");
-            newsTitle = document.createElement("div");
-            newsImg = document.createElement("div");
-            newsContent = document.createElement("div");
+        this.hasClicked();
+    }
 
-            newsTitle.innerHTML 
-        }
+    printNews(news) {
+        let articleWrapper, newsTitle, newsImg, newsContent, newsDate;
+
+        articleWrapper = document.createElement("div");
+        newsWrapper.addClass("articleWrapper");
+        newsTitle = document.createElement("div");
+        newsDate = document.createElement("div");
+        newsImg = document.createElement("div");
+        newsContent = document.createElement("div");
+
+        newsTitle.innerHTML = news.__title;
+        newsDate.innerHTML = news.__date.getHours() + "-" + news.__date.getMinutes() + "-" + news.__date.getSeconds();
+        newsImg.innerHTML = news.__img;
+        newsContent.innerHtml = news.__content;
+
+        articleWrapper.append(newsTitle);
+        articleWrapper.append(newsDate);
+        articleWrapper.append(newsImg);
+        articleWrapper.append(newsContent);
+
+        this.__pageWrapper.append(articleWrapper);
+    }
+
+    printNotif(notif) {
+        let notifWrapper, notifDate, notifText;
+
+        notifWrapper = document.createElement("div");
+        notifWrapper.addClass("notifWrapper");
+        notifDate = document.createElement("div");
+        notifText = docuemnt.createElement("div");
+
+        notifDate.innerHTML = notif.__date.getHours() + "-" + notif.__date.getMinutes() + "-" + notif.__date.getSeconds();
+        notifText.innerHTML = notif.__content;
+
+        notifWrapper.append(notifDate);
+        notifWrapper.append(notifText);
+
+        this.__pageWrapper.append(notifWrapper);
     }
 
     notify() {
@@ -58,5 +104,12 @@ class NewsUIController extends ControllerChild {
 
     show() {
         this.__newsWrapper.style.display = "block";
+    }
+
+    get pageWrapper() {
+        return this.__pageWrapper;
+    }
+    get pageButton() {
+        return this.__pageButton
     }
 }
