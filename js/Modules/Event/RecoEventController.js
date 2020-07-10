@@ -33,7 +33,7 @@ class RecoEventController extends EventControllerChild {
         event.__hasLaunched = 1;
         profile.__launchedReco.push(event);
 
-        this.__controller.__app.__UIController.update();
+        this.__controller.__app.__UIController.toPortfolio();
     }
     
     resolve(evtId, profileId) {
@@ -73,9 +73,11 @@ class RecoEventController extends EventControllerChild {
 
         profile.refresh();
 
+        console.log(event);
         // if news must be printed after event, set news controller to print it
         if(event.__newsId != 0) {
             this.__controller.__app.__newsController.print(event.__newsId);
+            console.log(this.__controller.__app.__newsManager);
         }
 
         // mark as resolved, delete from launched and push to resolved
@@ -88,8 +90,8 @@ class RecoEventController extends EventControllerChild {
 
         this.__controller.__nativeController.scanToLaunch();
         
-        this.__controller.__app.__UIController.update();
-
-        alert(profile.__name + " a terminé l'événement " + event.__name);
+        this.__controller.__app.__notificationController.print(profile.__name + " a terminé l'événement " + event.__name);
+        this.__controller.__app.__UIController.__newsUIController.notify();
+        this.__controller.__app.__UIController.__newsUIController.refresh();
     }
 }

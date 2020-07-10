@@ -24,7 +24,8 @@ class AppUIController extends AppChild {
         this.__activePage = "portfolio"; // default homepage
     }
 
-    update() {
+    update() {       
+        /*
         // hide potentially open profile pages
         this.__profileUIController.hide();
         this.__profileUIController.hideFromShop();
@@ -34,9 +35,9 @@ class AppUIController extends AppChild {
         this.__portfolioUIController.refresh();
         this.__newsUIController.refresh();
         this.printHeader();
-
+        */
         // show active page
-        this.showActive();
+        //this.showActive();
     }
 
     initMenu() {
@@ -53,6 +54,8 @@ class AppUIController extends AppChild {
         (function(self) {
             self.__newsButton.addEventListener("click", self.clickToNews(self));
         }(self));
+
+        this.showActive();
     }
 
     levelUp() {
@@ -60,7 +63,33 @@ class AppUIController extends AppChild {
 
         self.printHeader();
 
-        alert("VOUS AVEZ ÉTÉ PROMU !\nNIVEAU : " + self.__app.__levelsManager.getTitleOf(self.__app.__player.__level))
+        self.__app.__notificationController.print("VOUS AVEZ ÉTÉ PROMU !\nNIVEAU : " + self.__app.__levelsManager.getTitleOf(self.__app.__player.__level));
+        self.__newsUIController.notify();
+        self.__newsUIController.refresh();
+    }
+
+    toPortfolio(){
+        let self = this;
+        self.hideActive(self);
+        self.__portfolioUIController.show();
+        self.__portfolioUIController.refresh();
+        self.__activePage = "portfolio";
+    }
+
+    toShop() {
+        let self = this;
+        self.hideActive(self);
+        self.__shopUIController.show();
+        self.__shopUIController.refresh();
+        self.__activePage = "shop";
+    }
+
+    toNews() {
+        let self = this;
+        self.hideActive(self);
+        self.__newsUIController.show();
+        self.__newsUIController.refresh();
+        self.__activePage = "news";
     }
     
     clickToPortfolio(self) {
@@ -68,6 +97,7 @@ class AppUIController extends AppChild {
         return function() {
             self.hideActive(self);
             self.__portfolioUIController.show();
+            self.__portfolioUIController.refresh();
             self.__activePage = "portfolio";
         } 
     }
@@ -77,6 +107,7 @@ class AppUIController extends AppChild {
         return function() {
             self.hideActive(self);
             self.__shopUIController.show();
+            self.__shopUIController.refresh();
             self.__activePage = "shop";
         } 
     }
@@ -86,11 +117,14 @@ class AppUIController extends AppChild {
         return function() {
             self.hideActive(self);
             self.__newsUIController.show();
+            self.__newsUIController.refresh();
+            self.__newsUIController.hasClicked();
             self.__activePage = "news";
         }
     }
 
     hideActive(self) {
+        console.log("hide active");
         if(self.__activePage == "news") {
             self.__profileUIController.hide();
             self.__profileUIController.hideFromShop();
@@ -102,6 +136,7 @@ class AppUIController extends AppChild {
             self.__portfolioUIController.hide();
         }
         else if(self.__activePage == "shop") {
+            console.log("hide shop");
             self.__profileUIController.hide();
             self.__profileUIController.hideFromShop();
             self.__shopUIController.hide();

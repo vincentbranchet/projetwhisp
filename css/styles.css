@@ -43,6 +43,6 @@
     cursor: pointer;
 }
 
-.recoWrapper {
+.recoWrapper, .notifWrapper, .articleWrapper {
     margin: 2vh 0 2vh 0;
 }

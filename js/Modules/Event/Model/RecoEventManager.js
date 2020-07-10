@@ -18,11 +18,11 @@ class RecoEventManager extends EventManagerChild {
 
         this.create(3, "Fête", 12, 4);
 
-        this.create(4, "Influence", 10, 5);
+        this.create(4, "Influence", 10, 5, 1);
     }
 
-    create(id, name, delay, recoId) {
-        this.__recoEvents.push(new RecoEvent(id, name, delay, recoId));
+    create(id, name, delay, recoId, newsId) {
+        this.__recoEvents.push(new RecoEvent(id, name, delay, recoId, newsId));
     }
 
     getFromId(evtId) {

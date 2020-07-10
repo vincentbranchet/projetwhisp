@@ -9,7 +9,7 @@ class NewsManager {
         // json
 
         // bad way : /!\ si pas de valeur mettre 0 /!\
-        this.create();
+        this.create(1, "Portrait d'une nouvelle idole", "Ce jeune homme sorti de nulle part fait le buzz sur internet. Après cette fameuse vidéo ayant fait des millions de vues ...", 0, 2, 0, 4);
     }
 
     create(id, title, content, img, lv, launchId, comesFromId) {

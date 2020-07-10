@@ -13,11 +13,12 @@ class NewsController extends AppChild {
 
     print(newsId) {
         // get news from manager
-        let news = this.__app.__newsManager.getFromId(newsId);
+        let news = this.__app.__newsManager.getNewsFromId(newsId);
 
+        console.log(news);
         // gather data and check if an event must be launched
-        if(this.__app.__player.__lv >= news.__lv) {
-        
+        if(this.__app.__player.__level >= news.__lv) {
+            console.log(news);
             if(news.__launchId != 0) {
                 this.__app.__eventController.__macroController.launch(news.__launchId);
             }
@@ -29,7 +30,7 @@ class NewsController extends AppChild {
             this.__app.__newsManager.__printed.push(news);
 
             this.__app.__UIController.__newsUIController.notify();
-            this.__app.__UIController.update();
+            this.__app.__UIController.__newsUIController.refresh();
         }
     }
 }

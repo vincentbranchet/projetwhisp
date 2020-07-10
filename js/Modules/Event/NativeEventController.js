@@ -67,9 +67,9 @@ class NativeEventController extends EventControllerChild {
         profile.__launchedReco.splice(eventIndex, 1);
         profile.__nativeEvents.push(event);
         
-        this.__controller.__app.__UIController.update();
-
-        alert("L'attribut " + att.__name + " de " + profile.__name + " a donné lieu à des changements");
+        this.__controller.__app.__notificationController.print("L'attribut " + att.__name + " de " + profile.__name + " a donné lieu à des changements");
+        this.__controller.__app.__UIController.__newsUIController.notify();
+        this.__controller.__app.__UIController.__newsUIController.refresh();
     }
 
     scanToLaunch() {

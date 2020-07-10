@@ -20,10 +20,8 @@ class PlayerController extends AppChild {
             this.__app.__appController.checkIfLvUp();
             this.__app.__portfolioController.updateValue();
             this.__app.__eventController.__recoController.scan();
-            this.__app.__UIController.update();
+            this.__app.__UIController.toPortfolio();
         }
-        else
-            alert("Pas assez de cash");
     }
 
     sell(profileId) {
@@ -41,10 +39,8 @@ class PlayerController extends AppChild {
             this.__app.__appController.checkIfLvUp();
             this.__app.__portfolioController.updateValue();
             this.__app.__eventController.__recoController.scan();
-            this.__app.__UIController.update();
+            this.__app.__UIController.toPortfolio();
         }
-        else
-            alert("Pas assez de cash");
     }
 
     reco() {

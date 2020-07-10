@@ -11,6 +11,8 @@ class App {
         this.__playerController = new PlayerController(this);
         this.__recoController = new RecoController(this);
         this.__eventController = new GameEventController(this);
+        this.__notificationController = new NotificationController(this);
+        this.__newsController = new NewsController(this);
 
         this.__shopManager = new ShopManager();
         this.__portfolioManager = new PortfolioManager();
