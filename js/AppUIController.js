@@ -24,22 +24,6 @@ class AppUIController extends AppChild {
         this.__activePage = "portfolio"; // default homepage
     }
 
-    update() {       
-        /*
-        // hide potentially open profile pages
-        this.__profileUIController.hide();
-        this.__profileUIController.hideFromShop();
-
-        // update shop & portfolio (& news) & header
-        this.__shopUIController.refresh();
-        this.__portfolioUIController.refresh();
-        this.__newsUIController.refresh();
-        this.printHeader();
-        */
-        // show active page
-        //this.showActive();
-    }
-
     initMenu() {
         var self = this;
 
@@ -70,7 +54,9 @@ class AppUIController extends AppChild {
 
     toPortfolio(){
         let self = this;
+        console.log(this.__activePage);
         self.hideActive(self);
+        console.log(this.__activePage);
         self.__portfolioUIController.show();
         self.__portfolioUIController.refresh();
         self.__activePage = "portfolio";
@@ -90,6 +76,20 @@ class AppUIController extends AppChild {
         self.__newsUIController.show();
         self.__newsUIController.refresh();
         self.__activePage = "news";
+    }
+
+    toProfileInShop(profileId) {
+        let self = this;
+        self.hideActive(self);
+        self.__profileUIController.showInShop(profileId);
+        self.__activePage = "profile";
+    }
+
+    toProfileInPortfolio(profileId) {
+        let self = this;
+        self.hideActive(self);
+        self.__profileUIController.show(profileId);
+        self.__activePage = "profile";
     }
     
     clickToPortfolio(self) {
@@ -124,22 +124,18 @@ class AppUIController extends AppChild {
     }
 
     hideActive(self) {
-        console.log("hide active");
         if(self.__activePage == "news") {
-            self.__profileUIController.hide();
-            self.__profileUIController.hideFromShop();
             self.__newsUIController.hide();
         }
         else if(self.__activePage == "portfolio") {
-            self.__profileUIController.hide();
-            self.__profileUIController.hideFromShop();
             self.__portfolioUIController.hide();
         }
         else if(self.__activePage == "shop") {
-            console.log("hide shop");
+            self.__shopUIController.hide();
+        }
+        else if(self.__activePage == "profile") {
             self.__profileUIController.hide();
             self.__profileUIController.hideFromShop();
-            self.__shopUIController.hide();
         }
     }
 

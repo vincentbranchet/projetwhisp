@@ -54,7 +54,9 @@ class NewsUIController extends ControllerChild {
 
         newsTitle.innerHTML = news.__title;
         newsDate.innerHTML = news.__date.getHours() + ":" + news.__date.getMinutes() + ":" + news.__date.getSeconds();
-        newsImg.innerHTML = news.__img;
+        if(news.__img != 0) {
+            newsImg.innerHTML = news.__img;
+        }
         newsContent.innerHTML = news.__content;
 
         articleWrapper.append(newsTitle);

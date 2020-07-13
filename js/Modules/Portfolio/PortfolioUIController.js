@@ -11,10 +11,6 @@ class PortfolioUIController extends ControllerChild {
         this.print();
     }
 
-    updateCooldowns() {
-
-    }
-
     print() {
         var self = this;
         let htmlProfile, htmlTitle;
@@ -67,8 +63,7 @@ class PortfolioUIController extends ControllerChild {
 
         return function() {
             let profileId = this.id.split("_")[1];
-            self.hide();
-            self.__controller.__profileUIController.show(profileId);
+            self.__controller.toProfileInPortfolio(profileId);
         }
     }
 }

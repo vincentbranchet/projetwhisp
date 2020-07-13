@@ -49,10 +49,8 @@ class ShopUIController extends ControllerChild {
     clickToShow(self) {
 
         return function() {
-
             let profileId = this.id.split("_")[1];
-            self.hide();
-            self.__controller.__profileUIController.showInShop(profileId);
+            self.__controller.toProfileInShop(profileId);
         }
     }
 }
