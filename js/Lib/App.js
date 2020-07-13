@@ -37,7 +37,6 @@ class App {
         this.__newsManager.init();
 
         this.__shopController.fill();
-        this.__UIController.update();
         this.__UIController.initMenu();
     }
 
