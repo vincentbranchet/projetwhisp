@@ -23,11 +23,20 @@ class Profile {
 
     refresh() {
         var self = this;
+        let multBy = 1;
         self.__value = 0;
 
         this.__attributes.forEach(att => {
-            self.__value = self.__value + att.__value;
+            if(att.__isMult == 1) {
+            // if att is multiplier
+                multBy = multBy * att.__multRate;
+            }
+            else {
+                self.__value = self.__value + att.__value;
+            }
         });
+
+        self.__value = self.__value * multBy;
     }
 
     addAttribute(att) {

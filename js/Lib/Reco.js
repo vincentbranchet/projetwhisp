@@ -10,6 +10,8 @@ class Reco {
         this.__forbidden = []; // att ids forbidden for reco to show
     }
 
+    // id nom desc cld evt req(2, 24, 152) forb(3)
+
     fillRequired(...ids) {
         var self = this;
 

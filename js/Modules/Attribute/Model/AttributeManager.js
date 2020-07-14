@@ -12,12 +12,12 @@ class AttributeManager {
         this.create(3, "Compétent", 200);
         this.create(4, "Riche", 500);
         this.create(5, "Marié.e", 75);
-        this.create(6, "Super Cool", 100);
+        this.create(6, "Super Cool", 100, 0, 1, 10);
         this.create(7, "Nouveau Job", 300);
     }
 
-    create(id, name, value, evtId) {
-        this.__attributes.push(new Attribute(id, name, value, evtId));
+    create(id, name, value, evtId, isMult, multRate) { // if att is multiplier isMult = 1 & multRate != 0
+        this.__attributes.push(new Attribute(id, name, value, evtId, isMult, multRate));
     }
 
     getFromId(attId) {

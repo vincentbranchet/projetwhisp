@@ -42,8 +42,15 @@ class ProfileUIController extends ControllerChild {
         this.__profileWrapper.append(htmlProfileInfo);
 
         profile.__attributes.forEach(att => {
+            console.log(att);
             let htmlAtt = document.createElement("p");
-            htmlAtt.innerText = att.__name + " (" + att.__value + ")";
+            if(att.__isMult == 1) {
+            // if att is multiplier
+                htmlAtt.innerText = att.__name + " (x" + att.__multRate + ")";    
+            }
+            else {
+                htmlAtt.innerText = att.__name + " (" + att.__value + ")";
+            }
             self.__profileWrapper.append(htmlAtt);
         });
 
@@ -81,8 +88,14 @@ class ProfileUIController extends ControllerChild {
         this.__profileVitrineWrapper.append(htmlProfileInfo);
 
         profile.__attributes.forEach(att => {
+            console.log(att);
             let htmlAtt = document.createElement("p");
-            htmlAtt.innerText = att.__name + " (" + att.__value + ")";
+            if(att.__isMult == 1) {
+                htmlAtt.innerText = att.__name + " (x" + att.__multRate + ")";
+            }
+            else {
+                htmlAtt.innerText = att.__name + " (" + att.__value + ")";
+            }
             self.__profileVitrineWrapper.append(htmlAtt);
         });
 

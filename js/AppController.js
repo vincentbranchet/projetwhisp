@@ -21,11 +21,18 @@ class AppController extends AppChild {
     }
 
     yieldCash() {
+        let level = this.__app.__levelsManager.getFromId(this.__app.__player.__level);
+        let earnings = level.__cash;
+
+        if(earnings) {
+            this.__app.__player.__cashValue = this.__app.__player.__cashValue + earnings;
+        }
+        /*
         if(this.__app.__player.__portfolioValue > 0) {
            
             let earnings = this.__app.__player.__portfolioValue * this.__app.__config.__yieldRate;
             this.__app.__player.__cashValue = this.__app.__player.__cashValue + earnings;
-        }
+        } */
     }
 
     checkIfLvUp() {

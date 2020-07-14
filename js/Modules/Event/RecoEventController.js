@@ -39,6 +39,7 @@ class RecoEventController extends EventControllerChild {
     resolve(evtId, profileId) {
         var self = this;
         let event = this.__controller.__app.__eventManager.__recoManager.getFromId(evtId);
+        let reco = this.__controller.__app.__recoManager.getFromId(event.__reco);
         let profile = this.__controller.__app.__portfolioManager.getFromId(profileId);
         let attToDelete = [];
         let attToSpawn = [];
@@ -90,7 +91,15 @@ class RecoEventController extends EventControllerChild {
 
         this.__controller.__nativeController.scanToLaunch();
         
-        this.__controller.__app.__notificationController.print(profile.__name + " a terminé l'événement " + event.__name);
+        if(event.__toSpawn.length == 0 && event.__toDelete.length == 0) {
+        // if event has no consequences
+            this.__controller.__app.__notificationController.print(profile.__name + " n'a pas tenu compte de la recommandation " + reco.__name);
+        }
+        else {
+        // if event has consequences
+            this.__controller.__app.__notificationController.print(profile.__name + " a tenu compte de la recommandation " + reco.__name);
+        }
+    
         this.__controller.__app.__UIController.__newsUIController.notify();
         this.__controller.__app.__UIController.__newsUIController.refresh();
     }

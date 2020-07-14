@@ -12,6 +12,5 @@ class NotificationController extends AppChild {
         this.__app.__notificationManager.create(id, date, content);
         // switch news UI to "something happened" mode
         this.__app.__UIController.__newsUIController.notify();
-        this.__app.__UIController.update();
     }
 }

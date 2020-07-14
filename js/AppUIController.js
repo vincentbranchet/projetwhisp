@@ -52,11 +52,9 @@ class AppUIController extends AppChild {
         self.__newsUIController.refresh();
     }
 
-    toPortfolio(){
+    toPortfolio() {
         let self = this;
-        console.log(this.__activePage);
         self.hideActive(self);
-        console.log(this.__activePage);
         self.__portfolioUIController.show();
         self.__portfolioUIController.refresh();
         self.__activePage = "portfolio";
