@@ -13,6 +13,7 @@ class App {
         this.__eventController = new GameEventController(this);
         this.__notificationController = new NotificationController(this);
         this.__newsController = new NewsController(this);
+        this.__profileController = new ProfileController(this);
 
         this.__shopManager = new ShopManager();
         this.__portfolioManager = new PortfolioManager();
@@ -27,17 +28,15 @@ class App {
     init() {
         this.__player.__cashValue = this.__config.__cashStart;
 
-        this.__appController.init();
-
-        this.__eventManager.init();
-        this.__shopManager.init();
-        this.__attributeManager.init();
-        this.__levelsManager.init();
-        this.__recoManager.init();
-        this.__newsManager.init();
-
-        this.__shopController.fill();
-        this.__UIController.initMenu();
+        this.__levelsManager.init()
+            .then(() => this.__attributeManager.init())
+            .then(() => this.__shopManager.init())
+            .then(() => this.__eventManager.init())
+            .then(() => this.__recoManager.init())
+            .then(() => this.__newsManager.init())
+            .then(() => this.__appController.init())
+            .then(() => this.__UIController.initMenu())
+            .catch(err => console.log(err));
     }
 
     //setters

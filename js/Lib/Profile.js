@@ -11,32 +11,15 @@ class Profile {
         this.__launchedNative = [];
     }
 
-    init(...attributes) {
+    init(...attIds) {
+    // attributes ids
         var self = this;
         
-        for(let att of attributes) {
-            self.__attributes.push(att);
+        if(attIds[0]) {
+            for(let i = 0; i < attIds[0].length; i++) {
+                self.__attributes.push(attIds[0][i]);
+            }
         }
-
-        self.refresh();
-    }
-
-    refresh() {
-        var self = this;
-        let multBy = 1;
-        self.__value = 0;
-
-        this.__attributes.forEach(att => {
-            if(att.__isMult == 1) {
-            // if att is multiplier
-                multBy = multBy * att.__multRate;
-            }
-            else {
-                self.__value = self.__value + att.__value;
-            }
-        });
-
-        self.__value = self.__value * multBy;
     }
 
     addAttribute(att) {
@@ -67,6 +50,10 @@ class Profile {
         if(evt instanceof MacroEvent) {
             this.__macroEvents.push(evt);
         }
+    }
+
+    set value(newValue) {
+        this.__value = newValue;
     }
 
     get attributes() {

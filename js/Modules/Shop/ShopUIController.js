@@ -14,6 +14,9 @@ class ShopUIController extends ControllerChild {
         var self = this;
         let htmlProfile, htmlTitle;
 
+        // update all profile values
+        this.__controller.__app.__profileController.updateShop();
+
         htmlTitle = document.createElement("p");
         htmlTitle.innerText = "A VENDRE";
         self.__shopWrapper.append(htmlTitle);

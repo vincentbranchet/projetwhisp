@@ -5,14 +5,9 @@ class RecoController extends AppChild {
 
     getAvailableOf(profile) {
         // returns available recos ids
-        let profileAttributes = profile.__attributes;
-        let profileAttId = [];
+        let profileAttId = profile.__attributes;
         
         let availableRecoId = [];
-
-        profileAttributes.forEach(att => {
-            profileAttId.push(att.__id);
-        });
 
         this.__app.__recoManager.__recos.forEach(reco => {
         // for each reco in the game

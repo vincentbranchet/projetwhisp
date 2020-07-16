@@ -41,44 +41,22 @@ class RecoEventController extends EventControllerChild {
         let event = this.__controller.__app.__eventManager.__recoManager.getFromId(evtId);
         let reco = this.__controller.__app.__recoManager.getFromId(event.__reco);
         let profile = this.__controller.__app.__portfolioManager.getFromId(profileId);
-        let attToDelete = [];
-        let attToSpawn = [];
-
-        // get attributes to delete from their id in event
-        event.__toDelete.forEach(deleteId => {
-            for(let att of profile.__attributes) {
-                if(att.__id == deleteId) {
-                    attToDelete.push(att);
-                }
-            }
-        });
-
-        // get attributes to spawn from their id in event
-        event.__toSpawn.forEach(spawnId => {
-            for(let att of self.__controller.__app.__attributeManager.__attributes) {
-                if(att.__id == spawnId) {
-                    attToSpawn.push(att);
-                }
-            }
-        });
 
         // apply effects to profile
-        attToDelete.forEach(att => {
-            let indexOfAtt = profile.__attributes.indexOf(att);
+        event.__toDelete.forEach(id => {
+            let indexOfAtt = profile.__attributes.indexOf(id);
             profile.__attributes.splice(indexOfAtt, 1);
         });
 
-        attToSpawn.forEach(att => {
-            profile.__attributes.push(att);
+        event.__toSpawn.forEach(id => {
+            profile.__attributes.push(id);
         });
 
-        profile.refresh();
+        this.__controller.__app.__profileController.evaluate(profileId, "portfolio");
 
-        console.log(event);
         // if news must be printed after event, set news controller to print it
         if(event.__newsId != 0) {
             this.__controller.__app.__newsController.print(event.__newsId);
-            console.log(this.__controller.__app.__newsManager);
         }
 
         // mark as resolved, delete from launched and push to resolved

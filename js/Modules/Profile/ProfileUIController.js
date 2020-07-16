@@ -41,9 +41,10 @@ class ProfileUIController extends ControllerChild {
 
         this.__profileWrapper.append(htmlProfileInfo);
 
-        profile.__attributes.forEach(att => {
-            console.log(att);
+        profile.__attributes.forEach(id => {
+            let att = self.__controller.__app.__attributeManager.getFromId(id);
             let htmlAtt = document.createElement("p");
+            
             if(att.__isMult == 1) {
             // if att is multiplier
                 htmlAtt.innerText = att.__name + " (x" + att.__multRate + ")";    
@@ -79,17 +80,18 @@ class ProfileUIController extends ControllerChild {
         htmlSellButton = document.createElement("div");
 
         htmlTitle.innerText = "PROFIL";
-        self.__profileVitrineWrapper.append(htmlTitle);
+        this.__profileVitrineWrapper.append(htmlTitle);
 
-        //find profile in portfolio and get its info
+        // profile controller evaluates profile, then we get profile and print it
         let profile = this.__controller.__app.__shopManager.getFromId(profileId);
         htmlProfileInfo.innerText = profile.__name;
 
         this.__profileVitrineWrapper.append(htmlProfileInfo);
 
-        profile.__attributes.forEach(att => {
-            console.log(att);
+        profile.__attributes.forEach(id => {
+            let att = self.__controller.__app.__attributeManager.getFromId(id);
             let htmlAtt = document.createElement("p");
+
             if(att.__isMult == 1) {
                 htmlAtt.innerText = att.__name + " (x" + att.__multRate + ")";
             }

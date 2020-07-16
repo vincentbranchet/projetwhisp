@@ -1,0 +1,12 @@
+{
+  "native_events": [
+    {
+      "id": 1,
+      "name": "Devenir riche",
+      "delay": 5,
+      "attId": 2,
+      "toDelete": null,
+      "toSpawn": 4
+    }
+  ]
+}

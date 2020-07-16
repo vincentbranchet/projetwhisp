@@ -1,19 +1,25 @@
 class LevelsManager {
     constructor() {
+
+        this.__fileName = "levels";
+        this.__sheetName = "levels";
+
         this.__levels = [];
     }
 
     init() {
-        // get from json
+    // get from json
+        return new Promise((resolve, reject) => {
 
-        // bad way
-        this.create(1, 0, "Bronze", 10);
-        this.create(2, 100, "Silver", 100);
-        this.create(3, 500, "Gold", 1000);
-        this.create(4, 1000, "Platine", 10000);
-        this.create(5, 1500, "Diamond", 100000);
-        this.create(6, 2000, "Master", 1000000);
-        this.create(7, 3000, "Grand Master", 2000000);
+            $.getJSON('json/' + this.__fileName + '.json', levels => {
+                
+                levels[this.__sheetName].map(level => this.__levels.push(new Level(level.id, level.thrs, level.title, level.cash)));
+
+                resolve();
+            })
+
+            .fail(() => reject(new Error("getJSON error in LevelsManager : couldn't load " + this.__fileName)));
+        }); 
     }
 
     getTitleOf(lv) {

@@ -2,27 +2,39 @@ class RecoEventManager extends EventManagerChild {
     constructor(manager) {
         super(manager);
 
+        this.__fileName = "reco_events";
+        this.__sheetName = "reco_events";
+
         this.__recoEvents = [];
     }
 
     init() {
         // get from json
+        return new Promise((resolve, reject) => {
 
-        //
-        this.create(1, "Relooking", 10, 2);
-        this.__recoEvents[0].addToDelete(1);
-        this.__recoEvents[0].addToSpawn(6);
+            $.getJSON('json/' + this.__fileName + '.json', events => {
 
-        this.create(2, "Reconversion", 15, 3);
-        this.__recoEvents[1].addToSpawn(7);
+                events[this.__sheetName].map(event => this.create(event.id, event.name, event.delay, event.recoId, event.newsId, event.toDelete, event.toSpawn));
 
-        this.create(3, "Fête", 12, 4);
+                resolve();
+            })
 
-        this.create(4, "Influence", 10, 5, 1);
+            .fail(() => reject(new Error("getJSON error : could\'nt load " + this.__fileName)));
+        });
     }
 
-    create(id, name, delay, recoId, newsId) {
-        this.__recoEvents.push(new RecoEvent(id, name, delay, recoId, newsId));
+    create(id, name, delay, recoId, newsId, toDelete, toSpawn) {
+        let recoEvent = new RecoEvent(id, name, delay, recoId, newsId);
+
+        if(toDelete) {
+            recoEvent.addToDelete(toDelete);
+        }
+
+        if(toSpawn) {
+            recoEvent.addToSpawn(toSpawn);
+        }
+
+        this.__recoEvents.push(recoEvent);
     }
 
     getFromId(evtId) {

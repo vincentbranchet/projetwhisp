@@ -1,0 +1,40 @@
+{
+  "reco_events": [
+    {
+      "id": 1,
+      "name": "Relooking",
+      "delay": 5,
+      "recoId": 2,
+      "newsId": null,
+      "toDelete": 1,
+      "toSpawn": 6
+    },
+    {
+      "id": 2,
+      "name": "Reconversion",
+      "delay": 7,
+      "recoId": 3,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": 7
+    },
+    {
+      "id": 3,
+      "name": "Fête",
+      "delay": 10,
+      "recoId": 4,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": null
+    },
+    {
+      "id": 4,
+      "name": "Influence",
+      "delay": 10,
+      "recoId": 5,
+      "newsId": 1,
+      "toDelete": null,
+      "toSpawn": null
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "profiles": [
+    {
+      "id": 1,
+      "name": "Paul",
+      "attributes": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Jeanne",
+      "attributes": null
+    },
+    {
+      "id": 3,
+      "name": "Lilian",
+      "attributes": [
+        3,
+        4,
+        5
+      ]
+    }
+  ]
+}

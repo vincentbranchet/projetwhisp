@@ -1,0 +1,52 @@
+{
+  "levels": [
+    {
+      "id": 1,
+      "thrs": 0,
+      "title": "Fer",
+      "cash": 10
+    },
+    {
+      "id": 2,
+      "thrs": 100,
+      "title": "Bronze",
+      "cash": 20
+    },
+    {
+      "id": 3,
+      "thrs": 500,
+      "title": "Argent",
+      "cash": 50
+    },
+    {
+      "id": 4,
+      "thrs": 1000,
+      "title": "Or",
+      "cash": 100
+    },
+    {
+      "id": 5,
+      "thrs": 1500,
+      "title": "Diamant",
+      "cash": 200
+    },
+    {
+      "id": 6,
+      "thrs": 2000,
+      "title": "Platine",
+      "cash": 500
+    },
+    {
+      "id": 7,
+      "thrs": 3000,
+      "title": "Maître",
+      "cash": 1000
+    },
+    {
+      "id": 8,
+      "thrs": 100000,
+      "title": "Grand Maître",
+      "cash": 10000
+    }
+  ]
+}

@@ -24,6 +24,7 @@
         <script src="js/Modules/Shop/ShopUIController.js"></script>
         <script src="js/Modules/Portfolio/PortfolioUIController.js"></script>
         <script src="js/Modules/Profile/ProfileUIController.js"></script>
+        <script src="js/Modules/Profile/ProfileController.js"></script>
         <script src="js/Modules/Attribute/RecoController.js"></script>
         <script src="js/Modules/Attribute/Model/RecoManager.js"></script>
         <script src="js/Modules/Player/Model/LevelsManager.js"></script>
@@ -104,8 +105,9 @@
     </body>
 
     <script>
+        var game;
         $(function() {
-            var game = new App();
+            game = new App();
             game.init();
         });
            

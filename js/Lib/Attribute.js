@@ -1,5 +1,5 @@
 class Attribute {
-    constructor(id, name, value = 0, eventId, isMult = 0, multRate = 0) {
+    constructor(id, name, value = 0, eventId = 0, isMult = 0, multRate = 1) {
         this.__id = id; // int
         this.__name = name; // string
         this.__value = value; // int

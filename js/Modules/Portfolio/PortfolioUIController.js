@@ -15,6 +15,8 @@ class PortfolioUIController extends ControllerChild {
         var self = this;
         let htmlProfile, htmlTitle;
 
+        this.__controller.__app.__profileController.updatePortfolio();
+
         htmlTitle = document.createElement("p");
         htmlTitle.innerText = "VOS PROFILS";
         self.__portfolioWrapper.append(htmlTitle);

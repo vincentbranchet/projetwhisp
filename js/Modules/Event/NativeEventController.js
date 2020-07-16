@@ -18,44 +18,21 @@ class NativeEventController extends EventControllerChild {
     }
 
     resolve(evtId, profileId) {
-        let self = this;
         let event = this.__controller.__app.__eventManager.__nativeManager.getFromId(evtId);
         let profile = this.__controller.__app.__portfolioManager.getFromId(profileId);
         let att = this.__controller.__app.__attributeManager.getFromId(event.__nativeAttribute);
 
-        // apply nativeEvents effects to portfolio profile
-        let attToDelete = [];
-        let attToSpawn = [];
-
-        // get attributes to delete from their id in event
-        event.__toDelete.forEach(deleteId => {
-            for(let att of profile.__attributes) {
-                if(att.__id == deleteId) {
-                    attToDelete.push(att);
-                }
-            }
-        });
-
-        // get attributes to spawn from their id in event
-        event.__toSpawn.forEach(spawnId => {
-            for(let att of self.__controller.__app.__attributeManager.__attributes) {
-                if(att.__id == spawnId) {
-                    attToSpawn.push(att);
-                }
-            }
-        });
-
         // apply effects to profile
-        attToDelete.forEach(att => {
-            let indexOfAtt = profile.__attributes.indexOf(att);
+        event.__toDelete.forEach(id => {
+            let indexOfAtt = profile.__attributes.indexOf(id);
             profile.__attributes.splice(indexOfAtt, 1);
         });
 
-        attToSpawn.forEach(att => {
-            profile.__attributes.push(att);
+        event.__toSpawn.forEach(id => {
+            profile.__attributes.push(id);
         });
 
-        profile.refresh();
+        this.__controller.__app.__profileController.evaluate(profileId, "portfolio");
 
         // mark as resolved, delete from launched and push to resolved
         event.__timer.stop();
@@ -73,12 +50,15 @@ class NativeEventController extends EventControllerChild {
     }
 
     scanToLaunch() {
+        var self = this;
+
         this.__controller.__app.__portfolioManager.__profiles.forEach(profile => {
             //check if profile has native events
-            for(let att of profile.__attributes) {
+            for(let attId of profile.__attributes) {
+                let att = this.__controller.__app.__attributeManager.getFromId(attId);
                 if(att.__eventId > 0) {
                 //if profile attribute has native event, launch it
-                    this.__controller.__app.__eventController.__nativeController.launch(att.__eventId, profile.__id);
+                    self.launch(att.__eventId, profile.__id);
                 }
             }
         });
@@ -96,7 +76,7 @@ class NativeEventController extends EventControllerChild {
                 // check if event timer >= delay
                     if(event.__timer.__duration >= event.__delay) {
                     // if so, resolve event 
-                        self.__controller.__app.__eventController.__nativeController.resolve(event.__id, profile.__id);
+                        self.resolve(event.__id, profile.__id);
                     }
                 }
             }
