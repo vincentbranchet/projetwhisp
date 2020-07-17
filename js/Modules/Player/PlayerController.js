@@ -9,7 +9,7 @@ class PlayerController extends AppChild {
 
         if(profile instanceof Profile && this.__app.__player.__cashValue >= profile.__value) {
 
-            this.__app.__player.__cashValue = this.__app.__player.__cashValue - profile.__value;
+            this.__app.__player.__cashValue = Math.round(this.__app.__player.__cashValue - profile.__value * 100) / 100;
 
             this.__app.__portfolioController.add(profile);
             this.__app.__portfolioController.updateValue();
