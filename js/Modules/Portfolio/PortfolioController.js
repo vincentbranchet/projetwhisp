@@ -11,7 +11,8 @@ class PortfolioController extends AppChild {
             self.__app.__player.__portfolioValue = self.__app.__player.__portfolioValue + profile.__value;
         });
 
-        // check if profiles have native events, if so launch them
+        if(self.__app.__player.__portfolioValue < 0)
+            self.__app.__player.__portfolioValue = 0;
     }
 
     getProfiles() {
