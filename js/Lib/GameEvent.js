@@ -11,14 +11,26 @@ class GameEvent {
     }
 
     addToDelete(...attributes) {
-        attributes.forEach(att => {
-            this.__toDelete.push(att);
-        });
+
+        if(Array.isArray(attributes[0])) {
+            for(let i = 0; i < attributes[0].length; i++) {
+                this.__toDelete.push(attributes[0][i]);
+            }
+        }
+        else if(attributes[0]) {
+            this.__toDelete.push(attributes[0]);
+        }
     }
     addToSpawn(...attributes) {
-        attributes.forEach(att => {
-            this.__toSpawn.push(att);
-        });
+
+        if(Array.isArray(attributes[0])) {
+            for(let i = 0; i < attributes[0].length; i++) {
+                this.__toSpawn.push(attributes[0][i]);
+            }
+        }
+        else if(attributes[0]) {
+            this.__toSpawn.push(attributes[0]);
+        }
     }
 
     set hasLaunched(bool) {

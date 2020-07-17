@@ -33,11 +33,8 @@ class ProfileController extends AppChild {
         profile.value = 0;
         
         profile.__attributes.forEach(id => {
-            console.log(id);
             
             let att = self.__app.__attributeManager.getFromId(id);
-
-            console.log(att);
             
             if(att.__isMult == 1) {
             // if att is multiplier

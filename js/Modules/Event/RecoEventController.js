@@ -55,7 +55,7 @@ class RecoEventController extends EventControllerChild {
         this.__controller.__app.__profileController.evaluate(profileId, "portfolio");
 
         // if news must be printed after event, set news controller to print it
-        if(event.__newsId != 0) {
+        if(event.__newsId && event.__newsId != 0) {
             this.__controller.__app.__newsController.print(event.__newsId);
         }
 

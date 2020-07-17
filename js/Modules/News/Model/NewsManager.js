@@ -1,5 +1,7 @@
 class NewsManager {
     constructor() {
+        this.__fileName = "news";
+        this.__sheetName = "news";
 
         this.__news = [];
         this.__printed = [];
@@ -7,9 +9,18 @@ class NewsManager {
 
     init() {
         // json
+        return new Promise((resolve, reject) => {
 
-        // bad way : /!\ si pas de valeur mettre 0 /!\
-        this.create(1, "Portrait d'une nouvelle idole", "Ce jeune homme sorti de nulle part fait le buzz sur internet. Après cette fameuse vidéo ayant fait des millions de vues ...", 0, 2, 0, 4);
+            $.getJSON('json/' + this.__fileName + '.json', news => {
+
+                news[this.__sheetName].map(jsonNews => this.create(jsonNews.id, jsonNews.title, jsonNews.content, jsonNews.img, jsonNews.lv, jsonNews.launchId, jsonNews.comesFromId));
+
+                resolve();
+            })
+
+            .fail(() => reject(new Error('getJSON error : couldn\'t load : ' + this.__fileName)));
+
+        });
     }
 
     create(id, title, content, img, lv, launchId, comesFromId) {

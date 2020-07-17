@@ -1,0 +1,13 @@
+{
+  "news": [
+    {
+      "id": 1,
+      "title": "Ils croient pouvoir faire carrière sur internet",
+      "content": "Portraits de jeunes hommes et femmes déçus par les perspectives du métier d'influenceur",
+      "img": null,
+      "lv": 2,
+      "launchId": null,
+      "comesFromId": 4
+    }
+  ]
+}

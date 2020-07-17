@@ -16,11 +16,10 @@ class NewsController extends AppChild {
         // if newsId is definied, get news
             let news = this.__app.__newsManager.getNewsFromId(newsId);
 
-            console.log(news);
             // gather data and check if an event must be launched
             if(this.__app.__player.__level >= news.__lv) {
-                console.log(news);
-                if(news.__launchId != 0) {
+
+                if(news.__launchId) {
                     this.__app.__eventController.__macroController.launch(news.__launchId);
                 }
 

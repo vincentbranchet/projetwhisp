@@ -1,0 +1,66 @@
+{
+  "recos": [
+    {
+      "id": 1,
+      "name": "Promouvoir",
+      "desc": "Vous méritez un nouveau poste !",
+      "cld": 10,
+      "evtId": null,
+      "newsId": null,
+      "required": [
+        2,
+        3
+      ],
+      "forbidden": null
+    },
+    {
+      "id": 2,
+      "name": "Relooker",
+      "desc": "Envie de s'embellir ?",
+      "cld": 10,
+      "evtId": 1,
+      "newsId": null,
+      "required": "1",
+      "forbidden": null
+    },
+    {
+      "id": 3,
+      "name": "Débaucher",
+      "desc": "Vos talents peuvent rapporter gros",
+      "cld": 15,
+      "evtId": 2,
+      "newsId": null,
+      "required": [
+        3,
+        4
+      ],
+      "forbidden": "2"
+    },
+    {
+      "id": 4,
+      "name": "Organiser une fête",
+      "desc": "Une idée pour cultiver vos relations sociales",
+      "cld": 12,
+      "evtId": 3,
+      "newsId": null,
+      "required": [
+        2,
+        6
+      ],
+      "forbidden": null
+    },
+    {
+      "id": 5,
+      "name": "Devenir Influenceur",
+      "desc": "Montrez votre vie de rêve à tout le monde !",
+      "cld": 30,
+      "evtId": 4,
+      "newsId": null,
+      "required": [
+        4,
+        1
+      ],
+      "forbidden": null
+    }
+  ]
+}

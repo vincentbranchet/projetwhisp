@@ -1,10 +1,24 @@
 class RecoManager {
     constructor() {
+        this.__fileName = "recos";
+        this.__sheetName = "recos";
+
         this.__recos = [];
     }
 
     init() {
         // get from json
+        return new Promise((resolve, reject) => {
+
+            $.getJSON('json/' + this.__fileName + '.json', recos => {
+
+                recos[this.__sheetName].map(reco => this.create(reco.id, reco.name, reco.desc, reco.cld, reco.evtId, reco.newsId, reco.required, reco.forbidden));
+
+                resolve();
+            })
+
+            .fail(() => reject(new Error('getJSON error : couldn\'t load : ' + this.__fileName)));
+        });
 
         // bad way : IF ABSENT SET TO 0
         this.create(1, "Promouvoir", "Vous méritez un nouveau poste !", 10);
@@ -20,8 +34,18 @@ class RecoManager {
         this.__recos[4].fillRequired(4, 1);
     }
 
-    create(id, name, desc, cld, evtId, newsId) {
-        this.__recos.push(new Reco(id, name, desc, cld, evtId, newsId));
+    create(id, name, desc, cld, evtId, newsId, required, forbidden) {
+        let reco = new Reco(id, name, desc, cld, evtId, newsId);
+
+        if(required) {
+            reco.fillRequired(required);
+        }
+
+        if(forbidden) {
+            reco.fillForbidden(forbidden);
+        }
+        
+        this.__recos.push(reco);
     }
 
     getFromId(recoId) {
