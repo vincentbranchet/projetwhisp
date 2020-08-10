@@ -2,7 +2,7 @@
   "recos": [
     {
       "id": 1,
-      "name": "Promouvoir",
+      "name": "Procoquillemouvoir",
       "desc": "Vous méritez un nouveau poste !",
       "cld": 10,
       "evtId": null,
@@ -61,6 +61,16 @@
         1
       ],
       "forbidden": null
+    },
+    {
+      "id": 6,
+      "name": "Tumbalata",
+      "desc": "LA RECO QUI DOIT DISPARAITRE",
+      "cld": 3,
+      "evtId": 5,
+      "newsId": null,
+      "required": "1",
+      "forbidden": "8"
     }
   ]
 }

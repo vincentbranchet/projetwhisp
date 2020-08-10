@@ -15,7 +15,7 @@ class RecoEventManager extends EventManagerChild {
             $.getJSON('json/' + this.__fileName + '.json', events => {
 
                 events[this.__sheetName].map(event => this.create(event.id, event.name, event.delay, event.recoId, event.newsId, event.toDelete, event.toSpawn));
-
+                console.log(this);
                 resolve();
             })
 

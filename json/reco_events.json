@@ -2,7 +2,7 @@
   "reco_events": [
     {
       "id": 1,
-      "name": "Relooking",
+      "name": "Relouking",
       "delay": 5,
       "recoId": 2,
       "newsId": null,
@@ -35,6 +35,15 @@
       "newsId": 1,
       "toDelete": null,
       "toSpawn": null
+    },
+    {
+      "id": 5,
+      "name": "TumbaLata",
+      "delay": 3,
+      "recoId": 6,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": 8
     }
   ]
 }

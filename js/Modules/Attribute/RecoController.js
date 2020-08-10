@@ -6,21 +6,24 @@ class RecoController extends AppChild {
     getAvailableOf(profile) {
         // returns available recos ids
         let profileAttId = profile.__attributes;
+        console.log(profile);
         
         let availableRecoId = [];
 
         this.__app.__recoManager.__recos.forEach(reco => {
         // for each reco in the game
-        
             let totalRequired = reco.__required.length;
             let requiredAvailable = 0; // required attributes present in profile
             let hasForbidden = 0; // forbidden attributes present in profile
             
             for(let z = 0; z < reco.__forbidden.length; z++) {
             // and each of their forbidden attributes
-                if(profileAttId[z] == reco.__forbidden[z]) {
-                // see if forbidden attribute is found in profile array
-                    hasForbidden = profileAttId[z];
+                for(let x = 0; x < profileAttId.length; x++) {
+                // see if attribute is found in profile attributes array
+                    if(profileAttId[x] == reco.__forbidden[z]) {
+                    // if found, increment number of forbidden attributes found
+                        hasForbidden++;
+                    }
                 }
             }
             if(hasForbidden == 0) {
@@ -34,7 +37,7 @@ class RecoController extends AppChild {
                             requiredAvailable++;
                         }
                     }
-                    }
+                }
             }
 
             if(requiredAvailable == totalRequired) {

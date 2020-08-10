@@ -2,7 +2,7 @@
   "attributes": [
     {
       "id": 1,
-      "name": "Cool",
+      "name": "Coolos",
       "value": 100,
       "eventId": 0,
       "isMult": 0,
@@ -26,7 +26,7 @@
     },
     {
       "id": 4,
-      "name": "Riche",
+      "name": "Richou",
       "value": 1000,
       "eventId": 0,
       "isMult": 0,
@@ -52,6 +52,14 @@
       "id": 7,
       "name": "Nouveau Job",
       "value": 600,
+      "eventId": 0,
+      "isMult": 0,
+      "multRate": 0
+    },
+    {
+      "id": 8,
+      "name": "Spawn",
+      "value": 500,
       "eventId": 0,
       "isMult": 0,
       "multRate": 0
