@@ -18,11 +18,11 @@ class ShopUIController extends ControllerChild {
         this.__controller.__app.__profileController.updateShop();
 
         htmlTitle = document.createElement("p");
-        htmlTitle.innerText = "A VENDRE";
+        htmlTitle.innerText = "DISPONIBLE";
         self.__shopWrapper.append(htmlTitle);
         
         //for each profile in shop, create dom elt and add it to shop wrapper
-        this.__controller.__app.__shopManager.__profiles.forEach(profile => {
+        this.__controller.__app.__shopManager.__inShop.forEach(profile => {
             
             htmlProfile = document.createElement("div");
             htmlProfile.id = "profile_" + profile.__id;

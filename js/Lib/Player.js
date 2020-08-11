@@ -1,14 +1,14 @@
 class Player {
     constructor() {
         this.__portfolioValue = 0;
-        this.__cashValue = 500;
         this.__level = 1;
+        this.__xp = 0;
         this.__gameTime = new Timer();
     }
 
     //setters
-    set cashValue(newCash) { // round to 2 decimal max
-        this.__cashValue = Math.round(newCash * 100) / 100;
+    set xp(newXp) { // round to 2 decimal max
+        this.__xp = Math.round(newXp * 100) / 100;
     }
     set portfolioValue(newPv) {
         this.__portfolioValue = newPv;
@@ -21,8 +21,8 @@ class Player {
     get portfolioValue() {
         return this.__portfolioValue;
     }
-    get cashValue() {
-        return this.__cashValue;
+    get xp() {
+        return this.__xp;
     }
     get level() {
         return this.__level;

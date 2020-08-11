@@ -7,7 +7,7 @@ class ProfileController extends AppChild {
     updateShop() {
         let self = this;
 
-        this.__app.__shopManager.__profiles.forEach(profile => {
+        this.__app.__shopManager.__inShop.forEach(profile => {
             self.evaluate(profile.__id, "shop");
         });
     }
@@ -31,17 +31,17 @@ class ProfileController extends AppChild {
             profile = this.__app.__portfolioManager.getFromId(profileId);
 
         profile.value = 0;
-        
         profile.__attributes.forEach(id => {
-            
             let att = self.__app.__attributeManager.getFromId(id);
-            
-            if(att.__isMult == 1) {
-            // if att is multiplier
-                multBy = multBy * att.__multRate;
-            }
-            else {
-                profile.value = profile.__value + att.__value;
+
+            if(att) {
+                if(att.__isMult == 1) {
+                // if att is multiplier
+                    multBy = multBy * att.__multRate;
+                }
+                else {
+                    profile.value = profile.__value + att.__value;
+                }
             }
         });
 

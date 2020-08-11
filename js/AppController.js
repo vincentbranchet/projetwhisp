@@ -5,14 +5,16 @@ class AppController extends AppChild {
 
     init() {
         var self = this;
+        this.__app.__shopController.updateProfiles();
+
         // start tick
         setInterval(function() {
-            self.yieldCash();
+            self.yieldXp();
             self.checkIfLvUp();
             self.__app.__eventController.__recoController.scan();
             self.__app.__eventController.__nativeController.scanToResolve();
             self.__app.__portfolioController.updateValue();
-            self.__app.__UIController.printHeader(); // refresh portfolio/cash/lv values
+            self.__app.__UIController.printHeader(); // refresh portfolio/lv values
             self.__app.__UIController.__portfolioUIController.refresh(); // refresh portfolio content (profile clds)
             
         }, self.__app.__config.__tickTime);
@@ -20,22 +22,32 @@ class AppController extends AppChild {
         this.__app.__player.__gameTime.start();
     }
 
-    yieldCash() {
-        let level = this.__app.__levelsManager.getFromId(this.__app.__player.__level);
-        let earnings = level.__cash;
+    yieldXp() {
+        let lv = this.__app.__levelsManager.getFromId(this.__app.__player.__level);
+        let earnings = this.__app.__player.__portfolioValue;
+        
+        if(this.__app.__player.__xp < lv.__xpCap) {
+            this.__app.__player.__xp = this.__app.__player.__xp + earnings;
+        }
 
-        if(earnings) {
-            this.__app.__player.__cashValue = this.__app.__player.__cashValue + earnings;
+        if(this.__app.__player.__xp > lv.__xpCap) {
+        // if xp tick overloads threshold, level to cap
+            this.__app.__player.__xp = lv.__xpCap;
         }
     }
 
     checkIfLvUp() {
-        let nextLv = this.__app.__levelsManager.getNextOf(this.__app.__player.__level);
+        let lv = this.__app.__levelsManager.getFromId(this.__app.__player.__level);
 
-        if(this.__app.__player.__portfolioValue >= nextLv.__thrs) {
+        if(this.__app.__player.__xp >= lv.__xpCap) {
 
             this.__app.__player.__level = this.__app.__player.__level + 1;
+
+            this.__app.__player.__xp = 0;
+    
             this.__app.__UIController.levelUp();
+            
+            this.__app.__shopController.updateProfiles();
         }
     }
 }

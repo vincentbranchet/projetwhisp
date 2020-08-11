@@ -92,12 +92,15 @@ class ProfileUIController extends ControllerChild {
             let att = self.__controller.__app.__attributeManager.getFromId(id);
             let htmlAtt = document.createElement("p");
 
-            if(att.__isMult == 1) {
-                htmlAtt.innerText = att.__name + " (x" + att.__multRate + ")";
+            if(att) {
+                if(att.__isMult == 1) {
+                    htmlAtt.innerText = att.__name + " (x" + att.__multRate + ")";
+                }
+                else {
+                    htmlAtt.innerText = att.__name + " (" + att.__value + ")";
+                }
             }
-            else {
-                htmlAtt.innerText = att.__name + " (" + att.__value + ")";
-            }
+
             self.__profileVitrineWrapper.append(htmlAtt);
         });
 

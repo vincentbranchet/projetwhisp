@@ -22,7 +22,6 @@ class RecoEventController extends EventControllerChild {
     }
 
     launch(evtId, profileId) {
-        console.log("launch " + evtId + ", " + profileId);
         let reco = this.__controller.__app.__recoManager.getFromId(evtId);
         let event = this.__controller.__app.__eventManager.__recoManager.getFromId(reco.__evtId);
         let profile = this.__controller.__app.__portfolioManager.getFromId(profileId);

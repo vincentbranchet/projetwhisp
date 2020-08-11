@@ -13,8 +13,9 @@ class AppUIController extends AppChild {
         this.__headerGtSec = $("#gtSec")[0];
         this.__headerLv = $("#lv")[0];
         this.__headerLvTitle = $("#lvTitle")[0];
+        this.__headerXp = $("#xp")[0];
+        this.__headerXpCap = $("#xpCap")[0];
         this.__headerPortfolioValue = $("#pv")[0];
-        this.__headerCashValue = $("#cv")[0];
 
         // menu
         this.__portfolioButton = $(".portfolioButtonWrapper")[0];
@@ -154,10 +155,12 @@ class AppUIController extends AppChild {
         this.__headerGtSec.innerHTML = this.__app.__player.__gameTime.__sec;
 
         this.__headerLv.innerHTML = this.__app.__player.__level;
-       
         this.__headerLvTitle.innerHTML = this.__app.__levelsManager.getTitleOf(this.__app.__player.__level);
+
+        this.__headerXp.innerHTML = this.__app.__player.__xp;
+        this.__headerXpCap.innerHTML = this.__app.__levelsManager.getFromId(this.__app.__player.__level).__xpCap;
+
         this.__headerPortfolioValue.innerHTML = this.__app.__player.portfolioValue;
-        this.__headerCashValue.innerHTML = this.__app.__player.cashValue;
     }
 
     // getters

@@ -11,9 +11,9 @@ class RecoManager {
         return new Promise((resolve, reject) => {
 
             $.getJSON('json/' + this.__fileName + '.json', recos => {
-                console.log(recos);
+
                 recos[this.__sheetName].map(reco => this.create(reco.id, reco.name, reco.desc, reco.cld, reco.evtId, reco.newsId, reco.required, reco.forbidden));
-                console.log(this);
+
                 resolve();
             })
 

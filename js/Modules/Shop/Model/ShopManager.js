@@ -4,9 +4,9 @@ class ShopManager {
         this.__sheetName = "profiles";
 
         this.__profiles = [];
+        this.__inShop = [];
     }
 
-    
     init() {
 
         return new Promise((resolve, reject) => {
@@ -20,10 +20,6 @@ class ShopManager {
 
             .fail(() => reject(new Error()));
         });
-
-        this.create(1, "Thomas", 1, 2);
-        this.create(2, "Virginie");
-        this.create(3, "Zafar", 3, 4, 5);
     }
 
     create(id, name, ...attIds) {
@@ -60,9 +56,13 @@ class ShopManager {
     set profiles(profiles) {
         this.__profiles = profiles;
     }
+
     //getters
     get profiles() {
         return this.__profiles;
     }
 
+    get inShop() {
+        return this.__inShop;
+    }
 }

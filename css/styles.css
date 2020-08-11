@@ -12,7 +12,7 @@
     flex-direction: column;
 }
 
-.gtWrapper, .lvWrapper, .pvWrapper, .cvWrapper {
+.gtWrapper, .lvWrapper, .pvWrapper, .xpWrapper {
     height: 25%;
 }
 

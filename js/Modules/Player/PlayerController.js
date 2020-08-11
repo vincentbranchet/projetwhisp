@@ -7,9 +7,7 @@ class PlayerController extends AppChild {
 
         let profile = this.__app.__shopManager.getFromId(profileId);
 
-        if(profile instanceof Profile && this.__app.__player.__cashValue >= profile.__value) {
-
-            this.__app.__player.__cashValue = Math.round(this.__app.__player.__cashValue - profile.__value * 100) / 100;
+        if(profile instanceof Profile) {
 
             this.__app.__portfolioController.add(profile);
             this.__app.__portfolioController.updateValue();
@@ -29,8 +27,6 @@ class PlayerController extends AppChild {
         let profile = this.__app.__portfolioManager.getFromId(profileId);
 
         if(profile instanceof Profile) {
-
-            this.__app.__player.__cashValue = this.__app.__player.__cashValue + profile.__value;
 
             this.__app.__portfolioController.remove(profile);
             this.__app.__portfolioController.updateValue();

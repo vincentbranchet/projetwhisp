@@ -2,51 +2,54 @@
   "levels": [
     {
       "id": 1,
-      "thrs": 0,
+      "xpCap": 10000,
       "title": "Fer",
-      "cash": 10
+      "profiles": [
+        1,
+        2
+      ]
     },
     {
       "id": 2,
-      "thrs": 100,
+      "xpCap": 20000,
       "title": "Bronze",
-      "cash": 20
+      "profiles": "3"
     },
     {
       "id": 3,
-      "thrs": 500,
+      "xpCap": 50000,
       "title": "Argent",
-      "cash": 50
+      "profiles": ""
     },
     {
       "id": 4,
-      "thrs": 1000,
+      "xpCap": 100000,
       "title": "Or",
-      "cash": 100
+      "profiles": ""
     },
     {
       "id": 5,
-      "thrs": 1500,
+      "xpCap": 200000,
       "title": "Diamant",
-      "cash": 200
+      "profiles": ""
     },
     {
       "id": 6,
-      "thrs": 2000,
+      "xpCap": 500000,
       "title": "Platine",
-      "cash": 500
+      "profiles": ""
     },
     {
       "id": 7,
-      "thrs": 3000,
+      "xpCap": 1000000,
       "title": "Maître",
-      "cash": 1000
+      "profiles": ""
     },
     {
       "id": 8,
-      "thrs": 100000,
+      "xpCap": 2000000,
       "title": "Grand Maître",
-      "cash": 10000
+      "profiles": ""
     }
   ]
 }

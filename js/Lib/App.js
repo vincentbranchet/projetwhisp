@@ -26,7 +26,6 @@ class App {
     }
 
     init() {
-        this.__player.__cashValue = this.__config.__cashStart;
 
         this.__levelsManager.init()
             .then(() => this.__attributeManager.init())
@@ -38,8 +37,4 @@ class App {
             .then(() => this.__UIController.initMenu())
             .catch(err => console.log(err));
     }
-
-    //setters
-
-    //getters
 }

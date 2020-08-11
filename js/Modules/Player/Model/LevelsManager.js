@@ -12,8 +12,8 @@ class LevelsManager {
         return new Promise((resolve, reject) => {
 
             $.getJSON('json/' + this.__fileName + '.json', levels => {
-                
-                levels[this.__sheetName].map(level => this.__levels.push(new Level(level.id, level.thrs, level.title, level.cash)));
+
+                levels[this.__sheetName].map(level => this.__levels.push(new Level(level.id, level.title, level.xpCap, level.profiles)));
 
                 resolve();
             })
@@ -30,14 +30,6 @@ class LevelsManager {
         }       
     }
 
-    getNextOf(lv) {
-        for(let i = 0; i < this.__levels.length; i++) {
-            if(this.__levels[i].__id == lv) {
-                return this.__levels[i+1];
-            }
-        }
-    }
-
     getFromId(id) {
         let target;
         this.__levels.forEach(lv => {
@@ -46,10 +38,6 @@ class LevelsManager {
             }                
         });
         return target;   
-    }
-
-    create(id, thrs, title, cash) {
-        this.__levels.push(new Level(id, thrs, title, cash));
     }
 
     get levels() {

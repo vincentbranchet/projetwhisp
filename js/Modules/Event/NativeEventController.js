@@ -72,7 +72,6 @@ class NativeEventController extends EventControllerChild {
             if(profile.__launchedNative.length >= 1) {
             // and through profiles launched native events
                 for(let event of profile.__launchedNative) {
-                    console.log(profile.__name, event.__timer.__duration);
                 // check if event timer >= delay
                     if(event.__timer.__duration >= event.__delay) {
                     // if so, resolve event 

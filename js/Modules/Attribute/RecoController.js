@@ -6,7 +6,6 @@ class RecoController extends AppChild {
     getAvailableOf(profile) {
         // returns available recos ids
         let profileAttId = profile.__attributes;
-        console.log(profile);
         
         let availableRecoId = [];
 

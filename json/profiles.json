@@ -2,7 +2,7 @@
   "profiles": [
     {
       "id": 1,
-      "name": "Paulito",
+      "name": "Paul",
       "attributes": [
         1,
         2
@@ -11,7 +11,7 @@
     {
       "id": 2,
       "name": "Jeanne",
-      "attributes": null
+      "attributes": "0"
     },
     {
       "id": 3,

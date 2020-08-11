@@ -8,7 +8,6 @@ class NewsUIController extends ControllerChild {
     }
 
     refresh() {
-        console.log("news UI refresh");
         this.clear();
         this.printAll();
     }
@@ -20,13 +19,10 @@ class NewsUIController extends ControllerChild {
         news = this.__controller.__app.__newsManager.__printed;
         notifs = this.__controller.__app.__notificationManager.__printed;
         merge = news.concat(notifs);
-        console.log(merge);
 
         // SORT NEWS AND NOTIFS BY DATE
         merge.sort((a, b) => b.date - a.date);
 
-        console.log(merge);
-        
         htmltitle = document.createElement("p");
         htmltitle.innerText = "LES ACTUALITES";
 

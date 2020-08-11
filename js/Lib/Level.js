@@ -1,21 +1,25 @@
 class Level {
-    constructor(id, thrs, title, cash) {
+    constructor(id, title, xpCap, profiles) {
         this.__id = id;
-        this.__thrs = thrs;
         this.__title = title;
-        this.__cash = cash;
+        this.__xpCap = xpCap;
+        this.__profiles = profiles; // profile ids to spawn in shop at lv up
+        this.__hasSpawned = 0;
     }
 
     get id() {
         return this.__id;
     }
-    get thrs() {
-        return this.__thrs;
-    }
     get title() {
         return this.__title;
     }
-    get cash() {
-        return this.__cash;
+    get xpCap() {
+        return this.__xpCap;
+    }
+    get profiles() {
+        return this.__profiles;
+    }
+    get hasSpawn() {
+        return this.__hasSpawned;
     }
 }
