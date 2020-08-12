@@ -34,6 +34,7 @@ class App {
             .then(() => this.__recoManager.init())
             .then(() => this.__newsManager.init())
             .then(() => this.__appController.init())
+            .then(() => this.__portfolioManager.init())
             .then(() => this.__UIController.initMenu())
             .catch(err => console.log(err));
     }

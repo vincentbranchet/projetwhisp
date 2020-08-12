@@ -3,6 +3,10 @@ class PortfolioController extends AppChild {
         super(app);
     }
 
+    newSlot() {
+        this.__app.__portfolioManager.slots++;
+    }
+
     updateValue() {
         var self = this;
         self.__app.__player.__portfolioValue = 0;
@@ -20,8 +24,11 @@ class PortfolioController extends AppChild {
     }
 
     add(profile) {
-        if(profile instanceof Profile)
+        if(profile instanceof Profile && this.__app.__portfolioManager.__used < this.__app.__portfolioManager.__slots) {
             this.__app.__portfolioManager.__profiles.push(profile);
+
+            this.__app.__portfolioManager.used++;
+        }
     }
 
     remove(target) {
@@ -31,6 +38,8 @@ class PortfolioController extends AppChild {
                 if(profile.__id == target.__id) {
                     let targetIndex = self.__app.__portfolioManager.__profiles.indexOf(profile);
                     self.__app.__portfolioManager.__profiles.splice(targetIndex, 1);
+
+                    this.__app.__portfolioManager.used--;
                 }
             });
         }

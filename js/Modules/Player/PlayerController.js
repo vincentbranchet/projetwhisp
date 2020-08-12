@@ -7,7 +7,7 @@ class PlayerController extends AppChild {
 
         let profile = this.__app.__shopManager.getFromId(profileId);
 
-        if(profile instanceof Profile) {
+        if(profile instanceof Profile && this.__app.__portfolioManager.__used < this.__app.__portfolioManager.__slots) {
 
             this.__app.__portfolioController.add(profile);
             this.__app.__portfolioController.updateValue();
@@ -19,6 +19,9 @@ class PlayerController extends AppChild {
             this.__app.__portfolioController.updateValue();
             this.__app.__eventController.__recoController.scan();
             this.__app.__UIController.toPortfolio();
+        }
+        else {
+            this.__app.__notificationController.print("Votre portfolio manque de place. Sortez un profil ou gagnez un niveau.");
         }
     }
 

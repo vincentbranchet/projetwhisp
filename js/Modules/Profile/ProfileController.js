@@ -3,7 +3,6 @@ class ProfileController extends AppChild {
         super(app);
     }
 
-    
     updateShop() {
         let self = this;
 

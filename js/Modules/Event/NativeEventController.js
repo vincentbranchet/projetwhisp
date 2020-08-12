@@ -56,7 +56,7 @@ class NativeEventController extends EventControllerChild {
             //check if profile has native events
             for(let attId of profile.__attributes) {
                 let att = this.__controller.__app.__attributeManager.getFromId(attId);
-                if(att.__eventId > 0) {
+                if(att && att.__eventId > 0) {
                 //if profile attribute has native event, launch it
                     self.launch(att.__eventId, profile.__id);
                 }

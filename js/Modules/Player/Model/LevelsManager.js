@@ -12,9 +12,9 @@ class LevelsManager {
         return new Promise((resolve, reject) => {
 
             $.getJSON('json/' + this.__fileName + '.json', levels => {
-
-                levels[this.__sheetName].map(level => this.__levels.push(new Level(level.id, level.title, level.xpCap, level.profiles)));
-
+                console.log(levels);
+                levels[this.__sheetName].map(level => this.__levels.push(new Level(level.id, level.title, level.xpCap, level.profiles, level.newSlot)));
+                console.log(this);
                 resolve();
             })
 

@@ -41,13 +41,23 @@ class AppController extends AppChild {
 
         if(this.__app.__player.__xp >= lv.__xpCap) {
 
-            this.__app.__player.__level = this.__app.__player.__level + 1;
-
             this.__app.__player.__xp = 0;
-    
-            this.__app.__UIController.levelUp();
+
+            if(lv.__newSlot == 1) {
+                this.__app.__portfolioController.newSlot();
+                this.__app.__notificationController.print("Un nouvel emplacement de profil a été ajouté à votre portfolio.");
+            }
+
+            this.__app.__player.__level = this.__app.__player.__level + 1;
             
-            this.__app.__shopController.updateProfiles();
+            if(lv.__profiles && Array.isArray(lv.__profiles)) {
+            // profiles of CURRENT LV will be added, that's why we increment lv before
+                this.__app.__shopController.updateProfiles();
+                this.__app.__notificationController.print("De nouveaux profils sont disponibles.");
+            }
+
+            
+            this.__app.__UIController.levelUp();
         }
     }
 }

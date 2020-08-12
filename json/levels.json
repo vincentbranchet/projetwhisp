@@ -7,49 +7,57 @@
       "profiles": [
         1,
         2
-      ]
+      ],
+      "newSlot": 0
     },
     {
       "id": 2,
       "xpCap": 20000,
       "title": "Bronze",
-      "profiles": "3"
+      "profiles": "3",
+      "newSlot": 1
     },
     {
       "id": 3,
       "xpCap": 50000,
       "title": "Argent",
-      "profiles": ""
+      "profiles": "",
+      "newSlot": 0
     },
     {
       "id": 4,
       "xpCap": 100000,
       "title": "Or",
-      "profiles": ""
+      "profiles": "",
+      "newSlot": 0
     },
     {
       "id": 5,
       "xpCap": 200000,
       "title": "Diamant",
-      "profiles": ""
+      "profiles": "",
+      "newSlot": 0
     },
     {
       "id": 6,
       "xpCap": 500000,
       "title": "Platine",
-      "profiles": ""
+      "profiles": "",
+      "newSlot": 0
     },
     {
       "id": 7,
       "xpCap": 1000000,
       "title": "Maître",
-      "profiles": ""
+      "profiles": "",
+      "newSlot": 0
     },
     {
       "id": 8,
       "xpCap": 2000000,
       "title": "Grand Maître",
-      "profiles": ""
+      "profiles": "",
+      "newSlot": 0
     }
   ]
 }
