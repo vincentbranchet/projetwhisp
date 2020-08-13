@@ -49,13 +49,13 @@ class AppController extends AppChild {
             }
 
             this.__app.__player.__level = this.__app.__player.__level + 1;
-            
-            if(lv.__profiles && Array.isArray(lv.__profiles)) {
+            lv = this.__app.__levelsManager.getFromId(this.__app.__player.__level); // update var
+
+            if(lv.__profiles != "" && lv.__profiles != null) {
             // profiles of CURRENT LV will be added, that's why we increment lv before
                 this.__app.__shopController.updateProfiles();
                 this.__app.__notificationController.print("De nouveaux profils sont disponibles.");
             }
-
             
             this.__app.__UIController.levelUp();
         }

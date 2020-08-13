@@ -4,31 +4,28 @@
       "id": 1,
       "xpCap": 10000,
       "title": "Fer",
-      "profiles": [
-        1,
-        2
-      ],
+      "profiles": "1",
       "newSlot": 0
     },
     {
       "id": 2,
       "xpCap": 20000,
       "title": "Bronze",
-      "profiles": "3",
+      "profiles": "",
       "newSlot": 1
     },
     {
       "id": 3,
       "xpCap": 50000,
       "title": "Argent",
-      "profiles": "",
+      "profiles": "3",
       "newSlot": 0
     },
     {
       "id": 4,
       "xpCap": 100000,
       "title": "Or",
-      "profiles": "",
+      "profiles": "2",
       "newSlot": 0
     },
     {
