@@ -1,5 +1,5 @@
 class Reco {
-    constructor(id, name, desc, cld, evtId) {
+    constructor(id, name, desc, cld, evtId, newsId) {
         this.__id = id;
         this.__name = name;
         this.__desc = desc;
@@ -8,6 +8,7 @@ class Reco {
         this.__isActive = 0;
         this.__required = []; // att ids required to show reco
         this.__forbidden = []; // att ids forbidden for reco to show
+        this.__newsId = newsId; // news id required to show reco
     }
 
     // id nom desc cld evt req(2, 24, 152) forb(3)
@@ -41,6 +42,9 @@ class Reco {
     }
     get forbidden() {
         return this.__forbidden;
+    }
+    get newsId() {
+        return this.__newsRequired;
     }
     get id() {
         return this.__id;

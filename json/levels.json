@@ -4,57 +4,68 @@
       "id": 1,
       "xpCap": 10000,
       "title": "Fer",
-      "profiles": "1",
-      "newSlot": 0
+      "profiles": [
+        1,
+        2
+      ],
+      "newSlot": 0,
+      "printId": ""
     },
     {
       "id": 2,
       "xpCap": 20000,
       "title": "Bronze",
-      "profiles": "",
-      "newSlot": 1
+      "profiles": "3",
+      "newSlot": 1,
+      "printId": ""
     },
     {
       "id": 3,
       "xpCap": 50000,
       "title": "Argent",
-      "profiles": "3",
-      "newSlot": 0
+      "profiles": "",
+      "newSlot": 0,
+      "printId": 2
     },
     {
       "id": 4,
       "xpCap": 100000,
       "title": "Or",
-      "profiles": "2",
-      "newSlot": 0
+      "profiles": "",
+      "newSlot": 0,
+      "printId": ""
     },
     {
       "id": 5,
       "xpCap": 200000,
       "title": "Diamant",
       "profiles": "",
-      "newSlot": 0
+      "newSlot": 0,
+      "printId": ""
     },
     {
       "id": 6,
       "xpCap": 500000,
       "title": "Platine",
       "profiles": "",
-      "newSlot": 0
+      "newSlot": 0,
+      "printId": ""
     },
     {
       "id": 7,
       "xpCap": 1000000,
       "title": "Maître",
       "profiles": "",
-      "newSlot": 0
+      "newSlot": 0,
+      "printId": ""
     },
     {
       "id": 8,
       "xpCap": 2000000,
       "title": "Grand Maître",
       "profiles": "",
-      "newSlot": 0
+      "newSlot": 0,
+      "printId": ""
     }
   ]
 }

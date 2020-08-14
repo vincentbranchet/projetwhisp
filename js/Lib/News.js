@@ -1,11 +1,12 @@
 class News {
-    constructor(id, title, content, img, lv = 0, launchId = 0, comesFromId = 0) {
+    constructor(id, title, content, img, delay, lv = 0, launchId = 0, comesFromId = 0) {
         this.__id = id;
         this.__title = title;
         this.__content = content;
         this.__img = img;
+        this.__delay = delay;
         this.__lv = lv; // player lv condition
-        this.__launchId = launchId; // id of event to launch with this news
+        this.__launchId = launchId; // id of macro event to launch with this news
         this.__comesFromId = comesFromId; // id of event which launched this news
         this.__wasPrinted = 0;
         this.__date = 0;
@@ -26,6 +27,9 @@ class News {
     }
     get img() {
         return this.__img;
+    }
+    get delay() {
+        return this.__delay;
     }
     get lv() {
         return this.__lv;

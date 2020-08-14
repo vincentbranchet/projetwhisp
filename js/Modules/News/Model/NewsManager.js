@@ -12,9 +12,9 @@ class NewsManager {
         return new Promise((resolve, reject) => {
 
             $.getJSON('json/' + this.__fileName + '.json', news => {
-
-                news[this.__sheetName].map(jsonNews => this.create(jsonNews.id, jsonNews.title, jsonNews.content, jsonNews.img, jsonNews.lv, jsonNews.launchId, jsonNews.comesFromId));
-
+                console.log(news);
+                news[this.__sheetName].map(jsonNews => this.create(jsonNews.id, jsonNews.title, jsonNews.content, jsonNews.img, jsonNews.delay, jsonNews.lv, jsonNews.launchId, jsonNews.comesFromId));
+                console.log(this);
                 resolve();
             })
 
@@ -23,8 +23,8 @@ class NewsManager {
         });
     }
 
-    create(id, title, content, img, lv, launchId, comesFromId) {
-        this.__news.push(new News(id, title, content, img, lv, launchId, comesFromId));
+    create(id, title, content, img, delay, lv, launchId, comesFromId) {
+        this.__news.push(new News(id, title, content, img, delay, lv, launchId, comesFromId));
     }
 
     getNewsFromId(newsId) {

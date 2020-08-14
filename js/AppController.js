@@ -40,10 +40,11 @@ class AppController extends AppChild {
         let lv = this.__app.__levelsManager.getFromId(this.__app.__player.__level);
 
         if(this.__app.__player.__xp >= lv.__xpCap) {
-
+        // if player has reached xp objective
             this.__app.__player.__xp = 0;
 
             if(lv.__newSlot == 1) {
+            // if lv spawns new portfolio slot
                 this.__app.__portfolioController.newSlot();
                 this.__app.__notificationController.print("Un nouvel emplacement de profil a été ajouté à votre portfolio.");
             }
@@ -52,9 +53,14 @@ class AppController extends AppChild {
             lv = this.__app.__levelsManager.getFromId(this.__app.__player.__level); // update var
 
             if(lv.__profiles != "" && lv.__profiles != null) {
-            // profiles of CURRENT LV will be added, that's why we increment lv before
+            // if lv spawns new shop profiles : profiles of CURRENT LV will be added, that's why we increment lv before
                 this.__app.__shopController.updateProfiles();
                 this.__app.__notificationController.print("De nouveaux profils sont disponibles.");
+            }
+
+            if(lv.__printId != "" && lv.__printId != null && lv.__printId != undefined) {
+            // if lv spawns news
+                this.__app.__newsController.print(lv.__printId);
             }
             
             this.__app.__UIController.levelUp();

@@ -14,6 +14,7 @@ class RecoController extends AppChild {
             let totalRequired = reco.__required.length;
             let requiredAvailable = 0; // required attributes present in profile
             let hasForbidden = 0; // forbidden attributes present in profile
+            let newsControl = 0; // required published news bool control
             
             for(let z = 0; z < reco.__forbidden.length; z++) {
             // and each of their forbidden attributes
@@ -39,7 +40,25 @@ class RecoController extends AppChild {
                 }
             }
 
-            if(requiredAvailable == totalRequired) {
+            if(reco.__newsId != "" && reco.__newsId != null && reco.__newsId != undefined) {
+            // if news is required to print reco
+                let news = this.__app.__newsManager.getNewsFromId(reco.__newsId);
+
+                if(news && news.__wasPrinted == 1) {
+                // if required news exists in the game & was printed, pass news control
+                    newsControl = 1;
+                }
+                else {
+                // if required news doesn't exist or wasn't printed yet, don't pass news control
+                    newsControl = 0;
+                }
+            }
+            else if(reco.__newsId == "" || reco.__newsId == null || reco.__newsId == undefined) {
+            // if no news is required to print reco, pass news control
+                newsControl = 1;
+            }
+
+            if(requiredAvailable == totalRequired && newsControl == 1) {
             // if correct number of required attribute were found (& no forbidden attributes were found)
                 availableRecoId.push(reco.__id);
             }

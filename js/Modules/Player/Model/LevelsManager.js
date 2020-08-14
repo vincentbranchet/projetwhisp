@@ -13,7 +13,7 @@ class LevelsManager {
 
             $.getJSON('json/' + this.__fileName + '.json', levels => {
                 console.log(levels);
-                levels[this.__sheetName].map(level => this.__levels.push(new Level(level.id, level.title, level.xpCap, level.profiles, level.newSlot)));
+                levels[this.__sheetName].map(level => this.__levels.push(new Level(level.id, level.title, level.xpCap, level.profiles, level.newSlot, level.printId)));
                 console.log(this);
                 resolve();
             })

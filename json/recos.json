@@ -2,7 +2,7 @@
   "recos": [
     {
       "id": 1,
-      "name": "Procoquillemouvoir",
+      "name": "Promouvoir",
       "desc": "Vous méritez un nouveau poste !",
       "cld": 10,
       "evtId": null,
@@ -19,7 +19,7 @@
       "desc": "Envie de s'embellir ?",
       "cld": 10,
       "evtId": 1,
-      "newsId": null,
+      "newsId": 1,
       "required": "1",
       "forbidden": null
     },

@@ -5,9 +5,20 @@
       "title": "Ils croient pouvoir faire carrière sur internet",
       "content": "Portraits de jeunes hommes et femmes déçus par les perspectives du métier d'influenceur",
       "img": null,
+      "delay": 3,
       "lv": 2,
       "launchId": null,
       "comesFromId": 4
+    },
+    {
+      "id": 2,
+      "title": "News de Level Up",
+      "content": "Selon nos informations, un joueur aurait passé le niveau trois !",
+      "img": null,
+      "delay": null,
+      "lv": 3,
+      "launchId": null,
+      "comesFromId": null
     }
   ]
 }
