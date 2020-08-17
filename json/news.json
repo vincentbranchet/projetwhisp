@@ -19,6 +19,16 @@
       "lv": 3,
       "launchId": null,
       "comesFromId": null
+    },
+    {
+      "id": 3,
+      "title": "Première news",
+      "content": "Bienvenue et bonne partie !",
+      "img": null,
+      "delay": null,
+      "lv": null,
+      "launchId": null,
+      "comesFromId": null
     }
   ]
 }

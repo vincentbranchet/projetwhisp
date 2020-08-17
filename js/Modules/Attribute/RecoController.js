@@ -58,6 +58,16 @@ class RecoController extends AppChild {
                 newsControl = 1;
             }
 
+            if(reco.__newsForbidden != "" && reco.__newsForbidden != null && reco.__newsForbidden != undefined) {
+            // if news is required NOT to have been published
+                let news = this.__app.__newsManager.getPrintedFromId(reco.__newsForbidden);
+
+                if(news && news.__wasPrinted == 1) {
+                // if said news was published, cancel news control
+                    newsControl = 0;
+                }
+            }
+
             if(requiredAvailable == totalRequired && newsControl == 1) {
             // if correct number of required attribute were found (& no forbidden attributes were found)
                 availableRecoId.push(reco.__id);

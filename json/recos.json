@@ -11,7 +11,8 @@
         2,
         3
       ],
-      "forbidden": null
+      "forbidden": null,
+      "newsForbidden": null
     },
     {
       "id": 2,
@@ -21,7 +22,8 @@
       "evtId": 1,
       "newsId": 1,
       "required": "1",
-      "forbidden": null
+      "forbidden": null,
+      "newsForbidden": null
     },
     {
       "id": 3,
@@ -34,7 +36,8 @@
         3,
         4
       ],
-      "forbidden": "2"
+      "forbidden": "2",
+      "newsForbidden": null
     },
     {
       "id": 4,
@@ -47,7 +50,8 @@
         2,
         6
       ],
-      "forbidden": null
+      "forbidden": null,
+      "newsForbidden": null
     },
     {
       "id": 5,
@@ -60,7 +64,8 @@
         4,
         1
       ],
-      "forbidden": null
+      "forbidden": null,
+      "newsForbidden": null
     },
     {
       "id": 6,
@@ -70,7 +75,8 @@
       "evtId": 5,
       "newsId": null,
       "required": "1",
-      "forbidden": "8"
+      "forbidden": "8",
+      "newsForbidden": 1
     }
   ]
 }

@@ -12,7 +12,7 @@ class RecoManager {
 
             $.getJSON('json/' + this.__fileName + '.json', recos => {
                 console.log(recos);
-                recos[this.__sheetName].map(reco => this.create(reco.id, reco.name, reco.desc, reco.cld, reco.evtId, reco.newsId, reco.required, reco.forbidden));
+                recos[this.__sheetName].map(reco => this.create(reco.id, reco.name, reco.desc, reco.cld, reco.evtId, reco.newsId, reco.required, reco.forbidden, reco.newsForbidden));
                 console.log(this);
                 resolve();
             })
@@ -34,8 +34,8 @@ class RecoManager {
         this.__recos[4].fillRequired(4, 1);
     }
 
-    create(id, name, desc, cld, evtId, newsId, required, forbidden) {
-        let reco = new Reco(id, name, desc, cld, evtId, newsId);
+    create(id, name, desc, cld, evtId, newsId, required, forbidden, newsForbidden) {
+        let reco = new Reco(id, name, desc, cld, evtId, newsId, newsForbidden);
 
         if(required) {
             reco.fillRequired(required);

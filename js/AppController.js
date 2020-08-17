@@ -5,6 +5,12 @@ class AppController extends AppChild {
 
     init() {
         var self = this;
+
+        // LV 1 INJECTION
+        let lv = this.__app.__levelsManager.getFromId(1);
+        if(lv.__printId != "" && lv.__printId != null && lv.__printId != undefined) {
+            this.__app.__newsController.print(lv.__printId);
+        }
         this.__app.__shopController.updateProfiles();
 
         // start tick

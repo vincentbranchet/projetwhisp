@@ -41,7 +41,7 @@ class NativeEventController extends EventControllerChild {
         event.__wasResolved = 1;
 
         let eventIndex = profile.__launchedNative.indexOf(event);
-        profile.__launchedReco.splice(eventIndex, 1);
+        profile.__launchedNative.splice(eventIndex, 1);
         profile.__nativeEvents.push(event);
         
         this.__controller.__app.__notificationController.print("L'attribut " + att.__name + " de " + profile.__name + " a donné lieu à des changements");
