@@ -2,9 +2,9 @@
   "attributes": [
     {
       "id": 1,
-      "name": "Coolos",
+      "name": "Cool",
       "value": 100,
-      "eventId": 0,
+      "events": 1,
       "isMult": 0,
       "multRate": 0
     },
@@ -12,7 +12,7 @@
       "id": 2,
       "name": "Employé",
       "value": 300,
-      "eventId": 1,
+      "events": 1,
       "isMult": 0,
       "multRate": 0
     },
@@ -20,15 +20,15 @@
       "id": 3,
       "name": "Compétent",
       "value": 400,
-      "eventId": 0,
+      "events": 0,
       "isMult": 0,
       "multRate": 0
     },
     {
       "id": 4,
-      "name": "Richou",
+      "name": "Riche",
       "value": 1000,
-      "eventId": 0,
+      "events": 0,
       "isMult": 0,
       "multRate": 0
     },
@@ -36,7 +36,7 @@
       "id": 5,
       "name": "Marié.e",
       "value": 150,
-      "eventId": 0,
+      "events": 0,
       "isMult": 0,
       "multRate": 0
     },
@@ -44,7 +44,7 @@
       "id": 6,
       "name": "Super Cool",
       "value": 200,
-      "eventId": 0,
+      "events": 0,
       "isMult": 1,
       "multRate": 10
     },
@@ -52,7 +52,7 @@
       "id": 7,
       "name": "Nouveau Job",
       "value": 600,
-      "eventId": 0,
+      "events": 0,
       "isMult": 0,
       "multRate": 0
     },
@@ -60,7 +60,7 @@
       "id": 8,
       "name": "Spawn",
       "value": 500,
-      "eventId": 0,
+      "events": 0,
       "isMult": 0,
       "multRate": 0
     }

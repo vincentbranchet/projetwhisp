@@ -13,9 +13,9 @@ class NativeEventManager extends EventManagerChild {
         return new Promise((resolve, reject) => {
 
             $.getJSON('json/' + this.__fileName + '.json', events => {
-
-                events[this.__sheetName].map(event => this.create(event.id, event.name, event.delay, event.attId, event.toDelete, event.toSpawn));
-
+                console.log(events);
+                events[this.__sheetName].map(event => this.create(event.id, event.name, event.delay, event.required, event.toDelete, event.toSpawn));
+                console.log(this);
                 resolve();
             })
 
@@ -23,8 +23,12 @@ class NativeEventManager extends EventManagerChild {
         });
     }
 
-    create(id, name, delay, attId, toDelete, toSpawn) {
-        let event = new NativeEvent(id, name, delay, attId);
+    create(id, name, delay, required, toDelete, toSpawn) {
+        let event = new NativeEvent(id, name, delay);
+
+        if(required) {
+            event.fillRequired(required);
+        }
 
         if(toDelete) {
             event.addToDelete(toDelete);

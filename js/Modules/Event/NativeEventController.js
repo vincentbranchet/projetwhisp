@@ -53,12 +53,91 @@ class NativeEventController extends EventControllerChild {
         var self = this;
 
         this.__controller.__app.__portfolioManager.__profiles.forEach(profile => {
-            //check if profile has native events
-            for(let attId of profile.__attributes) {
-                let att = this.__controller.__app.__attributeManager.getFromId(attId);
-                if(att && att.__eventId > 0) {
-                //if profile attribute has native event, launch it
-                    self.launch(att.__eventId, profile.__id);
+        // for each profile in player's portfolio
+            if(profile.__attributes) {
+                for(let attId of profile.__attributes) {
+                //and each attribute in each profile
+                    let att = this.__controller.__app.__attributeManager.getFromId(attId);
+    
+                    if(att.__events && Array.isArray(att.__events)) {
+                    // if attribute has multiple events
+                        for(let evtId of att.__events) {
+                        // loop through each event
+                            let evt = this.__controller.__app.__eventManager.__nativeManager.getFromId(evtId);
+
+                            if(evt.__required && Array.isArray(evt.__required)) {
+                            // if event has multiple required attributes
+                                let nbRequired = evt.__required.length;
+                                let nbFound = 0;
+
+                                for(let i = 0; i < evt.__required.length; i++) {
+                                // loop through required attributes
+                                    for(let y = 0; y < profile.__attributes.length; y++) {
+                                    // and through profile attributes
+                                        if(evt.__required[i] == profile.__attributes[y]) {
+                                        // if required attribute is found, save it
+                                            nbFound++;
+                                        }
+                                    }                                
+                                }
+
+                                if(nbFound >= nbRequired) {
+                                // if enough required attributes were found, launch event
+                                    self.launch(evt.__id, profile.__id);
+                                    console.log("attribute w/ multiple events, events w/ multiple required"+evt);
+                                }
+                            }
+                            else if(evt.__required) {
+                            // if event has one required attribute
+                                for(let coreAttId of profile.__attributes) {
+                                // loop again through profile attributes
+                                    if(coreAttId == evt.__required) {
+                                    // if required attribute was found, launch event
+                                        self.launch(evt.__id, profile.__id);
+                                        console.log("attribute w/ multiple events, event w/ one required"+evt);
+                                    }
+                                }
+                            }              
+                        }
+                    }
+                    else if(att.__events) {
+                    // if attribute has 1 event
+                        let evt = this.__controller.__app.__eventManager.__nativeManager.getFromId(att.__events);
+
+                        if(evt.__required && Array.isArray(evt.__required)) {
+                        // if event has multiple required attributes
+                            let nbRequired = evt.__required.length;
+                            let nbFound = 0;
+
+                            for(let i = 0; i < evt.__required.length; i++) {
+                            // loop through required attributes
+                                for(let y = 0; y < profile.__attributes.length; y++) {
+                                // and through profile attributes
+                                    if(evt.__required[i] == profile.__attributes[y]) {
+                                    // if required attribute is found, save it
+                                        nbFound++;
+                                    }
+                                }                                
+                            }
+
+                            if(nbFound >= nbRequired) {
+                            // if enough required attributes were found, launch event
+                                self.launch(evt.__id, profile.__id);
+                                console.log("attribute w/ one event, event w/ multiple required"+evt);
+                            }
+                        }
+                        else if(evt.__required) {
+                        // if event has one required attribute
+                            for(let coreAttId of profile.__attributes) {
+                            // loop again through profile attributes
+                                if(coreAttId == evt.__required) {
+                                // if required attribute was found, launch event
+                                    self.launch(evt.__id, profile.__id);
+                                    console.log("attribute w/ one event, event w/ one required"+evt);
+                                }
+                            }
+                        }
+                    }
                 }
             }
         });
