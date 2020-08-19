@@ -25,18 +25,21 @@ class RecoEventController extends EventControllerChild {
         let reco = this.__controller.__app.__recoManager.getFromId(evtId);
         let event = this.__controller.__app.__eventManager.__recoManager.getFromId(reco.__evtId);
         let profile = this.__controller.__app.__portfolioManager.getFromId(profileId);
-        // start timer
-        event.__timer.start();
 
-        // mark as launched and push to profile
-        event.__hasLaunched = 1;
-        profile.__launchedReco.push(event);
+        if(event.__hasLaunched == 0) {
+            // start timer
+            event.__timer.start();
 
-        this.__controller.__app.__UIController.toPortfolio();
+            // mark as launched and push to profile
+            event.__hasLaunched = 1;
+
+            profile.__launchedReco.push(event);
+
+            this.__controller.__app.__UIController.toPortfolio();
+        }
     }
     
     resolve(evtId, profileId) {
-        var self = this;
         let event = this.__controller.__app.__eventManager.__recoManager.getFromId(evtId);
         let reco = this.__controller.__app.__recoManager.getFromId(event.__reco);
         let profile = this.__controller.__app.__portfolioManager.getFromId(profileId);
@@ -44,11 +47,25 @@ class RecoEventController extends EventControllerChild {
         // apply effects to profile
         event.__toDelete.forEach(id => {
             let indexOfAtt = profile.__attributes.indexOf(id);
-            profile.__attributes.splice(indexOfAtt, 1);
+
+            if(indexOfAtt >= 0) {
+            // if target attribute is present in profile 
+                profile.__attributes.splice(indexOfAtt, 1);
+            }
         });
 
         event.__toSpawn.forEach(id => {
-            profile.__attributes.push(id);
+            let alreadyThere = 0;
+            for(let attId of profile.__attributes) {
+                if(attId == id) {
+                    alreadyThere = 1;
+                }
+            }
+
+            if(alreadyThere == 0) {
+            // if target attribute is not yet present in profile
+                profile.__attributes.push(id);
+            }
         });
 
         this.__controller.__app.__profileController.evaluate(profileId, "portfolio");
@@ -62,9 +79,12 @@ class RecoEventController extends EventControllerChild {
         event.__timer.stop();
         event.__timer.reset();
         event.__wasResolved = 1; 
-        let eventIndex = profile.__launchedReco.indexOf(event);
-        profile.__launchedReco.splice(eventIndex, 1);
-        profile.__recoEvents.push(event);
+
+        let indexOfEvent = profile.__launchedReco.indexOf(event);
+        if(indexOfEvent >= 0) {
+            profile.__launchedReco.splice(indexOfEvent, 1);
+            profile.__recoEvents.push(event);
+        }
 
         this.__controller.__nativeController.scanToLaunch();
         
