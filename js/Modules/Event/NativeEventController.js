@@ -106,7 +106,7 @@ class NativeEventController extends EventControllerChild {
                             // if event has one required attribute
                                 for(let coreAttId of profile.__attributes) {
                                 // loop again through profile attributes
-                                    if(coreAttId == evt.__required) {
+                                    if(coreAttId == evt.__required[0]) {
                                     // if required attribute was found, launch event
                                         self.launch(evt.__id, profile.__id);
                                         console.log(evt);
@@ -145,7 +145,7 @@ class NativeEventController extends EventControllerChild {
                         // if event has one required attribute
                             for(let coreAttId of profile.__attributes) {
                             // loop again through profile attributes
-                                if(coreAttId == evt.__required) {
+                                if(coreAttId == evt.__required[0]) {
                                 // if required attribute was found, launch event
                                     self.launch(evt.__id, profile.__id);
                                     console.log(evt);
@@ -203,26 +203,32 @@ class NativeEventController extends EventControllerChild {
                     }
                     else if(event.__required && Array.isArray(event.__required) && event.__required.length == 1) {
                     //if launched native event has one required attribute
+                        let attIsHere = 0;
+
                         for(let coreAttId of profile.__attributes) {
                         // loop again through profile attributes
-                            if(coreAttId == event.__required) {
+                            if(coreAttId == event.__required[0]) {
                             // if attribute is still there
-                                if(event.__timer.__duration >= event.__delay) {
-                                // and time is up
-                                    self.resolve(event.__id, profile.__id);
-                                }
+                                attIsHere = 1;
                             }
-                            else {
-                            // if attribute is not there anymore
-                                let trueEvent = this.__controller.__app.__eventManager.__nativeManager.getFromId(event.__id);
-                                trueEvent.__hasLaunched = 0;
-                                trueEvent.__timer.stop();
-                                trueEvent.__timer.reset();
-    
-                                let indexOfEvent = profile.__launchedNative.indexOf(event);
-                                if(indexOfEvent >= 0) {
-                                    profile.__launchedNative.splice(indexOfEvent, 1);
-                                }
+                        }
+
+                        if(attIsHere == 0) {
+                        // if attribute is not there anymore
+                            let trueEvent = this.__controller.__app.__eventManager.__nativeManager.getFromId(event.__id);
+                            trueEvent.__hasLaunched = 0;
+                            trueEvent.__timer.stop();
+                            trueEvent.__timer.reset();
+
+                            let indexOfEvent = profile.__launchedNative.indexOf(event);
+                            if(indexOfEvent >= 0) {
+                                profile.__launchedNative.splice(indexOfEvent, 1);
+                            }
+                        }
+                        else {
+                            if(event.__timer.__duration >= event.__delay) {
+                            // and time is up
+                                self.resolve(event.__id, profile.__id);
                             }
                         }
                     }
