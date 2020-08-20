@@ -206,9 +206,23 @@ class NativeEventController extends EventControllerChild {
                         for(let coreAttId of profile.__attributes) {
                         // loop again through profile attributes
                             if(coreAttId == event.__required) {
-                            // if required attribute was found, launch event
-                                self.launch(event.__id, profile.__id);
-                                console.log(evt);
+                            // if attribute is still there
+                                if(event.__timer.__duration >= event.__delay) {
+                                // and time is up
+                                    self.resolve(event.__id, profile.__id);
+                                }
+                            }
+                            else {
+                            // if attribute is not there anymore
+                                let trueEvent = this.__controller.__app.__eventManager.__nativeManager.getFromId(event.__id);
+                                trueEvent.__hasLaunched = 0;
+                                trueEvent.__timer.stop();
+                                trueEvent.__timer.reset();
+    
+                                let indexOfEvent = profile.__launchedNative.indexOf(event);
+                                if(indexOfEvent >= 0) {
+                                    profile.__launchedNative.splice(indexOfEvent, 1);
+                                }
                             }
                         }
                     }
