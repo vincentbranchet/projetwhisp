@@ -27,7 +27,7 @@ class ProfileUIController extends ControllerChild {
     print(profileId) {
         //profile id is the profile ID as int
         var self = this;
-        let htmlProfileInfo, htmlSellButton, htmlTitle, htmlRecoTitle;
+        let htmlProfileInfo, htmlSellButton, htmlTitle, htmlRecoTitle, htmlHistoryTitle;
 
         htmlProfileInfo = document.createElement("div");
         htmlSellButton = document.createElement("div");
@@ -70,6 +70,12 @@ class ProfileUIController extends ControllerChild {
         (function(self) {
             htmlSellButton.addEventListener("click", self.clickToSell(self));
         }(self));
+
+        htmlHistoryTitle = document.createElement("div");
+        htmlHistoryTitle.innerText = "HISTORIQUE";
+        this.__profileWrapper.append(htmlHistoryTitle);
+
+        this.printHistoryOf(profile);
 
         this.__profileWrapper.append(htmlSellButton);
     }
@@ -131,6 +137,67 @@ class ProfileUIController extends ControllerChild {
             let profileId = this.className.split("_")[1];
             self.__controller.__app.__playerController.buy(profileId);
         }
+    }
+
+    printHistoryOf(profile) {
+        var self = this;
+        let htmlHistory, profileEvents;
+        
+        profileEvents = profile.__recoEvents.concat(profile.__nativeEvents);
+        console.log(profileEvents);
+
+        if(profileEvents.length >= 1) {
+            htmlHistory = document.createElement("div");
+
+            profileEvents.sort((a, b) => b.date - a.date);
+
+            profileEvents.forEach(evt => {
+                if(evt instanceof NativeEvent) {
+                    let nativeEvt = self.printNativeEvent(evt);
+                    $(htmlHistory).append(nativeEvt);
+                }
+                else if(evt instanceof RecoEvent) {
+                    let recoEvt = self.printRecoEvent(evt);
+                    $(htmlHistory).append(recoEvt);
+                }
+            });
+
+            this.__profileWrapper.append(htmlHistory);
+        }
+    }
+
+    printNativeEvent(evt) {
+        let htmlEvtWrapper, htmlEvtTitle, htmlEvtDate;
+
+        htmlEvtTitle = document.createElement("div");
+        htmlEvtTitle.innerText = evt.__name;
+
+        htmlEvtDate = document.createElement("div");
+        htmlEvtDate.innerHTML = evt.__resolveDate.getHours() + ":" + evt.__resolveDate.getMinutes() + ":" + evt.__resolveDate.getSeconds();
+
+        htmlEvtWrapper = document.createElement("div");
+        $(htmlEvtWrapper).append(htmlEvtDate);
+        $(htmlEvtWrapper).append(htmlEvtTitle);
+        $(htmlEvtWrapper).addClass("historyEvent");
+
+        return htmlEvtWrapper;
+    }
+
+    printRecoEvent(evt) {
+        let htmlEvtWrapper, htmlEvtTitle, htmlEvtDate;
+
+        htmlEvtTitle = document.createElement("div");
+        htmlEvtTitle.innerText = evt.__name;
+
+        htmlEvtDate = document.createElement("div");
+        htmlEvtDate.innerHTML = evt.__resolveDate.getHours() + ":" + evt.__resolveDate.getMinutes() + ":" + evt.__resolveDate.getSeconds();
+
+        htmlEvtWrapper = document.createElement("div");
+        $(htmlEvtWrapper).append(htmlEvtDate);
+        $(htmlEvtWrapper).append(htmlEvtTitle);
+        $(htmlEvtWrapper).addClass("historyEvent");
+
+        return htmlEvtWrapper;
     }
 
     printRecosOf(profile) {

@@ -59,7 +59,7 @@ class NativeEventController extends EventControllerChild {
             profile.__nativeEvents.push(event);    
         }
         
-        this.__controller.__app.__notificationController.print("Le profil de " + profile.__name + " a été modifié suite à un événement.");
+        this.__controller.__app.__notificationController.print("Le profil de " + profile.__name + " a été modifié suite à un événement.", event);
         this.__controller.__app.__UIController.__newsUIController.notify();
         this.__controller.__app.__UIController.__newsUIController.refresh();
     }
@@ -214,7 +214,7 @@ class NativeEventController extends EventControllerChild {
                         }
 
                         if(attIsHere == 0) {
-                        // if attribute is not there anymore
+                        // if attribute is not there anymore, cancel event
                             let trueEvent = this.__controller.__app.__eventManager.__nativeManager.getFromId(event.__id);
                             trueEvent.__hasLaunched = 0;
                             trueEvent.__timer.stop();

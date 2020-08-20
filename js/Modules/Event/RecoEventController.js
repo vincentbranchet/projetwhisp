@@ -90,11 +90,11 @@ class RecoEventController extends EventControllerChild {
         
         if(event.__toSpawn.length == 0 && event.__toDelete.length == 0) {
         // if event has no consequences
-            this.__controller.__app.__notificationController.print(profile.__name + " n'a pas tenu compte de la recommandation " + reco.__name);
+            this.__controller.__app.__notificationController.print(profile.__name + " n'a pas tenu compte de la recommandation " + reco.__name, event);
         }
         else {
         // if event has consequences
-            this.__controller.__app.__notificationController.print(profile.__name + " a tenu compte de la recommandation " + reco.__name);
+            this.__controller.__app.__notificationController.print(profile.__name + " a tenu compte de la recommandation " + reco.__name, event);
         }
     
         this.__controller.__app.__UIController.__newsUIController.notify();

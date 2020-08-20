@@ -8,6 +8,7 @@ class GameEvent {
         this.__toSpawn = []; // attribute id
         this.__hasLaunched = 0;
         this.__wasResolved = 0;
+        this.__resolveDate = 0;
     }
 
     addToDelete(...attributes) {
@@ -39,6 +40,9 @@ class GameEvent {
     set wasResolved(bool) {
         this.__wasResolved = bool;
     }
+    set resolveDate(date) {
+        this.__resolveDate = date;
+    }
 
     get id() {
         return this.__id;
@@ -63,5 +67,8 @@ class GameEvent {
     }
     get wasResolved() {
         return this.__wasResolved;
+    }
+    get resolveDate() {
+        return this.__resolveDate;
     }
 }

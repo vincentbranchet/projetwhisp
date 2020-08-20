@@ -5,7 +5,11 @@ class NotificationManager {
     }
 
     create(id, date, content) {
-        this.__printed.push(new Notification(id, date, content));
+        let notif = new Notification(id, date, content);
+
+        this.__printed.push(notif);
+
+        return notif; // so it can be stored elsewhere
     }
 
     getFromId(notifId) {
