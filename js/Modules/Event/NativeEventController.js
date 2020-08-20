@@ -58,6 +58,8 @@ class NativeEventController extends EventControllerChild {
             profile.__launchedNative.splice(indexOfEvent, 1);
             profile.__nativeEvents.push(event);    
         }
+
+        this.__controller.__nativeController.scanToLaunch();
         
         this.__controller.__app.__notificationController.print("Le profil de " + profile.__name + " a été modifié suite à un événement.", event);
         this.__controller.__app.__UIController.__newsUIController.notify();
