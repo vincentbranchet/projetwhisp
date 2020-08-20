@@ -201,6 +201,17 @@ class NativeEventController extends EventControllerChild {
                             }
                         }
                     }
+                    else if(event.__required && Array.isArray(event.__required) && event.__required.length == 1) {
+                    //if launched native event has one required attribute
+                        for(let coreAttId of profile.__attributes) {
+                        // loop again through profile attributes
+                            if(coreAttId == event.__required) {
+                            // if required attribute was found, launch event
+                                self.launch(event.__id, profile.__id);
+                                console.log(evt);
+                            }
+                        }
+                    }
                 }
             }
         });
