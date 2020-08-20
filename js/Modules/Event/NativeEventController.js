@@ -80,7 +80,7 @@ class NativeEventController extends EventControllerChild {
                         // loop through each event
                             let evt = this.__controller.__app.__eventManager.__nativeManager.getFromId(evtId);
 
-                            if(evt.__required && Array.isArray(evt.__required)) {
+                            if(evt.__required && Array.isArray(evt.__required) && evt.__required.length > 1) {
                             // if event has multiple required attributes
                                 let nbRequired = evt.__required.length;
                                 let nbFound = 0;
@@ -102,7 +102,7 @@ class NativeEventController extends EventControllerChild {
                                     console.log(evt);
                                 }
                             }
-                            else if(evt.__required) {
+                            else if(evt.__required && Array.isArray(evt.__required) && evt.__required.length == 1) {
                             // if event has one required attribute
                                 for(let coreAttId of profile.__attributes) {
                                 // loop again through profile attributes
@@ -141,7 +141,7 @@ class NativeEventController extends EventControllerChild {
                                 console.log(evt);
                             }
                         }
-                        else if(evt.__required && Array.isArray(evt.__required)) {
+                        else if(evt.__required && Array.isArray(evt.__required) && evt.__required.length == 1) {
                         // if event has one required attribute
                             for(let coreAttId of profile.__attributes) {
                             // loop again through profile attributes
