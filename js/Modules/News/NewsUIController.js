@@ -23,8 +23,9 @@ class NewsUIController extends ControllerChild {
         // SORT NEWS AND NOTIFS BY DATE
         merge.sort((a, b) => b.date - a.date);
 
-        htmltitle = document.createElement("p");
-        htmltitle.innerText = "LES ACTUALITES";
+        htmltitle = document.createElement("div");
+        htmltitle.innerText = "FEED";
+        $(htmltitle).addClass("newsTitle");
 
         this.__pageWrapper.append(htmltitle);
 

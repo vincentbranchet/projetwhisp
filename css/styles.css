@@ -1,9 +1,18 @@
+/* DOCUMENT - GENERAL */
+
 .mainWrapper {
     width: 30vw;
     height: 70vh;
     margin: auto;
     margin-top: 10vh;
 }
+
+.button {
+    cursor: pointer;
+}
+
+
+/* HEADER */
 
 .headerWrapper {
     height: 20%;
@@ -12,15 +21,48 @@
     flex-direction: column;
 }
 
-.gtWrapper, .lvWrapper, .pvWrapper, .xpWrapper {
-    height: 25%;
+.gtWrapper, .lvWrapper {
+    height: 15%;
 }
 
+.xpWrapper {
+    height: 40%;
+    border: 1px solid black;
+}
+
+.pvWrapper {
+    height: 30%;
+}
+
+.pvWrapper, .xpWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* BODY - GENERAL */
+
 .pagesWrapper {
-    height: 80%;
+    height: 70%;
     width: 100%;
     display: flex;
     flex-direction: row;
+}
+
+.newsWrapper::-webkit-scrollbar {
+    display: none;
+}
+.portfolioWrapper::-webkit-scrollbar {
+    display: none;
+}
+.shopWrapper::-webkit-scrollbar {
+    display: none;
+}
+.profileWrapper::-webkit-scrollbar {
+    display: none;
+}
+.profileVitrineWrapper::-webkit-scrollbar {
+    display: none;
 }
 
 .newsWrapper, .portfolioWrapper, .shopWrapper, .profileWrapper, .profileVitrineWrapper {
@@ -34,23 +76,25 @@
     display: none;
 }
 
-.navWrapper {
+.portfolioTitle, .newsTitle, .shopTitle {
+    width: 100%;
+    height: 10%;
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-
-.button {
-    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid black;
 }
 
 .recoWrapper, .notifWrapper, .articleWrapper {
     margin: 2vh 0 2vh 0;
 }
 
+/* BODY - PORTFOLIO */
+
 .slot {
-    border: 1px solid black;
-    width: 90%;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    width: 100%;
     height: 10%;
     margin: 1vh 0 1vh 0;
 }
@@ -59,10 +103,48 @@
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+}
+
+.slotProfileName, .slotProfileValue {
+    height: 100%;
+    padding: 0 15% 0 15%;
+    display: flex;
     align-items: center;
 }
 
 .historyEvent {
     margin: 1vh 0 1vh 0;
+}
+
+/* BOTTOM MENU */
+
+.navWrapper {
+    height: 10%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.newsButtonWrapper, .portfolioButtonWrapper, .shopButtonWrapper {
+    height: 100%;
+    width: 33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.newsButtonWrapper {
+    border-left: 1px solid black;
+}
+
+.portfolioButtonWrapper {
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+}
+
+.shopButtonWrapper {
+    border-right: 1px solid black;
 }
