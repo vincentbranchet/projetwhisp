@@ -78,7 +78,8 @@ class RecoEventController extends EventControllerChild {
         // mark as resolved, delete from launched and push to resolved
         event.__timer.stop();
         event.__timer.reset();
-        event.__wasResolved = 1; 
+        event.__wasResolved = 1;
+        event.__hasLaunched = 0; // so it can be sent again
 
         let indexOfEvent = profile.__launchedReco.indexOf(event);
         if(indexOfEvent >= 0) {
