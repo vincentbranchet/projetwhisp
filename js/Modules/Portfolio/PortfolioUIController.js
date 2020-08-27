@@ -40,10 +40,10 @@ class PortfolioUIController extends ControllerChild {
                     let cld = profileEvent.__delay - profileEvent.__timer.__duration;
 
                     htmlProfileName = document.createElement("div");
-                    htmlProfileName.innerText = profile.__name;
+                    htmlProfileName.innerText = profile.__name + " (" + cld + "s)";
                     $(htmlProfileName).addClass("slotProfileName");
                     htmlProfileValue = document.createElement("div");
-                    htmlProfileValue.innerText = profileEvent.__name + " : " + cld + "s)";
+                    htmlProfileValue.innerText = profile.__value + "/s";
                     $(htmlProfileValue).addClass("slotProfileValue");
         
                     $(htmlProfile).append(htmlProfileName);

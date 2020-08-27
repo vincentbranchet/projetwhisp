@@ -4,6 +4,9 @@ class ProfileUIController extends ControllerChild {
 
         this.__profileWrapper = $(".profileWrapper")[0]; // profile page in portfolio
         this.__profileVitrineWrapper = $(".profileVitrineWrapper")[0]; // profile page in shop
+
+        this.__activePage = "attributes"; // default profile subpage
+        this.__activeWrapper = ""; // html wrapper of active subpage
     }
 
     // A REFACTORISER AVEC InPortfolio / InShop EN PARAMETRE DES FONCTIONS
@@ -13,7 +16,17 @@ class ProfileUIController extends ControllerChild {
 
         this.__profileWrapper.style.display = "block";
 
-        this.print(profileId);
+        this.printLayout(profileId);
+
+        if(this.__activePage == "attributes") {
+            this.printAttributesOf(profileId);
+        }
+        else if(this.__activePage == "history") {
+            this.printHistoryOf(profileId);
+        }
+        else if(this.__activePage == "recos") {
+            this.printRecosOf(profileId);
+        }
     }
 
     showInShop(profileId) {
@@ -23,27 +36,27 @@ class ProfileUIController extends ControllerChild {
 
         this.printInShop(profileId);
     }
-
-    print(profileId) {
-        //profile id is the profile ID as int
+    
+    printInShop(profileId) {
         var self = this;
-        let htmlProfileInfo, htmlSellButton, htmlTitle, htmlRecoTitle, htmlHistoryTitle;
+        let profile = this.__controller.__app.__shopManager.getFromId(profileId);
+        let htmlProfileInfo, htmlSellButton, htmlTitle, htmlAttWrapper;
+
+        htmlTitle = document.createElement("div");
+        htmlTitle.innerText = "PROFILS";
+        $(htmlTitle).addClass("shopTitle");
 
         htmlProfileInfo = document.createElement("div");
-        htmlSellButton = document.createElement("div");
-        htmlTitle = document.createElement("p");
-
-        htmlTitle.innerText = "PROFIL";
-        self.__profileWrapper.append(htmlTitle);
-
-        let profile = this.__controller.__app.__portfolioManager.getFromId(profileId);
         htmlProfileInfo.innerText = profile.__name;
-
-        this.__profileWrapper.append(htmlProfileInfo);
+        $(htmlProfileInfo).addClass("profileTitle");
+        
+        htmlAttWrapper = document.createElement("div");
+        $(htmlAttWrapper).addClass("attributeMainWrapper");
 
         profile.__attributes.forEach(id => {
             let att = self.__controller.__app.__attributeManager.getFromId(id);
-            let htmlAtt = document.createElement("p");
+            let htmlAtt = document.createElement("div");
+            $(htmlAtt).addClass("attribute");
             
             if(att) {
                 if(att.__isMult == 1) {
@@ -55,64 +68,10 @@ class ProfileUIController extends ControllerChild {
                 }
             }
 
-            self.__profileWrapper.append(htmlAtt);
+            $(htmlAttWrapper).append(htmlAtt);
         });
 
-        htmlRecoTitle = document.createElement("div");
-        htmlRecoTitle.innerText = "RECOMMANDATIONS";
-        this.__profileWrapper.append(htmlRecoTitle);
-
-        this.printRecosOf(profile);
-
-        htmlSellButton.innerText = "Vendre (" + profile.__value + ")";
-        $(htmlSellButton).addClass("profileSellButton button profile_" + profileId);
-
-        (function(self) {
-            htmlSellButton.addEventListener("click", self.clickToSell(self));
-        }(self));
-
-        htmlHistoryTitle = document.createElement("div");
-        htmlHistoryTitle.innerText = "HISTORIQUE";
-        this.__profileWrapper.append(htmlHistoryTitle);
-
-        this.printHistoryOf(profile);
-
-        this.__profileWrapper.append(htmlSellButton);
-    }
-
-    printInShop(profileId) {
-        var self = this;
-        let htmlProfileInfo, htmlSellButton, htmlTitle;
-
-        htmlTitle = document.createElement("p");
-        htmlProfileInfo = document.createElement("div");
         htmlSellButton = document.createElement("div");
-
-        htmlTitle.innerText = "PROFIL";
-        this.__profileVitrineWrapper.append(htmlTitle);
-
-        // profile controller evaluates profile, then we get profile and print it
-        let profile = this.__controller.__app.__shopManager.getFromId(profileId);
-        htmlProfileInfo.innerText = profile.__name;
-
-        this.__profileVitrineWrapper.append(htmlProfileInfo);
-
-        profile.__attributes.forEach(id => {
-            let att = self.__controller.__app.__attributeManager.getFromId(id);
-            let htmlAtt = document.createElement("p");
-
-            if(att) {
-                if(att.__isMult == 1) {
-                    htmlAtt.innerText = att.__name + " (x" + att.__multRate + ")";
-                }
-                else {
-                    htmlAtt.innerText = att.__name + " (" + att.__value + ")";
-                }
-            }
-
-            self.__profileVitrineWrapper.append(htmlAtt);
-        });
-
         htmlSellButton.innerText = "Acheter (" + profile.__value + ")";
         $(htmlSellButton).addClass("profileBuyButton button profile_" + profileId);
 
@@ -120,7 +79,58 @@ class ProfileUIController extends ControllerChild {
             htmlSellButton.addEventListener("click", self.clickToBuy(self));
         }(self));
 
+        this.__profileVitrineWrapper.append(htmlTitle);
+        this.__profileVitrineWrapper.append(htmlProfileInfo);
+        this.__profileVitrineWrapper.append(htmlAttWrapper)
         this.__profileVitrineWrapper.append(htmlSellButton);
+    }
+
+
+    printLayout(profileId) {
+        //profile id is the profile ID as int
+        var self = this;
+        let htmlTitle, htmlProfileInfo, htmlMenuWrapper, htmlAttButton, htmlRecoButton, htmlHistButton;
+        let profile = this.__controller.__app.__portfolioManager.getFromId(profileId);
+
+        htmlTitle = document.createElement("div");
+        htmlTitle.innerText = "PORTFOLIO";
+        $(htmlTitle).addClass("portfolioTitle");
+
+        htmlProfileInfo = document.createElement("div");
+        htmlProfileInfo.innerText = profile.__name;
+        $(htmlProfileInfo).addClass("profileTitle");
+        
+        htmlMenuWrapper = document.createElement("div");
+        $(htmlMenuWrapper).addClass("profileMenuWrapper");
+
+        htmlAttButton = document.createElement("div");
+        htmlAttButton.innerText = "ATTRIBUTS";
+        $(htmlAttButton).addClass("profileAttButton button");
+        (function(self) {
+            htmlAttButton.addEventListener("click", self.clickToAttributes(self, profileId));
+        }(self));
+
+        htmlRecoButton = document.createElement("div");
+        htmlRecoButton.innerText = "RECOS";
+        $(htmlRecoButton).addClass("profileRecoButton button");
+        (function(self) {
+            htmlRecoButton.addEventListener("click", self.clickToRecos(self, profileId));
+        }(self));
+
+        htmlHistButton = document.createElement("div");
+        htmlHistButton.innerText = "HISTORIQUE";
+        $(htmlHistButton).addClass("profileHistButton button");
+        (function(self) {
+            htmlHistButton.addEventListener("click", self.clickToHistory(self, profileId));
+        }(self));
+
+        $(htmlMenuWrapper).append(htmlAttButton);
+        $(htmlMenuWrapper).append(htmlRecoButton);
+        $(htmlMenuWrapper).append(htmlHistButton);
+
+        this.__profileWrapper.append(htmlTitle);
+        this.__profileWrapper.append(htmlProfileInfo);
+        this.__profileWrapper.append(htmlMenuWrapper);
     }
 
     clickToSell(self) {
@@ -139,31 +149,125 @@ class ProfileUIController extends ControllerChild {
         }
     }
 
-    printHistoryOf(profile) {
+    printAttributesOf(profileId) {
+        //profile id is the profile ID as int
         var self = this;
-        let htmlHistory, profileEvents;
+        let profile = this.__controller.__app.__portfolioManager.getFromId(profileId);
+        let htmlAttWrapper;
         
+        htmlAttWrapper = document.createElement("div");
+        $(htmlAttWrapper).addClass("attributeMainWrapper");
+        this.__activeWrapper = htmlAttWrapper;
+
+        this.__activePage = "attributes";
+
+        profile.__attributes.forEach(id => {
+            let att = self.__controller.__app.__attributeManager.getFromId(id);
+            let htmlAtt = document.createElement("div");
+            $(htmlAtt).addClass("attribute");
+            
+            if(att) {
+                if(att.__isMult == 1) {
+                // if att is multiplier
+                    htmlAtt.innerText = att.__name + " (x" + att.__multRate + ")";    
+                }
+                else {
+                    htmlAtt.innerText = att.__name + " (" + att.__value + ")";
+                }
+            }
+
+            $(htmlAttWrapper).append(htmlAtt);
+        });
+
+        this.__profileWrapper.append(htmlAttWrapper);
+    }
+
+    printHistoryOf(profileId) {
+        var self = this;
+        let profile = this.__controller.__app.__portfolioManager.getFromId(profileId);
+        let htmlHistWrapper, profileEvents;
+
+        htmlHistWrapper = document.createElement("div");
+        $(htmlHistWrapper).addClass("historyMainWrapper");
+        this.__activeWrapper = htmlHistWrapper;
+
+        this.__activePage = "history";
+
         profileEvents = profile.__recoEvents.concat(profile.__nativeEvents);
-        console.log(profileEvents);
 
         if(profileEvents.length >= 1) {
-            htmlHistory = document.createElement("div");
+            htmlHistWrapper = document.createElement("div");
 
             profileEvents.sort((a, b) => b.date - a.date);
 
             profileEvents.forEach(evt => {
                 if(evt instanceof NativeEvent) {
                     let nativeEvt = self.printNativeEvent(evt);
-                    $(htmlHistory).append(nativeEvt);
+                    $(nativeEvt).addClass("profileEvent");
+                    $(htmlHistWrapper).append(nativeEvt);
                 }
                 else if(evt instanceof RecoEvent) {
                     let recoEvt = self.printRecoEvent(evt);
-                    $(htmlHistory).append(recoEvt);
+                    $(recoEvt).addClass("profileEvent");
+                    $(htmlHistWrapper).append(recoEvt);
                 }
             });
 
-            this.__profileWrapper.append(htmlHistory);
+            this.__profileWrapper.append(htmlHistWrapper);
         }
+    }
+
+    printRecosOf(profileId) {
+        var self = this;
+        let profile = this.__controller.__app.__portfolioManager.getFromId(profileId);
+        let availableRecosId = this.__controller.__app.__recoController.getAvailableOf(profile);
+        let htmlRecoWrapper, htmlReco, htmlRecoTitle, htmlRecoDesc, htmlRecoSend, htmlSellButton;
+
+        htmlRecoWrapper = document.createElement("div");
+        $(htmlRecoWrapper).addClass("recoMainWrapper");
+        this.__activeWrapper = htmlRecoWrapper;
+
+        this.__activePage = "recos";
+
+        if(availableRecosId.length >= 1) {
+            availableRecosId.forEach(recoId => {
+                let reco = self.__controller.__app.__recoManager.getFromId(recoId);
+    
+                htmlReco = document.createElement("div");
+                $(htmlReco).addClass("recoWrapper");
+                
+                htmlRecoTitle = document.createElement("div");
+                htmlRecoTitle.innerText = reco.__name;
+
+                htmlRecoDesc = document.createElement("div");
+                htmlRecoDesc.innerText = reco.__desc;
+
+                htmlRecoSend = document.createElement("div");
+                $(htmlRecoSend).addClass("button reco_" + recoId + "_" + profile.__id);
+                htmlRecoSend.innerText = "ENVOYER" + " (" + reco.__cld + "s)";
+
+                (function(self) {
+                    htmlRecoSend.addEventListener("click", self.clickToLaunch(self), true);
+                }(self));
+
+                $(htmlReco).append(htmlRecoTitle);
+                $(htmlReco).append(htmlRecoDesc);
+                $(htmlReco).append(htmlRecoSend);
+
+                $(htmlRecoWrapper).append(htmlReco);
+            });
+        }
+
+        htmlSellButton = document.createElement("div");
+        htmlSellButton.innerText = "Vendre (" + profile.__value + ")";
+        $(htmlSellButton).addClass("profileSellButton button profile_" + profileId);
+
+        (function(self) {
+            htmlSellButton.addEventListener("click", self.clickToSell(self));
+        }(self));
+        
+        this.__profileWrapper.append(htmlRecoWrapper);
+        this.__profileWrapper.append(htmlSellButton);
     }
 
     printNativeEvent(evt) {
@@ -200,39 +304,6 @@ class ProfileUIController extends ControllerChild {
         return htmlEvtWrapper;
     }
 
-    printRecosOf(profile) {
-        var self = this;
-        let htmlReco, htmlRecoTitle, htmlRecoDesc, htmlRecoSend;
-        let availableRecosId = self.__controller.__app.__recoController.getAvailableOf(profile);
-
-        if(availableRecosId.length >= 1) {
-            availableRecosId.forEach(recoId => {
-                let reco = self.__controller.__app.__recoManager.getFromId(recoId);
-    
-                htmlReco = document.createElement("div");
-                htmlRecoTitle = document.createElement("div");
-                htmlRecoDesc = document.createElement("div");
-                htmlRecoSend = document.createElement("div");
-
-                $(htmlReco).addClass("recoWrapper");
-                $(htmlRecoSend).addClass("button reco_" + recoId + "_" + profile.__id);
-
-                htmlRecoTitle.innerText = reco.__name;
-                htmlRecoDesc.innerText = reco.__desc;
-                htmlRecoSend.innerText = "ENVOYER" + " (" + reco.__cld + "s)";
-
-                (function(self) {
-                    htmlRecoSend.addEventListener("click", self.clickToLaunch(self), true);
-                }(self));
-
-                self.__profileWrapper.append(htmlReco);
-                $(htmlReco).append(htmlRecoTitle);
-                $(htmlReco).append(htmlRecoDesc);
-                $(htmlReco).append(htmlRecoSend);
-            });
-        }
-    }
-
     clickToLaunch(self) {
 
         return function() {
@@ -241,6 +312,37 @@ class ProfileUIController extends ControllerChild {
 
             self.__controller.__app.__eventController.__recoController.launch(recoId, profileId);
         }
+    }
+
+    clickToAttributes(self, profileId) {
+
+        return function() {
+            self.hideActive();
+            self.__activePage = "attributes";
+            self.show(profileId);
+        }
+    }
+
+    clickToRecos(self, profileId) {
+
+        return function() {
+            self.hideActive();
+            self.__activePage = "recos";
+            self.show(profileId);
+        }
+    }
+
+    clickToHistory(self, profileId) {
+
+        return function() {
+            self.hideActive();
+            self.__activePage = "history";
+            self.show(profileId);
+        }
+    }
+
+    hideActive() {
+        this.__activeWrapper.style.display = "none";
     }
 
     clear() {

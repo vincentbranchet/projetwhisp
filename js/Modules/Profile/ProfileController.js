@@ -45,5 +45,8 @@ class ProfileController extends AppChild {
         });
 
         profile.value = profile.__value * multBy;
+
+        if(profile.value < 0)
+            profile.value = 0;
     }
 }
