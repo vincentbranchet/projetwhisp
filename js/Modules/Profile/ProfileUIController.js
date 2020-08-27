@@ -153,7 +153,7 @@ class ProfileUIController extends ControllerChild {
         //profile id is the profile ID as int
         var self = this;
         let profile = this.__controller.__app.__portfolioManager.getFromId(profileId);
-        let htmlAttWrapper;
+        let htmlAttWrapper, htmlSellButton;
         
         htmlAttWrapper = document.createElement("div");
         $(htmlAttWrapper).addClass("attributeMainWrapper");
@@ -179,7 +179,16 @@ class ProfileUIController extends ControllerChild {
             $(htmlAttWrapper).append(htmlAtt);
         });
 
+        htmlSellButton = document.createElement("div");
+        htmlSellButton.innerText = "Vendre (" + profile.__value + ")";
+        $(htmlSellButton).addClass("profileSellButton button profile_" + profileId);
+
+        (function(self) {
+            htmlSellButton.addEventListener("click", self.clickToSell(self));
+        }(self));
+
         this.__profileWrapper.append(htmlAttWrapper);
+        this.__profileWrapper.append(htmlSellButton);
     }
 
     printHistoryOf(profileId) {
@@ -221,7 +230,7 @@ class ProfileUIController extends ControllerChild {
         var self = this;
         let profile = this.__controller.__app.__portfolioManager.getFromId(profileId);
         let availableRecosId = this.__controller.__app.__recoController.getAvailableOf(profile);
-        let htmlRecoWrapper, htmlReco, htmlRecoTitle, htmlRecoDesc, htmlRecoSend, htmlSellButton;
+        let htmlRecoWrapper, htmlReco, htmlRecoTitle, htmlRecoDesc, htmlRecoSend;
 
         htmlRecoWrapper = document.createElement("div");
         $(htmlRecoWrapper).addClass("recoMainWrapper");
@@ -258,16 +267,7 @@ class ProfileUIController extends ControllerChild {
             });
         }
 
-        htmlSellButton = document.createElement("div");
-        htmlSellButton.innerText = "Vendre (" + profile.__value + ")";
-        $(htmlSellButton).addClass("profileSellButton button profile_" + profileId);
-
-        (function(self) {
-            htmlSellButton.addEventListener("click", self.clickToSell(self));
-        }(self));
-        
         this.__profileWrapper.append(htmlRecoWrapper);
-        this.__profileWrapper.append(htmlSellButton);
     }
 
     printNativeEvent(evt) {
