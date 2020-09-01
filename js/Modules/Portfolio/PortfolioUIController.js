@@ -90,7 +90,7 @@ class PortfolioUIController extends ControllerChild {
     }
 
     clickToProfile(self) {
-
+        
         return function() {
             let profileId = this.id.split("_")[1];
             self.__controller.toProfileInPortfolio(profileId);

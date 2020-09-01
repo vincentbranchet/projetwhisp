@@ -12,7 +12,7 @@ class AppController extends AppChild {
             this.__app.__newsController.print(lv.__printId);
         }
         this.__app.__shopController.updateProfiles();
-
+        /* OLD MAIN GAME LOOP
         // start tick
         setInterval(function() {
             self.yieldXp();
@@ -24,6 +24,7 @@ class AppController extends AppChild {
             self.__app.__UIController.__portfolioUIController.refresh(); // refresh portfolio content (profile clds)
             
         }, self.__app.__config.__tickTime);
+        */
         // init game timer
         this.__app.__player.__gameTime.start();
     }
