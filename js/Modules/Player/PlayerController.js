@@ -18,6 +18,10 @@ class PlayerController extends AppChild {
             this.__app.__appController.checkIfLvUp();
             this.__app.__portfolioController.updateValue();
             this.__app.__eventController.__recoController.scan();
+
+            this.__app.__UIController.__shopUIController.update();
+            this.__app.__UIController.__portfolioUIController.update();
+
             this.__app.__UIController.toPortfolio();
         }
         else {
@@ -56,6 +60,10 @@ class PlayerController extends AppChild {
             this.__app.__appController.checkIfLvUp();
             this.__app.__portfolioController.updateValue();
             this.__app.__eventController.__recoController.scan();
+            
+            this.__app.__UIController.__shopUIController.update();
+            this.__app.__UIController.__portfolioUIController.update();
+
             this.__app.__UIController.toPortfolio();
         }
     }

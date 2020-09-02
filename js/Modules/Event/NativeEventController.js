@@ -200,6 +200,8 @@ class NativeEventController extends EventControllerChild {
                             if(event.__timer.__duration >= event.__delay) {
                             // if event timer >= delay, resolve event 
                                 self.resolve(event.__id, profile.__id);
+
+                                self.__controller.__app.__UIController.__portfolioUIController.update();
                             }
                         }
                     }
@@ -231,6 +233,8 @@ class NativeEventController extends EventControllerChild {
                             if(event.__timer.__duration >= event.__delay) {
                             // and time is up
                                 self.resolve(event.__id, profile.__id);
+                                
+                                self.__controller.__app.__UIController.__portfolioUIController.update();
                             }
                         }
                     }

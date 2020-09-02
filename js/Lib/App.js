@@ -59,6 +59,7 @@ class App {
 
         /*render(tFrame); // appUIController updates*/
         this.__UIController.printHeader(); // refresh portfolio/lv values
+        this.__UIController.showActive();
 
         this.__lastRender = tFrame;
     }

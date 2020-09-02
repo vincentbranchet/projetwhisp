@@ -6,24 +6,25 @@ class PortfolioUIController extends ControllerChild {
         this.__portfolioProfiles = [];
     }
 
-    refresh() {
-        this.clear();
-        this.print();
-    }
-
-    print() {
+    update() {
         var self = this;
         let htmlSlot, htmlProfile, htmlTitle, htmlProfileName, htmlProfileValue;
 
+        // clear wrapper
+        this.clear();
+
+        // update profiles
         this.__controller.__app.__profileController.updatePortfolio();
 
+        // create & fill title
         htmlTitle = document.createElement("div");
         htmlTitle.innerText = "PORTFOLIO";
         $(htmlTitle).addClass("portfolioTitle");
         this.__portfolioWrapper.append(htmlTitle);
 
+        // for each portfolio slot, create elt
         for(let i = 0; i < this.__controller.__app.__portfolioManager.__slots; i++) {
-        // create slot
+
             htmlSlot = document.createElement("div");
             $(htmlSlot).addClass("slot");
 
@@ -75,6 +76,8 @@ class PortfolioUIController extends ControllerChild {
 
             self.__portfolioWrapper.append(htmlSlot);
         }
+
+        this.hide();
     }
 
     clear() {

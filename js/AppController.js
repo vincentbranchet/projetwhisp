@@ -70,6 +70,9 @@ class AppController extends AppChild {
                 this.__app.__newsController.print(lv.__printId);
             }
             
+            // update shop content
+            this.__app.__UIController.__shopUIController.update();
+
             this.__app.__UIController.levelUp();
         }
     }

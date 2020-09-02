@@ -13,8 +13,10 @@ class RecoEventController extends EventControllerChild {
                 for(let event of profile.__launchedReco) {
                 // check if event timer >= delay
                     if(event.__timer.duration >= event.__delay) {
-                    // if so, resolve event 
+                    // if so, resolve event & update portfolio
                         self.__controller.__app.__eventController.__recoController.resolve(event.__id, profile.__id);
+
+                        self.__controller.__app.__UIController.__portfolioUIController.update();
                     }
                 }
             }
@@ -34,6 +36,9 @@ class RecoEventController extends EventControllerChild {
             event.__hasLaunched = 1;
 
             profile.__launchedReco.push(event);
+
+            // update portfolio
+            this.__controller.__app.__UIController.__portfolioUIController.update();
 
             this.__controller.__app.__UIController.toPortfolio();
         }

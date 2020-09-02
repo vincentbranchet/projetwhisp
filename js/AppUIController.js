@@ -40,6 +40,9 @@ class AppUIController extends AppChild {
             self.__newsButton.addEventListener("click", self.clickToNews(self));
         }(self));
 
+        this.__shopUIController.update();
+        this.__portfolioUIController.update();
+
         this.showActive();
     }
 
@@ -57,7 +60,6 @@ class AppUIController extends AppChild {
         let self = this;
         self.hideActive(self);
         self.__portfolioUIController.show();
-        self.__portfolioUIController.refresh();
         self.__activePage = "portfolio";
     }
 
@@ -65,7 +67,6 @@ class AppUIController extends AppChild {
         let self = this;
         self.hideActive(self);
         self.__shopUIController.show();
-        self.__shopUIController.refresh();
         self.__activePage = "shop";
     }
 
@@ -96,7 +97,6 @@ class AppUIController extends AppChild {
         return function() {
             self.hideActive(self);
             self.__portfolioUIController.show();
-            self.__portfolioUIController.refresh();
             self.__activePage = "portfolio";
         } 
     }
@@ -106,7 +106,6 @@ class AppUIController extends AppChild {
         return function() {
             self.hideActive(self);
             self.__shopUIController.show();
-            self.__shopUIController.refresh();
             self.__activePage = "shop";
         } 
     }

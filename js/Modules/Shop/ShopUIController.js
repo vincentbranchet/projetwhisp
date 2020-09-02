@@ -5,25 +5,24 @@ class ShopUIController extends ControllerChild {
         this.__shopWrapper = $(".shopWrapper")[0];
     }
 
-    refresh() {
-        this.clear();
-        this.print();
-    }
-
-    print() {
+    update() {
         var self = this;
         let htmlSlot, htmlProfile, htmlProfileName, htmlProfileValue, htmlTitle;
+
+        // clear wrapper
+        this.clear();
 
         // update all profile values
         this.__controller.__app.__profileController.updateShop();
 
+        // create & fill title
         htmlTitle = document.createElement("div");
         htmlTitle.innerText = "PROFILES";
         $(htmlTitle).addClass("shopTitle");
 
-        self.__shopWrapper.append(htmlTitle);
+        this.__shopWrapper.append(htmlTitle);
 
-        //for each profile in shop, create dom elt and add it to shop wrapper
+        // for each profile in shop, create & fill slots
         this.__controller.__app.__shopManager.__inShop.forEach(profile => {
 
             htmlSlot = document.createElement("div");
@@ -52,8 +51,11 @@ class ShopUIController extends ControllerChild {
 
             self.__shopWrapper.append(htmlSlot);
         });
+
+        // hide
+        this.__shopWrapper.style.display = "none";
     }
-    
+
     clear() {
         this.__shopWrapper.innerHTML = "";
     }
