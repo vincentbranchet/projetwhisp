@@ -1,9 +1,14 @@
 class Config {
     constructor() {
-        this.__tickTime = 1000; // ms
+        this.__frameTick = 50;
+        this.__xpTick = 1000;
     }
 
-    get tickTime() {
-        return this.__tickTime;
+    get frameTick() {
+        return this.__frameTick;
+    }
+
+    get xpTick() {
+        return this.__xpTick;
     }
 }

@@ -3,7 +3,6 @@ class PortfolioUIController extends ControllerChild {
         super(controller); 
 
         this.__portfolioWrapper = $(".portfolioWrapper")[0];
-        this.__portfolioProfiles = [];
     }
 
     update() {
@@ -24,7 +23,7 @@ class PortfolioUIController extends ControllerChild {
 
         // for each portfolio slot, create elt
         for(let i = 0; i < this.__controller.__app.__portfolioManager.__slots; i++) {
-
+            console.log(this.__controller.__app.__portfolioManager.__slots);
             htmlSlot = document.createElement("div");
             $(htmlSlot).addClass("slot");
 
@@ -78,6 +77,23 @@ class PortfolioUIController extends ControllerChild {
         }
 
         this.hide();
+    }
+
+    print() {
+    // each frame
+        let profiles = this.__controller.__app.__portfolioManager.__profiles;
+
+        profiles.forEach(profile => {
+
+            if(profile.__launchedReco.length > 0) {
+            // if profile has running event, dont enable click event, print cooldown
+                let profileEvent = profile.__launchedReco[0];
+                let cld = profileEvent.__delay - profileEvent.__timer.__duration;
+                let query = "#profile_" + String(profile.__id) + " .slotProfileName";
+
+                $(query).text(profile.__name + " (" + cld + "s)");
+            }
+        });
     }
 
     clear() {

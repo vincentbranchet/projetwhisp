@@ -162,6 +162,10 @@ class AppUIController extends AppChild {
         this.__headerPortfolioValue.innerHTML = this.__app.__player.portfolioValue;
     }
 
+    printContent() {
+        this.__portfolioUIController.print();
+    }
+
     // getters
     get shopUIController() {
         return this.__shopUIController;
