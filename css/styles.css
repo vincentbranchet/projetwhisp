@@ -11,6 +11,24 @@
     cursor: pointer;
 }
 
+.xpFill, .slotFill {
+    display: block;
+    height: 100%;
+    background-color: gray;
+    width: 0%;
+}
+
+.slot {
+    position: relative;
+}
+
+.xpNumbers, .slotProfile {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 
 /* HEADER */
 
@@ -28,17 +46,20 @@
 .xpWrapper {
     height: 40%;
     border: 1px solid black;
+    position: relative;
 }
 
 .pvWrapper {
     height: 30%;
 }
 
-.pvWrapper, .xpWrapper {
+.pvWrapper {
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
+
 
 /* BODY - GENERAL */
 
@@ -141,6 +162,10 @@
 .profileRecoButton {
     border-right: 1px solid black;
     border-left: 1px solid black;
+}
+
+.slotProfile {
+
 }
 
 /* BODY - PORTFOLIO - PROFILE ATTRIBUTES */

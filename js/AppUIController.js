@@ -13,6 +13,10 @@ class AppUIController extends AppChild {
         this.__headerGtSec = $("#gtSec")[0];
         this.__headerLv = $("#lv")[0];
         this.__headerLvTitle = $("#lvTitle")[0];
+
+        this.__headerXpBar = $(".xpWrapper")[0];
+        this.__headerXpFill = $(".xpFill")[0];
+
         this.__headerXp = $("#xp")[0];
         this.__headerXpCap = $("#xpCap")[0];
         this.__headerPortfolioValue = $("#pv")[0];
@@ -155,6 +159,9 @@ class AppUIController extends AppChild {
 
         this.__headerLv.innerHTML = this.__app.__player.__level;
         this.__headerLvTitle.innerHTML = this.__app.__levelsManager.getTitleOf(this.__app.__player.__level);
+
+        this.__headerXpFill.style.width = Math.floor((this.__app.__player.__xp / this.__app.__levelsManager.getFromId(this.__app.__player.__level).__xpCap) * 100) + "%";
+      //  this.__headerXpBar.value = Math.floor((this.__app.__player.__xp / this.__app.__levelsManager.getFromId(this.__app.__player.__level).__xpCap) * 100);
 
         this.__headerXp.innerHTML = this.__app.__player.__xp;
         this.__headerXpCap.innerHTML = this.__app.__levelsManager.getFromId(this.__app.__player.__level).__xpCap;

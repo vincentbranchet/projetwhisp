@@ -7,7 +7,7 @@ class PortfolioUIController extends ControllerChild {
 
     update() {
         var self = this;
-        let htmlSlot, htmlProfile, htmlTitle, htmlProfileName, htmlProfileValue;
+        let htmlSlot, htmlProfile, htmlTitle, htmlProfileName, htmlProfileValue, htmlSlotFill;
 
         // clear wrapper
         this.clear();
@@ -34,13 +34,16 @@ class PortfolioUIController extends ControllerChild {
                 htmlProfile = document.createElement("div");
                 htmlProfile.id = "profile_" + profile.__id;
 
+                htmlSlotFill = document.createElement("div");
+                $(htmlSlotFill).addClass("slotFill");
+
                 if(profile.__launchedReco.length > 0) {
                 // if profile has running event, dont enable click event, print cooldown
                     let profileEvent = profile.__launchedReco[0];
                     let cld = profileEvent.__delay - profileEvent.__timer.__duration;
 
                     htmlProfileName = document.createElement("div");
-                    htmlProfileName.innerText = profile.__name + " (" + cld + "s)";
+                    htmlProfileName.innerText = profile.__name;
                     $(htmlProfileName).addClass("slotProfileName");
                     htmlProfileValue = document.createElement("div");
                     htmlProfileValue.innerText = profile.__value + "/s";
@@ -70,6 +73,7 @@ class PortfolioUIController extends ControllerChild {
                     $(htmlProfile).addClass("button slotProfile");
                 }
 
+                $(htmlSlot).append(htmlSlotFill);
                 $(htmlSlot).append(htmlProfile);
             }
 
@@ -88,10 +92,13 @@ class PortfolioUIController extends ControllerChild {
             if(profile.__launchedReco.length > 0) {
             // if profile has running event, dont enable click event, print cooldown
                 let profileEvent = profile.__launchedReco[0];
-                let cld = profileEvent.__delay - profileEvent.__timer.__duration;
-                let query = "#profile_" + String(profile.__id) + " .slotProfileName";
 
-                $(query).text(profile.__name + " (" + cld + "s)");
+                let decaCld = (profileEvent.__delay * 10) - profileEvent.__timer.__dsDuration;
+                let decaCldPerCent = Math.floor((decaCld / profileEvent.__delay) * 10) + "%";
+
+                let jQueryProfile = "#profile_" + String(profile.__id);
+                
+                $(jQueryProfile).parent().find(".slotFill").css("width", decaCldPerCent);
             }
         });
     }
