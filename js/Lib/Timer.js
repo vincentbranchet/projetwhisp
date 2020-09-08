@@ -14,7 +14,7 @@
  * - Stop it with yourTimer.stop()
  *
  * - Get total duration (in sec) with yourTimer.duration
- * - Get total duration (in decasec) with yourTimer.dsDuration
+ * - Get total duration (in centisec) with yourTimer.csDuration
  *
  * - Reset it with yourTimer.reset()
 **/
@@ -26,10 +26,10 @@ class Timer {
         this.__hr = 0;
         this.__min = 0;
         this.__sec = 0;
-        this.__ds = 0;
+        this.__cs = 0;
 
         this.__duration = 0;
-        this.__dsDuration = 0;
+        this.__csDuration = 0;
 
         this.__state = 'inactive';
         this.__itv = '';
@@ -49,10 +49,10 @@ class Timer {
         this.__hr = 0;
         this.__min = 0;
         this.__sec = 0;
-        this.__ds = 0;
+        this.__cs = 0;
 
         this.__duration = 0;
-        this.__dsDuration = 0;
+        this.__csDuration = 0;
 
         this.stop();
     }
@@ -64,11 +64,11 @@ class Timer {
 
             this.__itv = setTimeout(() => {
 
-                self.__dsDuration ++;
+                self.__csDuration ++;
 
-                self.__ds ++;
+                self.__cs ++;
                 self.run();
-            }, 100);
+            }, 10);
         }
 
         this.update();
@@ -77,10 +77,10 @@ class Timer {
     update() {
         let modulo;
 
-        if(this.ds >= 10) {
+        if(this.cs >= 100) {
             this.sec ++;
-            modulo = this.ds - 10;
-            this.ds = 0 + modulo;
+            modulo = this.cs - 100;
+            this.cs = 0 + modulo;
 
             this.duration ++;
         }
@@ -110,16 +110,16 @@ class Timer {
         return this.__sec;
     }
 
-    get ds() {
-        return this.__ds;
+    get cs() {
+        return this.__cs;
     }
 
     get duration() {
         return this.__duration;
     }
 
-    get dsDuration() {
-        return this.__dsDuration;
+    get csDuration() {
+        return this.__csDuration;
     }
 
     get itv() {
@@ -140,8 +140,8 @@ class Timer {
         this.__sec = newSec;
     }
 
-    set ds(newMs) {
-        this.__ds = newMs;
+    set cs(newCs) {
+        this.__cs = newCs;
     }
 
     set itv(newItv) {
@@ -152,7 +152,7 @@ class Timer {
         this.__duration = newDuration;
     }
 
-    set dsDuration(newDuration) {
-        this.__dsDuration = newDuration;
+    set csDuration(newDuration) {
+        this.__csDuration = newDuration;
     }
 }

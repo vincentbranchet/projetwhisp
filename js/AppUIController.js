@@ -27,6 +27,7 @@ class AppUIController extends AppChild {
         this.__newsButton = $(".newsButtonWrapper")[0];
 
         this.__activePage = "portfolio"; // default homepage
+        this.__activeProfileId = 0;
     }
 
     initMenu() {
@@ -86,7 +87,7 @@ class AppUIController extends AppChild {
         let self = this;
         self.hideActive(self);
         self.__profileUIController.showInShop(profileId);
-        self.__activePage = "profile";
+        self.__activePage = "shop_profile";
     }
 
     toProfileInPortfolio(profileId) {
@@ -94,6 +95,7 @@ class AppUIController extends AppChild {
         self.hideActive(self);
         self.__profileUIController.show(profileId);
         self.__activePage = "profile";
+        self.__activeProfileId = profileId;
     }
     
     clickToPortfolio(self) {
@@ -135,7 +137,7 @@ class AppUIController extends AppChild {
         else if(self.__activePage == "shop") {
             self.__shopUIController.hide();
         }
-        else if(self.__activePage == "profile") {
+        else if(self.__activePage == "profile" || self.__activePage == "shop_profile") {
             self.__profileUIController.hide();
             self.__profileUIController.hideFromShop();
         }
@@ -144,12 +146,24 @@ class AppUIController extends AppChild {
     showActive() {
         if(this.__activePage == "news") {
             this.__newsUIController.show();
+
+            $(".portfolioButtonWrapper").css("text-decoration-line", "none");
+            $(".shopButtonWrapper").css("text-decoration-line", "none");
+            $(".newsButtonWrapper").css("text-decoration-line", "underline");
         }
         else if(this.__activePage == "portfolio") {
             this.__portfolioUIController.show();
+
+            $(".portfolioButtonWrapper").css("text-decoration-line", "underline");
+            $(".shopButtonWrapper").css("text-decoration-line", "none");
+            $(".newsButtonWrapper").css("text-decoration-line", "none");
         }
         else if(this.__activePage == "shop") {
             this.__shopUIController.show();
+
+            $(".portfolioButtonWrapper").css("text-decoration-line", "none");
+            $(".shopButtonWrapper").css("text-decoration-line", "underline");
+            $(".newsButtonWrapper").css("text-decoration-line", "none");
         }
     }
 
@@ -171,6 +185,10 @@ class AppUIController extends AppChild {
 
     printContent() {
         this.__portfolioUIController.print();
+
+        if(this.__activePage == "profile") {
+            this.__profileUIController.refresh(this.__activeProfileId);
+        }
     }
 
     // getters

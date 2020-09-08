@@ -85,12 +85,33 @@
 .profileVitrineWrapper::-webkit-scrollbar {
     display: none;
 }
+.attributeMainWrapper::-webkit-scrollbar {
+    display: none;
+}
+.historyMainWrapper::-webkit-scrollbar {
+    display: none;
+}
+.recoMainWrapper::-webkit-scrollbar {
+    display: none;
+}
+.newsContentWrapper::-webkit-scrollbar {
+    display: none;
+}
+.portfolioContentWrapper::-webkit-scrollbar {
+    display: none;
+}
+.shopContentWrapper::-webkit-scrollbar {
+    display: none;
+}
 
 .newsWrapper, .portfolioWrapper, .shopWrapper, .profileWrapper, .profileVitrineWrapper {
     height: 100%;
     width: 100%;
-    border: 1px solid black;
+}
+
+.newsContentWrapper, .portfolioContentWrapper, .shopContentWrapper {
     overflow: scroll;
+    height: 90%;
 }
 
 .profileWrapper, .profileVitrineWrapper, .newsWrapper, .portfolioWrapper, .shopWrapper {
@@ -103,7 +124,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 1px solid black;
+}
+
+.profileTitle {
+    justify-content: space-around;
+}
+
+.attributeMainWrapper, .historyMainWrapper, .recoMainWrapper {
+    position: absolute;
+    overflow-y: scroll;
+    height: 70%;
 }
 
 .recoWrapper, .notifWrapper, .articleWrapper {
@@ -111,9 +141,8 @@
 }
 
 .slot {
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-    width: 100%;
+    border: 1px solid black;
+    width: 99%;
     height: 10%;
     margin: 1vh 0 1vh 0;
 }
@@ -149,7 +178,6 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    border-bottom: 1px solid black;
 }
 
 .profileAttButton, .profileRecoButton, .profileHistButton {
@@ -159,13 +187,21 @@
     align-items: center;
 }
 
-.profileRecoButton {
-    border-right: 1px solid black;
-    border-left: 1px solid black;
+
+.profileSellButton, .profileBuyButton {
+    height: 10%;
+    padding: 0 20px 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    position: absolute;
+    top: 10%;
+    right: 0;
 }
 
-.slotProfile {
-
+.profileSellButton {
+    
 }
 
 /* BODY - PORTFOLIO - PROFILE ATTRIBUTES */
@@ -193,32 +229,22 @@
     position: relative;
 }
 
-.profileSellButton {
-    position: absolute;
-    bottom: 0;
+/* BODY - PORTFOLIO - PROFILE RECOS */
+
+.recoMainWrapper {
     width: 100%;
-    height: 15%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-top: 1px solid black;
+}
+
+.recoWrapper {
+    width: 95%;
+    border: 1px solid black;
+    padding: 10px 2%;
 }
 
 /* BODY - SHOP */
 
 .profileVitrineWrapper {
     position: relative;
-}
-
-.profileBuyButton {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 15%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-top: 1px solid black;
 }
 
 /* BOTTOM MENU */
@@ -230,6 +256,7 @@
     flex-direction: row;
     align-items: center;
     border-bottom: 1px solid black;
+    border-top: 1px solid black;
 }
 
 .newsButtonWrapper, .portfolioButtonWrapper, .shopButtonWrapper {

@@ -14,7 +14,7 @@ class NewsUIController extends ControllerChild {
 
     printAll() {
         let self = this;
-        let htmltitle;
+        let htmltitle, htmlContent;
         let news, notifs, merge = [];
         news = this.__controller.__app.__newsManager.__printed;
         notifs = this.__controller.__app.__notificationManager.__printed;
@@ -27,7 +27,11 @@ class NewsUIController extends ControllerChild {
         htmltitle.innerText = "FEED";
         $(htmltitle).addClass("newsTitle");
 
+        htmlContent = document.createElement("div");
+        $(htmlContent).addClass("newsContentWrapper");
+
         this.__pageWrapper.append(htmltitle);
+        this.__pageWrapper.append(htmlContent);
 
         merge.forEach(elt => {
             if(elt instanceof News) {
@@ -61,7 +65,7 @@ class NewsUIController extends ControllerChild {
         articleWrapper.append(newsImg);
         articleWrapper.append(newsContent);
 
-        this.__pageWrapper.append(articleWrapper);
+        $(".newsContentWrapper").append(articleWrapper);
     }
 
     printNotif(notif) {
@@ -78,7 +82,7 @@ class NewsUIController extends ControllerChild {
         notifWrapper.append(notifDate);
         notifWrapper.append(notifText);
 
-        this.__pageWrapper.append(notifWrapper);
+        $(".newsContentWrapper").append(notifWrapper);
     }
 
     notify() {

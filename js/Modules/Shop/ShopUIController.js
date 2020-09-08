@@ -7,7 +7,7 @@ class ShopUIController extends ControllerChild {
 
     update() {
         var self = this;
-        let htmlSlot, htmlProfile, htmlProfileName, htmlProfileValue, htmlTitle;
+        let htmlSlot, htmlProfile, htmlProfileName, htmlProfileValue, htmlTitle, htmlContent;
 
         // clear wrapper
         this.clear();
@@ -19,6 +19,9 @@ class ShopUIController extends ControllerChild {
         htmlTitle = document.createElement("div");
         htmlTitle.innerText = "PROFILES";
         $(htmlTitle).addClass("shopTitle");
+
+        htmlContent = document.createElement("div");
+        $(htmlContent).addClass("shopContentWrapper");
 
         this.__shopWrapper.append(htmlTitle);
 
@@ -49,9 +52,11 @@ class ShopUIController extends ControllerChild {
 
             $(htmlSlot).append(htmlProfile);
 
-            self.__shopWrapper.append(htmlSlot);
+            $(htmlContent).append(htmlSlot);
         });
 
+        this.__shopWrapper.append(htmlContent);
+        
         // hide
         this.__shopWrapper.style.display = "none";
     }

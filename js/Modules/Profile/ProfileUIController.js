@@ -11,6 +11,13 @@ class ProfileUIController extends ControllerChild {
 
     // A REFACTORISER AVEC InPortfolio / InShop EN PARAMETRE DES FONCTIONS
 
+    refresh(profileId) {
+        // hacky function called each frame to refresh profile page value
+        let profile = this.__controller.__app.__portfolioManager.getFromId(profileId);
+
+        $(".profileTitle").text(profile.__name + " (" + profile.__value + "/s" + ")");
+    }
+
     show(profileId) {
         this.clear();
 
@@ -20,12 +27,24 @@ class ProfileUIController extends ControllerChild {
 
         if(this.__activePage == "attributes") {
             this.printAttributesOf(profileId);
+
+            $(".profileAttButton").css("text-decoration-line", "underline");
+            $(".profileRecoButton").css("text-decoration-line", "none");
+            $(".profileHistButton").css("text-decoration-line", "none");
         }
         else if(this.__activePage == "history") {
             this.printHistoryOf(profileId);
+
+            $(".profileAttButton").css("text-decoration-line", "none");
+            $(".profileRecoButton").css("text-decoration-line", "none");
+            $(".profileHistButton").css("text-decoration-line", "underline");
         }
         else if(this.__activePage == "recos") {
             this.printRecosOf(profileId);
+
+            $(".profileAttButton").css("text-decoration-line", "none");
+            $(".profileRecoButton").css("text-decoration-line", "underline");
+            $(".profileHistButton").css("text-decoration-line", "none");
         }
     }
 
@@ -47,7 +66,7 @@ class ProfileUIController extends ControllerChild {
         $(htmlTitle).addClass("shopTitle");
 
         htmlProfileInfo = document.createElement("div");
-        htmlProfileInfo.innerText = profile.__name;
+        htmlProfileInfo.innerText = profile.__name + " (" + profile.__value + "/s" + ")";
         $(htmlProfileInfo).addClass("profileTitle");
         
         htmlAttWrapper = document.createElement("div");
@@ -72,7 +91,7 @@ class ProfileUIController extends ControllerChild {
         });
 
         htmlSellButton = document.createElement("div");
-        htmlSellButton.innerText = "Acheter (" + profile.__value + ")";
+        htmlSellButton.innerText = "Ajouter";
         $(htmlSellButton).addClass("profileBuyButton button profile_" + profileId);
 
         (function(self) {
@@ -81,15 +100,15 @@ class ProfileUIController extends ControllerChild {
 
         this.__profileVitrineWrapper.append(htmlTitle);
         this.__profileVitrineWrapper.append(htmlProfileInfo);
-        this.__profileVitrineWrapper.append(htmlAttWrapper)
         this.__profileVitrineWrapper.append(htmlSellButton);
+        this.__profileVitrineWrapper.append(htmlAttWrapper);
     }
 
 
     printLayout(profileId) {
         //profile id is the profile ID as int
         var self = this;
-        let htmlTitle, htmlProfileInfo, htmlMenuWrapper, htmlAttButton, htmlRecoButton, htmlHistButton;
+        let htmlTitle, htmlProfileInfo, htmlMenuWrapper, htmlAttButton, htmlRecoButton, htmlHistButton, htmlSellButton;
         let profile = this.__controller.__app.__portfolioManager.getFromId(profileId);
 
         htmlTitle = document.createElement("div");
@@ -97,7 +116,7 @@ class ProfileUIController extends ControllerChild {
         $(htmlTitle).addClass("portfolioTitle");
 
         htmlProfileInfo = document.createElement("div");
-        htmlProfileInfo.innerText = profile.__name;
+        htmlProfileInfo.innerText = profile.__name + " (" + profile.__value + "/s" + ")";
         $(htmlProfileInfo).addClass("profileTitle");
         
         htmlMenuWrapper = document.createElement("div");
@@ -124,6 +143,14 @@ class ProfileUIController extends ControllerChild {
             htmlHistButton.addEventListener("click", self.clickToHistory(self, profileId));
         }(self));
 
+        htmlSellButton = document.createElement("div");
+        htmlSellButton.innerText = "Retirer";
+        $(htmlSellButton).addClass("profileSellButton button profile_" + profileId);
+
+        (function(self) {
+            htmlSellButton.addEventListener("click", self.clickToSell(self));
+        }(self));
+
         $(htmlMenuWrapper).append(htmlAttButton);
         $(htmlMenuWrapper).append(htmlRecoButton);
         $(htmlMenuWrapper).append(htmlHistButton);
@@ -131,6 +158,7 @@ class ProfileUIController extends ControllerChild {
         this.__profileWrapper.append(htmlTitle);
         this.__profileWrapper.append(htmlProfileInfo);
         this.__profileWrapper.append(htmlMenuWrapper);
+        this.__profileWrapper.append(htmlSellButton);
     }
 
     clickToSell(self) {
@@ -153,7 +181,7 @@ class ProfileUIController extends ControllerChild {
         //profile id is the profile ID as int
         var self = this;
         let profile = this.__controller.__app.__portfolioManager.getFromId(profileId);
-        let htmlAttWrapper, htmlSellButton;
+        let htmlAttWrapper;
         
         htmlAttWrapper = document.createElement("div");
         $(htmlAttWrapper).addClass("attributeMainWrapper");
@@ -179,16 +207,7 @@ class ProfileUIController extends ControllerChild {
             $(htmlAttWrapper).append(htmlAtt);
         });
 
-        htmlSellButton = document.createElement("div");
-        htmlSellButton.innerText = "Vendre (" + profile.__value + ")";
-        $(htmlSellButton).addClass("profileSellButton button profile_" + profileId);
-
-        (function(self) {
-            htmlSellButton.addEventListener("click", self.clickToSell(self));
-        }(self));
-
         this.__profileWrapper.append(htmlAttWrapper);
-        this.__profileWrapper.append(htmlSellButton);
     }
 
     printHistoryOf(profileId) {
@@ -205,8 +224,6 @@ class ProfileUIController extends ControllerChild {
         profileEvents = profile.__recoEvents.concat(profile.__nativeEvents);
 
         if(profileEvents.length >= 1) {
-            htmlHistWrapper = document.createElement("div");
-
             profileEvents.sort((a, b) => b.date - a.date);
 
             profileEvents.forEach(evt => {

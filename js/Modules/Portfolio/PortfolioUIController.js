@@ -7,7 +7,7 @@ class PortfolioUIController extends ControllerChild {
 
     update() {
         var self = this;
-        let htmlSlot, htmlProfile, htmlTitle, htmlProfileName, htmlProfileValue, htmlSlotFill;
+        let htmlSlot, htmlProfile, htmlTitle, htmlContent, htmlProfileName, htmlProfileValue, htmlSlotFill;
 
         // clear wrapper
         this.clear();
@@ -19,11 +19,15 @@ class PortfolioUIController extends ControllerChild {
         htmlTitle = document.createElement("div");
         htmlTitle.innerText = "PORTFOLIO";
         $(htmlTitle).addClass("portfolioTitle");
+
         this.__portfolioWrapper.append(htmlTitle);
+
+        htmlContent = document.createElement("div");
+        $(htmlContent).addClass("portfolioContentWrapper");
 
         // for each portfolio slot, create elt
         for(let i = 0; i < this.__controller.__app.__portfolioManager.__slots; i++) {
-            console.log(this.__controller.__app.__portfolioManager.__slots);
+
             htmlSlot = document.createElement("div");
             $(htmlSlot).addClass("slot");
 
@@ -77,8 +81,10 @@ class PortfolioUIController extends ControllerChild {
                 $(htmlSlot).append(htmlProfile);
             }
 
-            self.__portfolioWrapper.append(htmlSlot);
+            $(htmlContent).append(htmlSlot);
         }
+
+        this.__portfolioWrapper.append(htmlContent);
 
         this.hide();
     }
@@ -93,12 +99,11 @@ class PortfolioUIController extends ControllerChild {
             // if profile has running event, dont enable click event, print cooldown
                 let profileEvent = profile.__launchedReco[0];
 
-                let decaCld = (profileEvent.__delay * 10) - profileEvent.__timer.__dsDuration;
-                let decaCldPerCent = Math.floor((decaCld / profileEvent.__delay) * 10) + "%";
-
+                let centiCld = (profileEvent.__delay * 100) - profileEvent.__timer.__csDuration;
+                let centiCldPerCent = Math.floor((centiCld / profileEvent.__delay * 100)) / 100 + "%";
                 let jQueryProfile = "#profile_" + String(profile.__id);
                 
-                $(jQueryProfile).parent().find(".slotFill").css("width", decaCldPerCent);
+                $(jQueryProfile).parent().find(".slotFill").css("width", centiCldPerCent);
             }
         });
     }
