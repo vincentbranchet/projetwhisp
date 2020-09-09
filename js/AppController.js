@@ -111,6 +111,25 @@ class AppController extends AppChild {
             this.__app.__UIController.__shopUIController.update();
             this.__app.__UIController.__portfolioUIController.update();
             this.__app.__UIController.levelUp();
+            
+            // pop up lvup reward
+            this.popUp("Vous avez gagné un niveau. Félicitations !");
         }
+    }
+
+    popUp(text) {
+        this.__app.__UIController.printPopUp(text);
+        this.pause(this.__stopMainLoop);
+    }
+
+    pause(rafId) {
+        cancelAnimationFrame(rafId);
+        console.log("game paused");
+    }
+
+    resume() {
+        this.__lastTick = performance.now();
+        this.mainLoop(performance.now());
+        console.log("game resumed");
     }
 }

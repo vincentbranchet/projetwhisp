@@ -279,3 +279,27 @@
 .shopButtonWrapper {
     border-right: 1px solid black;
 }
+
+/* POP UP */
+
+.popUpWrapper {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    max-width: 80vw;
+    max-height: 20vh;
+    border: 1px solid black;
+    padding: 20px 20px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.popUpButton {
+    margin-top: 3vh;
+    padding: 5px 10px;
+    border: 1px solid black;
+}

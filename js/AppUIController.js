@@ -26,8 +26,12 @@ class AppUIController extends AppChild {
         this.__shopButton = $(".shopButtonWrapper")[0];
         this.__newsButton = $(".newsButtonWrapper")[0];
 
+        // pop-up
+        this.__popUpWrapper = $(".popUpWrapper")[0];
+
         this.__activePage = "portfolio"; // default homepage
         this.__activeProfileId = 0;
+        this.__isPaused = 0; // during pop ups
     }
 
     initMenu() {
@@ -127,6 +131,13 @@ class AppUIController extends AppChild {
         }
     }
 
+    clickToConfirm(self) {
+    // from pop up
+        return function() {
+            self.deletePopUp();
+        }
+    }
+
     hideActive(self) {
         if(self.__activePage == "news") {
             self.__newsUIController.hide();
@@ -189,6 +200,37 @@ class AppUIController extends AppChild {
         if(this.__activePage == "profile") {
             this.__profileUIController.refresh(this.__activeProfileId);
         }
+    }
+
+    printPopUp(text) {
+        var self = this;
+        let textWrapper, confirmButton;
+
+        confirmButton = document.createElement("div");
+        confirmButton.innerText = "Continuer";
+        $(confirmButton).addClass("popUpButton button");
+
+        (function(self) {
+            confirmButton.addEventListener("click", self.clickToConfirm(self));
+        }(self));
+
+        textWrapper = document.createElement("div");
+        textWrapper.innerText = text;
+        $(textWrapper).addClass("popUpText");
+
+
+        this.__popUpWrapper.append(textWrapper);
+        this.__popUpWrapper.append(confirmButton);
+
+        this.__popUpWrapper.style.display = "flex";
+    }
+
+    deletePopUp() {
+        this.__popUpWrapper.innerHTML = "";
+        this.__popUpWrapper.style.display = "none";
+
+        // resume game
+        this.__app.__appController.resume();
     }
 
     // getters
