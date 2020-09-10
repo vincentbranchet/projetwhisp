@@ -85,6 +85,7 @@ class RecoEventController extends EventControllerChild {
         event.__timer.reset();
         event.__wasResolved = 1;
         event.__hasLaunched = 0; // so it can be sent again
+        event.__resolveDate = new Date();
 
         let indexOfEvent = profile.__launchedReco.indexOf(event);
         if(indexOfEvent >= 0) {
@@ -93,15 +94,6 @@ class RecoEventController extends EventControllerChild {
         }
 
         this.__controller.__nativeController.scanToLaunch();
-        
-        if(event.__toSpawn.length == 0 && event.__toDelete.length == 0) {
-        // if event has no consequences
-            this.__controller.__app.__notificationController.print(profile.__name + " n'a pas tenu compte de la recommandation " + reco.__name, event);
-        }
-        else {
-        // if event has consequences
-            this.__controller.__app.__notificationController.print(profile.__name + " a tenu compte de la recommandation " + reco.__name, event);
-        }
     
         this.__controller.__app.__UIController.__newsUIController.notify();
         this.__controller.__app.__UIController.__newsUIController.refresh();

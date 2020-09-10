@@ -31,6 +31,9 @@ class ProfileUIController extends ControllerChild {
             $(".profileAttButton").css("text-decoration-line", "underline");
             $(".profileRecoButton").css("text-decoration-line", "none");
             $(".profileHistButton").css("text-decoration-line", "none");
+
+            // reset landing page to attribute
+            this.__activePage = "attributes";
         }
         else if(this.__activePage == "history") {
             this.printHistoryOf(profileId);
@@ -38,6 +41,9 @@ class ProfileUIController extends ControllerChild {
             $(".profileAttButton").css("text-decoration-line", "none");
             $(".profileRecoButton").css("text-decoration-line", "none");
             $(".profileHistButton").css("text-decoration-line", "underline");
+
+            // reset landing page to attribute
+            this.__activePage = "attributes";
         }
         else if(this.__activePage == "recos") {
             this.printRecosOf(profileId);
@@ -45,6 +51,9 @@ class ProfileUIController extends ControllerChild {
             $(".profileAttButton").css("text-decoration-line", "none");
             $(".profileRecoButton").css("text-decoration-line", "underline");
             $(".profileHistButton").css("text-decoration-line", "none");
+
+            // reset landing page to attribute
+            this.__activePage = "attributes";
         }
     }
 
@@ -307,11 +316,19 @@ class ProfileUIController extends ControllerChild {
     printRecoEvent(evt) {
         let htmlEvtWrapper, htmlEvtTitle, htmlEvtDate;
 
-        htmlEvtTitle = document.createElement("div");
-        htmlEvtTitle.innerText = evt.__name;
-
         htmlEvtDate = document.createElement("div");
         htmlEvtDate.innerHTML = evt.__resolveDate.getHours() + ":" + evt.__resolveDate.getMinutes() + ":" + evt.__resolveDate.getSeconds();
+
+        htmlEvtTitle = document.createElement("div");
+        
+        if(evt.__toSpawn.length == 0 && evt.__toDelete.length == 0) {
+        // if event has no consequences
+            htmlEvtTitle.innerText = "La recommandation " + evt.__name + " n'a pas eu de conséquences";
+        }
+        else {
+        // if event has consequences
+            htmlEvtTitle.innerText = "La recommandation " + evt.__name + " a eu des conséquences";
+        }
 
         htmlEvtWrapper = document.createElement("div");
         $(htmlEvtWrapper).append(htmlEvtDate);

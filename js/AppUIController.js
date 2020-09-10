@@ -29,7 +29,7 @@ class AppUIController extends AppChild {
         // pop-up
         this.__popUpWrapper = $(".popUpWrapper")[0];
 
-        this.__activePage = "portfolio"; // default homepage
+        this.__activePage = "news"; // default homepage
         this.__activeProfileId = 0;
         this.__isPaused = 0; // during pop ups
     }
@@ -231,6 +231,8 @@ class AppUIController extends AppChild {
 
         // resume game
         this.__app.__appController.resume();
+
+        this.toNews();
     }
 
     // getters
