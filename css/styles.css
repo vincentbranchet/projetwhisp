@@ -1,4 +1,8 @@
 /* DOCUMENT - GENERAL */
+html, body {
+    width: 100%;
+    height: 100%;
+}
 
 .mainWrapper {
     width: 30vw;
@@ -165,6 +169,12 @@
     width: 60%;
 }
 
+/* BODY - NEWS */
+
+.newsWrapper {
+    padding: 0 2vw;
+}
+
 /* BODY - PORTFOLIO */
 
 .historyEvent {
@@ -187,6 +197,17 @@
     align-items: center;
 }
 
+.profileAttButton:hover {
+    text-decoration-line: underline!important;
+}
+
+.profileRecoButton:hover {
+    text-decoration-line: underline!important;
+}
+
+.profileHistButton:hover {
+    text-decoration-line: underline!important;
+}
 
 .profileSellButton, .profileBuyButton {
     height: 10%;
@@ -200,9 +221,7 @@
     right: 0;
 }
 
-.profileSellButton {
-    
-}
+
 
 /* BODY - PORTFOLIO - PROFILE ATTRIBUTES */
 
@@ -239,6 +258,22 @@
     width: 95%;
     border: 1px solid black;
     padding: 10px 2%;
+    position: relative;
+}
+
+.wholeButton {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* BODY - PORTFOLIO - PROFILE HISTORY */
+
+.historyMainWrapper {
+    width: 100%;
+    padding: 0 2vw;
 }
 
 /* BODY - SHOP */
@@ -270,14 +305,23 @@
 .newsButtonWrapper {
     border-left: 1px solid black;
 }
+.navWrapper div.newsButtonWrapper:hover {
+    text-decoration-line: underline!important;
+}
 
 .portfolioButtonWrapper {
     border-right: 1px solid black;
     border-left: 1px solid black;
 }
+.navWrapper div.portfolioButtonWrapper:hover {
+    text-decoration-line: underline!important;
+}
 
 .shopButtonWrapper {
     border-right: 1px solid black;
+}
+.navWrapper div.shopButtonWrapper:hover {
+    text-decoration-line: underline!important;
 }
 
 /* POP UP */

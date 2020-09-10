@@ -17,7 +17,7 @@ class PortfolioUIController extends ControllerChild {
 
         // create & fill title
         htmlTitle = document.createElement("div");
-        htmlTitle.innerText = "PORTFOLIO";
+        htmlTitle.innerText = "Portfolio";
         $(htmlTitle).addClass("portfolioTitle");
 
         this.__portfolioWrapper.append(htmlTitle);

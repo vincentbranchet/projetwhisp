@@ -9,6 +9,8 @@ class AppController extends AppChild {
         this.__lastRender = this.__lastTick;
         
         this.__lastXpTick = this.__lastTick;
+
+        this.__gameTime = new Date();
     }
 
     init() {
@@ -41,6 +43,7 @@ class AppController extends AppChild {
         this.__app.__UIController.showActive();
 
         this.__lastRender = tFrame;
+        this.__gameTime = new Date();
     }
 
     queueUpdates(numTicks) {

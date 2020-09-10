@@ -71,7 +71,7 @@ class ProfileUIController extends ControllerChild {
         let htmlProfileInfo, htmlSellButton, htmlTitle, htmlAttWrapper;
 
         htmlTitle = document.createElement("div");
-        htmlTitle.innerText = "PROFILS";
+        htmlTitle.innerText = "Profils";
         $(htmlTitle).addClass("shopTitle");
 
         htmlProfileInfo = document.createElement("div");
@@ -121,7 +121,7 @@ class ProfileUIController extends ControllerChild {
         let profile = this.__controller.__app.__portfolioManager.getFromId(profileId);
 
         htmlTitle = document.createElement("div");
-        htmlTitle.innerText = "PORTFOLIO";
+        htmlTitle.innerText = "Portfolio";
         $(htmlTitle).addClass("portfolioTitle");
 
         htmlProfileInfo = document.createElement("div");
@@ -132,21 +132,21 @@ class ProfileUIController extends ControllerChild {
         $(htmlMenuWrapper).addClass("profileMenuWrapper");
 
         htmlAttButton = document.createElement("div");
-        htmlAttButton.innerText = "ATTRIBUTS";
+        htmlAttButton.innerText = "Attributs";
         $(htmlAttButton).addClass("profileAttButton button");
         (function(self) {
             htmlAttButton.addEventListener("click", self.clickToAttributes(self, profileId));
         }(self));
 
         htmlRecoButton = document.createElement("div");
-        htmlRecoButton.innerText = "RECOS";
+        htmlRecoButton.innerText = "Recommandations";
         $(htmlRecoButton).addClass("profileRecoButton button");
         (function(self) {
             htmlRecoButton.addEventListener("click", self.clickToRecos(self, profileId));
         }(self));
 
         htmlHistButton = document.createElement("div");
-        htmlHistButton.innerText = "HISTORIQUE";
+        htmlHistButton.innerText = "Historique";
         $(htmlHistButton).addClass("profileHistButton button");
         (function(self) {
             htmlHistButton.addEventListener("click", self.clickToHistory(self, profileId));
@@ -278,8 +278,7 @@ class ProfileUIController extends ControllerChild {
                 htmlRecoDesc.innerText = reco.__desc;
 
                 htmlRecoSend = document.createElement("div");
-                $(htmlRecoSend).addClass("button reco_" + recoId + "_" + profile.__id);
-                htmlRecoSend.innerText = "ENVOYER" + " (" + reco.__cld + "s)";
+                $(htmlRecoSend).addClass("wholeButton button reco_" + recoId + "_" + profile.__id);
 
                 (function(self) {
                     htmlRecoSend.addEventListener("click", self.clickToLaunch(self), true);
@@ -298,12 +297,14 @@ class ProfileUIController extends ControllerChild {
 
     printNativeEvent(evt) {
         let htmlEvtWrapper, htmlEvtTitle, htmlEvtDate;
+        let absoluteTimePassed = Math.abs(this.__controller.__app.__appController.__gameTime - evt.__resolveDate);
+        let minutesPassed = Math.ceil(absoluteTimePassed / (1000 * 60));
 
         htmlEvtTitle = document.createElement("div");
         htmlEvtTitle.innerText = evt.__name;
 
         htmlEvtDate = document.createElement("div");
-        htmlEvtDate.innerHTML = evt.__resolveDate.getHours() + ":" + evt.__resolveDate.getMinutes() + ":" + evt.__resolveDate.getSeconds();
+        htmlEvtDate.innerHTML = "Il y a " + minutesPassed + " minutes";
 
         htmlEvtWrapper = document.createElement("div");
         $(htmlEvtWrapper).append(htmlEvtDate);
@@ -315,12 +316,14 @@ class ProfileUIController extends ControllerChild {
 
     printRecoEvent(evt) {
         let htmlEvtWrapper, htmlEvtTitle, htmlEvtDate;
+        let absoluteTimePassed = Math.abs(this.__controller.__app.__appController.__gameTime - evt.__resolveDate);
+        let minutesPassed = Math.ceil(absoluteTimePassed / (1000 * 60));
 
         htmlEvtDate = document.createElement("div");
-        htmlEvtDate.innerHTML = evt.__resolveDate.getHours() + ":" + evt.__resolveDate.getMinutes() + ":" + evt.__resolveDate.getSeconds();
+        htmlEvtDate.innerHTML = "Il y a " + minutesPassed + " minutes";
 
         htmlEvtTitle = document.createElement("div");
-        
+
         if(evt.__toSpawn.length == 0 && evt.__toDelete.length == 0) {
         // if event has no consequences
             htmlEvtTitle.innerText = "La recommandation " + evt.__name + " n'a pas eu de conséquences";

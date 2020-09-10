@@ -24,7 +24,7 @@ class NewsUIController extends ControllerChild {
         merge.sort((a, b) => b.date - a.date);
 
         htmltitle = document.createElement("div");
-        htmltitle.innerText = "FEED";
+        htmltitle.innerText = "Actualités";
         $(htmltitle).addClass("newsTitle");
 
         htmlContent = document.createElement("div");
@@ -45,6 +45,8 @@ class NewsUIController extends ControllerChild {
 
     printNews(news) {
         let articleWrapper, newsTitle, newsImg, newsContent, newsDate;
+        let absoluteTimePassed = Math.abs(this.__controller.__app.__appController.__gameTime - news.__date);
+        let minutesPassed = Math.ceil(absoluteTimePassed / (1000 * 60));
 
         articleWrapper = document.createElement("div");
         $(articleWrapper).addClass("articleWrapper");
@@ -54,7 +56,7 @@ class NewsUIController extends ControllerChild {
         newsContent = document.createElement("div");
 
         newsTitle.innerHTML = news.__title;
-        newsDate.innerHTML = news.__date.getHours() + ":" + news.__date.getMinutes() + ":" + news.__date.getSeconds();
+        newsDate.innerHTML = "Il y a "  + minutesPassed + " minute(s)";
         if(news.__img && news.__img != 0) {
             newsImg.innerHTML = news.__img;
         }
@@ -70,13 +72,15 @@ class NewsUIController extends ControllerChild {
 
     printNotif(notif) {
         let notifWrapper, notifDate, notifText;
+        let absoluteTimePassed = Math.abs(this.__controller.__app.__appController.__gameTime - notif.__date);
+        let minutesPassed = Math.ceil(absoluteTimePassed / (1000 * 60));
 
         notifWrapper = document.createElement("div");
         $(notifWrapper).addClass("notifWrapper");
         notifDate = document.createElement("div");
         notifText = document.createElement("div");
 
-        notifDate.innerHTML = notif.__date.getHours() + ":" + notif.__date.getMinutes() + ":" + notif.__date.getSeconds();
+        notifDate.innerHTML = "Il y a "  + minutesPassed + " minute(s)";
         notifText.innerHTML = notif.__content;
 
         notifWrapper.append(notifDate);
