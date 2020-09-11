@@ -75,7 +75,7 @@ class ProfileUIController extends ControllerChild {
         $(htmlTitle).addClass("shopTitle");
 
         htmlProfileInfo = document.createElement("div");
-        htmlProfileInfo.innerText = profile.__name + " (" + profile.__value + "/s" + ")";
+        htmlProfileInfo.innerText = profile.__name + " (" + this.__controller.formatNumber(profile.__value) + "/s" + ")";
         $(htmlProfileInfo).addClass("profileTitle");
         
         htmlAttWrapper = document.createElement("div");
@@ -125,7 +125,7 @@ class ProfileUIController extends ControllerChild {
         $(htmlTitle).addClass("portfolioTitle");
 
         htmlProfileInfo = document.createElement("div");
-        htmlProfileInfo.innerText = profile.__name + " (" + profile.__value + "/s" + ")";
+        htmlProfileInfo.innerText = profile.__name + " (" + this.__controller.formatNumber(profile.__value) + "/s" + ")";
         $(htmlProfileInfo).addClass("profileTitle");
         
         htmlMenuWrapper = document.createElement("div");
@@ -233,7 +233,7 @@ class ProfileUIController extends ControllerChild {
         profileEvents = profile.__recoEvents.concat(profile.__nativeEvents);
 
         if(profileEvents.length >= 1) {
-            profileEvents.sort((a, b) => b.date - a.date);
+            profileEvents.sort((a, b) => b.resolveDate - a.resolveDate);
 
             profileEvents.forEach(evt => {
                 if(evt instanceof NativeEvent) {
@@ -296,7 +296,7 @@ class ProfileUIController extends ControllerChild {
     }
 
     printNativeEvent(evt) {
-        let htmlEvtWrapper, htmlEvtTitle, htmlEvtDate;
+        let htmlEvtWrapper, htmlEvtTitle, htmlEvtDate, htmlConsWrapper;
         let absoluteTimePassed = Math.abs(this.__controller.__app.__appController.__gameTime - evt.__resolveDate);
         let minutesPassed = Math.ceil(absoluteTimePassed / (1000 * 60));
 
@@ -305,24 +305,63 @@ class ProfileUIController extends ControllerChild {
 
         htmlEvtDate = document.createElement("div");
         htmlEvtDate.innerHTML = "Il y a " + minutesPassed + " minutes";
+        $(htmlEvtDate).addClass("contentDate");
+
+        htmlConsWrapper = document.createElement("div");
+
+        if(evt.__toSpawn.length == 0 && evt.__toDelete.length == 0) {
+        // if event has no consequences
+            htmlEvtTitle.innerText = "Un événement '" + evt.__name + "' a eu lieu, sans conséquences";
+        }
+        else {
+        // if event has consequences
+            htmlEvtTitle.innerText = "Un événement '" + evt.__name + "' a eu lieu :";
+
+            if(evt.__toDelete.length != 0) {
+                for(let attId of evt.__toDelete) {
+
+                    let att = this.__controller.__app.__attributeManager.getFromId(attId);
+                    let htmlConseq = document.createElement("div");
+
+                    htmlConseq.innerText = "L'attribut '" + att.__name + "' a disparu";
+
+                    $(htmlConsWrapper).append(htmlConseq);
+                }
+            }
+            if(evt.__toSpawn.length != 0) {
+                for(let attId of evt.__toSpawn) {
+
+                    let att = this.__controller.__app.__attributeManager.getFromId(attId);
+                    let htmlConseq = document.createElement("div");
+
+                    htmlConseq.innerText = "Nouvel attribut '" + att.__name + "'";
+
+                    $(htmlConsWrapper).append(htmlConseq);
+                }
+            }
+        }
 
         htmlEvtWrapper = document.createElement("div");
         $(htmlEvtWrapper).append(htmlEvtDate);
         $(htmlEvtWrapper).append(htmlEvtTitle);
+        $(htmlEvtWrapper).append(htmlConsWrapper);
         $(htmlEvtWrapper).addClass("historyEvent");
 
         return htmlEvtWrapper;
     }
 
     printRecoEvent(evt) {
-        let htmlEvtWrapper, htmlEvtTitle, htmlEvtDate;
+        let htmlEvtWrapper, htmlEvtTitle, htmlEvtDate, htmlConsWrapper;
         let absoluteTimePassed = Math.abs(this.__controller.__app.__appController.__gameTime - evt.__resolveDate);
         let minutesPassed = Math.ceil(absoluteTimePassed / (1000 * 60));
 
         htmlEvtDate = document.createElement("div");
         htmlEvtDate.innerHTML = "Il y a " + minutesPassed + " minutes";
+        $(htmlEvtDate).addClass("contentDate");
 
         htmlEvtTitle = document.createElement("div");
+
+        htmlConsWrapper = document.createElement("div");
 
         if(evt.__toSpawn.length == 0 && evt.__toDelete.length == 0) {
         // if event has no consequences
@@ -330,12 +369,36 @@ class ProfileUIController extends ControllerChild {
         }
         else {
         // if event has consequences
-            htmlEvtTitle.innerText = "La recommandation " + evt.__name + " a eu des conséquences";
+            htmlEvtTitle.innerText = "La recommandation " + evt.__name + " a eu des conséquences :";
+
+            if(evt.__toDelete.length != 0) {
+                for(let attId of evt.__toDelete) {
+
+                    let att = this.__controller.__app.__attributeManager.getFromId(attId);
+                    let htmlConseq = document.createElement("div");
+
+                    htmlConseq.innerText = "L'attribut '" + att.__name + "' a disparu";
+
+                    $(htmlConsWrapper).append(htmlConseq);
+                }
+            }
+            if(evt.__toSpawn.length != 0) {
+                for(let attId of evt.__toSpawn) {
+
+                    let att = this.__controller.__app.__attributeManager.getFromId(attId);
+                    let htmlConseq = document.createElement("div");
+
+                    htmlConseq.innerText = "Nouvel attribut '" + att.__name + "'";
+
+                    $(htmlConsWrapper).append(htmlConseq);
+                }
+            }
         }
 
         htmlEvtWrapper = document.createElement("div");
         $(htmlEvtWrapper).append(htmlEvtDate);
         $(htmlEvtWrapper).append(htmlEvtTitle);
+        $(htmlEvtWrapper).append(htmlConsWrapper);
         $(htmlEvtWrapper).addClass("historyEvent");
 
         return htmlEvtWrapper;

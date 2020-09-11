@@ -7,7 +7,7 @@ class ShopUIController extends ControllerChild {
 
     update() {
         var self = this;
-        let htmlSlot, htmlProfile, htmlProfileName, htmlProfileValue, htmlTitle, htmlContent;
+        let profiles, htmlSlot, htmlProfile, htmlProfileName, htmlProfileValue, htmlTitle, htmlContent;
 
         // clear wrapper
         this.clear();
@@ -25,8 +25,10 @@ class ShopUIController extends ControllerChild {
 
         this.__shopWrapper.append(htmlTitle);
 
-        // for each profile in shop, create & fill slots
-        this.__controller.__app.__shopManager.__inShop.forEach(profile => {
+        // for each profile in shop, sorted by value (decr) create & fill slots
+        profiles = this.__controller.__app.__shopManager.__inShop;
+        profiles.sort((a, b) => b.__value - a.__value);
+        profiles.forEach(profile => {
 
             htmlSlot = document.createElement("div");
             $(htmlSlot).addClass("slot");
@@ -44,7 +46,7 @@ class ShopUIController extends ControllerChild {
             htmlProfileName.innerText = profile.__name;
             $(htmlProfileName).addClass("slotProfileName");
             htmlProfileValue = document.createElement("div");
-            htmlProfileValue.innerText = profile.__value + "/s";
+            htmlProfileValue.innerText = self.__controller.formatNumber(profile.__value) + "/s";
             $(htmlProfileValue).addClass("slotProfileValue");
 
             $(htmlProfile).append(htmlProfileName);

@@ -46,7 +46,6 @@ class RecoEventController extends EventControllerChild {
     
     resolve(evtId, profileId) {
         let event = this.__controller.__app.__eventManager.__recoManager.getFromId(evtId);
-        let reco = this.__controller.__app.__recoManager.getFromId(event.__reco);
         let profile = this.__controller.__app.__portfolioManager.getFromId(profileId);
 
         // apply effects to profile

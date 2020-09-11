@@ -57,9 +57,12 @@ class NewsUIController extends ControllerChild {
 
         newsTitle.innerHTML = news.__title;
         newsDate.innerHTML = "Il y a "  + minutesPassed + " minute(s)";
+        $(newsDate).addClass("contentDate");
+
         if(news.__img && news.__img != 0) {
             newsImg.innerHTML = news.__img;
         }
+
         newsContent.innerHTML = news.__content;
 
         articleWrapper.append(newsTitle);
@@ -81,6 +84,7 @@ class NewsUIController extends ControllerChild {
         notifText = document.createElement("div");
 
         notifDate.innerHTML = "Il y a "  + minutesPassed + " minute(s)";
+        $(notifDate).addClass("contentDate");
         notifText.innerHTML = notif.__content;
 
         notifWrapper.append(notifDate);

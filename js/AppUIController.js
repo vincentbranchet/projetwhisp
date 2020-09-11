@@ -187,12 +187,16 @@ class AppUIController extends AppChild {
         this.__headerLvTitle.innerHTML = this.__app.__levelsManager.getTitleOf(this.__app.__player.__level);
 
         this.__headerXpFill.style.width = Math.floor((this.__app.__player.__xp / this.__app.__levelsManager.getFromId(this.__app.__player.__level).__xpCap) * 100) + "%";
-      //  this.__headerXpBar.value = Math.floor((this.__app.__player.__xp / this.__app.__levelsManager.getFromId(this.__app.__player.__level).__xpCap) * 100);
 
-        this.__headerXp.innerHTML = this.__app.__player.__xp;
-        this.__headerXpCap.innerHTML = this.__app.__levelsManager.getFromId(this.__app.__player.__level).__xpCap;
+        this.__headerXp.innerHTML = this.formatNumber(this.__app.__player.__xp);
+        this.__headerXpCap.innerHTML = this.formatNumber(this.__app.__levelsManager.getFromId(this.__app.__player.__level).__xpCap);
 
-        this.__headerPortfolioValue.innerHTML = this.__app.__player.portfolioValue;
+        this.__headerPortfolioValue.innerHTML = this.formatNumber(this.__app.__player.portfolioValue);
+    }
+
+    formatNumber(nb) {
+        // turns integer > 1000 to K notation
+        return nb > 999 ? Number(Math.abs(nb)/1000).toFixed(1) + 'k' : nb;
     }
 
     printContent() {

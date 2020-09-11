@@ -48,7 +48,7 @@ class PortfolioUIController extends ControllerChild {
                     htmlProfileName.innerText = profile.__name;
                     $(htmlProfileName).addClass("slotProfileName");
                     htmlProfileValue = document.createElement("div");
-                    htmlProfileValue.innerText = profile.__value + "/s";
+                    htmlProfileValue.innerText = this.__controller.formatNumber(profile.__value) + "/s";
                     $(htmlProfileValue).addClass("slotProfileValue");
         
                     $(htmlProfile).append(htmlProfileName);
@@ -61,7 +61,7 @@ class PortfolioUIController extends ControllerChild {
                     htmlProfileName.innerText = profile.__name;
                     $(htmlProfileName).addClass("slotProfileName");
                     htmlProfileValue = document.createElement("div");
-                    htmlProfileValue.innerText = profile.__value + "/s";
+                    htmlProfileValue.innerText = this.__controller.formatNumber(profile.__value) + "/s";
                     $(htmlProfileValue).addClass("slotProfileValue");
         
                     $(htmlProfile).append(htmlProfileName);

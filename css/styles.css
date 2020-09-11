@@ -1,5 +1,9 @@
 /* DOCUMENT - GENERAL */
 html, body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -7,6 +11,7 @@ html, body {
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* IE10+/Edge */
     user-select: none; /* Standard */
+    background-color: #cccccc;
 }
 
 .opacityLayer {
@@ -17,15 +22,43 @@ html, body {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: 3;
     display: none;
 }
 
+.desktopFraming {
+    width: 25vw;
+    height: 85vh;
+    background-color: #434343;
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    border-radius: 50px;
+}
+
+.framingFakeButton {
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 25px;
+    position: absolute;
+    top: 94%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
 .mainWrapper {
-    width: 30vw;
+    width: 20vw;
     height: 70vh;
-    margin: auto;
-    margin-top: 10vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    background-color: white;
 }
 
 .button {
@@ -190,6 +223,11 @@ html, body {
     width: 60%;
 }
 
+.contentDate {
+    font-size: 0.9em;
+    font-style: italic;
+}
+
 /* BODY - NEWS */
 
 .newsWrapper {
@@ -239,7 +277,7 @@ html, body {
     border: 1px solid black;
     position: absolute;
     top: 10%;
-    right: 0;
+    right: 5%;
 }
 
 
@@ -263,6 +301,7 @@ html, body {
     justify-content: center;
     border: 1px solid black;
     margin: 10px 10px 0 0;
+    text-align: center;
 }
 
 .profileWrapper {
@@ -293,7 +332,7 @@ html, body {
 /* BODY - PORTFOLIO - PROFILE HISTORY */
 
 .historyMainWrapper {
-    width: 100%;
+    width: 96%;
     padding: 0 2vw;
 }
 
@@ -302,6 +341,11 @@ html, body {
 .profileVitrineWrapper {
     position: relative;
 }
+
+.profileVitrineWrapper .attributeMainWrapper {
+    height: 80%;
+}
+
 
 /* BOTTOM MENU */
 
@@ -361,7 +405,7 @@ html, body {
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 2;
+    z-index: 5;
 }
 
 .popUpButton {
@@ -369,3 +413,186 @@ html, body {
     padding: 5px 10px;
     border: 1px solid black;
 }
+
+
+/* MOBILE (LANDSCAPE) */
+
+@media only screen and (min-width : 321px) and (max-width: 825px) {
+
+    .mainWrapper {
+        width: 80vw;
+        height: 100vh;
+        margin-top: 0;
+        font-size: 1.2em;
+    }
+
+    .headerWrapper {
+        height: 40%;
+    }
+
+    .pagesWrapper {
+        height: 40%;
+    }
+
+    .slot {
+        height: 20%;
+    }
+
+    .profileTitle, .shopTitle, .portfolioTitle, .profileMenuWrapper, .profileBuyButton, .profileSellButton {
+        height: 20%;
+    }
+
+    .profileVitrineWrapper .attributeMainWrapper {
+        height: 60%;
+    }
+
+    .profileWrapper .attributeMainWrapper {
+        height: 40%;
+    }
+
+    .historyMainWrapper, .recoMainWrapper {
+        height: 40%;
+    }
+
+    .navWrapper {
+        height: 20%;
+    }
+}
+
+/* MOBILE (PORTRAIT) */
+
+@media only screen and (max-width : 415px) {
+
+    .mainWrapper {
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        font-size: 1.2em;
+    }
+
+    .attribute {
+        width: 40vw;
+        height: 40vw;
+    }
+
+    .popUpWrapper {
+        width: 80vw;
+        max-height: 40vh;
+    }
+
+    .historyMainWrapper, .newsWrapper {
+        width: 90vw;
+        padding: 0 5vw;
+    }
+
+    .articleWrapper, .notifWrapper, .recoWrapper {
+        margin: 4vh 0 4vh 0;
+    }
+
+    .headerWrapper {
+        height: 20%;
+    }
+
+    .pagesWrapper {
+        height: 70%;
+    }
+
+    .slot {
+        height: 10%;
+    }
+
+    .profileTitle, .shopTitle, .portfolioTitle, .profileMenuWrapper, .profileBuyButton, .profileSellButton {
+        height: 10%;
+    }
+
+    .profileVitrineWrapper .attributeMainWrapper {
+        height: 80%;
+    }
+
+    .profileWrapper .attributeMainWrapper {
+        height: 70%;
+    }
+
+    .historyMainWrapper, .recoMainWrapper {
+        height: 70%;
+    }
+
+    .navWrapper {
+        height: 10%;
+    }
+}
+
+
+/* MOBILE (PORTRAIT & LANDSCAPE) */
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+
+    .historyEvent {
+        margin: 3vh 0 3vh 0;
+    }
+}
+
+
+/* TABLETS (PORTRAIT) */
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+        
+    .mainWrapper {
+        width: 50vw;
+        height: 70vh;
+    }
+
+    .desktopFraming {
+        width: 55vw;
+        height: 85vh;
+    }
+
+    .headerWrapper {
+        height: 20%;
+    }
+
+    .pagesWrapper {
+        height: 70%;
+    }
+
+    .slot {
+        height: 10%;
+    }
+
+    .profileTitle, .shopTitle, .portfolioTitle, .profileMenuWrapper, .profileBuyButton, .profileSellButton {
+        height: 10%;
+    }
+
+    .profileVitrineWrapper .attributeMainWrapper {
+        height: 80%;
+    }
+
+    .profileWrapper .attributeMainWrapper {
+        height: 70%;
+    }
+
+    .historyMainWrapper, .recoMainWrapper {
+        height: 70%;
+    }
+
+    .navWrapper {
+        height: 10%;
+    }
+}
+
+
+/* TABLETS (LANDSCAPES) */
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1366px) and (min-device-height: 415px) and (orientation : landscape) {
+
+    .mainWrapper {
+        width: 40vw;
+        height: 70vh;
+    }
+
+    .desktopFraming {
+        width: 45vw;
+        height: 85vh;
+    }
+}
+
