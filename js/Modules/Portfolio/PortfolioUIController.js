@@ -43,8 +43,6 @@ class PortfolioUIController extends ControllerChild {
 
                 if(profile.__launchedReco.length > 0) {
                 // if profile has running event, dont enable click event, print cooldown
-                    let profileEvent = profile.__launchedReco[0];
-                    let cld = profileEvent.__delay - profileEvent.__timer.__duration;
 
                     htmlProfileName = document.createElement("div");
                     htmlProfileName.innerText = profile.__name;
@@ -55,7 +53,6 @@ class PortfolioUIController extends ControllerChild {
         
                     $(htmlProfile).append(htmlProfileName);
                     $(htmlProfile).append(htmlProfileValue);
-
                     $(htmlProfile).addClass("slotProfile");
                 }
                 else {
@@ -104,6 +101,7 @@ class PortfolioUIController extends ControllerChild {
                 let jQueryProfile = "#profile_" + String(profile.__id);
                 
                 $(jQueryProfile).parent().find(".slotFill").css("width", centiCldPerCent);
+                $(jQueryProfile).parent().css("opacity", "0.5")
             }
         });
     }

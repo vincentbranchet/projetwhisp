@@ -28,6 +28,7 @@ class AppUIController extends AppChild {
 
         // pop-up
         this.__popUpWrapper = $(".popUpWrapper")[0];
+        this.__opacityLayer = $(".opacityLayer")[0];
 
         this.__activePage = "news"; // default homepage
         this.__activeProfileId = 0;
@@ -223,11 +224,13 @@ class AppUIController extends AppChild {
         this.__popUpWrapper.append(confirmButton);
 
         this.__popUpWrapper.style.display = "flex";
+        this.__opacityLayer.style.display = "block";
     }
 
     deletePopUp() {
         this.__popUpWrapper.innerHTML = "";
         this.__popUpWrapper.style.display = "none";
+        this.__opacityLayer.style.display = "none";
 
         // resume game
         this.__app.__appController.resume();

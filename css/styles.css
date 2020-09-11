@@ -2,6 +2,23 @@
 html, body {
     width: 100%;
     height: 100%;
+    overflow: hidden;
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+}
+
+.opacityLayer {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: none;
 }
 
 .mainWrapper {
@@ -24,6 +41,10 @@ html, body {
 
 .slot {
     position: relative;
+}
+
+.slotFill {
+    opacity: 0.7;
 }
 
 .xpNumbers, .slotProfile {
@@ -340,6 +361,7 @@ html, body {
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: 2;
 }
 
 .popUpButton {
