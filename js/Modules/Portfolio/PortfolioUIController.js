@@ -7,7 +7,7 @@ class PortfolioUIController extends ControllerChild {
 
     update() {
         var self = this;
-        let htmlSlot, htmlProfile, htmlTitle, htmlContent, htmlProfileName, htmlProfileValue, htmlSlotFill;
+        let htmlSlot, htmlProfile, htmlTitle, htmlSep, htmlContent, htmlProfileName, htmlProfileValue, htmlSlotFill;
 
         // clear wrapper
         this.clear();
@@ -20,7 +20,11 @@ class PortfolioUIController extends ControllerChild {
         htmlTitle.innerText = "Portfolio";
         $(htmlTitle).addClass("portfolioTitle");
 
+        htmlSep = document.createElement("div");
+        $(htmlSep).addClass("pagesSeparator");
+
         this.__portfolioWrapper.append(htmlTitle);
+        this.__portfolioWrapper.append(htmlSep);
 
         htmlContent = document.createElement("div");
         $(htmlContent).addClass("portfolioContentWrapper");

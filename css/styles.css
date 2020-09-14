@@ -12,26 +12,28 @@ html, body {
     -ms-user-select: none; /* IE10+/Edge */
     user-select: none; /* Standard */
     background-color: #cccccc;
+    font-family: 'Roboto', sans-serif;
 }
 
 .opacityLayer {
-    width: 100%;
-    height: 100%;
+    width: 20vw;
+    height: 70vh;
     background-color: white;
     opacity: 0.5;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     z-index: 3;
     display: none;
 }
 
 .desktopFraming {
-    width: 25vw;
-    height: 85vh;
+    width: 22vw;
+    height: 82vh;
     background-color: #434343;
     position: absolute;
-    top: 52%;
+    top: 54%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
@@ -59,6 +61,7 @@ html, body {
     transform: translate(-50%, -50%);
     z-index: 2;
     background-color: white;
+    border-radius: 25px 25px 0 0;
 }
 
 .button {
@@ -87,6 +90,14 @@ html, body {
     transform: translate(-50%, -50%);
 }
 
+.fadedOut {
+    opacity: 0;
+}
+
+.headSpace {
+    width: 100%;
+    height: 5%;
+}
 
 /* HEADER */
 
@@ -99,6 +110,7 @@ html, body {
 
 .gtWrapper, .lvWrapper {
     height: 15%;
+    padding: 0 2vw;
 }
 
 .xpWrapper {
@@ -122,10 +134,17 @@ html, body {
 /* BODY - GENERAL */
 
 .pagesWrapper {
-    height: 70%;
+    height: 65%;
     width: 100%;
     display: flex;
     flex-direction: row;
+}
+
+.pagesSeparator {
+    height: 1px;
+    border: 1px solid black;
+    width: 60vw;
+    margin: auto;
 }
 
 .newsWrapper::-webkit-scrollbar {
@@ -185,13 +204,18 @@ html, body {
 }
 
 .profileTitle {
-    justify-content: space-around;
+    justify-content: flex-start;
+    padding: 0 2vw;
 }
 
 .attributeMainWrapper, .historyMainWrapper, .recoMainWrapper {
     position: absolute;
     overflow-y: scroll;
     height: 70%;
+}
+
+.articleWrapper, .notifWrapper {
+    transition: opacity 500ms;
 }
 
 .recoWrapper, .notifWrapper, .articleWrapper {
@@ -201,8 +225,8 @@ html, body {
 .slot {
     border: 1px solid black;
     width: 99%;
-    height: 10%;
-    margin: 1vh 0 1vh 0;
+    height: 15%;
+    margin: 2vh 0 2vh 0;
 }
 
 .slotProfile {
@@ -221,6 +245,10 @@ html, body {
 
 .slotProfileName {
     width: 60%;
+}
+
+.slotProfileValue {
+    transition: opacity 500ms;
 }
 
 .contentDate {
@@ -276,8 +304,9 @@ html, body {
     justify-content: center;
     border: 1px solid black;
     position: absolute;
-    top: 10%;
+    top: 6%;
     right: 5%;
+    background-color: white;
 }
 
 
@@ -327,6 +356,11 @@ html, body {
     position: absolute;
     top: 0;
     left: 0;
+}
+
+.recoLineSpace {
+    width: 100%;
+    height: 10px;
 }
 
 /* BODY - PORTFOLIO - PROFILE HISTORY */
@@ -419,11 +453,11 @@ html, body {
 
 @media only screen and (min-width : 321px) and (max-width: 825px) {
 
-    .mainWrapper {
+    .mainWrapper, .opacityLayer {
         width: 80vw;
         height: 100vh;
         margin-top: 0;
-        font-size: 1.2em;
+        border-radius: 0;
     }
 
     .headerWrapper {
@@ -431,11 +465,11 @@ html, body {
     }
 
     .pagesWrapper {
-        height: 40%;
+        height: 35%;
     }
 
     .slot {
-        height: 20%;
+        height: 30%;
     }
 
     .profileTitle, .shopTitle, .portfolioTitle, .profileMenuWrapper, .profileBuyButton, .profileSellButton {
@@ -463,11 +497,11 @@ html, body {
 
 @media only screen and (max-width : 415px) {
 
-    .mainWrapper {
+    .mainWrapper, .opacityLayer {
         width: 100vw;
         height: 100vh;
         margin: 0;
-        font-size: 1.2em;
+        border-radius: 0;
     }
 
     .attribute {
@@ -494,15 +528,19 @@ html, body {
     }
 
     .pagesWrapper {
-        height: 70%;
+        height: 65%;
     }
 
     .slot {
-        height: 10%;
+        height: 15%;
     }
 
     .profileTitle, .shopTitle, .portfolioTitle, .profileMenuWrapper, .profileBuyButton, .profileSellButton {
         height: 10%;
+    }
+
+    .profileTitle {
+        padding: 0 10vw;
     }
 
     .profileVitrineWrapper .attributeMainWrapper {
@@ -537,14 +575,15 @@ html, body {
 
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
         
-    .mainWrapper {
+    .mainWrapper, .opacityLayer {
         width: 50vw;
         height: 70vh;
+        border-radius: 25px 25px 0 0;
     }
 
     .desktopFraming {
-        width: 55vw;
-        height: 85vh;
+        width: 53vw;
+        height: 82vh;
     }
 
     .headerWrapper {
@@ -552,15 +591,19 @@ html, body {
     }
 
     .pagesWrapper {
-        height: 70%;
+        height: 65%;
     }
 
     .slot {
-        height: 10%;
+        height: 15%;
     }
 
     .profileTitle, .shopTitle, .portfolioTitle, .profileMenuWrapper, .profileBuyButton, .profileSellButton {
         height: 10%;
+    }
+
+    .profileTitle {
+        padding: 0 5vw;
     }
 
     .profileVitrineWrapper .attributeMainWrapper {
@@ -585,14 +628,15 @@ html, body {
 
 @media only screen and (min-device-width : 768px) and (max-device-width : 1366px) and (min-device-height: 415px) and (orientation : landscape) {
 
-    .mainWrapper {
-        width: 40vw;
+    .mainWrapper, .opacityLayer {
+        width: 30vw;
         height: 70vh;
+        border-radius: 25px 25px 0 0;
     }
 
     .desktopFraming {
-        width: 45vw;
-        height: 85vh;
+        width: 33vw;
+        height: 82vh;
     }
 }
 

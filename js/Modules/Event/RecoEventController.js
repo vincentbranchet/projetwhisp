@@ -13,10 +13,12 @@ class RecoEventController extends EventControllerChild {
                 for(let event of profile.__launchedReco) {
                 // check if event timer >= delay
                     if(event.__timer.duration >= event.__delay) {
-                    // if so, resolve event & update portfolio
+                    // if so, resolve event, update portfolio and ask for animation
                         self.__controller.__app.__eventController.__recoController.resolve(event.__id, profile.__id);
 
                         self.__controller.__app.__UIController.__portfolioUIController.update();
+
+                        self.__controller.__app.__UIController.fadeIn($("#profile_" + profile.__id).find(".slotProfileValue"));
                     }
                 }
             }

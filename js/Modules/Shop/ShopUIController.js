@@ -7,7 +7,7 @@ class ShopUIController extends ControllerChild {
 
     update() {
         var self = this;
-        let profiles, htmlSlot, htmlProfile, htmlProfileName, htmlProfileValue, htmlTitle, htmlContent;
+        let profiles, htmlSlot, htmlProfile, htmlProfileName, htmlProfileValue, htmlTitle, htmlSep, htmlContent;
 
         // clear wrapper
         this.clear();
@@ -19,11 +19,15 @@ class ShopUIController extends ControllerChild {
         htmlTitle = document.createElement("div");
         htmlTitle.innerText = "Profils";
         $(htmlTitle).addClass("shopTitle");
+        
+        htmlSep = document.createElement("div");
+        $(htmlSep).addClass("pagesSeparator");
 
         htmlContent = document.createElement("div");
         $(htmlContent).addClass("shopContentWrapper");
 
         this.__shopWrapper.append(htmlTitle);
+        this.__shopWrapper.append(htmlSep);
 
         // for each profile in shop, sorted by value (decr) create & fill slots
         profiles = this.__controller.__app.__shopManager.__inShop;

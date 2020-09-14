@@ -202,6 +202,8 @@ class NativeEventController extends EventControllerChild {
                                 self.resolve(event.__id, profile.__id);
 
                                 self.__controller.__app.__UIController.__portfolioUIController.update();
+
+                                self.__controller.__app.__UIController.fadeIn($("#profile_" + profile.__id).find(".slotProfileValue"));
                             }
                         }
                     }
@@ -235,6 +237,8 @@ class NativeEventController extends EventControllerChild {
                                 self.resolve(event.__id, profile.__id);
                                 
                                 self.__controller.__app.__UIController.__portfolioUIController.update();
+
+                                self.__controller.__app.__UIController.fadeIn($("#profile_" + profile.__id).find(".slotProfileValue"));
                             }
                         }
                     }

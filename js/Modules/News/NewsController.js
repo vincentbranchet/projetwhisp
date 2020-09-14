@@ -3,14 +3,6 @@ class NewsController extends AppChild {
         super(app);
     }
 
-    scan() {
-        // loop through manager news
-        // if news are meant to print at current player lv
-        // and were not printed yet
-        // and are not supposed to be printed following any event
-        // then print them
-    }
-
     publish(newsId) {
     //effective printing
         let news = this.__app.__newsManager.getNewsFromId(newsId);

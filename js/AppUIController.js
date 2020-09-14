@@ -61,7 +61,6 @@ class AppUIController extends AppChild {
 
         self.printHeader();
 
-        self.__app.__notificationController.print("VOUS AVEZ ÉTÉ PROMU !\nNIVEAU : " + self.__app.__levelsManager.getTitleOf(self.__app.__player.__level));
         self.__newsUIController.notify();
         self.__newsUIController.refresh();
     }
@@ -240,6 +239,15 @@ class AppUIController extends AppChild {
         this.__app.__appController.resume();
 
         this.toNews();
+    }
+
+    fadeIn(elt) {
+        
+        $(elt).addClass("fadedOut");
+
+        requestAnimationFrame(() => {
+            $(elt).removeClass("fadedOut");
+        });
     }
 
     // getters

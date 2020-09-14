@@ -85,30 +85,36 @@ class AppController extends AppChild {
 
     checkIfLvUp() {
         let lv = this.__app.__levelsManager.getFromId(this.__app.__player.__level);
+        let popUpText = "", newSlotText = "", newsProfilesText = "";
 
         if(this.__app.__player.__xp >= lv.__xpCap) {
         // if player has reached xp objective
             this.__app.__player.__xp = 0;
 
             if(lv.__newSlot == 1) {
-            // if lv spawns new portfolio slot
+            // if lv spawns new portfolio slot, update system & prep text
                 this.__app.__portfolioController.newSlot();
-                this.__app.__notificationController.print("Un nouvel emplacement de profil a été ajouté à votre portfolio.");
+                newSlotText = "\nUn nouvel emplacement a été ajouté à votre portfolio.";
             }
 
+            // increment level & prep text
             this.__app.__player.__level = this.__app.__player.__level + 1;
             lv = this.__app.__levelsManager.getFromId(this.__app.__player.__level); // update var
+            popUpText = "Félicitations, vous avez été promu " + lv.__title + " ! ";
 
             if(lv.__profiles != "" && lv.__profiles != null) {
-            // if lv spawns new shop profiles : profiles of CURRENT LV will be added, that's why we increment lv before
+            // if lv spawns new shop profiles profiles of CURRENT LV will be added, that's why we increment lv before
                 this.__app.__shopController.updateProfiles();
-                this.__app.__notificationController.print("De nouveaux profils sont disponibles.");
+                newsProfilesText = "\nDe nouveaux profils sont disponibles.";
             }
 
             if(lv.__printId != "" && lv.__printId != null && lv.__printId != undefined) {
-            // if lv spawns news
+            // if lv spawns news, update system
                 this.__app.__newsController.print(lv.__printId);
             }
+
+            // merge pop up texts
+            popUpText = popUpText.concat(newSlotText, newsProfilesText);
             
             // update shop, portfolio & push notifs
             this.__app.__UIController.__shopUIController.update();
@@ -116,7 +122,7 @@ class AppController extends AppChild {
             this.__app.__UIController.levelUp();
             
             // pop up lvup reward
-            this.popUp("Vous avez gagné un niveau. Félicitations !");
+            this.popUp(popUpText);
         }
     }
 

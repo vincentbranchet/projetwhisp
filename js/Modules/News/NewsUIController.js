@@ -14,7 +14,7 @@ class NewsUIController extends ControllerChild {
 
     printAll() {
         let self = this;
-        let htmltitle, htmlContent;
+        let htmltitle, htmlContent, htmlSep;
         let news, notifs, merge = [];
         news = this.__controller.__app.__newsManager.__printed;
         notifs = this.__controller.__app.__notificationManager.__printed;
@@ -27,10 +27,14 @@ class NewsUIController extends ControllerChild {
         htmltitle.innerText = "Actualités";
         $(htmltitle).addClass("newsTitle");
 
+        htmlSep = document.createElement("div");
+        $(htmlSep).addClass("pagesSeparator");
+
         htmlContent = document.createElement("div");
         $(htmlContent).addClass("newsContentWrapper");
 
         this.__pageWrapper.append(htmltitle);
+        this.__pageWrapper.append(htmlSep);
         this.__pageWrapper.append(htmlContent);
 
         merge.forEach(elt => {
@@ -71,6 +75,8 @@ class NewsUIController extends ControllerChild {
         articleWrapper.append(newsContent);
 
         $(".newsContentWrapper").append(articleWrapper);
+
+        this.__controller.fadeIn(articleWrapper);
     }
 
     printNotif(notif) {
@@ -91,6 +97,8 @@ class NewsUIController extends ControllerChild {
         notifWrapper.append(notifText);
 
         $(".newsContentWrapper").append(notifWrapper);
+
+        this.__controller.fadeIn(notifWrapper);
     }
 
     notify() {

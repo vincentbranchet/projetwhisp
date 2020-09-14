@@ -25,7 +25,7 @@ class PlayerController extends AppChild {
             this.__app.__UIController.toPortfolio();
         }
         else {
-            this.__app.__notificationController.print("Votre portfolio manque de place. Sortez un profil ou gagnez un niveau.");
+            this.__app.__appController.popUp("Votre portfolio est déjà complet.\nRetirez un profil ou montez en grade.");
         }
     }
 
@@ -66,9 +66,5 @@ class PlayerController extends AppChild {
 
             this.__app.__UIController.toPortfolio();
         }
-    }
-
-    reset() {
-        // new game
     }
 }
