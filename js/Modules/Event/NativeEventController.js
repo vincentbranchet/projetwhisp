@@ -76,7 +76,7 @@ class NativeEventController extends EventControllerChild {
                 //and each attribute in each profile
                     let att = this.__controller.__app.__attributeManager.getFromId(attId);
 
-                    if(att.__events && Array.isArray(att.__events) && att.__events.length > 1) {
+                    if(att && att.__events && Array.isArray(att.__events) && att.__events.length > 1) {
                     // if attribute has multiple events
                         for(let evtId of att.__events) {
                         // loop through each event
@@ -117,7 +117,7 @@ class NativeEventController extends EventControllerChild {
                             }              
                         }
                     }
-                    else if(att.__events && Array.isArray(att.__events) && att.__events.length == 1) {
+                    else if(att && att.__events && Array.isArray(att.__events) && att.__events.length == 1) {
                     // if attribute has 1 event
                         let evt = this.__controller.__app.__eventManager.__nativeManager.getFromId(att.__events);
 

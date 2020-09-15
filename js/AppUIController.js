@@ -195,7 +195,19 @@ class AppUIController extends AppChild {
 
     formatNumber(nb) {
         // turns integer > 1000 to K notation
-        return nb > 999 ? Number(Math.abs(nb)/1000).toFixed(1) + 'k' : nb;
+        let rounded;
+
+        if(nb > 999999) {
+            rounded = Number(Math.abs(nb)/1000000).toFixed(1) + ' M';
+        }
+        else if(nb > 999) {
+            rounded = Number(Math.abs(nb)/1000).toFixed(1) + ' K';
+        }
+        else {
+            rounded = nb;
+        }
+        
+        return rounded;
     }
 
     printContent() {
@@ -238,7 +250,11 @@ class AppUIController extends AppChild {
         // resume game
         this.__app.__appController.resume();
 
-        this.toNews();
+        if(this.__activePage == "shop_profile") {
+            return;
+        }
+        else 
+            this.toNews();
     }
 
     fadeIn(elt) {
