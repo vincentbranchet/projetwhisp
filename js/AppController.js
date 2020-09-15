@@ -37,6 +37,7 @@ class AppController extends AppChild {
 
         this.queueUpdates(numTicks); // appController updates
 
+        console.log(this.__app.__portfolioManager.__used);
         /*render(tFrame); // appUIController updates*/
         this.__app.__UIController.printHeader(); // refresh portfolio/lv values
         this.__app.__UIController.printContent();
