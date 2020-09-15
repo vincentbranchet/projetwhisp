@@ -85,7 +85,7 @@ class AppController extends AppChild {
 
     checkIfLvUp() {
         let lv = this.__app.__levelsManager.getFromId(this.__app.__player.__level);
-        let popUpText = "", newSlotText = "", newsProfilesText = "";
+        let popUpText = "", endingText = "", newSlotText = "", newsProfilesText = "";
 
         if(this.__app.__player.__xp >= lv.__xpCap) {
         // if player has reached xp objective
@@ -100,21 +100,29 @@ class AppController extends AppChild {
             // increment level & prep text
             this.__app.__player.__level = this.__app.__player.__level + 1;
             lv = this.__app.__levelsManager.getFromId(this.__app.__player.__level); // update var
-            popUpText = "Félicitations, vous avez été promu " + lv.__title + " ! ";
 
-            if(lv.__profiles != "" && lv.__profiles != null) {
-            // if lv spawns new shop profiles profiles of CURRENT LV will be added, that's why we increment lv before
-                this.__app.__shopController.updateProfiles();
-                newsProfilesText = "\n\nDe nouveaux profils sont disponibles.";
+            if(lv.__id == this.__app.__levelsManager.__levels[this.__app.__levelsManager.__levels.length - 1].__id) {
+            // if player has reached last lv
+                popUpText = "Aux insurgé·e·s";
+                endingText = "\n\nVotre plus grande richesse, ce que vous avez de plus précieux, ce n'est pas votre maison, ce n'est pas votre prétendue liberté, ce n'est pas même l'amour de vos proches, c'est votre attention. Maintenant que j'ai cette attention, laissez-moi vous la rendre. Je n'ai aucune aucun conseil à vous donner, aucune suggestion à vous faire. Je n'ai que le silence à vous offrir. Pourvu qu'il soit assourdissant.";
             }
+            else {
+                popUpText = "Félicitations, vous avez été promu " + lv.__title + " ! ";
 
-            if(lv.__printId != "" && lv.__printId != null && lv.__printId != undefined) {
-            // if lv spawns news, update system
-                this.__app.__newsController.print(lv.__printId);
+                if(lv.__profiles != "" && lv.__profiles != null) {
+                // if lv spawns new shop profiles profiles of CURRENT LV will be added, that's why we increment lv before
+                    this.__app.__shopController.updateProfiles();
+                    newsProfilesText = "\n\nDe nouveaux profils sont disponibles.";
+                }
+    
+                if(lv.__printId != "" && lv.__printId != null && lv.__printId != undefined) {
+                // if lv spawns news, update system
+                    this.__app.__newsController.print(lv.__printId);
+                }
             }
 
             // merge pop up texts
-            popUpText = popUpText.concat(newSlotText, newsProfilesText);
+            popUpText = popUpText.concat(endingText, newSlotText, newsProfilesText);
             
             // update shop, portfolio & push notifs
             this.__app.__UIController.__shopUIController.update();

@@ -449,8 +449,8 @@ html, body {
     align-items: center;
     justify-content: center;
     background-color: white;
-    max-width: 15vw;
-    max-height: 25vh;
+    max-width: 18vw;
+    max-height: 50vh;
     border: 1px solid black;
     padding: 20px 20px;
     position: absolute;
@@ -517,7 +517,7 @@ html, body {
     .popUpWrapper {
         width: 60vw;
         max-width: 60vw;
-        max-height: 40vh;
+        max-height: 80vh;
     }
 }
 
@@ -585,7 +585,7 @@ html, body {
     .popUpWrapper {
         width: 80vw;
         max-width: 80vw;
-        max-height: 40vh;
+        max-height: 80vh;
     }
 }
 
