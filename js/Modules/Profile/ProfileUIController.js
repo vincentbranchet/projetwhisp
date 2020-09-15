@@ -68,19 +68,15 @@ class ProfileUIController extends ControllerChild {
     printInShop(profileId) {
         var self = this;
         let profile = this.__controller.__app.__shopManager.getFromId(profileId);
-        let htmlProfileInfo, htmlSellButton, htmlTitle, htmlSep, htmlAttWrapper;
+        let htmlSellButton, htmlTitle, htmlSep, htmlAttWrapper;
 
         htmlTitle = document.createElement("div");
-        htmlTitle.innerText = "Profils";
+        htmlTitle.innerText = profile.__name + " (" + this.__controller.formatNumber(profile.__value) + "/s" + ")";
         $(htmlTitle).addClass("shopTitle");
 
         htmlSep = document.createElement("div");
         $(htmlSep).addClass("pagesSeparator");
 
-        htmlProfileInfo = document.createElement("div");
-        htmlProfileInfo.innerText = profile.__name + " (" + this.__controller.formatNumber(profile.__value) + "/s" + ")";
-        $(htmlProfileInfo).addClass("profileTitle");
-        
         htmlAttWrapper = document.createElement("div");
         $(htmlAttWrapper).addClass("attributeMainWrapper");
 
@@ -112,7 +108,6 @@ class ProfileUIController extends ControllerChild {
 
         this.__profileVitrineWrapper.append(htmlTitle);
         this.__profileVitrineWrapper.append(htmlSep);
-        this.__profileVitrineWrapper.append(htmlProfileInfo);
         this.__profileVitrineWrapper.append(htmlSellButton);
         this.__profileVitrineWrapper.append(htmlAttWrapper);
     }
@@ -121,19 +116,15 @@ class ProfileUIController extends ControllerChild {
     printLayout(profileId) {
         //profile id is the profile ID as int
         var self = this;
-        let htmlTitle, htmlSep, htmlProfileInfo, htmlMenuWrapper, htmlAttButton, htmlRecoButton, htmlHistButton, htmlSellButton;
+        let htmlTitle, htmlSep, htmlMenuWrapper, htmlAttButton, htmlRecoButton, htmlHistButton, htmlSellButton;
         let profile = this.__controller.__app.__portfolioManager.getFromId(profileId);
 
         htmlTitle = document.createElement("div");
-        htmlTitle.innerText = "Portfolio";
+        htmlTitle.innerText = profile.__name + " (" + this.__controller.formatNumber(profile.__value) + "/s" + ")";
         $(htmlTitle).addClass("portfolioTitle");
         
         htmlSep = document.createElement("div");
         $(htmlSep).addClass("pagesSeparator");
-
-        htmlProfileInfo = document.createElement("div");
-        htmlProfileInfo.innerText = profile.__name + " (" + this.__controller.formatNumber(profile.__value) + "/s" + ")";
-        $(htmlProfileInfo).addClass("profileTitle");
         
         htmlMenuWrapper = document.createElement("div");
         $(htmlMenuWrapper).addClass("profileMenuWrapper");
@@ -173,7 +164,6 @@ class ProfileUIController extends ControllerChild {
 
         this.__profileWrapper.append(htmlTitle);
         this.__profileWrapper.append(htmlSep);
-        this.__profileWrapper.append(htmlProfileInfo);
         this.__profileWrapper.append(htmlMenuWrapper);
         this.__profileWrapper.append(htmlSellButton);
     }
@@ -323,11 +313,11 @@ class ProfileUIController extends ControllerChild {
 
         if(evt.__toSpawn.length == 0 && evt.__toDelete.length == 0) {
         // if event has no consequences
-            htmlEvtTitle.innerText = "'" + evt.__name + "' donne lieu à un événement, sans conséquences";
+            htmlEvtTitle.innerText = "" + evt.__name + " donne lieu à un événement, sans conséquences";
         }
         else {
         // if event has consequences
-            htmlEvtTitle.innerText = "'" + evt.__name + "' donne lieu à un événement";
+            htmlEvtTitle.innerText = "" + evt.__name + " donne lieu à un événement";
 
             if(evt.__toDelete.length != 0) {
                 for(let attId of evt.__toDelete) {
@@ -335,7 +325,7 @@ class ProfileUIController extends ControllerChild {
                     let att = this.__controller.__app.__attributeManager.getFromId(attId);
                     let htmlConseq = document.createElement("div");
 
-                    htmlConseq.innerText = "'" + att.__name + "' disparaît";
+                    htmlConseq.innerText = "[" + att.__name + "] disparaît";
 
                     $(htmlConsWrapper).append(htmlConseq);
                 }
@@ -346,7 +336,7 @@ class ProfileUIController extends ControllerChild {
                     let att = this.__controller.__app.__attributeManager.getFromId(attId);
                     let htmlConseq = document.createElement("div");
 
-                    htmlConseq.innerText = "'" + att.__name + "' apparaît";
+                    htmlConseq.innerText = "[" + att.__name + "] apparaît";
 
                     $(htmlConsWrapper).append(htmlConseq);
                 }
@@ -389,7 +379,7 @@ class ProfileUIController extends ControllerChild {
                     let att = this.__controller.__app.__attributeManager.getFromId(attId);
                     let htmlConseq = document.createElement("div");
 
-                    htmlConseq.innerText = "'" + att.__name + "' disparaît";
+                    htmlConseq.innerText = "[" + att.__name + "] disparaît";
 
                     $(htmlConsWrapper).append(htmlConseq);
                 }
@@ -400,7 +390,7 @@ class ProfileUIController extends ControllerChild {
                     let att = this.__controller.__app.__attributeManager.getFromId(attId);
                     let htmlConseq = document.createElement("div");
 
-                    htmlConseq.innerText = "'" + att.__name + "' apparaît";
+                    htmlConseq.innerText = "[" + att.__name + "] apparaît";
 
                     $(htmlConsWrapper).append(htmlConseq);
                 }

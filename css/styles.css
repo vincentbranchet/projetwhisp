@@ -1,18 +1,23 @@
 /* DOCUMENT - GENERAL */
-html, body {
+* {
     margin: 0;
     padding: 0;
     border: 0;
+    outline: 0;
     font-size: 100%;
+    vertical-align: baseline;
+    overflow: hidden;
+}
+
+html, body {
     width: 100%;
     height: 100%;
-    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
     -webkit-user-select: none; /* Safari */        
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* IE10+/Edge */
     user-select: none; /* Standard */
     background-color: #cccccc;
-    font-family: 'Roboto', sans-serif;
 }
 
 .opacityLayer {
@@ -26,6 +31,7 @@ html, body {
     transform: translate(-50%, -50%);
     z-index: 3;
     display: none;
+    border-radius: 25px 25px 0 0;
 }
 
 .desktopFraming {
@@ -108,9 +114,15 @@ html, body {
     flex-direction: column;
 }
 
-.gtWrapper, .lvWrapper {
-    height: 15%;
+.gtWrapper {
+    display: none;
+}
+
+.lvWrapper {
+    height: 30%;
     padding: 0 2vw;
+    display: flex;
+    align-items: center;
 }
 
 .xpWrapper {
@@ -142,9 +154,16 @@ html, body {
 
 .pagesSeparator {
     height: 1px;
-    border: 1px solid black;
-    width: 60vw;
+    border-top: 1px solid black;
+    width: 16vw;
     margin: auto;
+}
+
+.profileWrapper .pagesSeparator {
+    height: 5%;
+}
+.profileVitrineWrapper .pagesSeparator {
+    height: 5%;
 }
 
 .newsWrapper::-webkit-scrollbar {
@@ -180,6 +199,10 @@ html, body {
 .shopContentWrapper::-webkit-scrollbar {
     display: none;
 }
+.newsWrapper, .portfolioWrapper, .shopWrapper, .profileWrapper, .profileVitrineWrapper, .attributeMainWrapper, .historyMainWrapper, .recoMainWrapper, .newsContentWrapper, .portfolioContentWrapper, .shopContentWrapper {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
 
 .newsWrapper, .portfolioWrapper, .shopWrapper, .profileWrapper, .profileVitrineWrapper {
     height: 100%;
@@ -195,7 +218,7 @@ html, body {
     display: none;
 }
 
-.portfolioTitle, .newsTitle, .shopTitle, .profileTitle {
+.portfolioTitle, .newsTitle, .shopTitle {
     width: 100%;
     height: 10%;
     display: flex;
@@ -203,15 +226,10 @@ html, body {
     align-items: center;
 }
 
-.profileTitle {
-    justify-content: flex-start;
-    padding: 0 2vw;
-}
-
 .attributeMainWrapper, .historyMainWrapper, .recoMainWrapper {
     position: absolute;
     overflow-y: scroll;
-    height: 70%;
+    height: 75%;
 }
 
 .articleWrapper, .notifWrapper {
@@ -304,7 +322,7 @@ html, body {
     justify-content: center;
     border: 1px solid black;
     position: absolute;
-    top: 6%;
+    top: 5%;
     right: 5%;
     background-color: white;
 }
@@ -367,7 +385,7 @@ html, body {
 
 .historyMainWrapper {
     width: 96%;
-    padding: 0 2vw;
+    padding: 0 2%;
 }
 
 /* BODY - SHOP */
@@ -377,7 +395,7 @@ html, body {
 }
 
 .profileVitrineWrapper .attributeMainWrapper {
-    height: 80%;
+    height: 85%;
 }
 
 
@@ -431,8 +449,8 @@ html, body {
     align-items: center;
     justify-content: center;
     background-color: white;
-    max-width: 80vw;
-    max-height: 20vh;
+    max-width: 15vw;
+    max-height: 25vh;
     border: 1px solid black;
     padding: 20px 20px;
     position: absolute;
@@ -467,29 +485,39 @@ html, body {
     .pagesWrapper {
         height: 35%;
     }
+    
+    .pagesSeparator {
+        width: 60vw;
+    }
 
     .slot {
         height: 30%;
     }
 
-    .profileTitle, .shopTitle, .portfolioTitle, .profileMenuWrapper, .profileBuyButton, .profileSellButton {
+    .shopTitle, .portfolioTitle, .newsTitle, .profileMenuWrapper, .profileBuyButton, .profileSellButton {
         height: 20%;
     }
 
     .profileVitrineWrapper .attributeMainWrapper {
-        height: 60%;
+        height: 75%;
     }
 
     .profileWrapper .attributeMainWrapper {
-        height: 40%;
+        height: 55%;
     }
 
     .historyMainWrapper, .recoMainWrapper {
-        height: 40%;
+        height: 55%;
     }
 
     .navWrapper {
         height: 20%;
+    }
+    
+    .popUpWrapper {
+        width: 60vw;
+        max-width: 60vw;
+        max-height: 40vh;
     }
 }
 
@@ -503,15 +531,14 @@ html, body {
         margin: 0;
         border-radius: 0;
     }
+    
+    .pagesSeparator {
+        width: 60vw;
+    }
 
     .attribute {
         width: 40vw;
         height: 40vw;
-    }
-
-    .popUpWrapper {
-        width: 80vw;
-        max-height: 40vh;
     }
 
     .historyMainWrapper, .newsWrapper {
@@ -535,28 +562,30 @@ html, body {
         height: 15%;
     }
 
-    .profileTitle, .shopTitle, .portfolioTitle, .profileMenuWrapper, .profileBuyButton, .profileSellButton {
+    .shopTitle, .portfolioTitle, .newsTitle, .profileMenuWrapper, .profileBuyButton, .profileSellButton {
         height: 10%;
     }
 
-    .profileTitle {
-        padding: 0 10vw;
-    }
-
     .profileVitrineWrapper .attributeMainWrapper {
-        height: 80%;
+        height: 85%;
     }
 
     .profileWrapper .attributeMainWrapper {
-        height: 70%;
+        height: 75%;
     }
 
     .historyMainWrapper, .recoMainWrapper {
-        height: 70%;
+        height: 75%;
     }
 
     .navWrapper {
         height: 10%;
+    }
+    
+    .popUpWrapper {
+        width: 80vw;
+        max-width: 80vw;
+        max-height: 40vh;
     }
 }
 
@@ -564,6 +593,10 @@ html, body {
 /* MOBILE (PORTRAIT & LANDSCAPE) */
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+
+    .pagesSeparator {
+        width: 60vw;
+    }
 
     .historyEvent {
         margin: 3vh 0 3vh 0;
@@ -594,16 +627,16 @@ html, body {
         height: 65%;
     }
 
+    .pagesSeparator {
+        width: 16vw;
+    }
+
     .slot {
         height: 15%;
     }
 
-    .profileTitle, .shopTitle, .portfolioTitle, .profileMenuWrapper, .profileBuyButton, .profileSellButton {
+    .shopTitle, .portfolioTitle, .profileMenuWrapper, .profileBuyButton, .profileSellButton {
         height: 10%;
-    }
-
-    .profileTitle {
-        padding: 0 5vw;
     }
 
     .profileVitrineWrapper .attributeMainWrapper {

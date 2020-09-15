@@ -96,7 +96,6 @@ class RecoEventController extends EventControllerChild {
 
         this.__controller.__nativeController.scanToLaunch();
     
-        this.__controller.__app.__UIController.__newsUIController.notify();
         this.__controller.__app.__UIController.__newsUIController.refresh();
     }
 }

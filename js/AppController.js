@@ -94,7 +94,7 @@ class AppController extends AppChild {
             if(lv.__newSlot == 1) {
             // if lv spawns new portfolio slot, update system & prep text
                 this.__app.__portfolioController.newSlot();
-                newSlotText = "\nUn nouvel emplacement a été ajouté à votre portfolio.";
+                newSlotText = "\n\nUn nouvel emplacement a été ajouté à votre portfolio.";
             }
 
             // increment level & prep text
@@ -105,7 +105,7 @@ class AppController extends AppChild {
             if(lv.__profiles != "" && lv.__profiles != null) {
             // if lv spawns new shop profiles profiles of CURRENT LV will be added, that's why we increment lv before
                 this.__app.__shopController.updateProfiles();
-                newsProfilesText = "\nDe nouveaux profils sont disponibles.";
+                newsProfilesText = "\n\nDe nouveaux profils sont disponibles.";
             }
 
             if(lv.__printId != "" && lv.__printId != null && lv.__printId != undefined) {
