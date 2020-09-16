@@ -86,7 +86,7 @@ class AppController extends AppChild {
 
     checkIfLvUp() {
         let lv = this.__app.__levelsManager.getFromId(this.__app.__player.__level);
-        let popUpText = "", endingText = "", newSlotText = "", newsProfilesText = "";
+        let popUpText = "", endingText = "", newSlotText = "", newsProfilesText = "", end = 0;
 
         if(this.__app.__player.__xp >= lv.__xpCap) {
         // if player has reached xp objective
@@ -106,6 +106,7 @@ class AppController extends AppChild {
             // if player has reached last lv
                 popUpText = "Aux insurgé·e·s";
                 endingText = "\n\nVotre plus grande richesse, ce que vous avez de plus précieux, ce n'est pas votre maison, ce n'est pas votre prétendue liberté, ce n'est pas même l'amour de vos proches, c'est votre attention. Maintenant que j'ai cette attention, laissez-moi vous la rendre. Je n'ai aucune aucun conseil à vous donner, aucune suggestion à vous faire. Je n'ai que le silence à vous offrir. Pourvu qu'il soit assourdissant.";
+                end = 1;
             }
             else {
                 popUpText = "Félicitations, vous avez été promu " + lv.__title + " ! ";
@@ -131,12 +132,12 @@ class AppController extends AppChild {
             this.__app.__UIController.levelUp();
             
             // pop up lvup reward
-            this.popUp(popUpText);
+            this.popUp(popUpText, end);
         }
     }
 
-    popUp(text) {
-        this.__app.__UIController.printPopUp(text);
+    popUp(text, end) {
+        this.__app.__UIController.printPopUp(text, end);
         this.pause(this.__stopMainLoop);
     }
 

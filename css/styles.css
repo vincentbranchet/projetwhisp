@@ -105,6 +105,18 @@ html, body {
     height: 5%;
 }
 
+.creditsLogoWrapper {
+    margin-top: 15px;
+}
+
+#creditsLogo {
+    max-width: 20%;
+    height: auto;
+    margin-top: 15px;
+    display: block;
+    margin: auto;
+}
+
 /* HEADER */
 
 .headerWrapper {
@@ -449,12 +461,12 @@ html, body {
     align-items: center;
     justify-content: center;
     background-color: white;
-    max-width: 10vw;
+    max-width: 12vw;
     max-height: 50vh;
     border: 1px solid black;
     padding: 20px 20px;
     position: absolute;
-    top: 40%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 5;
@@ -518,6 +530,10 @@ html, body {
         width: 60vw;
         max-width: 60vw;
         max-height: 80vh;
+    }
+    
+    #creditsLogo {
+        max-width: 10%;
     }
 }
 
@@ -586,6 +602,10 @@ html, body {
         width: 80vw;
         max-width: 80vw;
         max-height: 80vh;
+    }
+
+    #creditsLogo {
+        max-width: 10%;
     }
 }
 
@@ -677,7 +697,9 @@ html, body {
     }
 
     .popUpWrapper {
-        max-width: 15vw;
+        max-width: 17vw;
+        max-height: 70vh;
+        top: 50%;
     }
 }
 

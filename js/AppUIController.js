@@ -136,6 +136,15 @@ class AppUIController extends AppChild {
         }
     }
 
+    clickToCredits(self) {
+    // from ending pop up
+        return function() {
+            self.deletePopUp();
+            self.printPopUp("Lazy Little Humans\n(v0.1 - 16/09/2020)\n\nVincent Branchet - Développement\nPierre Corbinais - Écriture\nJeremy Moirano - Intégration/Équilibrage\n\njeremy.moirano@gmail.com", 2)
+            self.__app.__appController.pause(self.__app.__appController.__stopMainLoop);
+        }
+    }
+
     hideActive(self) {
         if(self.__activePage == "news") {
             self.__newsUIController.hide();
@@ -218,25 +227,52 @@ class AppUIController extends AppChild {
         }
     }
 
-    printPopUp(text) {
+    printPopUp(text, end) {
         var self = this;
         let textWrapper, confirmButton;
-
-        confirmButton = document.createElement("div");
-        confirmButton.innerText = "Continuer";
-        $(confirmButton).addClass("popUpButton button");
-
-        (function(self) {
-            confirmButton.addEventListener("click", self.clickToConfirm(self));
-        }(self));
 
         textWrapper = document.createElement("div");
         textWrapper.innerText = text;
         $(textWrapper).addClass("popUpText");
 
+        confirmButton = document.createElement("div");
+
+        if(end == 2) {
+        // credit screen
+            $(confirmButton).css("display", "none");
+            
+            var creditsLogo = document.createElement("div");
+            $(creditsLogo).addClass("creditsLogoWrapper");
+            $(creditsLogo).prepend("<img id='creditsLogo' src='img/credits_logo.png' />");
+
+            $(textWrapper).css("user-select", "text");
+        }
+        else if(end == 1) {
+        // end screen
+            confirmButton.innerText = "Crédits";
+            $(confirmButton).addClass("popUpButton button");
+    
+            (function(self) {
+                confirmButton.addEventListener("click", self.clickToCredits(self));
+            }(self));
+        }
+        else if(end == 0) {
+            console.log("normal popup");
+        // lv up & 'you can't do this' pop ups
+            confirmButton.innerText = "Continuer";
+            $(confirmButton).addClass("popUpButton button");
+    
+            (function(self) {
+                confirmButton.addEventListener("click", self.clickToConfirm(self));
+            }(self));
+        }
 
         this.__popUpWrapper.append(textWrapper);
         this.__popUpWrapper.append(confirmButton);
+
+        if(typeof creditsLogo !== "undefined") {
+            this.__popUpWrapper.append(creditsLogo);
+        }
 
         this.__popUpWrapper.style.display = "flex";
         this.__opacityLayer.style.display = "block";
