@@ -61,7 +61,6 @@ class AppUIController extends AppChild {
 
         self.printHeader();
 
-        self.__newsUIController.notify();
         self.__newsUIController.refresh();
     }
 
@@ -126,7 +125,6 @@ class AppUIController extends AppChild {
             self.hideActive(self);
             self.__newsUIController.show();
             self.__newsUIController.refresh();
-            self.__newsUIController.hasClicked();
             self.__activePage = "news";
         }
     }
@@ -161,6 +159,8 @@ class AppUIController extends AppChild {
             $(".portfolioButtonWrapper").css("text-decoration-line", "none");
             $(".shopButtonWrapper").css("text-decoration-line", "none");
             $(".newsButtonWrapper").css("text-decoration-line", "underline");
+
+            this.__newsUIController.hasClicked();
         }
         else if(this.__activePage == "portfolio") {
             this.__portfolioUIController.show();

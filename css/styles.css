@@ -449,7 +449,7 @@ html, body {
     align-items: center;
     justify-content: center;
     background-color: white;
-    max-width: 18vw;
+    max-width: 10vw;
     max-height: 50vh;
     border: 1px solid black;
     padding: 20px 20px;
@@ -654,6 +654,10 @@ html, body {
     .navWrapper {
         height: 10%;
     }
+
+    .popUpWrapper {
+        max-width: 30vw;
+    }
 }
 
 
@@ -670,6 +674,10 @@ html, body {
     .desktopFraming {
         width: 33vw;
         height: 82vh;
+    }
+
+    .popUpWrapper {
+        max-width: 15vw;
     }
 }
 
