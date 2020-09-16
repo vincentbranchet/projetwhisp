@@ -140,7 +140,7 @@ class AppUIController extends AppChild {
     // from ending pop up
         return function() {
             self.deletePopUp();
-            self.printPopUp("Lazy Little Humans\n(v0.1 - 16/09/2020)\n\nVincent Branchet - Développement\nPierre Corbinais - Écriture\nJeremy Moirano - Intégration/Équilibrage\n\njeremy.moirano@gmail.com", 2)
+            self.printPopUp("Lazy Little Humans\n(v0.1 - 16/09/2020)\n\nVincent Branchet - Développement\nPierre Corbinais - Écriture\nAlexis Moroz - Design\nCharles Klipfel - UI/UX\nJeremy Moirano - Intégration/Équilibrage\n\njeremy.moirano@gmail.com", 2)
             self.__app.__appController.pause(self.__app.__appController.__stopMainLoop);
         }
     }
