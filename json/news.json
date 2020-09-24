@@ -29,6 +29,16 @@
       "lv": null,
       "launchId": null,
       "comesFromId": null
+    },
+    {
+      "id": 4,
+      "title": "Annexe de la première news",
+      "content": "Et si vous aimez le jeu, financez-le !",
+      "img": null,
+      "delay": null,
+      "lv": null,
+      "launchId": null,
+      "comesFromId": null
     }
   ]
 }

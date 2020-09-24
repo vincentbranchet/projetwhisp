@@ -9,7 +9,10 @@
         2
       ],
       "newSlot": 0,
-      "printId": 3
+      "printId": [
+        3, 
+        4
+      ]
     },
     {
       "id": 2,

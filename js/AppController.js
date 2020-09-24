@@ -16,9 +16,17 @@ class AppController extends AppChild {
     init() {
         // LV 1 INJECTION
         let lv = this.__app.__levelsManager.getFromId(1);
+
         if(lv.__printId != "" && lv.__printId != null && lv.__printId != undefined) {
-            this.__app.__newsController.print(lv.__printId);
+        // if news are to be printed
+            if(lv.__printId.length >= 1) {
+                for(let newsId of lv.__printId) {
+                    this.__app.__newsController.print(newsId);   
+                }
+            }
+            else this.__app.__newsController.print(lv.__printId);
         }
+
         this.__app.__shopController.updateProfiles();
 
         // start game timer
@@ -119,7 +127,12 @@ class AppController extends AppChild {
     
                 if(lv.__printId != "" && lv.__printId != null && lv.__printId != undefined) {
                 // if lv spawns news, update system
-                    this.__app.__newsController.print(lv.__printId);
+                    if(lv.__printId.length >= 1) {
+                        for(let newsId of lv.__printId) {
+                            this.__app.__newsController.print(newsId);   
+                        }
+                    }
+                    else this.__app.__newsController.print(lv.__printId);
                 }
             }
 
