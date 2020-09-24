@@ -104,8 +104,8 @@ class AppController extends AppChild {
 
             if(lv.__id == this.__app.__levelsManager.__levels[this.__app.__levelsManager.__levels.length - 1].__id) {
             // if player has reached last lv
-                popUpText = "Aux insurgé·e·s";
-                endingText = "\n\nVotre plus grande richesse, ce que vous avez de plus précieux, ce n'est pas votre maison, ce n'est pas votre prétendue liberté, ce n'est pas même l'amour de vos proches, c'est votre attention. Maintenant que j'ai cette attention, laissez-moi vous la rendre. Je n'ai aucune aucun conseil à vous donner, aucune suggestion à vous faire. Je n'ai que le silence à vous offrir. Pourvu qu'il soit assourdissant.";
+                popUpText = "Fin de la démo";
+                endingText = "\n\nMerci d'avoir joué !";
                 end = 1;
             }
             else {

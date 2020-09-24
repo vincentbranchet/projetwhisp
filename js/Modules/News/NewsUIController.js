@@ -102,11 +102,28 @@ class NewsUIController extends ControllerChild {
     }
 
     notify() {
+        let circle = document.createElement("span");
+        let styles = {
+            "background-color": "gray",
+            "width": "15px",
+            "height": "15px",
+            "border-radius": "15px",
+            "position": "absolute",
+            "top": "18%",
+            "right": "5%"
+        };
+        $(circle).css(styles);
+        $(circle).addClass("notifCircle");
+        $(this.__newsButton).append(circle);
+
         this.__newsButton.style.fontWeight = "bold";
+
         this.__isNew = 1;
     }
 
     hasClicked() {
+        $(this.__newsButton).find(".notifCircle").remove();
+
         this.__newsButton.style.fontWeight = "normal";
         this.__isNew = 0;
     }

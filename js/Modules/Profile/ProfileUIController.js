@@ -5,7 +5,8 @@ class ProfileUIController extends ControllerChild {
         this.__profileWrapper = $(".profileWrapper")[0]; // profile page in portfolio
         this.__profileVitrineWrapper = $(".profileVitrineWrapper")[0]; // profile page in shop
 
-        this.__activePage = "attributes"; // default profile subpage
+        this.__defaultPage = "history"; // default profile subpage
+        this.__activePage = this.__defaultPage; 
         this.__activeWrapper = ""; // html wrapper of active subpage
     }
 
@@ -32,8 +33,8 @@ class ProfileUIController extends ControllerChild {
             $(".profileRecoButton").css("text-decoration-line", "none");
             $(".profileHistButton").css("text-decoration-line", "none");
 
-            // reset landing page to attribute
-            this.__activePage = "attributes";
+            // reset landing page 
+            this.__activePage = this.__defaultPage;
         }
         else if(this.__activePage == "history") {
             this.printHistoryOf(profileId);
@@ -42,8 +43,8 @@ class ProfileUIController extends ControllerChild {
             $(".profileRecoButton").css("text-decoration-line", "none");
             $(".profileHistButton").css("text-decoration-line", "underline");
 
-            // reset landing page to attribute
-            this.__activePage = "attributes";
+            // reset landing page 
+            this.__activePage = this.__defaultPage;
         }
         else if(this.__activePage == "recos") {
             this.printRecosOf(profileId);
@@ -52,8 +53,8 @@ class ProfileUIController extends ControllerChild {
             $(".profileRecoButton").css("text-decoration-line", "underline");
             $(".profileHistButton").css("text-decoration-line", "none");
 
-            // reset landing page to attribute
-            this.__activePage = "attributes";
+            // reset landing page 
+            this.__activePage = this.__defaultPage;
         }
     }
 
@@ -245,9 +246,15 @@ class ProfileUIController extends ControllerChild {
                     $(htmlHistWrapper).append(recoEvt);
                 }
             });
-
-            this.__profileWrapper.append(htmlHistWrapper);
         }
+        else {
+            let defaultText = document.createElement("div");
+            $(defaultText).addClass("historyEvent");
+            $(defaultText).text("Vous n'avez pas encore envoyé de recommandation à ce profil.");
+            $(htmlHistWrapper).append(defaultText);
+        }
+        
+        this.__profileWrapper.append(htmlHistWrapper);
     }
 
     printRecosOf(profileId) {

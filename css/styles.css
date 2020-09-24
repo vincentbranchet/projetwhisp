@@ -433,6 +433,7 @@ html, body {
 
 .newsButtonWrapper {
     border-left: 1px solid black;
+    position: relative;
 }
 .navWrapper div.newsButtonWrapper:hover {
     text-decoration-line: underline!important;
