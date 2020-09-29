@@ -69,7 +69,7 @@ class ProfileUIController extends ControllerChild {
     printInShop(profileId) {
         var self = this;
         let profile = this.__controller.__app.__shopManager.getFromId(profileId);
-        let htmlSellButton, htmlTitle, htmlSep, htmlAttWrapper;
+        let htmlSellButton, htmlTitle, htmlSep, htmlAttWrapper, htmlTotal, totalName, totalValue;
 
         htmlTitle = document.createElement("div");
         htmlTitle.innerText = profile.__name + " (" + this.__controller.formatNumber(profile.__value) + "/s" + ")";
@@ -83,21 +83,42 @@ class ProfileUIController extends ControllerChild {
 
         profile.__attributes.forEach(id => {
             let att = self.__controller.__app.__attributeManager.getFromId(id);
-            let htmlAtt = document.createElement("div");
-            $(htmlAtt).addClass("attribute");
-            
+
             if(att) {
+                let htmlAtt = document.createElement("div");
+                $(htmlAtt).addClass("attribute");
+    
+                let attName = document.createElement("span");
+                attName.innerText = att.__name;
+    
+                let attValue = document.createElement("span");
                 if(att.__isMult == 1) {
                 // if att is multiplier
-                    htmlAtt.innerText = att.__name + " (x" + att.__multRate + ")";    
+                    attValue.innerText = "x" + att.__multRate;    
                 }
-                else {
-                    htmlAtt.innerText = att.__name + " (" + att.__value + ")";
+                else if(att.__value >= 0) {
+                    attValue.innerText = "+" + att.__value;
                 }
+                else if(att.__value < 0) {
+                    attValue.innerText = att.__value;
+                }
+    
+                $(htmlAtt).append(attName);
+                $(htmlAtt).append(attValue);
+                $(htmlAttWrapper).append(htmlAtt);
             }
-
-            $(htmlAttWrapper).append(htmlAtt);
         });
+
+        htmlTotal = document.createElement("div");
+        $(htmlTotal).addClass("attribute total");
+        totalName = document.createElement("span");
+        totalName.innerText = "Valeur totale";
+        totalValue = document.createElement("span");
+        totalValue.innerText = this.__controller.formatNumber(profile.__value);
+
+        $(htmlTotal).append(totalName);
+        $(htmlTotal).append(totalValue);
+        $(htmlAttWrapper).append(htmlTotal);
 
         htmlSellButton = document.createElement("div");
         htmlSellButton.innerText = "Ajouter";
@@ -106,6 +127,7 @@ class ProfileUIController extends ControllerChild {
         (function(self) {
             htmlSellButton.addEventListener("click", self.clickToBuy(self));
         }(self));
+
 
         this.__profileVitrineWrapper.append(htmlTitle);
         this.__profileVitrineWrapper.append(htmlSep);
@@ -138,7 +160,7 @@ class ProfileUIController extends ControllerChild {
         }(self));
 
         htmlRecoButton = document.createElement("div");
-        htmlRecoButton.innerText = "Recommandations";
+        htmlRecoButton.innerText = "Notifications";
         $(htmlRecoButton).addClass("profileRecoButton button");
         (function(self) {
             htmlRecoButton.addEventListener("click", self.clickToRecos(self, profileId));
@@ -189,7 +211,7 @@ class ProfileUIController extends ControllerChild {
         //profile id is the profile ID as int
         var self = this;
         let profile = this.__controller.__app.__portfolioManager.getFromId(profileId);
-        let htmlAttWrapper;
+        let htmlAttWrapper, htmlTotal, totalName, totalValue;
         
         htmlAttWrapper = document.createElement("div");
         $(htmlAttWrapper).addClass("attributeMainWrapper");
@@ -199,21 +221,42 @@ class ProfileUIController extends ControllerChild {
 
         profile.__attributes.forEach(id => {
             let att = self.__controller.__app.__attributeManager.getFromId(id);
-            let htmlAtt = document.createElement("div");
-            $(htmlAtt).addClass("attribute");
-            
+
             if(att) {
+                let htmlAtt = document.createElement("div");
+                $(htmlAtt).addClass("attribute");
+    
+                let attName = document.createElement("span");
+                attName.innerText = att.__name;
+    
+                let attValue = document.createElement("span");
                 if(att.__isMult == 1) {
                 // if att is multiplier
-                    htmlAtt.innerText = att.__name + " (x" + att.__multRate + ")";    
+                    attValue.innerText = "x" + att.__multRate;    
                 }
-                else {
-                    htmlAtt.innerText = att.__name + " (" + att.__value + ")";
+                else if(att.__value >= 0) {
+                    attValue.innerText = "+" + att.__value;
                 }
+                else if(att.__value < 0) {
+                    attValue.innerText = att.__value;
+                }
+    
+                $(htmlAtt).append(attName);
+                $(htmlAtt).append(attValue);
+                $(htmlAttWrapper).append(htmlAtt);
             }
-
-            $(htmlAttWrapper).append(htmlAtt);
         });
+
+        htmlTotal = document.createElement("div");
+        $(htmlTotal).addClass("attribute total");
+        totalName = document.createElement("span");
+        totalName.innerText = "Valeur totale";
+        totalValue = document.createElement("span");
+        totalValue.innerText = this.__controller.formatNumber(profile.__value);
+
+        $(htmlTotal).append(totalName);
+        $(htmlTotal).append(totalValue);
+        $(htmlAttWrapper).append(htmlTotal);
 
         this.__profileWrapper.append(htmlAttWrapper);
     }

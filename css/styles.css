@@ -346,21 +346,25 @@ html, body {
 .attributeMainWrapper {
     width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
+}
+
+.attributeMainWrapper > *:first-child {
+    margin-top: 10%;
 }
 
 .attribute {
-    height: 150px;
-    width: 150px;
+    width: 80%;
+    min-height: 1em;
     display: flex;
     align-items: center;
-    justify-content: center;
-    border: 1px solid black;
+    justify-content: space-between;
     margin: 10px 10px 0 0;
-    text-align: center;
+}
+
+.total {
+    margin-top: 7%;
 }
 
 .profileWrapper {
@@ -511,6 +515,10 @@ html, body {
         height: 20%;
     }
 
+    .attributeMainWrapper > *:first-child {
+        margin-top: 0%;
+    }
+
     .profileVitrineWrapper .attributeMainWrapper {
         height: 75%;
     }
@@ -544,7 +552,7 @@ html, body {
 
     .mainWrapper, .opacityLayer {
         width: 100vw;
-        height: 100vh;
+        height: 90vh;
         margin: 0;
         border-radius: 0;
     }
@@ -554,8 +562,7 @@ html, body {
     }
 
     .attribute {
-        width: 40vw;
-        height: 40vw;
+        width: 80%;
     }
 
     .historyMainWrapper, .newsWrapper {
@@ -581,6 +588,10 @@ html, body {
 
     .shopTitle, .portfolioTitle, .newsTitle, .profileMenuWrapper, .profileBuyButton, .profileSellButton {
         height: 10%;
+    }
+
+    .attributeMainWrapper > *:first-child {
+        margin-top: 10%;
     }
 
     .profileVitrineWrapper .attributeMainWrapper {
@@ -661,11 +672,11 @@ html, body {
     }
 
     .profileVitrineWrapper .attributeMainWrapper {
-        height: 80%;
+        height: 70%;
     }
 
     .profileWrapper .attributeMainWrapper {
-        height: 70%;
+        height: 60%;
     }
 
     .historyMainWrapper, .recoMainWrapper {
