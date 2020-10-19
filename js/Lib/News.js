@@ -15,6 +15,9 @@ class News {
     set date(newDate) {
         this.__date = newDate;
     }
+    set wasPrinted(bool) {
+        this.__wasPrinted = bool;
+    }
 
     get id() {
         return this.__id;

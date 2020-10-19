@@ -30,15 +30,15 @@ class ShopUIController extends ControllerChild {
         this.__shopWrapper.append(htmlSep);
 
         // for each profile in shop, sorted by value (decr) create & fill slots
-        profiles = this.__controller.__app.__shopManager.__inShop;
-        profiles.sort((a, b) => b.__value - a.__value);
+        profiles = this.__controller.__app.__shopManager.inShop;
+        profiles.sort((a, b) => b.value - a.value);
         profiles.forEach(profile => {
 
             htmlSlot = document.createElement("div");
             $(htmlSlot).addClass("slot");
     
             htmlProfile = document.createElement("div");
-            htmlProfile.id = "profile_" + profile.__id;
+            htmlProfile.id = "profile_" + profile.id;
 
             (function(self) {
                 htmlProfile.addEventListener("click", self.clickToShow(self));
@@ -47,10 +47,10 @@ class ShopUIController extends ControllerChild {
             $(htmlProfile).addClass("button slotProfile");
 
             htmlProfileName = document.createElement("div");
-            htmlProfileName.innerText = profile.__name;
+            htmlProfileName.innerText = profile.name;
             $(htmlProfileName).addClass("slotProfileName");
             htmlProfileValue = document.createElement("div");
-            htmlProfileValue.innerText = self.__controller.formatNumber(profile.__value) + "/s";
+            htmlProfileValue.innerText = self.__controller.formatNumber(profile.value) + "/s";
             $(htmlProfileValue).addClass("slotProfileValue");
 
             $(htmlProfile).append(htmlProfileName);

@@ -6,16 +6,16 @@ class ProfileController extends AppChild {
     updateShop() {
         let self = this;
 
-        this.__app.__shopManager.__inShop.forEach(profile => {
-            self.evaluate(profile.__id, "shop");
+        this.__app.__shopManager.inShop.forEach(profile => {
+            self.evaluate(profile.id, "shop");
         });
     }
 
     updatePortfolio() {
         let self = this;
 
-        this.__app.__portfolioManager.__profiles.forEach(profile => {
-            self.evaluate(profile.__id, "portfolio");
+        this.__app.__portfolioManager.profiles.forEach(profile => {
+            self.evaluate(profile.id, "portfolio");
         });
     }
 
@@ -30,21 +30,21 @@ class ProfileController extends AppChild {
             profile = this.__app.__portfolioManager.getFromId(profileId);
 
         profile.value = 0;
-        profile.__attributes.forEach(id => {
+        profile.attributes.forEach(id => {
             let att = self.__app.__attributeManager.getFromId(id);
 
             if(att) {
-                if(att.__isMult == 1) {
+                if(att.isMult == 1) {
                 // if att is multiplier
-                    multBy = multBy * att.__multRate;
+                    multBy = multBy * att.multRate;
                 }
                 else {
-                    profile.value = profile.__value + att.__value;
+                    profile.value = profile.value + att.value;
                 }
             }
         });
 
-        profile.value = profile.__value * multBy;
+        profile.value = profile.value * multBy;
 
         if(profile.value < 0)
             profile.value = 0;

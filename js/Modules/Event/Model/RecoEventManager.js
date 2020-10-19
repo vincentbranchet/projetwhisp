@@ -40,7 +40,7 @@ class RecoEventManager extends EventManagerChild {
     getFromId(evtId) {
         let targetEvt;
         this.__recoEvents.forEach(evt => {
-            if(evt.__id == evtId) {
+            if(evt.id == evtId) {
                 targetEvt = evt; 
             }                
         });

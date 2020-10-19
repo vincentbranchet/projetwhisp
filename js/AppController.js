@@ -164,4 +164,10 @@ class AppController extends AppChild {
         this.mainLoop(performance.now());
         console.log("game resumed");
     }
+
+    // getters
+
+    get gameTime() {
+        return this.__gameTime;
+    }
 }

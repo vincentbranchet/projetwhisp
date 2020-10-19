@@ -7,18 +7,18 @@ class RecoEventController extends EventControllerChild {
         var self = this;
 
         // loop through portfolio profiles
-        this.__controller.__app.__portfolioManager.__profiles.forEach(profile => {
-            if(profile.__launchedReco.length >= 1) {
+        this.__controller.__app.__portfolioManager.profiles.forEach(profile => {
+            if(profile.launchedReco.length >= 1) {
             // and through profiles launched reco events
-                for(let event of profile.__launchedReco) {
+                for(let event of profile.launchedReco) {
                 // check if event timer >= delay
-                    if(event.__timer.duration >= event.__delay) {
+                    if(event.timer.duration >= event.delay) {
                     // if so, resolve event, update portfolio and ask for animation
-                        self.__controller.__app.__eventController.__recoController.resolve(event.__id, profile.__id);
+                        self.__controller.__app.__eventController.__recoController.resolve(event.id, profile.id);
 
                         self.__controller.__app.__UIController.__portfolioUIController.update();
 
-                        self.__controller.__app.__UIController.fadeIn($("#profile_" + profile.__id).find(".slotProfileValue"));
+                        self.__controller.__app.__UIController.fadeIn($("#profile_" + profile.id).find(".slotProfileValue"));
                     }
                 }
             }
@@ -26,16 +26,16 @@ class RecoEventController extends EventControllerChild {
     }
 
     launch(evtId, profileId) {
-        let reco = this.__controller.__app.__recoManager.getFromId(evtId);
-        let event = this.__controller.__app.__eventManager.__recoManager.getFromId(reco.__evtId);
+        const reco = this.__controller.__app.__recoManager.getFromId(evtId);
+        let event = this.__controller.__app.__eventManager.__recoManager.getFromId(reco.evtId);
         let profile = this.__controller.__app.__portfolioManager.getFromId(profileId);
 
-        if(event.__hasLaunched == 0) {
+        if(event.hasLaunched == 0) {
             // start timer
-            event.__timer.start();
+            event.timer.start();
 
             // mark as launched and push to profile
-            event.__hasLaunched = 1;
+            event.hasLaunched = 1;
 
             profile.__launchedReco.push(event);
 
@@ -51,8 +51,8 @@ class RecoEventController extends EventControllerChild {
         let profile = this.__controller.__app.__portfolioManager.getFromId(profileId);
 
         // apply effects to profile
-        event.__toDelete.forEach(id => {
-            let indexOfAtt = profile.__attributes.indexOf(id);
+        event.toDelete.forEach(id => {
+            const indexOfAtt = profile.attributes.indexOf(id);
 
             if(indexOfAtt >= 0) {
             // if target attribute is present in profile 
@@ -60,9 +60,9 @@ class RecoEventController extends EventControllerChild {
             }
         });
 
-        event.__toSpawn.forEach(id => {
+        event.toSpawn.forEach(id => {
             let alreadyThere = 0;
-            for(let attId of profile.__attributes) {
+            for(let attId of profile.attributes) {
                 if(attId == id) {
                     alreadyThere = 1;
                 }
@@ -77,18 +77,18 @@ class RecoEventController extends EventControllerChild {
         this.__controller.__app.__profileController.evaluate(profileId, "portfolio");
 
         // if news must be printed after event, set news controller to print it
-        if(event.__newsId && event.__newsId != 0) {
-            this.__controller.__app.__newsController.print(event.__newsId);
+        if(event.newsId && event.newsId != 0) {
+            this.__controller.__app.__newsController.print(event.newsId);
         }
 
         // mark as resolved, delete from launched and push to resolved
-        event.__timer.stop();
-        event.__timer.reset();
-        event.__wasResolved = 1;
-        event.__hasLaunched = 0; // so it can be sent again
-        event.__resolveDate = new Date();
+        event.timer.stop();
+        event.timer.reset();
+        event.wasResolved = 1;
+        event.hasLaunched = 0; // so it can be sent again
+        event.resolveDate = new Date();
 
-        let indexOfEvent = profile.__launchedReco.indexOf(event);
+        const indexOfEvent = profile.launchedReco.indexOf(event);
         if(indexOfEvent >= 0) {
             profile.__launchedReco.splice(indexOfEvent, 1);
             profile.__recoEvents.push(event);

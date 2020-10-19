@@ -11,9 +11,9 @@ class PortfolioManager {
 
     // get specific profile
     getFromId(profileId) {
-        var targetProfile;
+        let targetProfile;
         this.__profiles.forEach(profile => {
-            if(profile.__id == profileId) {
+            if(profile.id == profileId) {
                 targetProfile = profile; 
             }                
         });

@@ -7,17 +7,6 @@ class GameEventController extends AppChild {
         this.__recoController = new RecoEventController(this);
     }
 
-    scanToLaunch() {
-        // forEach game event
-        // check if launchCondition is fulfilled
-        // if so, launch event
-    }
-
-    scanToResolve() {
-        // forEach launched event
-        // check if 
-    }
-
     get macroController() {
         return this.__macroController;
     }

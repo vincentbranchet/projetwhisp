@@ -7,11 +7,11 @@ class NativeEventController extends EventControllerChild {
         let event = this.__controller.__app.__eventManager.__nativeManager.getFromId(evtId);
         let profile = this.__controller.__app.__portfolioManager.getFromId(profileId);
 
-        if(event.__hasLaunched == 0) {
+        if(event.hasLaunched == 0) {
             // start nativeEvent
-            event.__timer.start();
+            event.timer.start();
 
-            event.__hasLaunched = 1;
+            event.hasLaunched = 1;
             // push native event to profile
             profile.__launchedNative.push(event);
         }
@@ -22,8 +22,8 @@ class NativeEventController extends EventControllerChild {
         let profile = this.__controller.__app.__portfolioManager.getFromId(profileId);
 
         // apply effects to profile
-        event.__toDelete.forEach(id => {
-            let indexOfAtt = profile.__attributes.indexOf(id);
+        event.toDelete.forEach(id => {
+            const indexOfAtt = profile.attributes.indexOf(id);
 
             if(indexOfAtt >= 0) {
             // if target attribute is present in profile 
@@ -31,9 +31,9 @@ class NativeEventController extends EventControllerChild {
             }
         });
 
-        event.__toSpawn.forEach(id => {
+        event.toSpawn.forEach(id => {
             let alreadyThere = 0;
-            for(let attId of profile.__attributes) {
+            for(let attId of profile.attributes) {
                 if(attId == id) {
                     alreadyThere = 1;
                 }
@@ -48,12 +48,12 @@ class NativeEventController extends EventControllerChild {
         this.__controller.__app.__profileController.evaluate(profileId, "portfolio");
 
         // mark as resolved, delete from launched and push to resolved
-        event.__timer.stop();
-        event.__timer.reset();
+        event.timer.stop();
+        event.timer.reset();
 
-        event.__wasResolved = 1;
+        event.wasResolved = 1;
 
-        let indexOfEvent = profile.__launchedNative.indexOf(event);
+        const indexOfEvent = profile.launchedNative.indexOf(event);
         if(indexOfEvent >= 0) {
             profile.__launchedNative.splice(indexOfEvent, 1);
             profile.__nativeEvents.push(event);    
@@ -61,7 +61,7 @@ class NativeEventController extends EventControllerChild {
 
         this.__controller.__nativeController.scanToLaunch();
         
-        this.__controller.__app.__notificationController.print("Le profil de " + profile.__name + " a été modifié suite à un événement.", event);
+        this.__controller.__app.__notificationController.print("Le profil de " + profile.name + " a été modifié suite à un événement.", event);
         this.__controller.__app.__UIController.__newsUIController.notify();
         this.__controller.__app.__UIController.__newsUIController.refresh();
     }
@@ -69,29 +69,29 @@ class NativeEventController extends EventControllerChild {
     scanToLaunch() {
         var self = this;
 
-        this.__controller.__app.__portfolioManager.__profiles.forEach(profile => {
+        this.__controller.__app.__portfolioManager.profiles.forEach(profile => {
         // for each profile in player's portfolio
-            if(profile.__attributes) {
-                for(let attId of profile.__attributes) {
+            if(profile.attributes) {
+                for(let attId of profile.attributes) {
                 //and each attribute in each profile
-                    let att = this.__controller.__app.__attributeManager.getFromId(attId);
+                    const att = this.__controller.__app.__attributeManager.getFromId(attId);
 
-                    if(att && att.__events && Array.isArray(att.__events) && att.__events.length > 1) {
+                    if(att && att.events && Array.isArray(att.events) && att.events.length > 1) {
                     // if attribute has multiple events
                         for(let evtId of att.__events) {
                         // loop through each event
-                            let evt = this.__controller.__app.__eventManager.__nativeManager.getFromId(evtId);
+                            const evt = this.__controller.__app.__eventManager.__nativeManager.getFromId(evtId);
 
-                            if(evt && evt.__required && Array.isArray(evt.__required) && evt.__required.length > 1) {
+                            if(evt && evt.required && Array.isArray(evt.required) && evt.required.length > 1) {
                             // if event has multiple required attributes
-                                let nbRequired = evt.__required.length;
+                                const nbRequired = evt.required.length;
                                 let nbFound = 0;
 
-                                for(let i = 0; i < evt.__required.length; i++) {
+                                for(let i = 0; i < evt.required.length; i++) {
                                 // loop through required attributes
-                                    for(let y = 0; y < profile.__attributes.length; y++) {
+                                    for(let y = 0; y < profile.attributes.length; y++) {
                                     // and through profile attributes
-                                        if(evt.__required[i] == profile.__attributes[y]) {
+                                        if(evt.required[i] == profile.attributes[y]) {
                                         // if required attribute is found, save it
                                             nbFound++;
                                         }
@@ -100,37 +100,35 @@ class NativeEventController extends EventControllerChild {
 
                                 if(nbFound >= nbRequired) {
                                 // if enough required attributes were found, launch event
-                                    self.launch(evt.__id, profile.__id);
-                                    console.log(evt);
+                                    self.launch(evt.id, profile.id);
                                 }
                             }
-                            else if(evt && evt.__required && Array.isArray(evt.__required) && evt.__required.length == 1) {
+                            else if(evt && evt.__required && Array.isArray(evt.required) && evt.required.length == 1) {
                             // if event has one required attribute
-                                for(let coreAttId of profile.__attributes) {
+                                for(let coreAttId of profile.attributes) {
                                 // loop again through profile attributes
-                                    if(coreAttId == evt.__required[0]) {
+                                    if(coreAttId == evt.required[0]) {
                                     // if required attribute was found, launch event
-                                        self.launch(evt.__id, profile.__id);
-                                        console.log(evt);
+                                        self.launch(evt.id, profile.id);
                                     }
                                 }
                             }              
                         }
                     }
-                    else if(att && att.__events && Array.isArray(att.__events) && att.__events.length == 1) {
+                    else if(att && att.events && Array.isArray(att.events) && att.events.length == 1) {
                     // if attribute has 1 event
-                        let evt = this.__controller.__app.__eventManager.__nativeManager.getFromId(att.__events);
+                        const evt = this.__controller.__app.__eventManager.__nativeManager.getFromId(att.events);
 
                         if(evt && evt.__required && Array.isArray(evt.__required) && evt.__required.length > 1) {
                         // if event has multiple required attributes
-                            let nbRequired = evt.__required.length;
+                            const nbRequired = evt.__required.length;
                             let nbFound = 0;
 
-                            for(let i = 0; i < evt.__required.length; i++) {
+                            for(let i = 0; i < evt.required.length; i++) {
                             // loop through required attributes
-                                for(let y = 0; y < profile.__attributes.length; y++) {
+                                for(let y = 0; y < profile.attributes.length; y++) {
                                 // and through profile attributes
-                                    if(evt.__required[i] == profile.__attributes[y]) {
+                                    if(evt.required[i] == profile.attributes[y]) {
                                     // if required attribute is found, save it
                                         nbFound++;
                                     }
@@ -139,18 +137,16 @@ class NativeEventController extends EventControllerChild {
 
                             if(nbFound >= nbRequired) {
                             // if enough required attributes were found, launch event
-                                self.launch(evt.__id, profile.__id);
-                                console.log(evt);
+                                self.launch(evt.id, profile.id);
                             }
                         }
-                        else if(evt && evt.__required && Array.isArray(evt.__required) && evt.__required.length == 1) {
+                        else if(evt && evt.required && Array.isArray(evt.required) && evt.required.length == 1) {
                         // if event has one required attribute
-                            for(let coreAttId of profile.__attributes) {
+                            for(let coreAttId of profile.attributes) {
                             // loop again through profile attributes
-                                if(coreAttId == evt.__required[0]) {
+                                if(coreAttId == evt.required[0]) {
                                 // if required attribute was found, launch event
-                                    self.launch(evt.__id, profile.__id);
-                                    console.log(evt);
+                                    self.launch(evt.id, profile.id);
                                 }
                             }
                         }
@@ -164,20 +160,18 @@ class NativeEventController extends EventControllerChild {
         var self = this;
 
         // loop through portfolio profiles
-        this.__controller.__app.__portfolioManager.__profiles.forEach(profile => {
-            if(profile.__launchedNative.length >= 1) {
+        this.__controller.__app.__portfolioManager.profiles.forEach(profile => {
+            if(profile.launchedNative.length >= 1) {
             // and through profiles launched native events
-                for(let event of profile.__launchedNative) {
-                    console.log(event.__timer.__duration);
-
-                    if(event.__required && Array.isArray(event.__required) && event.__required.length > 1) {
+                for(let event of profile.launchedNative) {
+                    if(event.required && Array.isArray(event.required) && event.required.length > 1) {
                     // if launched native event has multiple required attributes
-                        let attRequired = event.__required.length;
+                        const attRequired = event.required.length;
                         let attFound = 0;
 
-                        for(let evtAttId of event.__required) {
+                        for(let evtAttId of event.required) {
                         // check if required attributes are present in profile
-                            for(let profAttId of profile.__attributes) {
+                            for(let profAttId of profile.attributes) {
                                 if(evtAttId == profAttId) {
                                     attFound++;
                                 }
@@ -186,34 +180,34 @@ class NativeEventController extends EventControllerChild {
 
                         if(attFound < attRequired) {
                         // if they are not, cancel native event
-                            let trueEvent = this.__controller.__app.__eventManager.__nativeManager.getFromId(event.__id);
-                            trueEvent.__hasLaunched = 0;
-                            trueEvent.__timer.stop();
-                            trueEvent.__timer.reset();
+                            let trueEvent = this.__controller.__app.__eventManager.__nativeManager.getFromId(event.id);
+                            trueEvent.hasLaunched = 0;
+                            trueEvent.timer.stop();
+                            trueEvent.timer.reset();
 
-                            let indexOfEvent = profile.__launchedNative.indexOf(event);
+                            const indexOfEvent = profile.launchedNative.indexOf(event);
                             if(indexOfEvent >= 0) {
                                 profile.__launchedNative.splice(indexOfEvent, 1);
                             }
                         }
                         else {
-                            if(event.__timer.__duration >= event.__delay) {
+                            if(event.timer.duration >= event.delay) {
                             // if event timer >= delay, resolve event 
-                                self.resolve(event.__id, profile.__id);
+                                self.resolve(event.id, profile.id);
 
                                 self.__controller.__app.__UIController.__portfolioUIController.update();
 
-                                self.__controller.__app.__UIController.fadeIn($("#profile_" + profile.__id).find(".slotProfileValue"));
+                                self.__controller.__app.__UIController.fadeIn($("#profile_" + profile.id).find(".slotProfileValue"));
                             }
                         }
                     }
-                    else if(event.__required && Array.isArray(event.__required) && event.__required.length == 1) {
+                    else if(event.required && Array.isArray(event.required) && event.required.length == 1) {
                     //if launched native event has one required attribute
                         let attIsHere = 0;
 
-                        for(let coreAttId of profile.__attributes) {
+                        for(let coreAttId of profile.attributes) {
                         // loop again through profile attributes
-                            if(coreAttId == event.__required[0]) {
+                            if(coreAttId == event.required[0]) {
                             // if attribute is still there
                                 attIsHere = 1;
                             }
@@ -221,24 +215,24 @@ class NativeEventController extends EventControllerChild {
 
                         if(attIsHere == 0) {
                         // if attribute is not there anymore, cancel event
-                            let trueEvent = this.__controller.__app.__eventManager.__nativeManager.getFromId(event.__id);
-                            trueEvent.__hasLaunched = 0;
-                            trueEvent.__timer.stop();
-                            trueEvent.__timer.reset();
+                            let trueEvent = this.__controller.__app.__eventManager.__nativeManager.getFromId(event.id);
+                            trueEvent.hasLaunched = 0;
+                            trueEvent.timer.stop();
+                            trueEvent.timer.reset();
 
-                            let indexOfEvent = profile.__launchedNative.indexOf(event);
+                            const indexOfEvent = profile.launchedNative.indexOf(event);
                             if(indexOfEvent >= 0) {
                                 profile.__launchedNative.splice(indexOfEvent, 1);
                             }
                         }
                         else {
-                            if(event.__timer.__duration >= event.__delay) {
+                            if(event.timer.duration >= event.delay) {
                             // and time is up
-                                self.resolve(event.__id, profile.__id);
+                                self.resolve(event.id, profile.id);
                                 
                                 self.__controller.__app.__UIController.__portfolioUIController.update();
 
-                                self.__controller.__app.__UIController.fadeIn($("#profile_" + profile.__id).find(".slotProfileValue"));
+                                self.__controller.__app.__UIController.fadeIn($("#profile_" + profile.id).find(".slotProfileValue"));
                             }
                         }
                     }

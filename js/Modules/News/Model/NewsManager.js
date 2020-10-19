@@ -12,9 +12,7 @@ class NewsManager {
         return new Promise((resolve, reject) => {
 
             $.getJSON('json/' + this.__fileName + '.json', news => {
-                console.log(news);
                 news[this.__sheetName].map(jsonNews => this.create(jsonNews.id, jsonNews.title, jsonNews.content, jsonNews.img, jsonNews.delay, jsonNews.lv, jsonNews.launchId, jsonNews.comesFromId));
-                console.log(this);
                 resolve();
             })
 
@@ -30,7 +28,7 @@ class NewsManager {
     getNewsFromId(newsId) {
         let targetNews;
         this.__news.forEach(news => {
-            if(news.__id == newsId) {
+            if(news.id == newsId) {
                 targetNews = news; 
             }                
         });
@@ -40,7 +38,7 @@ class NewsManager {
     getPrintedFromId(newsId) {
         let targetNews;
         this.__printed.forEach(news => {
-            if(news.__id == newsId) {
+            if(news.id == newsId) {
                 targetNews = news; 
             }                
         });

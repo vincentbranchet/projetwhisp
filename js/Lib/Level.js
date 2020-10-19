@@ -9,6 +9,10 @@ class Level {
         this.__hasSpawned = 0;
     }
 
+    set hasSpawned(bool) {
+        this.__hasSpawned = bool;
+    }
+
     get id() {
         return this.__id;
     }
@@ -27,7 +31,7 @@ class Level {
     get printId() {
         return this.__printId;
     }
-    get hasSpawn() {
+    get hasSpawned() {
         return this.__hasSpawned;
     }
 }

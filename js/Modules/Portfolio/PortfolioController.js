@@ -9,23 +9,19 @@ class PortfolioController extends AppChild {
 
     updateValue() {
         var self = this;
-        self.__app.__player.__portfolioValue = 0;
+        self.__app.__player.portfolioValue = 0;
         
-        this.__app.__portfolioManager.__profiles.forEach(profile => {
-            self.__app.__player.__portfolioValue = self.__app.__player.__portfolioValue + profile.__value;
+        this.__app.__portfolioManager.profiles.forEach(profile => {
+            self.__app.__player.portfolioValue = self.__app.__player.portfolioValue + profile.value;
         });
 
-        if(self.__app.__player.__portfolioValue < 0)
-            self.__app.__player.__portfolioValue = 0;
-    }
-
-    getProfiles() {
-        return this.__app.__portfolioManager.__profiles;
+        if(self.__app.__player.portfolioValue < 0)
+            self.__app.__player.portfolioValue = 0;
     }
 
     add(profile) {
-        if(profile instanceof Profile && this.__app.__portfolioManager.__used < this.__app.__portfolioManager.__slots) {
-            this.__app.__portfolioManager.__profiles.push(profile);
+        if(profile instanceof Profile && this.__app.__portfolioManager.used < this.__app.__portfolioManager.slots) {
+            this.__app.__portfolioManager.profiles.push(profile);
 
             this.__app.__portfolioManager.used++;
         }
@@ -34,9 +30,9 @@ class PortfolioController extends AppChild {
     remove(target) {
         var self = this;
         if(target instanceof Profile) {
-            this.__app.__portfolioManager.__profiles.forEach(profile => {
-                if(profile.__id == target.__id) {
-                    let targetIndex = self.__app.__portfolioManager.__profiles.indexOf(profile);
+            this.__app.__portfolioManager.profiles.forEach(profile => {
+                if(profile.id == target.id) {
+                    const targetIndex = self.__app.__portfolioManager.profiles.indexOf(profile);
                     self.__app.__portfolioManager.__profiles.splice(targetIndex, 1);
 
                     this.__app.__portfolioManager.used--;

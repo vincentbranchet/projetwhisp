@@ -13,9 +13,7 @@ class NativeEventManager extends EventManagerChild {
         return new Promise((resolve, reject) => {
 
             $.getJSON('json/' + this.__fileName + '.json', events => {
-                console.log(events);
                 events[this.__sheetName].map(event => this.create(event.id, event.name, event.delay, event.required, event.toDelete, event.toSpawn));
-                console.log(this);
                 resolve();
             })
 
@@ -44,7 +42,7 @@ class NativeEventManager extends EventManagerChild {
     getFromId(evtId) {
         let targetEvt;
         this.__nativeEvents.forEach(evt => {
-            if(evt.__id == evtId) {
+            if(evt.id == evtId) {
                 targetEvt = evt; 
             }                
         });

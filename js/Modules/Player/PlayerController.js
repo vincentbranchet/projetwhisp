@@ -5,9 +5,9 @@ class PlayerController extends AppChild {
 
     buy(profileId) {
 
-        let profile = this.__app.__shopManager.getFromId(profileId);
+        const profile = this.__app.__shopManager.getFromId(profileId);
 
-        if(profile instanceof Profile && this.__app.__portfolioManager.__used < this.__app.__portfolioManager.__slots) {
+        if(profile instanceof Profile && this.__app.__portfolioManager.used < this.__app.__portfolioManager.slots) {
 
             this.__app.__portfolioController.add(profile);
             this.__app.__portfolioController.updateValue();
@@ -31,21 +31,21 @@ class PlayerController extends AppChild {
 
     sell(profileId) {
         
-        let profile = this.__app.__portfolioManager.getFromId(profileId);
+        const profile = this.__app.__portfolioManager.getFromId(profileId);
 
         if(profile instanceof Profile) {
-            if(profile.__launchedNative.length > 0) {
+            if(profile.launchedNative.length > 0) {
             // if profile has running native events
-                for(let evt of profile.__launchedNative) {
+                for(let evt of profile.launchedNative) {
 
                     if(evt) {
                     // reset native event in Mananger & delete copy from profile
-                        let trueEvent = this.__app.__eventManager.__nativeManager.getFromId(evt.__id);
-                        trueEvent.__hasLaunched = 0;
-                        trueEvent.__timer.stop();
-                        trueEvent.__timer.reset();
+                        let trueEvent = this.__app.__eventManager.__nativeManager.getFromId(evt.id);
+                        trueEvent.hasLaunched = 0;
+                        trueEvent.timer.stop();
+                        trueEvent.timer.reset();
 
-                        let indexOfEvent = profile.__launchedNative.indexOf(evt);
+                        const indexOfEvent = profile.launchedNative.indexOf(evt);
                         if(indexOfEvent >= 0) {
                             profile.__launchedNative.splice(indexOfEvent, 1);
                         }

@@ -14,9 +14,9 @@ class ProfileUIController extends ControllerChild {
 
     refresh(profileId) {
         // hacky function called each frame to refresh profile page value
-        let profile = this.__controller.__app.__portfolioManager.getFromId(profileId);
+        const profile = this.__controller.__app.__portfolioManager.getFromId(profileId);
 
-        $(".profileTitle").text(profile.__name + " (" + profile.__value + "/s" + ")");
+        $(".profileTitle").text(profile.name + " (" + profile.value + "/s" + ")");
     }
 
     show(profileId) {
@@ -68,11 +68,11 @@ class ProfileUIController extends ControllerChild {
     
     printInShop(profileId) {
         var self = this;
-        let profile = this.__controller.__app.__shopManager.getFromId(profileId);
+        const profile = this.__controller.__app.__shopManager.getFromId(profileId);
         let htmlSellButton, htmlTitle, htmlSep, htmlAttWrapper, htmlTotal, totalName, totalValue;
 
         htmlTitle = document.createElement("div");
-        htmlTitle.innerText = profile.__name + " (" + this.__controller.formatNumber(profile.__value) + "/s" + ")";
+        htmlTitle.innerText = profile.name + " (" + this.__controller.formatNumber(profile.value) + "/s" + ")";
         $(htmlTitle).addClass("shopTitle");
 
         htmlSep = document.createElement("div");
@@ -81,26 +81,26 @@ class ProfileUIController extends ControllerChild {
         htmlAttWrapper = document.createElement("div");
         $(htmlAttWrapper).addClass("attributeMainWrapper");
 
-        profile.__attributes.forEach(id => {
-            let att = self.__controller.__app.__attributeManager.getFromId(id);
+        profile.attributes.forEach(id => {
+            const att = self.__controller.__app.__attributeManager.getFromId(id);
 
             if(att) {
                 let htmlAtt = document.createElement("div");
                 $(htmlAtt).addClass("attribute");
     
                 let attName = document.createElement("span");
-                attName.innerText = att.__name;
+                attName.innerText = att.name;
     
                 let attValue = document.createElement("span");
-                if(att.__isMult == 1) {
+                if(att.isMult == 1) {
                 // if att is multiplier
-                    attValue.innerText = "x" + att.__multRate;    
+                    attValue.innerText = "x" + att.multRate;    
                 }
-                else if(att.__value >= 0) {
-                    attValue.innerText = "+" + att.__value;
+                else if(att.value >= 0) {
+                    attValue.innerText = "+" + att.value;
                 }
-                else if(att.__value < 0) {
-                    attValue.innerText = att.__value;
+                else if(att.value < 0) {
+                    attValue.innerText = att.value;
                 }
     
                 $(htmlAtt).append(attName);
@@ -114,7 +114,7 @@ class ProfileUIController extends ControllerChild {
         totalName = document.createElement("span");
         totalName.innerText = "Valeur totale";
         totalValue = document.createElement("span");
-        totalValue.innerText = this.__controller.formatNumber(profile.__value);
+        totalValue.innerText = this.__controller.formatNumber(profile.value);
 
         $(htmlTotal).append(totalName);
         $(htmlTotal).append(totalValue);
@@ -140,10 +140,10 @@ class ProfileUIController extends ControllerChild {
         //profile id is the profile ID as int
         var self = this;
         let htmlTitle, htmlSep, htmlMenuWrapper, htmlAttButton, htmlRecoButton, htmlHistButton, htmlSellButton;
-        let profile = this.__controller.__app.__portfolioManager.getFromId(profileId);
+        const profile = this.__controller.__app.__portfolioManager.getFromId(profileId);
 
         htmlTitle = document.createElement("div");
-        htmlTitle.innerText = profile.__name + " (" + this.__controller.formatNumber(profile.__value) + "/s" + ")";
+        htmlTitle.innerText = profile.name + " (" + this.__controller.formatNumber(profile.value) + "/s" + ")";
         $(htmlTitle).addClass("portfolioTitle");
         
         htmlSep = document.createElement("div");
@@ -194,7 +194,7 @@ class ProfileUIController extends ControllerChild {
     clickToSell(self) {
 
         return function() {
-            let profileId = this.className.split("_")[1];
+            const profileId = this.className.split("_")[1];
             self.__controller.__app.__playerController.sell(profileId);
         }
     }
@@ -202,7 +202,7 @@ class ProfileUIController extends ControllerChild {
     clickToBuy(self) {
 
         return function() {
-            let profileId = this.className.split("_")[1];
+            const profileId = this.className.split("_")[1];
             self.__controller.__app.__playerController.buy(profileId);
         }
     }
@@ -210,7 +210,7 @@ class ProfileUIController extends ControllerChild {
     printAttributesOf(profileId) {
         //profile id is the profile ID as int
         var self = this;
-        let profile = this.__controller.__app.__portfolioManager.getFromId(profileId);
+        const profile = this.__controller.__app.__portfolioManager.getFromId(profileId);
         let htmlAttWrapper, htmlTotal, totalName, totalValue;
         
         htmlAttWrapper = document.createElement("div");
@@ -219,7 +219,7 @@ class ProfileUIController extends ControllerChild {
 
         this.__activePage = "attributes";
 
-        profile.__attributes.forEach(id => {
+        profile.attributes.forEach(id => {
             let att = self.__controller.__app.__attributeManager.getFromId(id);
 
             if(att) {
@@ -227,18 +227,18 @@ class ProfileUIController extends ControllerChild {
                 $(htmlAtt).addClass("attribute");
     
                 let attName = document.createElement("span");
-                attName.innerText = att.__name;
+                attName.innerText = att.name;
     
                 let attValue = document.createElement("span");
-                if(att.__isMult == 1) {
+                if(att.isMult == 1) {
                 // if att is multiplier
-                    attValue.innerText = "x" + att.__multRate;    
+                    attValue.innerText = "x" + att.multRate;    
                 }
-                else if(att.__value >= 0) {
-                    attValue.innerText = "+" + att.__value;
+                else if(att.value >= 0) {
+                    attValue.innerText = "+" + att.value;
                 }
-                else if(att.__value < 0) {
-                    attValue.innerText = att.__value;
+                else if(att.value < 0) {
+                    attValue.innerText = att.value;
                 }
     
                 $(htmlAtt).append(attName);
@@ -252,7 +252,7 @@ class ProfileUIController extends ControllerChild {
         totalName = document.createElement("span");
         totalName.innerText = "Valeur totale";
         totalValue = document.createElement("span");
-        totalValue.innerText = this.__controller.formatNumber(profile.__value);
+        totalValue.innerText = this.__controller.formatNumber(profile.value);
 
         $(htmlTotal).append(totalName);
         $(htmlTotal).append(totalValue);
@@ -263,7 +263,7 @@ class ProfileUIController extends ControllerChild {
 
     printHistoryOf(profileId) {
         var self = this;
-        let profile = this.__controller.__app.__portfolioManager.getFromId(profileId);
+        const profile = this.__controller.__app.__portfolioManager.getFromId(profileId);
         let htmlHistWrapper, profileEvents;
 
         htmlHistWrapper = document.createElement("div");
@@ -272,7 +272,7 @@ class ProfileUIController extends ControllerChild {
 
         this.__activePage = "history";
 
-        profileEvents = profile.__recoEvents.concat(profile.__nativeEvents);
+        profileEvents = profile.recoEvents.concat(profile.nativeEvents);
 
         if(profileEvents.length >= 1) {
             profileEvents.sort((a, b) => b.resolveDate - a.resolveDate);
@@ -302,8 +302,8 @@ class ProfileUIController extends ControllerChild {
 
     printRecosOf(profileId) {
         var self = this;
-        let profile = this.__controller.__app.__portfolioManager.getFromId(profileId);
-        let availableRecosId = this.__controller.__app.__recoController.getAvailableOf(profile);
+        const profile = this.__controller.__app.__portfolioManager.getFromId(profileId);
+        const availableRecosId = this.__controller.__app.__recoController.getAvailableOf(profile);
         let htmlRecoWrapper, htmlReco, htmlRecoTitle, htmlRecoSeparator, htmlRecoDesc, htmlRecoSend;
 
         htmlRecoWrapper = document.createElement("div");
@@ -314,22 +314,22 @@ class ProfileUIController extends ControllerChild {
 
         if(availableRecosId.length >= 1) {
             availableRecosId.forEach(recoId => {
-                let reco = self.__controller.__app.__recoManager.getFromId(recoId);
+                const reco = self.__controller.__app.__recoManager.getFromId(recoId);
     
                 htmlReco = document.createElement("div");
                 $(htmlReco).addClass("recoWrapper");
                 
                 htmlRecoTitle = document.createElement("div");
-                htmlRecoTitle.innerText = reco.__name;
+                htmlRecoTitle.innerText = reco.name;
 
                 htmlRecoSeparator = document.createElement("div");
                 $(htmlRecoSeparator).addClass("recoLineSpace");
 
                 htmlRecoDesc = document.createElement("div");
-                htmlRecoDesc.innerText = reco.__desc;
+                htmlRecoDesc.innerText = reco.desc;
 
                 htmlRecoSend = document.createElement("div");
-                $(htmlRecoSend).addClass("wholeButton button reco_" + recoId + "_" + profile.__id);
+                $(htmlRecoSend).addClass("wholeButton button reco_" + recoId + "_" + profile.id);
 
                 (function(self) {
                     htmlRecoSend.addEventListener("click", self.clickToLaunch(self), true);
@@ -349,11 +349,11 @@ class ProfileUIController extends ControllerChild {
 
     printNativeEvent(evt) {
         let htmlEvtWrapper, htmlEvtTitle, htmlEvtDate, htmlConsWrapper;
-        let absoluteTimePassed = Math.abs(this.__controller.__app.__appController.__gameTime - evt.__resolveDate);
-        let minutesPassed = Math.ceil(absoluteTimePassed / (1000 * 60));
+        const absoluteTimePassed = Math.abs(this.__controller.__app.__appController.__gameTime - evt.resolveDate);
+        const minutesPassed = Math.ceil(absoluteTimePassed / (1000 * 60));
 
         htmlEvtTitle = document.createElement("div");
-        htmlEvtTitle.innerText = evt.__name;
+        htmlEvtTitle.innerText = evt.name;
 
         htmlEvtDate = document.createElement("div");
         htmlEvtDate.innerHTML = "Il y a " + minutesPassed + " minutes";
@@ -361,32 +361,32 @@ class ProfileUIController extends ControllerChild {
 
         htmlConsWrapper = document.createElement("div");
 
-        if(evt.__toSpawn.length == 0 && evt.__toDelete.length == 0) {
+        if(evt.toSpawn.length == 0 && evt.toDelete.length == 0) {
         // if event has no consequences
-            htmlEvtTitle.innerText = "" + evt.__name + " donne lieu à un événement, sans conséquences";
+            htmlEvtTitle.innerText = "" + evt.name + " donne lieu à un événement, sans conséquences";
         }
         else {
         // if event has consequences
-            htmlEvtTitle.innerText = "" + evt.__name + " donne lieu à un événement";
+            htmlEvtTitle.innerText = "" + evt.name + " donne lieu à un événement";
 
-            if(evt.__toDelete.length != 0) {
-                for(let attId of evt.__toDelete) {
+            if(evt.toDelete.length != 0) {
+                for(let attId of evt.toDelete) {
 
-                    let att = this.__controller.__app.__attributeManager.getFromId(attId);
+                    const att = this.__controller.__app.__attributeManager.getFromId(attId);
                     let htmlConseq = document.createElement("div");
 
-                    htmlConseq.innerText = "[" + att.__name + "] disparaît";
+                    htmlConseq.innerText = "[" + att.name + "] disparaît";
 
                     $(htmlConsWrapper).append(htmlConseq);
                 }
             }
-            if(evt.__toSpawn.length != 0) {
-                for(let attId of evt.__toSpawn) {
+            if(evt.toSpawn.length != 0) {
+                for(let attId of evt.toSpawn) {
 
-                    let att = this.__controller.__app.__attributeManager.getFromId(attId);
+                    const att = this.__controller.__app.__attributeManager.getFromId(attId);
                     let htmlConseq = document.createElement("div");
 
-                    htmlConseq.innerText = "[" + att.__name + "] apparaît";
+                    htmlConseq.innerText = "[" + att.name + "] apparaît";
 
                     $(htmlConsWrapper).append(htmlConseq);
                 }
@@ -404,8 +404,8 @@ class ProfileUIController extends ControllerChild {
 
     printRecoEvent(evt) {
         let htmlEvtWrapper, htmlEvtTitle, htmlEvtDate, htmlConsWrapper;
-        let absoluteTimePassed = Math.abs(this.__controller.__app.__appController.__gameTime - evt.__resolveDate);
-        let minutesPassed = Math.ceil(absoluteTimePassed / (1000 * 60));
+        const absoluteTimePassed = Math.abs(this.__controller.__app.__appController.__gameTime - evt.resolveDate);
+        const minutesPassed = Math.ceil(absoluteTimePassed / (1000 * 60));
 
         htmlEvtDate = document.createElement("div");
         htmlEvtDate.innerHTML = "Il y a " + minutesPassed + " minutes";
@@ -415,32 +415,32 @@ class ProfileUIController extends ControllerChild {
 
         htmlConsWrapper = document.createElement("div");
 
-        if(evt.__toSpawn.length == 0 && evt.__toDelete.length == 0) {
+        if(evt.toSpawn.length == 0 && evt.toDelete.length == 0) {
         // if event has no consequences
-            htmlEvtTitle.innerText = "La recommandation " + evt.__name + " n'a pas de conséquences";
+            htmlEvtTitle.innerText = "La recommandation " + evt.name + " n'a pas de conséquences";
         }
         else {
         // if event has consequences
-            htmlEvtTitle.innerText = "La recommandation " + evt.__name + " a des conséquences :";
+            htmlEvtTitle.innerText = "La recommandation " + evt.name + " a des conséquences :";
 
-            if(evt.__toDelete.length != 0) {
-                for(let attId of evt.__toDelete) {
+            if(evt.toDelete.length != 0) {
+                for(let attId of evt.toDelete) {
 
-                    let att = this.__controller.__app.__attributeManager.getFromId(attId);
+                    const att = this.__controller.__app.__attributeManager.getFromId(attId);
                     let htmlConseq = document.createElement("div");
 
-                    htmlConseq.innerText = "[" + att.__name + "] disparaît";
+                    htmlConseq.innerText = "[" + att.name + "] disparaît";
 
                     $(htmlConsWrapper).append(htmlConseq);
                 }
             }
-            if(evt.__toSpawn.length != 0) {
-                for(let attId of evt.__toSpawn) {
+            if(evt.toSpawn.length != 0) {
+                for(let attId of evt.toSpawn) {
 
-                    let att = this.__controller.__app.__attributeManager.getFromId(attId);
+                    const att = this.__controller.__app.__attributeManager.getFromId(attId);
                     let htmlConseq = document.createElement("div");
 
-                    htmlConseq.innerText = "[" + att.__name + "] apparaît";
+                    htmlConseq.innerText = "[" + att.name + "] apparaît";
 
                     $(htmlConsWrapper).append(htmlConseq);
                 }
@@ -459,8 +459,8 @@ class ProfileUIController extends ControllerChild {
     clickToLaunch(self) {
 
         return function() {
-            let recoId = this.className.split("_")[1];
-            let profileId = this.className.split("_")[2];
+            const recoId = this.className.split("_")[1];
+            const profileId = this.className.split("_")[2];
 
             self.__controller.__app.__eventController.__recoController.launch(recoId, profileId);
         }

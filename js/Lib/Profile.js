@@ -77,7 +77,10 @@ class Profile {
     get macroEvents() {
         return this.__macroEvents;
     }
-    get launchedEvents() {
-        return this.__launchedEvents;
+    get launchedReco() {
+        return this.__launchedReco;
+    }
+    get launchedNative() {
+        return this.__launchedNative;
     }
 }

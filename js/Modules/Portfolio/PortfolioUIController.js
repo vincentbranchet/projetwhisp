@@ -30,29 +30,29 @@ class PortfolioUIController extends ControllerChild {
         $(htmlContent).addClass("portfolioContentWrapper");
 
         // for each portfolio slot, create elt
-        for(let i = 0; i < this.__controller.__app.__portfolioManager.__slots; i++) {
+        for(let i = 0; i < this.__controller.__app.__portfolioManager.slots; i++) {
 
             htmlSlot = document.createElement("div");
             $(htmlSlot).addClass("slot");
 
-            if(i < this.__controller.__app.__portfolioManager.__used) {
+            if(i < this.__controller.__app.__portfolioManager.used) {
             // if slot is supposed to be used, fill it
-                let profile = this.__controller.__app.__portfolioManager.__profiles[i];
+                const profile = this.__controller.__app.__portfolioManager.profiles[i];
 
                 htmlProfile = document.createElement("div");
-                htmlProfile.id = "profile_" + profile.__id;
+                htmlProfile.id = "profile_" + profile.id;
 
                 htmlSlotFill = document.createElement("div");
                 $(htmlSlotFill).addClass("slotFill");
 
-                if(profile.__launchedReco.length > 0) {
+                if(profile.launchedReco.length > 0) {
                 // if profile has running event, dont enable click event, print cooldown
 
                     htmlProfileName = document.createElement("div");
-                    htmlProfileName.innerText = profile.__name;
+                    htmlProfileName.innerText = profile.name;
                     $(htmlProfileName).addClass("slotProfileName");
                     htmlProfileValue = document.createElement("div");
-                    htmlProfileValue.innerText = this.__controller.formatNumber(profile.__value) + "/s";
+                    htmlProfileValue.innerText = this.__controller.formatNumber(profile.value) + "/s";
                     $(htmlProfileValue).addClass("slotProfileValue");
         
                     $(htmlProfile).append(htmlProfileName);
@@ -62,10 +62,10 @@ class PortfolioUIController extends ControllerChild {
                 else {
                 // if profile has no running event, enable click event to profile page
                     htmlProfileName = document.createElement("div");
-                    htmlProfileName.innerText = profile.__name;
+                    htmlProfileName.innerText = profile.name;
                     $(htmlProfileName).addClass("slotProfileName");
                     htmlProfileValue = document.createElement("div");
-                    htmlProfileValue.innerText = this.__controller.formatNumber(profile.__value) + "/s";
+                    htmlProfileValue.innerText = this.__controller.formatNumber(profile.value) + "/s";
                     $(htmlProfileValue).addClass("slotProfileValue");
         
                     $(htmlProfile).append(htmlProfileName);
@@ -92,17 +92,17 @@ class PortfolioUIController extends ControllerChild {
 
     print() {
     // each frame
-        let profiles = this.__controller.__app.__portfolioManager.__profiles;
+        const profiles = this.__controller.__app.__portfolioManager.__profiles;
 
         profiles.forEach(profile => {
 
-            if(profile.__launchedReco.length > 0) {
+            if(profile.launchedReco.length > 0) {
             // if profile has running event, dont enable click event, print cooldown
-                let profileEvent = profile.__launchedReco[0];
+                const profileEvent = profile.__launchedReco[0];
 
-                let centiCld = (profileEvent.__delay * 100) - profileEvent.__timer.__csDuration;
-                let centiCldPerCent = Math.floor((centiCld / profileEvent.__delay * 100)) / 100 + "%";
-                let jQueryProfile = "#profile_" + String(profile.__id);
+                const centiCld = (profileEvent.delay * 100) - profileEvent.timer.csDuration;
+                const centiCldPerCent = Math.floor((centiCld / profileEvent.delay * 100)) / 100 + "%";
+                const jQueryProfile = "#profile_" + String(profile.id);
                 
                 $(jQueryProfile).parent().find(".slotFill").css("width", centiCldPerCent);
                 $(jQueryProfile).parent().css("opacity", "0.5")
@@ -125,7 +125,7 @@ class PortfolioUIController extends ControllerChild {
     clickToProfile(self) {
         
         return function() {
-            let profileId = this.id.split("_")[1];
+            const profileId = this.id.split("_")[1];
             self.__controller.toProfileInPortfolio(profileId);
         }
     }

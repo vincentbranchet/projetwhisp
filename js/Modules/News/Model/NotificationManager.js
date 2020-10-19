@@ -5,7 +5,7 @@ class NotificationManager {
     }
 
     create(id, date, content) {
-        let notif = new Notification(id, date, content);
+        const notif = new Notification(id, date, content);
 
         this.__printed.push(notif);
 
@@ -15,14 +15,14 @@ class NotificationManager {
     getFromId(notifId) {
         let targetNotif;
         this.__printed.forEach(notif => {
-            if(notif.__id == notifId) {
+            if(notif.id == notifId) {
                 targetNotif = notif; 
             }                
         });
         return targetNotif;   
     }
 
-    get notifs() {
+    get printed() {
         return this.__printed;
     }
 }
