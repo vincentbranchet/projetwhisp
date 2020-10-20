@@ -31,6 +31,9 @@ class AppController extends AppChild {
 
         // start game timer
         this.__app.__player.__gameTime.start();
+
+        // game start popUp
+        this.__app.__UIController.printPopUp("Ceci est une démo.\n\nCette expérience est une version de démonstration, condensée de manière à être jouée rapidement en une seule session. Dans sa version finale, le jeu sera comportera un meilleur équilibrage, davantage de fonctionnalités ainsi qu’une direction artistique (beaucoup) plus riche.", 0);
     }
 
     mainLoop(tFrame) {
