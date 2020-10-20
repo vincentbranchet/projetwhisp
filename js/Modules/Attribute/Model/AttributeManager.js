@@ -11,9 +11,9 @@ class AttributeManager {
         return new Promise((resolve, reject) => {
 
             $.getJSON('json/' + this.__fileName + '.json', atts => {
-                console.log(atts);
+
                 atts[this.__sheetName].map(level => this.create(level.id, level.name, level.value, level.events, level.isMult, level.multRate));
-                console.log(this);
+
                 resolve();
             })
 
@@ -34,7 +34,7 @@ class AttributeManager {
     getFromId(attId) {
         let targetAtt;
         this.__attributes.forEach(att => {
-            if(att.__id == attId) {
+            if(att.id == attId) {
                 targetAtt = att; 
             }                
         });

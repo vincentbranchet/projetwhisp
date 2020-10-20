@@ -188,16 +188,16 @@ class AppUIController extends AppChild {
     }
 
     printHeader() {
-        this.__headerGtMin.innerHTML = this.__app.__player.__gameTime.__min;
-        this.__headerGtSec.innerHTML = this.__app.__player.__gameTime.__sec;
+        this.__headerGtMin.innerHTML = this.__app.__player.gameTime.min;
+        this.__headerGtSec.innerHTML = this.__app.__player.gameTime.sec;
 
-        this.__headerLv.innerHTML = this.__app.__player.__level;
-        this.__headerLvTitle.innerHTML = this.__app.__levelsManager.getTitleOf(this.__app.__player.__level);
+        this.__headerLv.innerHTML = this.__app.__player.level;
+        this.__headerLvTitle.innerHTML = this.__app.__levelsManager.getTitleOf(this.__app.__player.level);
 
-        this.__headerXpFill.style.width = Math.floor((this.__app.__player.__xp / this.__app.__levelsManager.getFromId(this.__app.__player.__level).__xpCap) * 100) + "%";
+        this.__headerXpFill.style.width = Math.floor((this.__app.__player.xp / this.__app.__levelsManager.getFromId(this.__app.__player.level).xpCap) * 100) + "%";
 
-        this.__headerXp.innerHTML = this.formatNumber(this.__app.__player.__xp);
-        this.__headerXpCap.innerHTML = this.formatNumber(this.__app.__levelsManager.getFromId(this.__app.__player.__level).__xpCap);
+        this.__headerXp.innerHTML = this.formatNumber(this.__app.__player.xp);
+        this.__headerXpCap.innerHTML = this.formatNumber(this.__app.__levelsManager.getFromId(this.__app.__player.level).xpCap);
 
         this.__headerPortfolioValue.innerHTML = this.formatNumber(this.__app.__player.portfolioValue);
     }
@@ -257,7 +257,6 @@ class AppUIController extends AppChild {
             }(self));
         }
         else if(end == 0) {
-            console.log("normal popup");
         // lv up & 'you can't do this' pop ups
             confirmButton.innerText = "Continuer";
             $(confirmButton).addClass("popUpButton button");
@@ -294,7 +293,6 @@ class AppUIController extends AppChild {
     }
 
     fadeIn(elt) {
-        
         $(elt).addClass("fadedOut");
 
         requestAnimationFrame(() => {

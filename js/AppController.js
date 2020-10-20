@@ -15,16 +15,16 @@ class AppController extends AppChild {
 
     init() {
         // LV 1 INJECTION
-        let lv = this.__app.__levelsManager.getFromId(1);
+        const lv = this.__app.__levelsManager.getFromId(1);
 
-        if(lv.__printId != "" && lv.__printId != null && lv.__printId != undefined) {
+        if(lv.printId != "" && lv.printId != null && lv.printId != undefined) {
         // if news are to be printed
-            if(lv.__printId.length >= 1) {
-                for(let newsId of lv.__printId) {
+            if(lv.printId.length >= 1) {
+                for(let newsId of lv.printId) {
                     this.__app.__newsController.print(newsId);   
                 }
             }
-            else this.__app.__newsController.print(lv.__printId);
+            else this.__app.__newsController.print(lv.printId);
         }
 
         this.__app.__shopController.updateProfiles();
@@ -35,17 +35,16 @@ class AppController extends AppChild {
 
     mainLoop(tFrame) {
         this.__stopMainLoop = window.requestAnimationFrame(this.mainLoop.bind(this));
-        var nextTick = this.__lastTick + this.__app.__config.__frameTick;
-        var numTicks = 0;
+        const nextTick = this.__lastTick + this.__app.__config.frameTick;
+        let numTicks = 0;
 
         if(tFrame > nextTick) {
-            var timeSinceTick = tFrame - this.__lastTick;
-            numTicks = Math.floor(timeSinceTick / this.__app.__config.__frameTick);
+            const timeSinceTick = tFrame - this.__lastTick;
+            numTicks = Math.floor(timeSinceTick / this.__app.__config.frameTick);
         }
 
         this.queueUpdates(numTicks); // appController updates
 
-        console.log(this.__app.__portfolioManager.__used);
         /*render(tFrame); // appUIController updates*/
         this.__app.__UIController.printHeader(); // refresh portfolio/lv values
         this.__app.__UIController.printContent();
@@ -56,8 +55,8 @@ class AppController extends AppChild {
     }
 
     queueUpdates(numTicks) {
-        for(var i = 0; i < numTicks; i++) {
-            this.__lastTick = this.__lastTick + this.__app.__config.__frameTick;
+        for(let i = 0; i < numTicks; i++) {
+            this.__lastTick = this.__lastTick + this.__app.__config.frameTick;
 
             /*this.update(this.__lastTick); */
             this.yieldXp(this.__lastTick);
@@ -71,68 +70,67 @@ class AppController extends AppChild {
     }
 
     yieldXp(currentTick) {
-        let xpTick = this.__app.__config.__xpTick;
-        let lv = this.__app.__levelsManager.getFromId(this.__app.__player.__level);
-        let earnings = this.__app.__player.__portfolioValue;
+        const xpTick = this.__app.__config.xpTick;
+        const lv = this.__app.__levelsManager.getFromId(this.__app.__player.level);
+        const earnings = this.__app.__player.portfolioValue;
         
         if(currentTick >= (this.__lastXpTick + xpTick)) {
         // if enough time has passed since last xp tick
-            if(this.__app.__player.__xp < lv.__xpCap) {
+            if(this.__app.__player.xp < lv.xpCap) {
             // and player has not yet completed lv
-
-                this.__app.__player.__xp = this.__app.__player.__xp + earnings;
+                this.__app.__player.xp = this.__app.__player.xp + earnings;
 
                 this.__lastXpTick = currentTick;
             }
 
-            if(this.__app.__player.__xp > lv.__xpCap) {
+            if(this.__app.__player.xp > lv.xpCap) {
             // if xp tick overloads threshold, level to cap
-                this.__app.__player.__xp = lv.__xpCap;
+                this.__app.__player.xp = lv.xpCap;
             }
         }
     }
 
     checkIfLvUp() {
-        let lv = this.__app.__levelsManager.getFromId(this.__app.__player.__level);
+        let lv = this.__app.__levelsManager.getFromId(this.__app.__player.level);
         let popUpText = "", endingText = "", newSlotText = "", newsProfilesText = "", end = 0;
 
-        if(this.__app.__player.__xp >= lv.__xpCap) {
+        if(this.__app.__player.xp >= lv.xpCap) {
         // if player has reached xp objective
-            this.__app.__player.__xp = 0;
+            this.__app.__player.xp = 0;
 
-            if(lv.__newSlot == 1) {
+            if(lv.newSlot == 1) {
             // if lv spawns new portfolio slot, update system & prep text
                 this.__app.__portfolioController.newSlot();
                 newSlotText = "\n\nUn nouvel emplacement a été ajouté à votre portfolio.";
             }
 
             // increment level & prep text
-            this.__app.__player.__level = this.__app.__player.__level + 1;
-            lv = this.__app.__levelsManager.getFromId(this.__app.__player.__level); // update var
+            this.__app.__player.level = this.__app.__player.level + 1;
+            lv = this.__app.__levelsManager.getFromId(this.__app.__player.level); // update var
 
-            if(lv.__id == this.__app.__levelsManager.__levels[this.__app.__levelsManager.__levels.length - 1].__id) {
+            if(lv.id == this.__app.__levelsManager.levels[this.__app.__levelsManager.levels.length - 1].id) {
             // if player has reached last lv
                 popUpText = "Fin de la démo";
                 endingText = "\n\nMerci d'avoir joué !";
                 end = 1;
             }
             else {
-                popUpText = "Félicitations, vous avez été promu " + lv.__title + " ! ";
+                popUpText = "Félicitations, vous avez été promu " + lv.title + " ! ";
 
-                if(lv.__profiles != "" && lv.__profiles != null) {
+                if(lv.profiles != "" && lv.profiles != null) {
                 // if lv spawns new shop profiles profiles of CURRENT LV will be added, that's why we increment lv before
                     this.__app.__shopController.updateProfiles();
                     newsProfilesText = "\n\nDe nouveaux profils sont disponibles.";
                 }
     
-                if(lv.__printId != "" && lv.__printId != null && lv.__printId != undefined) {
+                if(lv.printId != "" && lv.printId != null && lv.printId != undefined) {
                 // if lv spawns news, update system
-                    if(lv.__printId.length >= 1) {
-                        for(let newsId of lv.__printId) {
+                    if(lv.printId.length >= 1) {
+                        for(let newsId of lv.printId) {
                             this.__app.__newsController.print(newsId);   
                         }
                     }
-                    else this.__app.__newsController.print(lv.__printId);
+                    else this.__app.__newsController.print(lv.printId);
                 }
             }
 
@@ -156,13 +154,11 @@ class AppController extends AppChild {
 
     pause(rafId) {
         cancelAnimationFrame(rafId);
-        console.log("game paused");
     }
 
     resume() {
         this.__lastTick = performance.now();
         this.mainLoop(performance.now());
-        console.log("game resumed");
     }
 
     // getters

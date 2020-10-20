@@ -45,7 +45,7 @@ class Reco {
         return this.__forbidden;
     }
     get newsId() {
-        return this.__newsRequired;
+        return this.__newsId;
     }
     get newsForbidden() {
         return this.__newsForbidden;
