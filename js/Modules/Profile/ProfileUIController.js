@@ -160,7 +160,7 @@ class ProfileUIController extends ControllerChild {
         }(self));
 
         htmlRecoButton = document.createElement("div");
-        htmlRecoButton.innerText = "Notifications";
+        htmlRecoButton.innerText = "Recommandations";
         $(htmlRecoButton).addClass("profileRecoButton button");
         (function(self) {
             htmlRecoButton.addEventListener("click", self.clickToRecos(self, profileId));
