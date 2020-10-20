@@ -339,6 +339,10 @@ html, body {
     background-color: white;
 }
 
+.emptySlotLink {
+    width: 100%;
+    height: 100%;
+}
 
 
 /* BODY - PORTFOLIO - PROFILE ATTRIBUTES */

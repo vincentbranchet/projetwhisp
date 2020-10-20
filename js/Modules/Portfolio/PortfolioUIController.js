@@ -7,7 +7,7 @@ class PortfolioUIController extends ControllerChild {
 
     update() {
         var self = this;
-        let htmlSlot, htmlProfile, htmlTitle, htmlSep, htmlContent, htmlProfileName, htmlProfileValue, htmlSlotFill;
+        let htmlSlot, htmlProfile, htmlTitle, htmlSep, htmlContent, htmlProfileName, htmlProfileValue, htmlSlotFill, htmlLinkToShop;
 
         // clear wrapper
         this.clear();
@@ -81,6 +81,16 @@ class PortfolioUIController extends ControllerChild {
                 $(htmlSlot).append(htmlSlotFill);
                 $(htmlSlot).append(htmlProfile);
             }
+            else {
+                htmlLinkToShop = document.createElement("div");
+                $(htmlLinkToShop).addClass("emptySlotLink button");
+
+                (function(self) {
+                    htmlLinkToShop.addEventListener("click", self.clickToShop(self));
+                })(self);
+    
+                $(htmlSlot).append(htmlLinkToShop);
+            }
 
             $(htmlContent).append(htmlSlot);
         }
@@ -127,6 +137,13 @@ class PortfolioUIController extends ControllerChild {
         return function() {
             const profileId = this.id.split("_")[1];
             self.__controller.toProfileInPortfolio(profileId);
+        }
+    }
+
+    clickToShop(self) {
+
+        return function() {
+            self.__controller.toShop();
         }
     }
 }
