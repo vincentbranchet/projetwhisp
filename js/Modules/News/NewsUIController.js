@@ -20,9 +20,10 @@ class NewsUIController extends ControllerChild {
         notifs = this.__controller.__app.__notificationManager.printed;
         merge = news.concat(notifs);
 
-        // SORT NEWS AND NOTIFS BY DATE
+        // sort news and notifications by date
         merge.sort((a, b) => b.date - a.date);
 
+        // print layout
         htmltitle = document.createElement("div");
         htmltitle.innerText = "Actualités";
         $(htmltitle).addClass("newsTitle");
@@ -37,6 +38,7 @@ class NewsUIController extends ControllerChild {
         this.__pageWrapper.append(htmlSep);
         this.__pageWrapper.append(htmlContent);
 
+        // print content
         merge.forEach(elt => {
             if(elt instanceof News) {
                 self.printNews(elt);
@@ -49,19 +51,16 @@ class NewsUIController extends ControllerChild {
 
     printNews(news) {
         let articleWrapper, newsTitle, newsImg, newsContent, newsDate;
-        const absoluteTimePassed = Math.abs(this.__controller.__app.__appController.gameTime - news.date);
-        const minutesPassed = Math.ceil(absoluteTimePassed / (1000 * 60));
 
         articleWrapper = document.createElement("div");
         $(articleWrapper).addClass("articleWrapper");
         newsTitle = document.createElement("div");
-        newsDate = document.createElement("div");
         newsImg = document.createElement("div");
         newsContent = document.createElement("div");
+        
+        newsDate = this.getHtmlTimeSince(news);
 
         newsTitle.innerHTML = news.title;
-        newsDate.innerHTML = "Il y a "  + minutesPassed + " minute(s)";
-        $(newsDate).addClass("contentDate");
 
         if(news.img && news.img != 0) {
             newsImg.innerHTML = news.img;
@@ -81,16 +80,13 @@ class NewsUIController extends ControllerChild {
 
     printNotif(notif) {
         let notifWrapper, notifDate, notifText;
-        const absoluteTimePassed = Math.abs(this.__controller.__app.__appController.gameTime - notif.date);
-        const minutesPassed = Math.ceil(absoluteTimePassed / (1000 * 60));
 
         notifWrapper = document.createElement("div");
         $(notifWrapper).addClass("notifWrapper");
-        notifDate = document.createElement("div");
         notifText = document.createElement("div");
 
-        notifDate.innerHTML = "Il y a "  + minutesPassed + " minute(s)";
-        $(notifDate).addClass("contentDate");
+        notifDate = this.getHtmlTimeSince(notif);
+
         notifText.innerHTML = notif.content;
 
         notifWrapper.append(notifDate);
@@ -121,6 +117,18 @@ class NewsUIController extends ControllerChild {
     
             this.__isNew = 1;
         }
+    }
+
+    getHtmlTimeSince(evt) {
+        // evt must have 'date' propriety
+        let htmlTime = document.createElement("div");
+        const absoluteTimePassed = Math.abs(this.__controller.__app.__appController.gameTime - evt.date);
+        const minutesPassed = Math.ceil(absoluteTimePassed / (1000 * 60));
+        
+        htmlTime.innerHTML = "Il y a "  + minutesPassed + " minute(s)";
+        $(htmlTime).addClass("contentDate");
+
+        return htmlTime;
     }
 
     hasClicked() {

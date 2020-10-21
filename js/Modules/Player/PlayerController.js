@@ -10,22 +10,20 @@ class PlayerController extends AppChild {
         if(profile instanceof Profile && this.__app.__portfolioManager.used < this.__app.__portfolioManager.slots) {
 
             this.__app.__portfolioController.add(profile);
-            this.__app.__portfolioController.updateValue();
             this.__app.__shopController.remove(profile);
 
             this.__app.__eventController.__nativeController.scanToLaunch();
-
-            this.__app.__appController.checkIfLvUp();
-            this.__app.__portfolioController.updateValue();
             this.__app.__eventController.__recoController.scan();
+
+            this.__app.__portfolioController.updateValue();
+            this.__app.__appController.checkIfLvUp();
 
             this.__app.__UIController.__shopUIController.update();
             this.__app.__UIController.__portfolioUIController.update();
-
             this.__app.__UIController.toPortfolio();
         }
         else {
-            this.__app.__appController.popUp("Votre portfolio est déjà complet.\n\nRetirez un profil ou montez en grade.", 0);
+            this.__app.__appController.popUp("<p>Votre portfolio est déjà complet.</p><p>Retirez un profil ou montez en grade.</p>", 0);
         }
     }
 
@@ -37,7 +35,6 @@ class PlayerController extends AppChild {
             if(profile.launchedNative.length > 0) {
             // if profile has running native events
                 for(let evt of profile.launchedNative) {
-
                     if(evt) {
                     // reset native event in Mananger & delete copy from profile
                         let trueEvent = this.__app.__eventManager.__nativeManager.getFromId(evt.id);
@@ -54,16 +51,15 @@ class PlayerController extends AppChild {
             }
 
             this.__app.__portfolioController.remove(profile);
-            this.__app.__portfolioController.updateValue();
             this.__app.__shopController.add(profile);
+
+            this.__app.__eventController.__recoController.scan();
 
             this.__app.__appController.checkIfLvUp();
             this.__app.__portfolioController.updateValue();
-            this.__app.__eventController.__recoController.scan();
             
             this.__app.__UIController.__shopUIController.update();
             this.__app.__UIController.__portfolioUIController.update();
-
             this.__app.__UIController.toPortfolio();
         }
     }
