@@ -140,7 +140,13 @@ class AppUIController extends AppChild {
     // from ending pop up
         return function() {
             self.deletePopUp();
-            self.printPopUp("Lazy Little Humans\n(v0.1 - 16/09/2020)\n\nVincent Branchet - Développement\nPierre Corbinais - Écriture\nAlexis Moroz - Design\nCharles Klipfel - UI/UX\nJeremy Moirano - Intégration/Équilibrage\n\njeremy.moirano@gmail.com", 2)
+            self.printPopUp(`<p>Lazy Little Humans (v0.1 - 16/09/2020)</p>
+            <p><br />Vincent Branchet - Développement
+            <br />Pierre Corbinais - Écriture
+            <br />Alexis Moroz - Design
+            <br />Charles Klipfel - UI/UX
+            <br />Jeremy Moirano - Intégration/Équilibrage</p>
+            jeremy.moirano@gmail.com`, 2)
             self.__app.__appController.pause(self.__app.__appController.__stopMainLoop);
         }
     }
@@ -232,7 +238,7 @@ class AppUIController extends AppChild {
         let textWrapper, confirmButton;
 
         textWrapper = document.createElement("div");
-        textWrapper.innerText = text;
+        textWrapper.innerHTML = text;
         $(textWrapper).addClass("popUpText");
 
         confirmButton = document.createElement("div");

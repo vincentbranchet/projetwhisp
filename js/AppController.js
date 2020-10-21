@@ -33,7 +33,8 @@ class AppController extends AppChild {
         this.__app.__player.__gameTime.start();
 
         // game start popUp
-        this.__app.__UIController.printPopUp("Ceci est une démo.\n\nCette expérience est une version de démonstration, condensée de manière à être jouée rapidement en une seule session. Dans sa version finale, le jeu sera comportera un meilleur équilibrage, davantage de fonctionnalités ainsi qu’une direction artistique (beaucoup) plus riche.", 0);
+        this.popUp(`<p>Ceci est une démo.</p>
+        <p>Cette expérience est une version de démonstration, condensée de manière à être jouée rapidement en une seule session. Dans sa version finale, le jeu sera comportera un équilibrage plus progressif, davantage de fonctionnalités ainsi qu’une direction artistique (beaucoup) plus riche.</p>`, 0);
     }
 
     mainLoop(tFrame) {
@@ -104,7 +105,7 @@ class AppController extends AppChild {
             if(lv.newSlot == 1) {
             // if lv spawns new portfolio slot, update system & prep text
                 this.__app.__portfolioController.newSlot();
-                newSlotText = "\n\nUn nouvel emplacement a été ajouté à votre portfolio.";
+                newSlotText = "<p>Un nouvel emplacement a été ajouté à votre portfolio.</p>";
             }
 
             // increment level & prep text
@@ -113,17 +114,23 @@ class AppController extends AppChild {
 
             if(lv.id == this.__app.__levelsManager.levels[this.__app.__levelsManager.levels.length - 1].id) {
             // if player has reached last lv
-                popUpText = "Fin de la démo";
-                endingText = "\n\nMerci d'avoir joué !";
+                popUpText = "<p>Fin de la démo</p>";
+                endingText = `<p>Merci d’avoir joué à cette démo. La version définitive du jeu comprendra :
+                                <br />- une UI élégante et des animations
+                                <br />- un arbre d'upgrades
+                                <br />- pour chaque profil : un portrait et du dialogue non-interactif (“bark”)
+                                <br />- un visuel pour chaque actualité
+                                <br />- plus de profils, d’attributs, de recommandations, d’actualités, d’événements et plusieurs fins !
+                                </p>`;
                 end = 1;
             }
             else {
-                popUpText = "Félicitations, vous avez été promu " + lv.title + " ! ";
+                popUpText = "<p>Félicitations, vous avez été promu " + lv.title + " !</p>";
 
                 if(lv.profiles != "" && lv.profiles != null) {
                 // if lv spawns new shop profiles profiles of CURRENT LV will be added, that's why we increment lv before
                     this.__app.__shopController.updateProfiles();
-                    newsProfilesText = "\n\nDe nouveaux profils sont disponibles.";
+                    newsProfilesText = "<p>De nouveaux profils sont disponibles.</p>";
                 }
     
                 if(lv.printId != "" && lv.printId != null && lv.printId != undefined) {
