@@ -8,11 +8,13 @@ class NewsManager {
     }
 
     init() {
-        // json
+
         return new Promise((resolve, reject) => {
 
             $.getJSON('json/' + this.__fileName + '.json', news => {
+
                 news[this.__sheetName].map(jsonNews => this.create(jsonNews.id, jsonNews.title, jsonNews.content, jsonNews.img, jsonNews.delay, jsonNews.lv, jsonNews.launchId, jsonNews.comesFromId));
+                
                 resolve();
             })
 

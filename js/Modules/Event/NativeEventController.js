@@ -8,11 +8,9 @@ class NativeEventController extends EventControllerChild {
         let profile = this.__controller.__app.__portfolioManager.getFromId(profileId);
 
         if(event.hasLaunched == 0) {
-            // start nativeEvent
             event.timer.start();
-
             event.hasLaunched = 1;
-            // push native event to profile
+
             profile.__launchedNative.push(event);
         }
     }
@@ -21,7 +19,7 @@ class NativeEventController extends EventControllerChild {
         let event = this.__controller.__app.__eventManager.__nativeManager.getFromId(evtId);
         let profile = this.__controller.__app.__portfolioManager.getFromId(profileId);
 
-        // apply effects to profile
+        // apply effects to profile ; delete and add attributes
         event.toDelete.forEach(id => {
             const indexOfAtt = profile.attributes.indexOf(id);
 
@@ -30,7 +28,6 @@ class NativeEventController extends EventControllerChild {
                 profile.__attributes.splice(indexOfAtt, 1);
             }
         });
-
         event.toSpawn.forEach(id => {
             let alreadyThere = 0;
             for(let attId of profile.attributes) {
@@ -38,7 +35,6 @@ class NativeEventController extends EventControllerChild {
                     alreadyThere = 1;
                 }
             }
-
             if(alreadyThere == 0) {
             // if target attribute is not yet present in profile
                 profile.__attributes.push(id);
@@ -50,7 +46,6 @@ class NativeEventController extends EventControllerChild {
         // mark as resolved, delete from launched and push to resolved
         event.timer.stop();
         event.timer.reset();
-
         event.wasResolved = 1;
 
         const indexOfEvent = profile.launchedNative.indexOf(event);
@@ -59,8 +54,10 @@ class NativeEventController extends EventControllerChild {
             profile.__nativeEvents.push(event);    
         }
 
+        // scan newly changed profile for native events to launch
         this.__controller.__nativeController.scanToLaunch();
         
+        // UI feedback
         this.__controller.__app.__notificationController.print("Le profil de " + profile.name + " a été modifié suite à un événement.", event);
         this.__controller.__app.__UIController.__newsUIController.notify();
         this.__controller.__app.__UIController.__newsUIController.refresh();
@@ -73,7 +70,7 @@ class NativeEventController extends EventControllerChild {
         // for each profile in player's portfolio
             if(profile.attributes) {
                 for(let attId of profile.attributes) {
-                //and each attribute in each profile
+                // and each attribute of each profile
                     const att = this.__controller.__app.__attributeManager.getFromId(attId);
 
                     if(att && att.events && Array.isArray(att.events) && att.events.length > 1) {
@@ -159,8 +156,8 @@ class NativeEventController extends EventControllerChild {
     scanToResolve() {
         var self = this;
 
-        // loop through portfolio profiles
         this.__controller.__app.__portfolioManager.profiles.forEach(profile => {
+        // loop through portfolio profiles
             if(profile.launchedNative.length >= 1) {
             // and through profiles launched native events
                 for(let event of profile.launchedNative) {

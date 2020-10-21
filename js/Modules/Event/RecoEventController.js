@@ -9,7 +9,7 @@ class RecoEventController extends EventControllerChild {
         // loop through portfolio profiles
         this.__controller.__app.__portfolioManager.profiles.forEach(profile => {
             if(profile.launchedReco.length >= 1) {
-            // and through profiles launched reco events
+            // and through profiles' launched reco events
                 for(let event of profile.launchedReco) {
                 // check if event timer >= delay
                     if(event.timer.duration >= event.delay) {
@@ -50,7 +50,7 @@ class RecoEventController extends EventControllerChild {
         let event = this.__controller.__app.__eventManager.__recoManager.getFromId(evtId);
         let profile = this.__controller.__app.__portfolioManager.getFromId(profileId);
 
-        // apply effects to profile
+        // apply effects to profile ; add & delete attributes
         event.toDelete.forEach(id => {
             const indexOfAtt = profile.attributes.indexOf(id);
 
@@ -59,7 +59,6 @@ class RecoEventController extends EventControllerChild {
                 profile.__attributes.splice(indexOfAtt, 1);
             }
         });
-
         event.toSpawn.forEach(id => {
             let alreadyThere = 0;
             for(let attId of profile.attributes) {
@@ -94,8 +93,10 @@ class RecoEventController extends EventControllerChild {
             profile.__recoEvents.push(event);
         }
 
+        // scan newly changed profile for native events to launch
         this.__controller.__nativeController.scanToLaunch();
     
+        // UI feedback
         this.__controller.__app.__UIController.__newsUIController.refresh();
     }
 }

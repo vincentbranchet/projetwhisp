@@ -4,7 +4,7 @@ class NewsController extends AppChild {
     }
 
     publish(newsId) {
-    //effective printing
+    // effective printing
         let news = this.__app.__newsManager.getNewsFromId(newsId);
         
         if(news.launchId) {
@@ -23,15 +23,15 @@ class NewsController extends AppChild {
     }
 
     print(newsId) {
-    //pre-printing controls
+    // pre-printing controls
         var self = this;
-        // if newsId is definied, get news
+        // if newsId is defined, get news
         let news = this.__app.__newsManager.getNewsFromId(newsId);
 
         if(news && this.__app.__player.level >= news.lv) {
         // if news exists and player is high lv enough to see it
             if(Number.isInteger(news.delay) && news.delay > 0) {
-            // if news has a delay
+            // if news has delay
                 setTimeout(function() {
                     self.publish(newsId);
                 }, news.delay * 1000);

@@ -7,7 +7,7 @@ class RecoManager {
     }
 
     init() {
-        // get from json
+
         return new Promise((resolve, reject) => {
 
             $.getJSON('json/' + this.__fileName + '.json', recos => {

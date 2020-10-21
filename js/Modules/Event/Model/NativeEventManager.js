@@ -13,7 +13,9 @@ class NativeEventManager extends EventManagerChild {
         return new Promise((resolve, reject) => {
 
             $.getJSON('json/' + this.__fileName + '.json', events => {
+
                 events[this.__sheetName].map(event => this.create(event.id, event.name, event.delay, event.required, event.toDelete, event.toSpawn));
+                
                 resolve();
             })
 
