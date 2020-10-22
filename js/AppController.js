@@ -14,7 +14,7 @@ class AppController extends AppChild {
     }
 
     init() {
-        // LV 1 INJECTION
+        // lv 1 setup
         const lv = this.__app.__levelsManager.getFromId(1);
 
         if(lv.printId != "" && lv.printId != null && lv.printId != undefined) {

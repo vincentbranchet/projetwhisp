@@ -45,32 +45,22 @@ class PortfolioUIController extends ControllerChild {
                 htmlSlotFill = document.createElement("div");
                 $(htmlSlotFill).addClass("slotFill");
 
-                if(profile.launchedReco.length > 0) {
-                // if profile has running event, dont enable click event, print cooldown
+                htmlProfileName = document.createElement("div");
+                htmlProfileName.innerText = profile.name;
+                $(htmlProfileName).addClass("slotProfileName");
+                htmlProfileValue = document.createElement("div");
+                htmlProfileValue.innerText = this.__controller.formatNumber(profile.value) + "/s";
+                $(htmlProfileValue).addClass("slotProfileValue");
+    
+                $(htmlProfile).append(htmlProfileName);
+                $(htmlProfile).append(htmlProfileValue);
 
-                    htmlProfileName = document.createElement("div");
-                    htmlProfileName.innerText = profile.name;
-                    $(htmlProfileName).addClass("slotProfileName");
-                    htmlProfileValue = document.createElement("div");
-                    htmlProfileValue.innerText = this.__controller.formatNumber(profile.value) + "/s";
-                    $(htmlProfileValue).addClass("slotProfileValue");
-        
-                    $(htmlProfile).append(htmlProfileName);
-                    $(htmlProfile).append(htmlProfileValue);
+                if(profile.launchedReco.length > 0) {
+                // if profile is on cooldown, don't allow player to click
                     $(htmlProfile).addClass("slotProfile");
                 }
                 else {
-                // if profile has no running event, enable click event to profile page
-                    htmlProfileName = document.createElement("div");
-                    htmlProfileName.innerText = profile.name;
-                    $(htmlProfileName).addClass("slotProfileName");
-                    htmlProfileValue = document.createElement("div");
-                    htmlProfileValue.innerText = this.__controller.formatNumber(profile.value) + "/s";
-                    $(htmlProfileValue).addClass("slotProfileValue");
-        
-                    $(htmlProfile).append(htmlProfileName);
-                    $(htmlProfile).append(htmlProfileValue);
-    
+                // if profile is not on cld, allow player to click into profile page
                     (function(self) {
                         htmlProfile.addEventListener("click", self.clickToProfile(self));
                     })(self);
@@ -101,13 +91,12 @@ class PortfolioUIController extends ControllerChild {
     }
 
     print() {
-    // each frame
+    // each frame, update profiles on cooldown
         const profiles = this.__controller.__app.__portfolioManager.__profiles;
 
         profiles.forEach(profile => {
 
             if(profile.launchedReco.length > 0) {
-            // if profile has running event, dont enable click event, print cooldown
                 const profileEvent = profile.__launchedReco[0];
 
                 const centiCld = (profileEvent.delay * 100) - profileEvent.timer.csDuration;

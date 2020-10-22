@@ -10,8 +10,6 @@ class ProfileUIController extends ControllerChild {
         this.__activeWrapper = ""; // html wrapper of active subpage
     }
 
-    // A REFACTORISER AVEC InPortfolio / InShop EN PARAMETRE DES FONCTIONS
-
     refresh(profileId) {
         // hacky function called each frame to refresh profile page value
         const profile = this.__controller.__app.__portfolioManager.getFromId(profileId);
@@ -20,6 +18,7 @@ class ProfileUIController extends ControllerChild {
     }
 
     show(profileId) {
+    // show profile page in portfolio
         this.clear();
 
         this.__profileWrapper.style.display = "block";
@@ -27,7 +26,8 @@ class ProfileUIController extends ControllerChild {
         this.printLayout(profileId);
 
         if(this.__activePage == "attributes") {
-            this.printAttributesOf(profileId);
+            const attWrapper = this.getAttributesOf(profileId, "portfolio");
+            this.__profileWrapper.append(attWrapper);
 
             $(".profileAttButton").css("text-decoration-line", "underline");
             $(".profileRecoButton").css("text-decoration-line", "none");
@@ -37,7 +37,8 @@ class ProfileUIController extends ControllerChild {
             this.__activePage = this.__defaultPage;
         }
         else if(this.__activePage == "history") {
-            this.printHistoryOf(profileId);
+            const histWrapper = this.getHistoryOf(profileId);
+            this.__profileWrapper.append(histWrapper);
 
             $(".profileAttButton").css("text-decoration-line", "none");
             $(".profileRecoButton").css("text-decoration-line", "none");
@@ -47,7 +48,8 @@ class ProfileUIController extends ControllerChild {
             this.__activePage = this.__defaultPage;
         }
         else if(this.__activePage == "recos") {
-            this.printRecosOf(profileId);
+            const recoWrapper = this.getRecosOf(profileId);
+            this.__profileWrapper.append(recoWrapper);
 
             $(".profileAttButton").css("text-decoration-line", "none");
             $(".profileRecoButton").css("text-decoration-line", "underline");
@@ -59,11 +61,15 @@ class ProfileUIController extends ControllerChild {
     }
 
     showInShop(profileId) {
+    // show profile page in shop
         this.clear();
 
         this.__profileVitrineWrapper.style.display = "block";
 
         this.printInShop(profileId);
+        
+        // reset landing page 
+        this.__activePage = this.__defaultPage;
     }
     
     printInShop(profileId) {
@@ -78,47 +84,7 @@ class ProfileUIController extends ControllerChild {
         htmlSep = document.createElement("div");
         $(htmlSep).addClass("pagesSeparator");
 
-        htmlAttWrapper = document.createElement("div");
-        $(htmlAttWrapper).addClass("attributeMainWrapper");
-
-        profile.attributes.forEach(id => {
-            const att = self.__controller.__app.__attributeManager.getFromId(id);
-
-            if(att) {
-                let htmlAtt = document.createElement("div");
-                $(htmlAtt).addClass("attribute");
-    
-                let attName = document.createElement("span");
-                attName.innerText = att.name;
-    
-                let attValue = document.createElement("span");
-                if(att.isMult == 1) {
-                // if att is multiplier
-                    attValue.innerText = "x" + att.multRate;    
-                }
-                else if(att.value >= 0) {
-                    attValue.innerText = "+" + att.value;
-                }
-                else if(att.value < 0) {
-                    attValue.innerText = att.value;
-                }
-    
-                $(htmlAtt).append(attName);
-                $(htmlAtt).append(attValue);
-                $(htmlAttWrapper).append(htmlAtt);
-            }
-        });
-
-        htmlTotal = document.createElement("div");
-        $(htmlTotal).addClass("attribute total");
-        totalName = document.createElement("span");
-        totalName.innerText = "Valeur totale";
-        totalValue = document.createElement("span");
-        totalValue.innerText = this.__controller.formatNumber(profile.value);
-
-        $(htmlTotal).append(totalName);
-        $(htmlTotal).append(totalValue);
-        $(htmlAttWrapper).append(htmlTotal);
+        htmlAttWrapper = this.getAttributesOf(profileId, "shop");
 
         htmlSellButton = document.createElement("div");
         htmlSellButton.innerText = "Ajouter";
@@ -134,7 +100,6 @@ class ProfileUIController extends ControllerChild {
         this.__profileVitrineWrapper.append(htmlSellButton);
         this.__profileVitrineWrapper.append(htmlAttWrapper);
     }
-
 
     printLayout(profileId) {
         //profile id is the profile ID as int
@@ -191,27 +156,17 @@ class ProfileUIController extends ControllerChild {
         this.__profileWrapper.append(htmlSellButton);
     }
 
-    clickToSell(self) {
-
-        return function() {
-            const profileId = this.className.split("_")[1];
-            self.__controller.__app.__playerController.sell(profileId);
-        }
-    }
-
-    clickToBuy(self) {
-
-        return function() {
-            const profileId = this.className.split("_")[1];
-            self.__controller.__app.__playerController.buy(profileId);
-        }
-    }
-
-    printAttributesOf(profileId) {
-        //profile id is the profile ID as int
+    getAttributesOf(profileId, location) {
+        // location is "portfolio" or "shop"
         var self = this;
-        const profile = this.__controller.__app.__portfolioManager.getFromId(profileId);
-        let htmlAttWrapper, htmlTotal, totalName, totalValue;
+        let profile, htmlAttWrapper, htmlTotal, totalName, totalValue;
+
+        if(location === "portfolio") {
+            profile = this.__controller.__app.__portfolioManager.getFromId(profileId);
+        }
+        else if(location === "shop") {
+            profile = this.__controller.__app.__shopManager.getFromId(profileId);
+        }
         
         htmlAttWrapper = document.createElement("div");
         $(htmlAttWrapper).addClass("attributeMainWrapper");
@@ -258,10 +213,10 @@ class ProfileUIController extends ControllerChild {
         $(htmlTotal).append(totalValue);
         $(htmlAttWrapper).append(htmlTotal);
 
-        this.__profileWrapper.append(htmlAttWrapper);
+        return htmlAttWrapper;
     }
 
-    printHistoryOf(profileId) {
+    getHistoryOf(profileId) {
         var self = this;
         const profile = this.__controller.__app.__portfolioManager.getFromId(profileId);
         let htmlHistWrapper, profileEvents;
@@ -279,12 +234,12 @@ class ProfileUIController extends ControllerChild {
 
             profileEvents.forEach(evt => {
                 if(evt instanceof NativeEvent) {
-                    let nativeEvt = self.printNativeEvent(evt);
+                    let nativeEvt = self.getNativeEvent(evt);
                     $(nativeEvt).addClass("profileEvent");
                     $(htmlHistWrapper).append(nativeEvt);
                 }
                 else if(evt instanceof RecoEvent) {
-                    let recoEvt = self.printRecoEvent(evt);
+                    let recoEvt = self.getRecoEvent(evt);
                     $(recoEvt).addClass("profileEvent");
                     $(htmlHistWrapper).append(recoEvt);
                 }
@@ -297,10 +252,10 @@ class ProfileUIController extends ControllerChild {
             $(htmlHistWrapper).append(defaultText);
         }
         
-        this.__profileWrapper.append(htmlHistWrapper);
+        return htmlHistWrapper;
     }
 
-    printRecosOf(profileId) {
+    getRecosOf(profileId) {
         var self = this;
         const profile = this.__controller.__app.__portfolioManager.getFromId(profileId);
         const availableRecosId = this.__controller.__app.__recoController.getAvailableOf(profile);
@@ -344,10 +299,10 @@ class ProfileUIController extends ControllerChild {
             });
         }
 
-        this.__profileWrapper.append(htmlRecoWrapper);
+        return htmlRecoWrapper;
     }
 
-    printNativeEvent(evt) {
+    getNativeEvent(evt) {
         let htmlEvtWrapper, htmlEvtTitle, htmlEvtDate, htmlConsWrapper;
         const absoluteTimePassed = Math.abs(this.__controller.__app.__appController.__gameTime - evt.resolveDate);
         const minutesPassed = Math.ceil(absoluteTimePassed / (1000 * 60));
@@ -402,7 +357,7 @@ class ProfileUIController extends ControllerChild {
         return htmlEvtWrapper;
     }
 
-    printRecoEvent(evt) {
+    getRecoEvent(evt) {
         let htmlEvtWrapper, htmlEvtTitle, htmlEvtDate, htmlConsWrapper;
         const absoluteTimePassed = Math.abs(this.__controller.__app.__appController.__gameTime - evt.resolveDate);
         const minutesPassed = Math.ceil(absoluteTimePassed / (1000 * 60));
@@ -454,6 +409,22 @@ class ProfileUIController extends ControllerChild {
         $(htmlEvtWrapper).addClass("historyEvent");
 
         return htmlEvtWrapper;
+    }
+
+    clickToSell(self) {
+
+        return function() {
+            const profileId = this.className.split("_")[1];
+            self.__controller.__app.__playerController.sell(profileId);
+        }
+    }
+
+    clickToBuy(self) {
+
+        return function() {
+            const profileId = this.className.split("_")[1];
+            self.__controller.__app.__playerController.buy(profileId);
+        }
     }
 
     clickToLaunch(self) {
