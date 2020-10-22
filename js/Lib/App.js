@@ -26,6 +26,7 @@ class App {
     }
 
     init() {
+        var self = this;
 
         this.__levelsManager.init()
             .then(() => this.__attributeManager.init())
@@ -36,8 +37,7 @@ class App {
             .then(() => this.__appController.init())
             .then(() => this.__portfolioManager.init())
             .then(() => this.__UIController.initMenu())
+            .then(() => this.__appController.mainLoop(self.__appController.__lastTick))
             .catch(err => console.log(err));
-
-        this.__appController.mainLoop(this.__appController.__lastTick);
     }
 }
