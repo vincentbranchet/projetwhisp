@@ -73,6 +73,11 @@ class RecoEventController extends EventControllerChild {
             }
         });
 
+        // if closure reco, set profile to closed
+        if(event.isClosure) {
+            profile.isClosed = 1;
+        }
+
         this.__controller.__app.__profileController.evaluate(profileId, "portfolio");
 
         // if news must be printed after event, set news controller to print it

@@ -91,7 +91,8 @@ class PortfolioUIController extends ControllerChild {
     }
 
     print() {
-    // each frame, update profiles on cooldown
+    // each frame, update profiles on cooldown & send closed profiles to shop
+        var self = this;
         const profiles = this.__controller.__app.__portfolioManager.__profiles;
 
         profiles.forEach(profile => {
@@ -104,7 +105,10 @@ class PortfolioUIController extends ControllerChild {
                 const jQueryProfile = "#profile_" + String(profile.id);
                 
                 $(jQueryProfile).parent().find(".slotFill").css("width", centiCldPerCent);
-                $(jQueryProfile).parent().css("opacity", "0.5")
+                $(jQueryProfile).parent().css("opacity", "0.5");
+            }
+            if(profile.isClosed) {
+                self.__controller.__app.__playerController.sell(profile.id);
             }
         });
     }

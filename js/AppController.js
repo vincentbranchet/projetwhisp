@@ -49,7 +49,6 @@ class AppController extends AppChild {
 
         this.queueUpdates(numTicks); // appController updates
 
-        /*render(tFrame); // appUIController updates*/
         this.__app.__UIController.printHeader(); // refresh portfolio/lv values
         this.__app.__UIController.printContent();
         this.__app.__UIController.showActive();
@@ -62,7 +61,6 @@ class AppController extends AppChild {
         for(let i = 0; i < numTicks; i++) {
             this.__lastTick = this.__lastTick + this.__app.__config.frameTick;
 
-            /*this.update(this.__lastTick); */
             this.yieldXp(this.__lastTick);
             this.checkIfLvUp();
     

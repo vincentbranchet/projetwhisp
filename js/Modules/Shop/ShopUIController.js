@@ -40,11 +40,16 @@ class ShopUIController extends ControllerChild {
             htmlProfile = document.createElement("div");
             htmlProfile.id = "profile_" + profile.id;
 
-            (function(self) {
-                htmlProfile.addEventListener("click", self.clickToShow(self));
-            })(self);
-
-            $(htmlProfile).addClass("button slotProfile");
+            if(profile.isClosed) {
+                $(htmlProfile).addClass("deactivated slotProfile");
+            }
+            else {
+                (function(self) {
+                    htmlProfile.addEventListener("click", self.clickToShow(self));
+                })(self);
+    
+                $(htmlProfile).addClass("button slotProfile");
+            }
 
             htmlProfileName = document.createElement("div");
             htmlProfileName.innerText = profile.name;
@@ -63,7 +68,6 @@ class ShopUIController extends ControllerChild {
 
         this.__shopWrapper.append(htmlContent);
         
-        // hide
         this.__shopWrapper.style.display = "none";
     }
 

@@ -9,10 +9,10 @@ class Profile {
         this.__macroEvents = []; // macro events history
         this.__launchedReco = []; // currently running unsolved reco events
         this.__launchedNative = [];
+        this.__isClosed = 0; // deactivated state after closure recommandation
     }
 
     init(...attIds) {
-    // attributes ids
         var self = this;
         
         if(attIds[0]) {
@@ -55,6 +55,9 @@ class Profile {
     set value(newValue) {
         this.__value = newValue;
     }
+    set isClosed(bool) {
+        this.__isClosed = bool;
+    }
 
     get attributes() {
         return this.__attributes;
@@ -82,5 +85,8 @@ class Profile {
     }
     get launchedNative() {
         return this.__launchedNative;
+    }
+    get isClosed() {
+        return this.__isClosed;
     }
 }

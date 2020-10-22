@@ -14,7 +14,7 @@ class RecoEventManager extends EventManagerChild {
 
             $.getJSON('json/' + this.__fileName + '.json', events => {
 
-                events[this.__sheetName].map(event => this.create(event.id, event.name, event.delay, event.recoId, event.newsId, event.toDelete, event.toSpawn));
+                events[this.__sheetName].map(event => this.create(event.id, event.name, event.delay, event.recoId, event.newsId, event.toDelete, event.toSpawn, event.isClosure));
 
                 resolve();
             })
@@ -23,8 +23,8 @@ class RecoEventManager extends EventManagerChild {
         });
     }
 
-    create(id, name, delay, recoId, newsId, toDelete, toSpawn) {
-        let recoEvent = new RecoEvent(id, name, delay, recoId, newsId);
+    create(id, name, delay, recoId, newsId, toDelete, toSpawn, isClosure) {
+        let recoEvent = new RecoEvent(id, name, delay, recoId, newsId, isClosure);
 
         if(toDelete) {
             recoEvent.addToDelete(toDelete);

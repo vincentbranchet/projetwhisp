@@ -34,10 +34,10 @@ class App {
             .then(() => this.__eventManager.init())
             .then(() => this.__recoManager.init())
             .then(() => this.__newsManager.init())
+            .then(() => this.__appController.mainLoop(self.__appController.__lastTick))
             .then(() => this.__appController.init())
             .then(() => this.__portfolioManager.init())
             .then(() => this.__UIController.initMenu())
-            .then(() => this.__appController.mainLoop(self.__appController.__lastTick))
             .catch(err => console.log(err));
     }
 }

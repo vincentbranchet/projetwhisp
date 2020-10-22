@@ -77,6 +77,17 @@
       "required": "1",
       "forbidden": "8",
       "newsForbidden": 1
+    },
+    {
+      "id": 7,
+      "name": "Fermeture",
+      "desc": "Etant donné votre inactivité, nous vous signalons la fermeture définitive de votre compte.",
+      "cld": 1,
+      "evtId": 6,
+      "newsId": null,
+      "required": "8",
+      "forbidden": null,
+      "newsForbidden": null
     }
   ]
 }

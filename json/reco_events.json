@@ -7,7 +7,8 @@
       "recoId": 2,
       "newsId": null,
       "toDelete": 1,
-      "toSpawn": 6
+      "toSpawn": 6,
+      "isClosure": 0
     },
     {
       "id": 2,
@@ -16,7 +17,8 @@
       "recoId": 3,
       "newsId": null,
       "toDelete": null,
-      "toSpawn": 7
+      "toSpawn": 7,
+      "isClosure": 0
     },
     {
       "id": 3,
@@ -25,7 +27,8 @@
       "recoId": 4,
       "newsId": null,
       "toDelete": null,
-      "toSpawn": null
+      "toSpawn": null,
+      "isClosure": 0
     },
     {
       "id": 4,
@@ -34,7 +37,8 @@
       "recoId": 5,
       "newsId": 1,
       "toDelete": null,
-      "toSpawn": null
+      "toSpawn": null,
+      "isClosure": 0
     },
     {
       "id": 5,
@@ -43,7 +47,18 @@
       "recoId": 6,
       "newsId": null,
       "toDelete": null,
-      "toSpawn": 8
+      "toSpawn": 8,
+      "isClosure": 0
+    },
+    {
+      "id": 6,
+      "name": "fermeture",
+      "delay": 1,
+      "recoId": 7,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": null,
+      "isClosure": 1
     }
   ]
 }

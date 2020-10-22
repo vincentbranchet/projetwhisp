@@ -12,8 +12,6 @@ class Reco {
         this.__newsForbidden = newsForbidden; // news id required to prevent reco from showing up
     }
 
-    // id nom desc cld evt req(2, 24, 152) forb(3)
-
     fillRequired(...ids) {
 
         if(Array.isArray(ids[0])) {

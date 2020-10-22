@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "Cool",
-      "value": 100,
+      "value": 10,
       "events": 1,
       "isMult": 0,
       "multRate": 0
@@ -11,7 +11,7 @@
     {
       "id": 2,
       "name": "Employé",
-      "value": 300,
+      "value": 100,
       "events": 1,
       "isMult": 0,
       "multRate": 0
@@ -27,7 +27,7 @@
     {
       "id": 4,
       "name": "Riche",
-      "value": 1000,
+      "value": 200,
       "events": 0,
       "isMult": 0,
       "multRate": 0
@@ -59,7 +59,7 @@
     {
       "id": 8,
       "name": "Spawn",
-      "value": 500,
+      "value": 50,
       "events": 0,
       "isMult": 0,
       "multRate": 0

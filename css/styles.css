@@ -78,7 +78,7 @@ p {
     cursor: pointer;
 }
 
-.xpFill, .slotFill {
+.xpFill, .slotFill, .deactivated {
     display: block;
     height: 100%;
     background-color: gray;
@@ -91,6 +91,10 @@ p {
 
 .slotFill {
     opacity: 0.7;
+}
+
+.deactivated {
+    opacity: 0.5;
 }
 
 .xpNumbers, .slotProfile {
