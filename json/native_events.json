@@ -2,14 +2,294 @@
   "native_events": [
     {
       "id": 1,
-      "name": "Devenir riche",
-      "delay": 5,
+      "name": "[Sans emploi]",
+      "delay": 60,
+      "required": 14,
+      "toDelete": null,
+      "toSpawn": 6
+    },
+    {
+      "id": 2,
+      "name": "[Etudiant]",
+      "delay": 60,
+      "required": 12,
+      "toDelete": null,
+      "toSpawn": 10
+    },
+    {
+      "id": 3,
+      "name": "[Bidasse] + [Artiste]",
+      "delay": 30,
       "required": [
-        1,
-        2
+        20,
+        23
       ],
       "toDelete": null,
-      "toSpawn": 4
+      "toSpawn": 21
+    },
+    {
+      "id": 4,
+      "name": [
+        "Star",
+        "influenceur pop Alcool"
+      ],
+      "delay": 60,
+      "required": 200,
+      "toDelete": null,
+      "toSpawn": 6
+    },
+    {
+      "id": 5,
+      "name": "Star Drogues dures",
+      "delay": 120,
+      "required": 200,
+      "toDelete": [
+        8,
+        4
+      ],
+      "toSpawn": 11
+    },
+    {
+      "id": 6,
+      "name": "[Hypocondriaque]",
+      "delay": 30,
+      "required": 35,
+      "toDelete": null,
+      "toSpawn": 10
+    },
+    {
+      "id": 7,
+      "name": "[Enceinte]",
+      "delay": 120,
+      "required": 42,
+      "toDelete": 42,
+      "toSpawn": 46
+    },
+    {
+      "id": 8,
+      "name": "[En trouple]",
+      "delay": 40,
+      "required": 32,
+      "toDelete": null,
+      "toSpawn": 33
+    },
+    {
+      "id": 9,
+      "name": "[Infarctus]",
+      "delay": 40,
+      "required": 33,
+      "toDelete": null,
+      "toSpawn": 34
+    },
+    {
+      "id": 10,
+      "name": "[Cannabis] + [Cocaine]",
+      "delay": 45,
+      "required": [
+        53,
+        54
+      ],
+      "toDelete": 51,
+      "toSpawn": 14
+    },
+    {
+      "id": 11,
+      "name": "Cocaine",
+      "delay": 30,
+      "required": 200,
+      "toDelete": 51,
+      "toSpawn": 14
+    },
+    {
+      "id": 12,
+      "name": "Eco terroriste",
+      "delay": 100,
+      "required": 200,
+      "toDelete": [
+        43,
+        53,
+        54
+      ],
+      "toSpawn": 58
+    },
+    {
+      "id": 13,
+      "name": "[Dealer]",
+      "delay": 100,
+      "required": 57,
+      "toDelete": null,
+      "toSpawn": 58
+    },
+    {
+      "id": 14,
+      "name": "[Tensions]",
+      "delay": 100,
+      "required": 45,
+      "toDelete": [
+        36,
+        45
+      ],
+      "toSpawn": 49
+    },
+    {
+      "id": 15,
+      "name": "Stress hypocondriaque",
+      "delay": 60,
+      "required": 200,
+      "toDelete": [
+        37,
+        43
+      ],
+      "toSpawn": [
+        14,
+        44
+      ]
+    },
+    {
+      "id": 16,
+      "name": "[Braqueur]",
+      "delay": 30,
+      "required": 22,
+      "toDelete": 22,
+      "toSpawn": 26
+    },
+    {
+      "id": 17,
+      "name": [
+        "Star",
+        "alcool pop trainwreak"
+      ],
+      "delay": 60,
+      "required": 200,
+      "toDelete": [
+        4,
+        17
+      ],
+      "toSpawn": [
+        11,
+        14
+      ]
+    },
+    {
+      "id": 18,
+      "name": "Sociable",
+      "delay": 160,
+      "required": 200,
+      "toDelete": null,
+      "toSpawn": 2
+    },
+    {
+      "id": 19,
+      "name": "Rhume",
+      "delay": 120,
+      "required": 200,
+      "toDelete": 10,
+      "toSpawn": null
+    },
+    {
+      "id": 20,
+      "name": "[Vendeuse] + [Burn out]",
+      "delay": 40,
+      "required": [
+        37,
+        44
+      ],
+      "toDelete": [
+        37,
+        44
+      ],
+      "toSpawn": 14
+    },
+    {
+      "id": 21,
+      "name": "[Mariée] + [5 enfants]",
+      "delay": 60,
+      "required": [
+        36,
+        48
+      ],
+      "toDelete": null,
+      "toSpawn": 45
+    },
+    {
+      "id": 22,
+      "name": "[Mariée] + [Tensions]",
+      "delay": 60,
+      "required": [
+        36,
+        45
+      ],
+      "toDelete": [
+        36,
+        45
+      ],
+      "toSpawn": 49
+    },
+    {
+      "id": 23,
+      "name": "[Enceinte]",
+      "delay": 120,
+      "required": [
+        46,
+        77
+      ],
+      "toDelete": [
+        77,
+        46
+      ],
+      "toSpawn": 47
+    },
+    {
+      "id": 24,
+      "name": "[Enceinte]",
+      "delay": 120,
+      "required": [
+        47,
+        78
+      ],
+      "toDelete": [
+        78,
+        47
+      ],
+      "toSpawn": 48
+    },
+    {
+      "id": 25,
+      "name": "[CM] + [Gamer]",
+      "delay": 45,
+      "required": [
+        65,
+        2
+      ],
+      "toDelete": 65,
+      "toSpawn": 14
+    },
+    {
+      "id": 26,
+      "name": "Burn out",
+      "delay": 45,
+      "required": 200,
+      "toDelete": 44,
+      "toSpawn": 14
+    },
+    {
+      "id": 27,
+      "name": "[Trainwreak]",
+      "delay": 45,
+      "required": 11,
+      "toDelete": 11,
+      "toSpawn": null
+    },
+    {
+      "id": 28,
+      "name": "[Hypocondriaque]",
+      "delay": 30,
+      "required": [
+        35,
+        47
+      ],
+      "toDelete": null,
+      "toSpawn": 10
     }
   ]
 }

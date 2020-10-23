@@ -2,59 +2,2136 @@
   "reco_events": [
     {
       "id": 1,
-      "name": "Relouking",
-      "delay": 5,
-      "recoId": 2,
-      "newsId": null,
-      "toDelete": 1,
-      "toSpawn": 6,
-      "isClosure": 0
+      "name": "TumbaLata",
+      "delay": 30,
+      "recoId": 1,
+      "newsId": 1,
+      "toDelete": null,
+      "toSpawn": 2,
+      "isClosure": null
     },
     {
       "id": 2,
-      "name": "Reconversion",
-      "delay": 7,
-      "recoId": 3,
+      "name": "Tara Tuto",
+      "delay": 45,
+      "recoId": 2,
       "newsId": null,
-      "toDelete": null,
-      "toSpawn": 7,
-      "isClosure": 0
+      "toDelete": 12,
+      "toSpawn": [
+        4,
+        5
+      ],
+      "isClosure": null
     },
     {
       "id": 3,
-      "name": "Fête",
-      "delay": 10,
-      "recoId": 4,
+      "name": "Lil'Punch",
+      "delay": 20,
+      "recoId": 3,
       "newsId": null,
       "toDelete": null,
-      "toSpawn": null,
-      "isClosure": 0
+      "toSpawn": 6,
+      "isClosure": null
     },
     {
       "id": 4,
-      "name": "Influence",
-      "delay": 10,
-      "recoId": 5,
-      "newsId": 1,
-      "toDelete": null,
-      "toSpawn": null,
-      "isClosure": 0
+      "name": "Tara Tuto",
+      "delay": 60,
+      "recoId": 4,
+      "newsId": 2,
+      "toDelete": 5,
+      "toSpawn": 7,
+      "isClosure": null
     },
     {
       "id": 5,
-      "name": "TumbaLata",
-      "delay": 3,
-      "recoId": 6,
+      "name": "Promotion",
+      "delay": 100,
+      "recoId": 5,
       "newsId": null,
-      "toDelete": null,
+      "toDelete": [
+        7,
+        1
+      ],
       "toSpawn": 8,
-      "isClosure": 0
+      "isClosure": null
     },
     {
       "id": 6,
-      "name": "fermeture",
-      "delay": 1,
+      "name": "Breaking News",
+      "delay": 30,
+      "recoId": 6,
+      "newsId": null,
+      "toDelete": 6,
+      "toSpawn": null,
+      "isClosure": null
+    },
+    {
+      "id": 7,
+      "name": "Breaking News",
+      "delay": 30,
       "recoId": 7,
+      "newsId": null,
+      "toDelete": 6,
+      "toSpawn": null,
+      "isClosure": null
+    },
+    {
+      "id": 8,
+      "name": "Tara Tuto",
+      "delay": 45,
+      "recoId": 8,
+      "newsId": null,
+      "toDelete": 9,
+      "toSpawn": null,
+      "isClosure": null
+    },
+    {
+      "id": 9,
+      "name": "Rubex",
+      "delay": 20,
+      "recoId": 9,
+      "newsId": null,
+      "toDelete": 10,
+      "toSpawn": null,
+      "isClosure": null
+    },
+    {
+      "id": 10,
+      "name": "Tara Tuto",
+      "delay": 45,
+      "recoId": 10,
+      "newsId": null,
+      "toDelete": 11,
+      "toSpawn": 8,
+      "isClosure": null
+    },
+    {
+      "id": 11,
+      "name": "Univ. Jean Frimas",
+      "delay": 45,
+      "recoId": 11,
+      "newsId": null,
+      "toDelete": 4,
+      "toSpawn": 12,
+      "isClosure": null
+    },
+    {
+      "id": 12,
+      "name": "Univ. Jean Frimas",
+      "delay": 100,
+      "recoId": 12,
+      "newsId": null,
+      "toDelete": [
+        12,
+        1
+      ],
+      "toSpawn": [
+        13,
+        14
+      ],
+      "isClosure": null
+    },
+    {
+      "id": 13,
+      "name": "Bourse de l'emploi",
+      "delay": 45,
+      "recoId": 13,
+      "newsId": null,
+      "toDelete": [
+        14,
+        12
+      ],
+      "toSpawn": 15,
+      "isClosure": null
+    },
+    {
+      "id": 14,
+      "name": "Bourse de l'emploi",
+      "delay": 60,
+      "recoId": 14,
+      "newsId": null,
+      "toDelete": 14,
+      "toSpawn": 16,
+      "isClosure": null
+    },
+    {
+      "id": 15,
+      "name": "Univ. Jean Frimas",
+      "delay": 45,
+      "recoId": 15,
+      "newsId": null,
+      "toDelete": 15,
+      "toSpawn": 12,
+      "isClosure": null
+    },
+    {
+      "id": 16,
+      "name": "Trash Pistache",
+      "delay": 30,
+      "recoId": 16,
+      "newsId": 15,
+      "toDelete": [
+        8,
+        4
+      ],
+      "toSpawn": [
+        11,
+        6,
+        14
+      ],
+      "isClosure": null
+    },
+    {
+      "id": 17,
+      "name": "Tara Tuto",
+      "delay": 60,
+      "recoId": 17,
+      "newsId": null,
+      "toDelete": 16,
+      "toSpawn": 17,
+      "isClosure": null
+    },
+    {
+      "id": 18,
+      "name": "Tara Tuto",
+      "delay": 100,
+      "recoId": 18,
+      "newsId": null,
+      "toDelete": [
+        79,
+        11
+      ],
+      "toSpawn": 8,
+      "isClosure": null
+    },
+    {
+      "id": 19,
+      "name": "Armée de Terre",
+      "delay": 5,
+      "recoId": 19,
+      "newsId": null,
+      "toDelete": [
+        18,
+        14
+      ],
+      "toSpawn": 20,
+      "isClosure": null
+    },
+    {
+      "id": 20,
+      "name": "Armée de Terre",
+      "delay": 5,
+      "recoId": 20,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": null,
+      "isClosure": null
+    },
+    {
+      "id": 21,
+      "name": "Horoscope",
+      "delay": 10,
+      "recoId": 21,
+      "newsId": 3,
+      "toDelete": [
+        20,
+        21
+      ],
+      "toSpawn": 22,
+      "isClosure": null
+    },
+    {
+      "id": 22,
+      "name": "Bourse de l'emploi",
+      "delay": 5,
+      "recoId": 22,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": null,
+      "isClosure": null
+    },
+    {
+      "id": 23,
+      "name": "Tara Tuto",
+      "delay": 5,
+      "recoId": 23,
+      "newsId": null,
+      "toDelete": 19,
+      "toSpawn": [
+        23,
+        5
+      ],
+      "isClosure": null
+    },
+    {
+      "id": 24,
+      "name": "Univ. Jean Frimas",
+      "delay": null,
+      "recoId": 24,
+      "newsId": null,
+      "toDelete": 14,
+      "toSpawn": 12,
+      "isClosure": null
+    },
+    {
+      "id": 25,
+      "name": "Univ. Jean Frimas",
+      "delay": 10,
+      "recoId": 25,
+      "newsId": null,
+      "toDelete": 14,
+      "toSpawn": 12,
+      "isClosure": null
+    },
+    {
+      "id": 26,
+      "name": "Bourse de l'emploi",
+      "delay": 30,
+      "recoId": 26,
+      "newsId": null,
+      "toDelete": 14,
+      "toSpawn": 25,
+      "isClosure": null
+    },
+    {
+      "id": 27,
+      "name": "Horoscope",
+      "delay": 10,
+      "recoId": 27,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": null,
+      "isClosure": null
+    },
+    {
+      "id": 28,
+      "name": "Tara Tuto",
+      "delay": 30,
+      "recoId": 28,
+      "newsId": null,
+      "toDelete": 25,
+      "toSpawn": 17,
+      "isClosure": null
+    },
+    {
+      "id": 29,
+      "name": "Tara Tuto",
+      "delay": 45,
+      "recoId": 29,
+      "newsId": null,
+      "toDelete": 17,
+      "toSpawn": 14,
+      "isClosure": null
+    },
+    {
+      "id": 30,
+      "name": "Promotion",
+      "delay": 60,
+      "recoId": 30,
+      "newsId": null,
+      "toDelete": 5,
+      "toSpawn": 7,
+      "isClosure": null
+    },
+    {
+      "id": 31,
+      "name": "Promotion",
+      "delay": 100,
+      "recoId": 31,
+      "newsId": null,
+      "toDelete": 7,
+      "toSpawn": 8,
+      "isClosure": null
+    },
+    {
+      "id": 32,
+      "name": "Univ. Jean Frimas",
+      "delay": 45,
+      "recoId": 32,
+      "newsId": null,
+      "toDelete": 12,
+      "toSpawn": [
+        24,
+        14
+      ],
+      "isClosure": null
+    },
+    {
+      "id": 33,
+      "name": "Inconnu",
+      "delay": 5,
+      "recoId": 33,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": null,
+      "isClosure": null
+    },
+    {
+      "id": 34,
+      "name": "Kokoro",
+      "delay": 5,
+      "recoId": 34,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": 29,
+      "isClosure": null
+    },
+    {
+      "id": 35,
+      "name": "Kokoro",
+      "delay": 5,
+      "recoId": 35,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": 30,
+      "isClosure": null
+    },
+    {
+      "id": 36,
+      "name": "Kokoro",
+      "delay": 10,
+      "recoId": 36,
+      "newsId": null,
+      "toDelete": 30,
+      "toSpawn": 31,
+      "isClosure": null
+    },
+    {
+      "id": 37,
+      "name": "Kokoro",
+      "delay": 10,
+      "recoId": 37,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": 30,
+      "isClosure": null
+    },
+    {
+      "id": 38,
+      "name": "Kokoro",
+      "delay": 20,
+      "recoId": 38,
+      "newsId": null,
+      "toDelete": [
+        29,
+        31,
+        30
+      ],
+      "toSpawn": 32,
+      "isClosure": null
+    },
+    {
+      "id": 39,
+      "name": "Les Plaisirs Démodés",
+      "delay": 20,
+      "recoId": 39,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": null,
+      "isClosure": null
+    },
+    {
+      "id": 40,
+      "name": "Les Plaisirs Démodés",
+      "delay": 20,
+      "recoId": 40,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": null,
+      "isClosure": null
+    },
+    {
+      "id": 41,
+      "name": "Promotion",
+      "delay": 20,
+      "recoId": 41,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": null,
+      "isClosure": null
+    },
+    {
+      "id": 42,
+      "name": "Les Plaisirs Démodés",
+      "delay": 20,
+      "recoId": 42,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": null,
+      "isClosure": null
+    },
+    {
+      "id": 43,
+      "name": "Breaking News",
+      "delay": 20,
+      "recoId": 43,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": 38,
+      "isClosure": null
+    },
+    {
+      "id": 44,
+      "name": "Horoscope",
+      "delay": 30,
+      "recoId": 44,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": 39,
+      "isClosure": null
+    },
+    {
+      "id": 45,
+      "name": "L'Autre Vérité",
+      "delay": 40,
+      "recoId": 45,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": 40,
+      "isClosure": null
+    },
+    {
+      "id": 46,
+      "name": "L'Autre Vérité",
+      "delay": 20,
+      "recoId": 46,
+      "newsId": null,
+      "toDelete": [
+        38,
+        39,
+        40,
+        10
+      ],
+      "toSpawn": 41,
+      "isClosure": null
+    },
+    {
+      "id": 47,
+      "name": "Horloge Biologique",
+      "delay": 45,
+      "recoId": 47,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": 42,
+      "isClosure": null
+    },
+    {
+      "id": 48,
+      "name": "Horloge Biologique",
+      "delay": 45,
+      "recoId": 48,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": 77,
+      "isClosure": null
+    },
+    {
+      "id": 49,
+      "name": "Horloge Biologique",
+      "delay": 45,
+      "recoId": 49,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": 78,
+      "isClosure": null
+    },
+    {
+      "id": 50,
+      "name": "Horloge Biologique",
+      "delay": 45,
+      "recoId": 50,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": 45,
+      "isClosure": null
+    },
+    {
+      "id": 51,
+      "name": "Tara Tuto",
+      "delay": 30,
+      "recoId": 51,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": 43,
+      "isClosure": null
+    },
+    {
+      "id": 52,
+      "name": "Horoscope",
+      "delay": 30,
+      "recoId": 52,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": 43,
+      "isClosure": null
+    },
+    {
+      "id": 53,
+      "name": "Clinique St. Kevin",
+      "delay": 30,
+      "recoId": 53,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": 43,
+      "isClosure": null
+    },
+    {
+      "id": 54,
+      "name": "L'Autre Vérité",
+      "delay": 3,
+      "recoId": 54,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": null,
+      "isClosure": null
+    },
+    {
+      "id": 55,
+      "name": "Horoscope",
+      "delay": 20,
+      "recoId": 55,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": null,
+      "isClosure": null
+    },
+    {
+      "id": 56,
+      "name": "Horoscope",
+      "delay": 20,
+      "recoId": 56,
+      "newsId": null,
+      "toDelete": 43,
+      "toSpawn": 44,
+      "isClosure": null
+    },
+    {
+      "id": 57,
+      "name": "Bourse de l'emploi",
+      "delay": 20,
+      "recoId": 57,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": null,
+      "isClosure": null
+    },
+    {
+      "id": 58,
+      "name": "123Quizz",
+      "delay": 30,
+      "recoId": 58,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": 21,
+      "isClosure": null
+    },
+    {
+      "id": 59,
+      "name": "Météo",
+      "delay": 30,
+      "recoId": 59,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": 43,
+      "isClosure": null
+    },
+    {
+      "id": 60,
+      "name": "Communiqué",
+      "delay": 30,
+      "recoId": 60,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": 52,
+      "isClosure": null
+    },
+    {
+      "id": 61,
+      "name": "MaPetiteBrocante.com",
+      "delay": 45,
+      "recoId": 61,
+      "newsId": null,
+      "toDelete": 43,
+      "toSpawn": [
+        52,
+        53
+      ],
+      "isClosure": null
+    },
+    {
+      "id": 62,
+      "name": "MaPetiteBrocante.com",
+      "delay": 45,
+      "recoId": 62,
+      "newsId": null,
+      "toDelete": 52,
+      "toSpawn": [
+        43,
+        54
+      ],
+      "isClosure": null
+    },
+    {
+      "id": 63,
+      "name": "Vidéo",
+      "delay": 20,
+      "recoId": 63,
+      "newsId": null,
+      "toDelete": 43,
+      "toSpawn": 52,
+      "isClosure": null
+    },
+    {
+      "id": 64,
+      "name": "Vidéo",
+      "delay": 20,
+      "recoId": 64,
+      "newsId": null,
+      "toDelete": 52,
+      "toSpawn": 43,
+      "isClosure": null
+    },
+    {
+      "id": 65,
+      "name": "MaPetiteBrocante.com",
+      "delay": 60,
+      "recoId": 65,
+      "newsId": null,
+      "toDelete": [
+        43,
+        14,
+        52,
+        53,
+        54
+      ],
+      "toSpawn": 55,
+      "isClosure": null
+    },
+    {
+      "id": 66,
+      "name": "Anéantissement Bougonnement",
+      "delay": 100,
+      "recoId": 66,
+      "newsId": 4,
+      "toDelete": [
+        52,
+        14,
+        53,
+        54
+      ],
+      "toSpawn": [
+        56,
+        58
+      ],
+      "isClosure": null
+    },
+    {
+      "id": 67,
+      "name": "Erreur",
+      "delay": 5,
+      "recoId": 67,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": null,
+      "isClosure": null
+    },
+    {
+      "id": 68,
+      "name": "Erreur",
+      "delay": 5,
+      "recoId": 68,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": null,
+      "isClosure": null
+    },
+    {
+      "id": 69,
+      "name": "Erreur",
+      "delay": 5,
+      "recoId": 69,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": null,
+      "isClosure": null
+    },
+    {
+      "id": 70,
+      "name": "Bourse de l'emploi",
+      "delay": 45,
+      "recoId": 70,
+      "newsId": null,
+      "toDelete": 14,
+      "toSpawn": 57,
+      "isClosure": null
+    },
+    {
+      "id": 71,
+      "name": "L'Autre Vérité",
+      "delay": 60,
+      "recoId": 71,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": 59,
+      "isClosure": null
+    },
+    {
+      "id": 72,
+      "name": "Kokoro",
+      "delay": 10,
+      "recoId": 72,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": 29,
+      "isClosure": null
+    },
+    {
+      "id": 73,
+      "name": "Kokoro",
+      "delay": 10,
+      "recoId": 73,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": null,
+      "isClosure": null
+    },
+    {
+      "id": 74,
+      "name": "Kokoro",
+      "delay": 20,
+      "recoId": 74,
+      "newsId": 17,
+      "toDelete": 29,
+      "toSpawn": 62,
+      "isClosure": null
+    },
+    {
+      "id": 75,
+      "name": "Kokoro Premium",
+      "delay": 10,
+      "recoId": 75,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": null,
+      "isClosure": null
+    },
+    {
+      "id": 76,
+      "name": "Kokoro Premium",
+      "delay": 20,
+      "recoId": 76,
+      "newsId": null,
+      "toDelete": 62,
+      "toSpawn": 63,
+      "isClosure": null
+    },
+    {
+      "id": 77,
+      "name": "Kokoro Gold",
+      "delay": 10,
+      "recoId": 77,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": null,
+      "isClosure": null
+    },
+    {
+      "id": 78,
+      "name": "Kokoro Gold",
+      "delay": 20,
+      "recoId": 78,
+      "newsId": null,
+      "toDelete": 63,
+      "toSpawn": 64,
+      "isClosure": null
+    },
+    {
+      "id": 79,
+      "name": "Kokoro Platinum",
+      "delay": 60,
+      "recoId": 79,
+      "newsId": 16,
+      "toDelete": [
+        67,
+        64
+      ],
+      "toSpawn": [
+        14,
+        102
+      ],
+      "isClosure": null
+    },
+    {
+      "id": 80,
+      "name": "Bourse de l'emploi",
+      "delay": 10,
+      "recoId": 80,
+      "newsId": null,
+      "toDelete": 14,
+      "toSpawn": 65,
+      "isClosure": null
+    },
+    {
+      "id": 81,
+      "name": "Bourse de l'emploi",
+      "delay": 30,
+      "recoId": 81,
+      "newsId": null,
+      "toDelete": 65,
+      "toSpawn": 66,
+      "isClosure": null
+    },
+    {
+      "id": 82,
+      "name": "Bourse de l'emploi",
+      "delay": 60,
+      "recoId": 82,
+      "newsId": null,
+      "toDelete": 66,
+      "toSpawn": 67,
+      "isClosure": null
+    },
+    {
+      "id": 83,
+      "name": "Brandr",
+      "delay": 5,
+      "recoId": 83,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": null,
+      "isClosure": null
+    },
+    {
+      "id": 84,
+      "name": "Kokoro",
+      "delay": 30,
+      "recoId": 84,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": 30,
+      "isClosure": null
+    },
+    {
+      "id": 85,
+      "name": "Kokoro",
+      "delay": 15,
+      "recoId": 85,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": null,
+      "isClosure": null
+    },
+    {
+      "id": 86,
+      "name": "Kokoro",
+      "delay": 45,
+      "recoId": 86,
+      "newsId": null,
+      "toDelete": [
+        29,
+        60,
+        45
+      ],
+      "toSpawn": null,
+      "isClosure": null
+    },
+    {
+      "id": 87,
+      "name": "Horoscope",
+      "delay": 45,
+      "recoId": 87,
+      "newsId": null,
+      "toDelete": [
+        30,
+        60
+      ],
+      "toSpawn": 31,
+      "isClosure": null
+    },
+    {
+      "id": 88,
+      "name": "Promotion",
+      "delay": 60,
+      "recoId": 88,
+      "newsId": null,
+      "toDelete": [
+        31,
+        49
+      ],
+      "toSpawn": 36,
+      "isClosure": null
+    },
+    {
+      "id": 89,
+      "name": "Tara Tuto",
+      "delay": 45,
+      "recoId": 89,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": 45,
+      "isClosure": null
+    },
+    {
+      "id": 90,
+      "name": "Kokoro",
+      "delay": 30,
+      "recoId": 90,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": 29,
+      "isClosure": null
+    },
+    {
+      "id": 91,
+      "name": "Kokoro",
+      "delay": 30,
+      "recoId": 91,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": 30,
+      "isClosure": null
+    },
+    {
+      "id": 92,
+      "name": "Kokoro",
+      "delay": 45,
+      "recoId": 92,
+      "newsId": null,
+      "toDelete": [
+        36,
+        45
+      ],
+      "toSpawn": 49,
+      "isClosure": null
+    },
+    {
+      "id": 93,
+      "name": "Tara Tuto",
+      "delay": 20,
+      "recoId": 93,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": null,
+      "isClosure": null
+    },
+    {
+      "id": 94,
+      "name": "Horoscope",
+      "delay": 60,
+      "recoId": 94,
+      "newsId": null,
+      "toDelete": 30,
+      "toSpawn": 31,
+      "isClosure": null
+    },
+    {
+      "id": 95,
+      "name": "Sondage",
+      "delay": 30,
+      "recoId": 95,
+      "newsId": 6,
+      "toDelete": 69,
+      "toSpawn": 70,
+      "isClosure": null
+    },
+    {
+      "id": 96,
+      "name": "Sondage",
+      "delay": 30,
+      "recoId": 96,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": null,
+      "isClosure": null
+    },
+    {
+      "id": 97,
+      "name": "Sondage",
+      "delay": 30,
+      "recoId": 97,
+      "newsId": null,
+      "toDelete": 70,
+      "toSpawn": 69,
+      "isClosure": null
+    },
+    {
+      "id": 98,
+      "name": "Sondage",
+      "delay": 30,
+      "recoId": 98,
+      "newsId": 5,
+      "toDelete": null,
+      "toSpawn": null,
+      "isClosure": null
+    },
+    {
+      "id": 99,
+      "name": "Communiqué",
+      "delay": 10,
+      "recoId": 99,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": null,
+      "isClosure": null
+    },
+    {
+      "id": 100,
+      "name": "Communiqué",
+      "delay": 10,
+      "recoId": 100,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": null,
+      "isClosure": null
+    },
+    {
+      "id": 101,
+      "name": "Tara Tuto",
+      "delay": 20,
+      "recoId": 101,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": 72,
+      "isClosure": null
+    },
+    {
+      "id": 102,
+      "name": "Larroze-Dombasle",
+      "delay": 20,
+      "recoId": 102,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": 73,
+      "isClosure": null
+    },
+    {
+      "id": 103,
+      "name": "Larroze-Dombasle",
+      "delay": 15,
+      "recoId": 103,
+      "newsId": null,
+      "toDelete": [
+        73,
+        72,
+        71,
+        69,
+        70
+      ],
+      "toSpawn": 75,
+      "isClosure": null
+    },
+    {
+      "id": 104,
+      "name": "Infobourse",
+      "delay": 5,
+      "recoId": 104,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": null,
+      "isClosure": null
+    },
+    {
+      "id": 105,
+      "name": "Trash Pistache",
+      "delay": 5,
+      "recoId": 105,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": null,
+      "isClosure": null
+    },
+    {
+      "id": 106,
+      "name": "*Huitième Sens*",
+      "delay": 15,
+      "recoId": 106,
+      "newsId": null,
+      "toDelete": 26,
+      "toSpawn": 74,
+      "isClosure": null
+    },
+    {
+      "id": 107,
+      "name": "Inconnu",
+      "delay": 3,
+      "recoId": 107,
+      "newsId": 8,
+      "toDelete": null,
+      "toSpawn": null,
+      "isClosure": null
+    },
+    {
+      "id": 108,
+      "name": "TumbaLata",
+      "delay": 30,
+      "recoId": 108,
+      "newsId": null,
+      "toDelete": 12,
+      "toSpawn": 14,
+      "isClosure": null
+    },
+    {
+      "id": 109,
+      "name": "Parti Visionnaire",
+      "delay": 30,
+      "recoId": 109,
+      "newsId": null,
+      "toDelete": 69,
+      "toSpawn": 70,
+      "isClosure": null
+    },
+    {
+      "id": 110,
+      "name": "Parti Nostalgique",
+      "delay": 30,
+      "recoId": 110,
+      "newsId": null,
+      "toDelete": 70,
+      "toSpawn": 69,
+      "isClosure": null
+    },
+    {
+      "id": 111,
+      "name": "Offre d’emploi",
+      "delay": 30,
+      "recoId": 111,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": 76,
+      "isClosure": null
+    },
+    {
+      "id": 112,
+      "name": "Univ. Jean Frimas",
+      "delay": 5,
+      "recoId": 112,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": 76,
+      "isClosure": null
+    },
+    {
+      "id": 113,
+      "name": "Tara Tuto",
+      "delay": 5,
+      "recoId": 113,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": 76,
+      "isClosure": null
+    },
+    {
+      "id": 114,
+      "name": "Rubex",
+      "delay": 10,
+      "recoId": 114,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": 76,
+      "isClosure": null
+    },
+    {
+      "id": 115,
+      "name": "Parti Visionnaire",
+      "delay": 30,
+      "recoId": 115,
+      "newsId": null,
+      "toDelete": 69,
+      "toSpawn": 70,
+      "isClosure": null
+    },
+    {
+      "id": 116,
+      "name": "Parti Nostalgique",
+      "delay": 30,
+      "recoId": 116,
+      "newsId": null,
+      "toDelete": 70,
+      "toSpawn": 69,
+      "isClosure": null
+    },
+    {
+      "id": 117,
+      "name": "Offre d’emploi",
+      "delay": 30,
+      "recoId": 117,
+      "newsId": null,
+      "toDelete": 88,
+      "toSpawn": 76,
+      "isClosure": null
+    },
+    {
+      "id": 118,
+      "name": "Horoscope",
+      "delay": 30,
+      "recoId": 118,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": 76,
+      "isClosure": null
+    },
+    {
+      "id": 119,
+      "name": "Univ. Jean Frimas",
+      "delay": 5,
+      "recoId": 119,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": 76,
+      "isClosure": null
+    },
+    {
+      "id": 120,
+      "name": "Rubex",
+      "delay": 5,
+      "recoId": 120,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": 76,
+      "isClosure": null
+    },
+    {
+      "id": 121,
+      "name": "TumbaLata",
+      "delay": 30,
+      "recoId": 121,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": 2,
+      "isClosure": null
+    },
+    {
+      "id": 122,
+      "name": "Parti Visionnaire",
+      "delay": 30,
+      "recoId": 122,
+      "newsId": null,
+      "toDelete": 69,
+      "toSpawn": 70,
+      "isClosure": null
+    },
+    {
+      "id": 123,
+      "name": "Parti Nostalgique",
+      "delay": 30,
+      "recoId": 123,
+      "newsId": null,
+      "toDelete": 70,
+      "toSpawn": 69,
+      "isClosure": null
+    },
+    {
+      "id": 124,
+      "name": "Les Plaisirs Démodés",
+      "delay": 5,
+      "recoId": 124,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": 76,
+      "isClosure": null
+    },
+    {
+      "id": 125,
+      "name": "Kokoro",
+      "delay": 5,
+      "recoId": 125,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": 76,
+      "isClosure": null
+    },
+    {
+      "id": 126,
+      "name": "Parti Visionnaire",
+      "delay": 30,
+      "recoId": 126,
+      "newsId": null,
+      "toDelete": 69,
+      "toSpawn": 70,
+      "isClosure": null
+    },
+    {
+      "id": 127,
+      "name": "Parti Nostalgique",
+      "delay": 30,
+      "recoId": 127,
+      "newsId": null,
+      "toDelete": 70,
+      "toSpawn": 69,
+      "isClosure": null
+    },
+    {
+      "id": 128,
+      "name": "Horloge Biologique",
+      "delay": 5,
+      "recoId": 128,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": 76,
+      "isClosure": null
+    },
+    {
+      "id": 129,
+      "name": "Horoscope",
+      "delay": 5,
+      "recoId": 129,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": 76,
+      "isClosure": null
+    },
+    {
+      "id": 130,
+      "name": "Horoscope",
+      "delay": 5,
+      "recoId": 130,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": 76,
+      "isClosure": null
+    },
+    {
+      "id": 131,
+      "name": "TumbaLata",
+      "delay": 30,
+      "recoId": 131,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": 2,
+      "isClosure": null
+    },
+    {
+      "id": 132,
+      "name": "Parti Visionnaire",
+      "delay": 30,
+      "recoId": 132,
+      "newsId": null,
+      "toDelete": 69,
+      "toSpawn": 70,
+      "isClosure": null
+    },
+    {
+      "id": 133,
+      "name": "Parti Nostalgique",
+      "delay": 30,
+      "recoId": 133,
+      "newsId": null,
+      "toDelete": 70,
+      "toSpawn": 69,
+      "isClosure": null
+    },
+    {
+      "id": 134,
+      "name": "Erreur",
+      "delay": 5,
+      "recoId": 134,
+      "newsId": null,
+      "toDelete": [
+        56,
+        58,
+        59
+      ],
+      "toSpawn": 76,
+      "isClosure": null
+    },
+    {
+      "id": 135,
+      "name": "Tara Tuto",
+      "delay": 5,
+      "recoId": 135,
+      "newsId": null,
+      "toDelete": [
+        56,
+        58,
+        60
+      ],
+      "toSpawn": 76,
+      "isClosure": null
+    },
+    {
+      "id": 136,
+      "name": "TumbaLata",
+      "delay": 30,
+      "recoId": 136,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": 2,
+      "isClosure": null
+    },
+    {
+      "id": 137,
+      "name": "TumbaLata",
+      "delay": 30,
+      "recoId": 137,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": 2,
+      "isClosure": null
+    },
+    {
+      "id": 138,
+      "name": "Sondage",
+      "delay": 30,
+      "recoId": 138,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": null,
+      "isClosure": null
+    },
+    {
+      "id": 139,
+      "name": "Parti Visionnaire",
+      "delay": 30,
+      "recoId": 139,
+      "newsId": null,
+      "toDelete": 69,
+      "toSpawn": 70,
+      "isClosure": null
+    },
+    {
+      "id": 140,
+      "name": "Parti Nostalgique",
+      "delay": 30,
+      "recoId": 140,
+      "newsId": null,
+      "toDelete": 70,
+      "toSpawn": 69,
+      "isClosure": null
+    },
+    {
+      "id": 141,
+      "name": "Horoscope",
+      "delay": 5,
+      "recoId": 141,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": 76,
+      "isClosure": null
+    },
+    {
+      "id": 142,
+      "name": "Kokoro",
+      "delay": 5,
+      "recoId": 142,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": 76,
+      "isClosure": null
+    },
+    {
+      "id": 143,
+      "name": "Sondage",
+      "delay": 5,
+      "recoId": 143,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": 76,
+      "isClosure": null
+    },
+    {
+      "id": 144,
+      "name": "Sondage",
+      "delay": 5,
+      "recoId": 144,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": 76,
+      "isClosure": null
+    },
+    {
+      "id": 145,
+      "name": "Kokoro",
+      "delay": 5,
+      "recoId": 145,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": 76,
+      "isClosure": null
+    },
+    {
+      "id": 146,
+      "name": "TumbaLata",
+      "delay": 30,
+      "recoId": 146,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": 2,
+      "isClosure": null
+    },
+    {
+      "id": 147,
+      "name": "Parti Visionnaire",
+      "delay": 30,
+      "recoId": 147,
+      "newsId": null,
+      "toDelete": 69,
+      "toSpawn": 70,
+      "isClosure": null
+    },
+    {
+      "id": 148,
+      "name": "Parti Nostalgique",
+      "delay": 30,
+      "recoId": 148,
+      "newsId": null,
+      "toDelete": 70,
+      "toSpawn": 69,
+      "isClosure": null
+    },
+    {
+      "id": 149,
+      "name": "Inconnu",
+      "delay": 3,
+      "recoId": 149,
+      "newsId": 9,
+      "toDelete": null,
+      "toSpawn": 76,
+      "isClosure": null
+    },
+    {
+      "id": 150,
+      "name": "Horoscope",
+      "delay": 5,
+      "recoId": 150,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": 76,
+      "isClosure": null
+    },
+    {
+      "id": 151,
+      "name": "Tara Tuto",
+      "delay": 45,
+      "recoId": 151,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": 43,
+      "isClosure": null
+    },
+    {
+      "id": 152,
+      "name": "Tara Tuto",
+      "delay": 45,
+      "recoId": 152,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": 43,
+      "isClosure": null
+    },
+    {
+      "id": 153,
+      "name": "Bourse de l'emploi",
+      "delay": 45,
+      "recoId": 153,
+      "newsId": null,
+      "toDelete": 14,
+      "toSpawn": [
+        65,
+        2
+      ],
+      "isClosure": null
+    },
+    {
+      "id": 154,
+      "name": "Kokoro Platinium",
+      "delay": 30,
+      "recoId": 154,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": null,
+      "isClosure": null
+    },
+    {
+      "id": 155,
+      "name": "TumbaLata",
+      "delay": 30,
+      "recoId": 155,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": 2,
+      "isClosure": null
+    },
+    {
+      "id": 156,
+      "name": "Univ. Jean Frimas",
+      "delay": 30,
+      "recoId": 156,
+      "newsId": 18,
+      "toDelete": [
+        80,
+        81
+      ],
+      "toSpawn": [
+        83,
+        86,
+        87,
+        89
+      ],
+      "isClosure": null
+    },
+    {
+      "id": 157,
+      "name": "Horoscope",
+      "delay": 5,
+      "recoId": 157,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": null,
+      "isClosure": null
+    },
+    {
+      "id": 158,
+      "name": "Direction Générale des Finances Publiques",
+      "delay": 20,
+      "recoId": 158,
+      "newsId": null,
+      "toDelete": 83,
+      "toSpawn": 84,
+      "isClosure": null
+    },
+    {
+      "id": 159,
+      "name": "MaPetiteBrocante.com",
+      "delay": 20,
+      "recoId": 159,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": 82,
+      "isClosure": null
+    },
+    {
+      "id": 160,
+      "name": "Infobourse",
+      "delay": 10,
+      "recoId": 160,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": null,
+      "isClosure": null
+    },
+    {
+      "id": 161,
+      "name": "L'Autre Vérité",
+      "delay": 20,
+      "recoId": 161,
+      "newsId": 19,
+      "toDelete": 83,
+      "toSpawn": 84,
+      "isClosure": null
+    },
+    {
+      "id": 162,
+      "name": "L'Autre Vérité",
+      "delay": 20,
+      "recoId": 162,
+      "newsId": null,
+      "toDelete": 84,
+      "toSpawn": 85,
+      "isClosure": null
+    },
+    {
+      "id": 163,
+      "name": "Horoscope",
+      "delay": 20,
+      "recoId": 163,
+      "newsId": null,
+      "toDelete": 84,
+      "toSpawn": 85,
+      "isClosure": null
+    },
+    {
+      "id": 164,
+      "name": "Succubator",
+      "delay": 20,
+      "recoId": 164,
+      "newsId": null,
+      "toDelete": 84,
+      "toSpawn": 85,
+      "isClosure": null
+    },
+    {
+      "id": 165,
+      "name": "Breaking News",
+      "delay": 20,
+      "recoId": 165,
+      "newsId": null,
+      "toDelete": 84,
+      "toSpawn": 85,
+      "isClosure": null
+    },
+    {
+      "id": 166,
+      "name": "MaPetiteBrocante.com",
+      "delay": 10,
+      "recoId": 166,
+      "newsId": null,
+      "toDelete": [
+        86,
+        85
+      ],
+      "toSpawn": 84,
+      "isClosure": null
+    },
+    {
+      "id": 167,
+      "name": "MaPetiteBrocante.com",
+      "delay": 10,
+      "recoId": 167,
+      "newsId": 20,
+      "toDelete": [
+        87,
+        85
+      ],
+      "toSpawn": [
+        84,
+        88
+      ],
+      "isClosure": null
+    },
+    {
+      "id": 168,
+      "name": "Erreur",
+      "delay": 5,
+      "recoId": 168,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": null,
+      "isClosure": null
+    },
+    {
+      "id": 169,
+      "name": "TumbaLata",
+      "delay": 10,
+      "recoId": 169,
+      "newsId": null,
+      "toDelete": 84,
+      "toSpawn": 85,
+      "isClosure": null
+    },
+    {
+      "id": 170,
+      "name": "Parti Visionnaire",
+      "delay": 10,
+      "recoId": 170,
+      "newsId": null,
+      "toDelete": 69,
+      "toSpawn": 70,
+      "isClosure": null
+    },
+    {
+      "id": 171,
+      "name": "Parti Nostalgique",
+      "delay": 10,
+      "recoId": 171,
+      "newsId": null,
+      "toDelete": 70,
+      "toSpawn": 69,
+      "isClosure": null
+    },
+    {
+      "id": 172,
+      "name": "Infobourse",
+      "delay": 5,
+      "recoId": 172,
+      "newsId": null,
+      "toDelete": 88,
+      "toSpawn": 76,
+      "isClosure": null
+    },
+    {
+      "id": 173,
+      "name": "Erreur",
+      "delay": 5,
+      "recoId": 173,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": 76,
+      "isClosure": null
+    },
+    {
+      "id": 174,
+      "name": "Succubator",
+      "delay": 20,
+      "recoId": 174,
+      "newsId": 21,
+      "toDelete": null,
+      "toSpawn": 91,
+      "isClosure": null
+    },
+    {
+      "id": 175,
+      "name": "Recrute1talent.com",
+      "delay": 10,
+      "recoId": 175,
+      "newsId": null,
+      "toDelete": 91,
+      "toSpawn": [
+        92,
+        101
+      ],
+      "isClosure": null
+    },
+    {
+      "id": 176,
+      "name": "Recrute1talent.com",
+      "delay": 10,
+      "recoId": 176,
+      "newsId": null,
+      "toDelete": 91,
+      "toSpawn": [
+        92,
+        101
+      ],
+      "isClosure": null
+    },
+    {
+      "id": 177,
+      "name": "Recrute1talent.com",
+      "delay": 10,
+      "recoId": 177,
+      "newsId": null,
+      "toDelete": 91,
+      "toSpawn": [
+        92,
+        101
+      ],
+      "isClosure": null
+    },
+    {
+      "id": 178,
+      "name": "Recrute1talent.com",
+      "delay": 10,
+      "recoId": 178,
+      "newsId": null,
+      "toDelete": 92,
+      "toSpawn": 93,
+      "isClosure": null
+    },
+    {
+      "id": 179,
+      "name": "Recrute1talent.com",
+      "delay": 10,
+      "recoId": 179,
+      "newsId": null,
+      "toDelete": 92,
+      "toSpawn": 93,
+      "isClosure": null
+    },
+    {
+      "id": 180,
+      "name": "Recrute1talent.com",
+      "delay": 10,
+      "recoId": 180,
+      "newsId": null,
+      "toDelete": 93,
+      "toSpawn": 95,
+      "isClosure": null
+    },
+    {
+      "id": 181,
+      "name": "Recrute1talent.com",
+      "delay": 10,
+      "recoId": 181,
+      "newsId": null,
+      "toDelete": 93,
+      "toSpawn": 95,
+      "isClosure": null
+    },
+    {
+      "id": 182,
+      "name": "Recrute1talent.com",
+      "delay": 10,
+      "recoId": 182,
+      "newsId": null,
+      "toDelete": 95,
+      "toSpawn": 96,
+      "isClosure": null
+    },
+    {
+      "id": 183,
+      "name": "Recrute1talent.com",
+      "delay": 10,
+      "recoId": 183,
+      "newsId": null,
+      "toDelete": 95,
+      "toSpawn": 96,
+      "isClosure": null
+    },
+    {
+      "id": 184,
+      "name": "Recrute1talent.com",
+      "delay": 10,
+      "recoId": 184,
+      "newsId": null,
+      "toDelete": 96,
+      "toSpawn": 97,
+      "isClosure": null
+    },
+    {
+      "id": 185,
+      "name": "Recrute1talent.com",
+      "delay": 10,
+      "recoId": 185,
+      "newsId": null,
+      "toDelete": 96,
+      "toSpawn": 97,
+      "isClosure": null
+    },
+    {
+      "id": 186,
+      "name": "Succubator",
+      "delay": 30,
+      "recoId": 186,
+      "newsId": null,
+      "toDelete": 97,
+      "toSpawn": 98,
+      "isClosure": null
+    },
+    {
+      "id": 187,
+      "name": "Direction Générale des Finances Publiques",
+      "delay": 20,
+      "recoId": 187,
+      "newsId": null,
+      "toDelete": 98,
+      "toSpawn": 99,
+      "isClosure": null
+    },
+    {
+      "id": 188,
+      "name": "Succubator",
+      "delay": 20,
+      "recoId": 188,
+      "newsId": null,
+      "toDelete": 98,
+      "toSpawn": 99,
+      "isClosure": null
+    },
+    {
+      "id": 189,
+      "name": "Ministère du Travail",
+      "delay": 15,
+      "recoId": 189,
+      "newsId": 22,
+      "toDelete": [
+        101,
+        99
+      ],
+      "toSpawn": [
+        14,
+        21
+      ],
+      "isClosure": null
+    },
+    {
+      "id": 190,
+      "name": "MaPetiteBrocante.com",
+      "delay": 20,
+      "recoId": 190,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": null,
+      "isClosure": null
+    },
+    {
+      "id": 191,
+      "name": "Parti Visionnaire",
+      "delay": 10,
+      "recoId": 191,
+      "newsId": null,
+      "toDelete": 69,
+      "toSpawn": 70,
+      "isClosure": null
+    },
+    {
+      "id": 192,
+      "name": "Parti Nostalgique",
+      "delay": 10,
+      "recoId": 192,
+      "newsId": null,
+      "toDelete": 70,
+      "toSpawn": 69,
+      "isClosure": null
+    },
+    {
+      "id": 193,
+      "name": "Les Plaisirs Démodés",
+      "delay": 5,
+      "recoId": 193,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": 76,
+      "isClosure": null
+    },
+    {
+      "id": 194,
+      "name": "Watheure",
+      "delay": 5,
+      "recoId": 194,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": null,
+      "isClosure": null
+    },
+    {
+      "id": 195,
+      "name": "Horoscope",
+      "delay": 45,
+      "recoId": 195,
+      "newsId": 24,
+      "toDelete": [
+        8,
+        17
+      ],
+      "toSpawn": 14,
+      "isClosure": null
+    },
+    {
+      "id": 196,
+      "name": "L'Autre Vérité",
+      "delay": 45,
+      "recoId": 196,
+      "newsId": 23,
+      "toDelete": null,
+      "toSpawn": 88,
+      "isClosure": null
+    },
+    {
+      "id": 197,
+      "name": "BestLife",
+      "delay": 1,
+      "recoId": 197,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": null,
+      "isClosure": 1
+    },
+    {
+      "id": 198,
+      "name": "BestLife",
+      "delay": 1,
+      "recoId": 198,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": null,
+      "isClosure": 1
+    },
+    {
+      "id": 199,
+      "name": "BestLife",
+      "delay": 1,
+      "recoId": 199,
+      "newsId": null,
+      "toDelete": null,
+      "toSpawn": null,
+      "isClosure": 1
+    },
+    {
+      "id": 200,
+      "name": "BestLife",
+      "delay": 1,
+      "recoId": 200,
       "newsId": null,
       "toDelete": null,
       "toSpawn": null,

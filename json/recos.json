@@ -2,90 +2,2559 @@
   "recos": [
     {
       "id": 1,
-      "name": "Promouvoir",
-      "desc": "Vous méritez un nouveau poste !",
-      "cld": 10,
-      "evtId": null,
+      "name": "Tumbalata",
+      "desc": "\"Ha le bouffon, il a pas de DinoCars !\" Ne fais surtout pas comme ce gros loser : retrouve tes DinoCars préférés dans DinoCars Country et défie tes amis pour contribuer à la pression sociale qui pèse déjà sur eux !",
+      "cld": 30,
+      "evtId": 1,
       "newsId": null,
-      "required": [
-        2,
-        3
-      ],
-      "forbidden": null,
+      "required": 1,
+      "forbidden": 2,
       "newsForbidden": null
     },
     {
       "id": 2,
-      "name": "Relooker",
-      "desc": "Envie de s'embellir ?",
-      "cld": 10,
-      "evtId": 1,
-      "newsId": 1,
-      "required": "1",
-      "forbidden": null,
+      "name": "Tara Tuto",
+      "desc": "Deviens streameur jeu vidéo en 13 étapes. La huitième va te surprendre. Like & suscribe pour plus du tutos.",
+      "cld": 45,
+      "evtId": 2,
+      "newsId": null,
+      "required": [
+        1,
+        2
+      ],
+      "forbidden": 4,
       "newsForbidden": null
     },
     {
       "id": 3,
-      "name": "Débaucher",
-      "desc": "Vos talents peuvent rapporter gros",
-      "cld": 15,
-      "evtId": 2,
+      "name": "Lil'Punch",
+      "desc": "Eh toi ! Oui, toi ! Tu veux connaître le secret pour passer des soirées bien vénères et emballer à tous les coups ? Alors écoute les conseil de ton pote Lil' Punch",
+      "cld": 20,
+      "evtId": 3,
       "newsId": null,
       "required": [
-        3,
-        4
+        1,
+        3
       ],
-      "forbidden": "2",
+      "forbidden": 6,
       "newsForbidden": null
     },
     {
       "id": 4,
-      "name": "Organiser une fête",
-      "desc": "Une idée pour cultiver vos relations sociales",
-      "cld": 12,
-      "evtId": 3,
+      "name": "Tara Tuto",
+      "desc": "Quel jeu streamer pour élargir sa fanbase ? Je vous livre mon top 5. (Sponsorisé par DinoCars.)",
+      "cld": 60,
+      "evtId": 4,
       "newsId": null,
       "required": [
-        2,
-        6
+        4,
+        5
       ],
       "forbidden": null,
       "newsForbidden": null
     },
     {
       "id": 5,
-      "name": "Devenir Influenceur",
-      "desc": "Montrez votre vie de rêve à tout le monde !",
-      "cld": 30,
-      "evtId": 4,
+      "name": "Promotion",
+      "desc": "Besoin d'un coup de pouce pour atteindre les 10M d'abonnés? Offrez-vous les services de Tara Tuto. Mention: 2000€ Featuring: 10000€ Clash: 25000€.",
+      "cld": 100,
+      "evtId": 5,
       "newsId": null,
       "required": [
         4,
-        1
+        7
       ],
       "forbidden": null,
       "newsForbidden": null
     },
     {
       "id": 6,
-      "name": "Tumbalata",
-      "desc": "LA RECO QUI DOIT DISPARAITRE",
-      "cld": 3,
-      "evtId": 5,
+      "name": "Breaking News",
+      "desc": "Une étude américaine établit un lien entre consommation d'alcool et pose d'appareil dentaire. Boire ou sourire, il va falloir choisir.",
+      "cld": 30,
+      "evtId": 6,
       "newsId": null,
-      "required": "1",
-      "forbidden": "8",
-      "newsForbidden": 1
+      "required": [
+        1,
+        6
+      ],
+      "forbidden": null,
+      "newsForbidden": null
     },
     {
       "id": 7,
-      "name": "Fermeture",
-      "desc": "Etant donné votre inactivité, nous vous signalons la fermeture définitive de votre compte.",
-      "cld": 1,
-      "evtId": 6,
+      "name": "Breaking News",
+      "desc": "Une étude néerlandaise établit un lien entre consommation d'alcool et supression de permis. Boire ou conduire, il va falloir choisir.",
+      "cld": 30,
+      "evtId": 7,
       "newsId": null,
-      "required": "8",
+      "required": 6,
+      "forbidden": 1,
+      "newsForbidden": null
+    },
+    {
+      "id": 8,
+      "name": "Tara Tuto",
+      "desc": "Mes top tips pour arrêter la cocaïne. Like & suscribe pour plus du tutos",
+      "cld": 45,
+      "evtId": 8,
+      "newsId": null,
+      "required": 9,
+      "forbidden": null,
+      "newsForbidden": null
+    },
+    {
+      "id": 9,
+      "name": "Rubex",
+      "desc": "Barre de boucher votre dez qui coule ? Ayez le réflèxe Rubex ! Rubex, le rebède bagique pour tout a... Atchiiiii!",
+      "cld": 20,
+      "evtId": 9,
+      "newsId": null,
+      "required": 10,
+      "forbidden": null,
+      "newsForbidden": null
+    },
+    {
+      "id": 10,
+      "name": "Tara Tuto",
+      "desc": "Comment j'ai fait mon comeback après le meltdown de mes 11ans. Une vidéo un peu spéciale.",
+      "cld": 45,
+      "evtId": 10,
+      "newsId": null,
+      "required": 2000,
+      "forbidden": 9,
+      "newsForbidden": null
+    },
+    {
+      "id": 11,
+      "name": "Univ. Jean Frimas",
+      "desc": "Jeune bachelier ? Venez réchauffer les bancs de l'Université Jean Frimas. Ils en ont bien besoin.",
+      "cld": 45,
+      "evtId": 11,
+      "newsId": null,
+      "required": 1,
+      "forbidden": [
+        4,
+        12
+      ],
+      "newsForbidden": null
+    },
+    {
+      "id": 12,
+      "name": "Univ. Jean Frimas",
+      "desc": "Rappel aux étudiants : À l'approche des partiels de fin d'année, la B.U. Jean Frimas sera exceptionnellement ouverte tous les soirs jusqu'à 4h du matin. Prenez un duvet.",
+      "cld": 100,
+      "evtId": 12,
+      "newsId": null,
+      "required": [
+        12,
+        3
+      ],
+      "forbidden": null,
+      "newsForbidden": null
+    },
+    {
+      "id": 13,
+      "name": "Bourse de l'emploi",
+      "desc": "Testeur Jeu Vidéo. Au sein du studio TumbaLata, vous serez (mal) payé à jouer aux prochains jeux de la licence DinoCars™ en boucle 40h par semaine (hors période de crunch).",
+      "cld": 45,
+      "evtId": 13,
+      "newsId": null,
+      "required": [
+        2,
+        14
+      ],
+      "forbidden": null,
+      "newsForbidden": null
+    },
+    {
+      "id": 14,
+      "name": "Bourse de l'emploi",
+      "desc": "Monetization Manager. Au sein du studio TumbaLata, vous aurez pour tâche de rendre les jeux DinoCars™ moins bons, et par conséquent plus rentables.",
+      "cld": 60,
+      "evtId": 14,
+      "newsId": null,
+      "required": [
+        13,
+        2,
+        14
+      ],
+      "forbidden": 16,
+      "newsForbidden": null
+    },
+    {
+      "id": 15,
+      "name": "Univ. Jean Frimas",
+      "desc": "Votre carrière semble stagner ? Découvrez les formations professionnelles de l'Université Jean Frimas. Diplômes équivalence Bac+3°C.",
+      "cld": 45,
+      "evtId": 15,
+      "newsId": null,
+      "required": 15,
+      "forbidden": null,
+      "newsForbidden": null
+    },
+    {
+      "id": 16,
+      "name": "Trash Pistache",
+      "desc": "Exclusif : Découvez les photos choc de la nouvelle star du net dans notre dossier spécial. Sa vie, son ex, ses plus honteux souvenirs : son ami d'enfance nous dit tout!",
+      "cld": 30,
+      "evtId": 16,
+      "newsId": null,
+      "required": [
+        8,
+        4
+      ],
+      "forbidden": null,
+      "newsForbidden": null
+    },
+    {
+      "id": 17,
+      "name": "Tara Tuto",
+      "desc": "Comment j'ai tout plaqué le jour de mes 9 ans pour réaliser mon rêve d'enfant. Abonne-toi et active la cloche.",
+      "cld": 60,
+      "evtId": 17,
+      "newsId": null,
+      "required": 16,
+      "forbidden": null,
+      "newsForbidden": null
+    },
+    {
+      "id": 18,
+      "name": "Tara Tuto",
+      "desc": "(Sponso) Le secret de mon succès - Comment j'ai vendu mon âme à mon seigneur et maître Belzebuth.",
+      "cld": 100,
+      "evtId": 18,
+      "newsId": null,
+      "required": [
+        17,
+        3
+      ],
+      "forbidden": 8,
+      "newsForbidden": null
+    },
+    {
+      "id": 19,
+      "name": "Armée de Terre",
+      "desc": "L'Armée de Terre recrute. Combattez pour la paix ! Obéissez pour la liberté ! Tuez pour la vie !",
+      "cld": 5,
+      "evtId": 19,
+      "newsId": null,
+      "required": [
+        18,
+        14
+      ],
+      "forbidden": null,
+      "newsForbidden": null
+    },
+    {
+      "id": 20,
+      "name": "Armée de Terre",
+      "desc": "A marcher longtemps, on finit par faire beaucoup de chemin.",
+      "cld": 5,
+      "evtId": 20,
+      "newsId": null,
+      "required": 20,
+      "forbidden": null,
+      "newsForbidden": null
+    },
+    {
+      "id": 21,
+      "name": "Horoscope",
+      "desc": "Argent : De nouvelles opportunités vous attendent au tournant, c'est le moment de tout plaquer et de voler de vos propres ailes.",
+      "cld": 10,
+      "evtId": 21,
+      "newsId": null,
+      "required": [
+        20,
+        21
+      ],
+      "forbidden": null,
+      "newsForbidden": null
+    },
+    {
+      "id": 22,
+      "name": "Bourse de l'emploi",
+      "desc": "Découvrez quel métier est fait pour vous, et regardez l'Intelligence Artificielle le faire disparaître sous vos yeux.",
+      "cld": 5,
+      "evtId": 22,
+      "newsId": null,
+      "required": 14,
+      "forbidden": null,
+      "newsForbidden": null
+    },
+    {
+      "id": 23,
+      "name": "Tara Tuto",
+      "desc": "Comment peindre la Joconde en moins de 30mn chrono. C'est plus difficile que ça en a l'air !",
+      "cld": 5,
+      "evtId": 23,
+      "newsId": null,
+      "required": 19,
+      "forbidden": null,
+      "newsForbidden": null
+    },
+    {
+      "id": 24,
+      "name": "Univ. Jean Frimas",
+      "desc": "Votre carrière semble stagner ? Découvrez les formations professionnelles de l'Université Jean Frimas. Diplômes équivalence Bac+3°C.",
+      "cld": null,
+      "evtId": 24,
+      "newsId": null,
+      "required": 999999999999,
+      "forbidden": 24,
+      "newsForbidden": null
+    },
+    {
+      "id": 25,
+      "name": "Univ. Jean Frimas",
+      "desc": "Votre carrière semble stagner ? Découvrez les formations professionnelles de l'Université Jean Frimas. Diplômes équivalence Bac+3°C.",
+      "cld": 10,
+      "evtId": 25,
+      "newsId": null,
+      "required": [
+        14,
+        23
+      ],
+      "forbidden": [
+        12,
+        24
+      ],
+      "newsForbidden": null
+    },
+    {
+      "id": 26,
+      "name": "Bourse à l'emploi",
+      "desc": "Modélisateur 3D. Au sein du studio TumbaLata, vous modéliserez chaque jour des voitures-dinosaures pour la licence DinoCars™, et en ferez des cauchemars chaque nuit.",
+      "cld": 30,
+      "evtId": 26,
+      "newsId": null,
+      "required": [
+        24,
+        14
+      ],
+      "forbidden": null,
+      "newsForbidden": null
+    },
+    {
+      "id": 27,
+      "name": "Horoscope",
+      "desc": "Travail :  Vous avez le sentiment d'être dans l'impasse, mais ce n'est que passager. N'abandonnez jamais. Les grandes choses prennent du temps.",
+      "cld": 10,
+      "evtId": 27,
+      "newsId": null,
+      "required": [
+        23,
+        5
+      ],
+      "forbidden": null,
+      "newsForbidden": null
+    },
+    {
+      "id": 28,
+      "name": "Tara Tuto",
+      "desc": "Comment j'ai tout plaqué le jour de mes 9 ans pour réaliser mon rêve d'enfant. Abonne-toi et active la cloche.",
+      "cld": 30,
+      "evtId": 28,
+      "newsId": null,
+      "required": 25,
+      "forbidden": 17,
+      "newsForbidden": null
+    },
+    {
+      "id": 29,
+      "name": "Tara Tuto",
+      "desc": "Comment shipper son premier jeu vidéo sans budget marketing. La méthode infaillible !",
+      "cld": 45,
+      "evtId": 29,
+      "newsId": null,
+      "required": [
+        17,
+        24
+      ],
+      "forbidden": 13,
+      "newsForbidden": null
+    },
+    {
+      "id": 30,
+      "name": "Promotion",
+      "desc": "Vous êtes important. Il faut que ça se sâche : Votre produit ou message sur tous les abribus du pays à prix cassé !",
+      "cld": 60,
+      "evtId": 30,
+      "newsId": null,
+      "required": [
+        23,
+        26,
+        5
+      ],
+      "forbidden": null,
+      "newsForbidden": null
+    },
+    {
+      "id": 31,
+      "name": "Promotion",
+      "desc": "Vous êtes important. Il faut que ça se sâche : Votre produit ou message sur tous les grattes ciels de la ville !",
+      "cld": 100,
+      "evtId": 31,
+      "newsId": null,
+      "required": [
+        23,
+        26,
+        7
+      ],
+      "forbidden": null,
+      "newsForbidden": null
+    },
+    {
+      "id": 32,
+      "name": "Univ. Jean Frimas",
+      "desc": "Rappel aux étudiants : À l'approche des partiels de fin d'année, la B.U. Jean Frimas sera exceptionnellement ouverte tous les soirs jusqu'à 4h du matin. Prenez un duvet.",
+      "cld": 45,
+      "evtId": 32,
+      "newsId": null,
+      "required": [
+        12,
+        23
+      ],
+      "forbidden": null,
+      "newsForbidden": null
+    },
+    {
+      "id": 33,
+      "name": "Inconnu",
+      "desc": "Fwd: Fwd: tr: Fr : TR : IMPORTANT : J'ai vraiment besoin de ton aide...",
+      "cld": 5,
+      "evtId": 33,
+      "newsId": null,
+      "required": 27,
+      "forbidden": 34,
+      "newsForbidden": null
+    },
+    {
+      "id": 34,
+      "name": "Kokoro",
+      "desc": "Doki Doki! C'est le bruit du coeur qui bat pour vous sur Kokoro ! Téléchargez l'application, faites des rencontres, trouvez l'amour, recommencez !",
+      "cld": 5,
+      "evtId": 34,
+      "newsId": null,
+      "required": 28,
+      "forbidden": [
+        29,
+        32
+      ],
+      "newsForbidden": null
+    },
+    {
+      "id": 35,
+      "name": "Kokoro",
+      "desc": "Doki doki! Anatole41 vous a envoyé un Dikupiku. Ouvrez l'application pour découvrir son profil.",
+      "cld": 5,
+      "evtId": 35,
+      "newsId": null,
+      "required": [
+        28,
+        29
+      ],
+      "forbidden": [
+        31,
+        30
+      ],
+      "newsForbidden": null
+    },
+    {
+      "id": 36,
+      "name": "Kokoro",
+      "desc": "Doki doki! Anatole41 a réagi à votre Frontonudo <3",
+      "cld": 10,
+      "evtId": 36,
+      "newsId": null,
+      "required": [
+        28,
+        30
+      ],
+      "forbidden": 31,
+      "newsForbidden": null
+    },
+    {
+      "id": 37,
+      "name": "Kokoro",
+      "desc": "Doki doki! Mademoiselle_Fernande vous a envoyé un Kokoro. Ouvrez l'application pour découvrir son profil.",
+      "cld": 10,
+      "evtId": 37,
+      "newsId": null,
+      "required": [
+        28,
+        29,
+        31
+      ],
+      "forbidden": 30,
+      "newsForbidden": null
+    },
+    {
+      "id": 38,
+      "name": "Kokoro",
+      "desc": "Doki doki! Mademoiselle_Fernande a réagi à votre Frontonudo ;p",
+      "cld": 20,
+      "evtId": 38,
+      "newsId": null,
+      "required": [
+        28,
+        30,
+        31
+      ],
+      "forbidden": null,
+      "newsForbidden": null
+    },
+    {
+      "id": 39,
+      "name": "Les Plaisirs Démodés",
+      "desc": "Reçu de votre commande sur Les Plaisir Démodés.",
+      "cld": 20,
+      "evtId": 39,
+      "newsId": null,
+      "required": [
+        28,
+        31
+      ],
+      "forbidden": null,
+      "newsForbidden": null
+    },
+    {
+      "id": 40,
+      "name": "Les Plaisirs Démodés",
+      "desc": "-40% sur les harnais Les Plaisirs Démodés avec le code promo ChacunSonTour. Plaisir d'offrir, joie de recevoir.",
+      "cld": 20,
+      "evtId": 40,
+      "newsId": null,
+      "required": 32,
+      "forbidden": 34,
+      "newsForbidden": null
+    },
+    {
+      "id": 41,
+      "name": "Promotion",
+      "desc": "Un être vous manque ? Dites-le avec des fleurs ! Chez Roni Fleur, le premier chrysantème est offert*. *Offre soumise à condition, voir modalités en magasin.",
+      "cld": 20,
+      "evtId": 41,
+      "newsId": null,
+      "required": [
+        28,
+        32
+      ],
+      "forbidden": 34,
+      "newsForbidden": null
+    },
+    {
+      "id": 42,
+      "name": "Les Plaisirs Démodés",
+      "desc": "Le palpitant qui fatigue ? Commandez dès aujourd'hui le kit Cardio Les Plaisirs Démodés. La meilleure façon de joindre l'utile à l'agréable.",
+      "cld": 20,
+      "evtId": 42,
+      "newsId": null,
+      "required": [
+        27,
+        33
+      ],
+      "forbidden": null,
+      "newsForbidden": null
+    },
+    {
+      "id": 43,
+      "name": "Breaking News",
+      "desc": "La grippe chevaline continue de faire des ravages dans les troupeaux du Kazakhstan. L'OMS se dit inquiète d'une possible transmission vers l'homme.",
+      "cld": 20,
+      "evtId": 43,
+      "newsId": null,
+      "required": [
+        35,
+        10
+      ],
+      "forbidden": 38,
+      "newsForbidden": null
+    },
+    {
+      "id": 44,
+      "name": "Horoscope",
+      "desc": "Santé : Cette petite boule au coude vous inquiète. Peut-être devriez-vous consulter ?",
+      "cld": 30,
+      "evtId": 44,
+      "newsId": null,
+      "required": 38,
+      "forbidden": 39,
+      "newsForbidden": null
+    },
+    {
+      "id": 45,
+      "name": "L'Autre Vérité",
+      "desc": "Êtes-vous sûrs d'être bien vivants ? Qu'est-ce qui vous prouve que vous n'êtes pas dans le coma, en train de rêver cette \"réalité\" ? #OuvrezLesYeux",
+      "cld": 40,
+      "evtId": 45,
+      "newsId": null,
+      "required": 39,
+      "forbidden": 40,
+      "newsForbidden": null
+    },
+    {
+      "id": 46,
+      "name": "L'Autre Vérité",
+      "desc": "L'eau tiède : ce remède multiusage naturel et gratuit que les médecins veulent vous cacher. #AltMedecine",
+      "cld": 20,
+      "evtId": 46,
+      "newsId": null,
+      "required": 40,
+      "forbidden": null,
+      "newsForbidden": null
+    },
+    {
+      "id": 47,
+      "name": "Horloge Biologique",
+      "desc": "Ici l'horloge biologique parlante. Au quatrième top il sera exactement 32 ans et 0 enfant.",
+      "cld": 45,
+      "evtId": 47,
+      "newsId": null,
+      "required": [
+        35,
+        36
+      ],
+      "forbidden": [
+        42,
+        46,
+        47,
+        48
+      ],
+      "newsForbidden": null
+    },
+    {
+      "id": 48,
+      "name": "Horloge Biologique",
+      "desc": "Ici l'horloge biologique parlante. Au quatrième top il sera exactement 34 ans et un seul enfant.",
+      "cld": 45,
+      "evtId": 48,
+      "newsId": null,
+      "required": [
+        35,
+        46
+      ],
+      "forbidden": [
+        77,
+        47
+      ],
+      "newsForbidden": null
+    },
+    {
+      "id": 49,
+      "name": "Horloge Biologique",
+      "desc": "Ici l'horloge biologique parlante. Au quatrième top il sera exactement 36 ans et deux enfants.",
+      "cld": 45,
+      "evtId": 49,
+      "newsId": null,
+      "required": [
+        35,
+        47
+      ],
+      "forbidden": [
+        78,
+        48
+      ],
+      "newsForbidden": null
+    },
+    {
+      "id": 50,
+      "name": "Horloge Biologique",
+      "desc": "Ici l'horloge biologique parlante. Au quatrième top il sera exactement 38 ans et beaucoup trop d'enfants.",
+      "cld": 45,
+      "evtId": 50,
+      "newsId": null,
+      "required": [
+        35,
+        48
+      ],
+      "forbidden": [
+        45,
+        49
+      ],
+      "newsForbidden": null
+    },
+    {
+      "id": 51,
+      "name": "Tara Tuto",
+      "desc": "Mes dix pires acouchements. Je vous donne tous les détails. Âmes sensibles s'abstenir.",
+      "cld": 30,
+      "evtId": 51,
+      "newsId": null,
+      "required": [
+        35,
+        42
+      ],
+      "forbidden": 43,
+      "newsForbidden": null
+    },
+    {
+      "id": 52,
+      "name": "Horoscope",
+      "desc": "Santé : Tout ne se passe pas toujours comme on l'aurait souhaité. Préparez-vous à quelques déconvenues.",
+      "cld": 30,
+      "evtId": 52,
+      "newsId": null,
+      "required": [
+        35,
+        77
+      ],
+      "forbidden": 43,
+      "newsForbidden": null
+    },
+    {
+      "id": 53,
+      "name": "Clinique St. Kevin",
+      "desc": "Les résultats de l'échographie sont là : Félicitations ! Ce sont des triplés !",
+      "cld": 30,
+      "evtId": 53,
+      "newsId": null,
+      "required": [
+        35,
+        78
+      ],
+      "forbidden": 43,
+      "newsForbidden": null
+    },
+    {
+      "id": 54,
+      "name": "L'Autre Vérité",
+      "desc": "Les vaccins sont des armes biologiques destinées à éradiquer les maladies infectieuses ! #PasteurAvaitRaison",
+      "cld": 3,
+      "evtId": 54,
+      "newsId": null,
+      "required": 5545415,
+      "forbidden": null,
+      "newsForbidden": null
+    },
+    {
+      "id": 55,
+      "name": "Horoscope",
+      "desc": "Travail : Il y a de la promotion dans l'air ! Accrochez-vous, car vos efforts seront bientôt récompensés",
+      "cld": 20,
+      "evtId": 55,
+      "newsId": null,
+      "required": 37,
+      "forbidden": [
+        43,
+        44
+      ],
+      "newsForbidden": null
+    },
+    {
+      "id": 56,
+      "name": "Horoscope",
+      "desc": "Travail : Il y a de la promotion dans l'air ! Accrochez-vous, car vos efforts seront bientôt récompensés",
+      "cld": 20,
+      "evtId": 56,
+      "newsId": null,
+      "required": [
+        37,
+        43
+      ],
+      "forbidden": 44,
+      "newsForbidden": null
+    },
+    {
+      "id": 57,
+      "name": "Bourse de l'emploi",
+      "desc": "Découvrez quel métier aurait pu être fait pour vous si vous aviez dix ans de moins.",
+      "cld": 20,
+      "evtId": 57,
+      "newsId": null,
+      "required": [
+        14,
+        36
+      ],
+      "forbidden": null,
+      "newsForbidden": null
+    },
+    {
+      "id": 58,
+      "name": "123Quizz",
+      "desc": "Petit coup de blues ou dépression chronique ? Faites le test !",
+      "cld": 30,
+      "evtId": 58,
+      "newsId": null,
+      "required": [
+        49,
+        35
+      ],
+      "forbidden": 21,
+      "newsForbidden": null
+    },
+    {
+      "id": 59,
+      "name": "Météo",
+      "desc": "La cannicule se poursuit tandis que la température atteint un seuil jamais égalé en 140 ans.",
+      "cld": 30,
+      "evtId": 59,
+      "newsId": null,
+      "required": 50,
+      "forbidden": [
+        43,
+        53,
+        55
+      ],
+      "newsForbidden": null
+    },
+    {
+      "id": 60,
+      "name": "Communiqué",
+      "desc": "A tous les professeurs de l'Education Nationale, nous tenions à vous rappeler qu'on vous méprise toujours autant. Bisous. Le Ministère.",
+      "cld": 30,
+      "evtId": 60,
+      "newsId": null,
+      "required": 51,
+      "forbidden": [
+        52,
+        54
+      ],
+      "newsForbidden": null
+    },
+    {
+      "id": 61,
+      "name": "MaPetiteBrocante.com",
+      "desc": "Vend graines de chanvre bio. Qualité supérieure. Prix à discuter.",
+      "cld": 45,
+      "evtId": 61,
+      "newsId": null,
+      "required": [
+        43,
+        50
+      ],
+      "forbidden": [
+        53,
+        58
+      ],
+      "newsForbidden": null
+    },
+    {
+      "id": 62,
+      "name": "MaPetiteBrocante.com",
+      "desc": "Vend plants de coca. A récupérer sur place. Discrètement.",
+      "cld": 45,
+      "evtId": 62,
+      "newsId": null,
+      "required": [
+        50,
+        52
+      ],
+      "forbidden": [
+        54,
+        58
+      ],
+      "newsForbidden": null
+    },
+    {
+      "id": 63,
+      "name": "Vidéo",
+      "desc": "La vie dans les abysses. Sources hydrothermales, bioluminescence : Les secrets des créatures des profondeurs.",
+      "cld": 20,
+      "evtId": 63,
+      "newsId": null,
+      "required": [
+        50,
+        53
+      ],
+      "forbidden": [
+        52,
+        14
+      ],
+      "newsForbidden": null
+    },
+    {
+      "id": 64,
+      "name": "Vidéo",
+      "desc": "Bataille EPIQUE Lion Vs Hippopotame VS Boa Constrictor ! [Vrai Combat]",
+      "cld": 20,
+      "evtId": 64,
+      "newsId": null,
+      "required": [
+        50,
+        54
+      ],
+      "forbidden": [
+        43,
+        14
+      ],
+      "newsForbidden": null
+    },
+    {
+      "id": 65,
+      "name": "MaPetiteBrocante.com",
+      "desc": "Vend troupeau de chèvres alpines. Bon état, très peu servi.",
+      "cld": 60,
+      "evtId": 65,
+      "newsId": null,
+      "required": [
+        50,
+        53,
+        14
+      ],
+      "forbidden": null,
+      "newsForbidden": null
+    },
+    {
+      "id": 66,
+      "name": "Anéantissement Bougonnement",
+      "desc": "Face au suicide écologique, une seule solution : la désobéissance gentille ! A vos bombes (serpentin) ! Collectif Anéantissement Bougonnement (AB).",
+      "cld": 100,
+      "evtId": 66,
+      "newsId": null,
+      "required": [
+        50,
+        54,
+        14
+      ],
+      "forbidden": null,
+      "newsForbidden": null
+    },
+    {
+      "id": 67,
+      "name": "Erreur",
+      "desc": "Echec Réseau.",
+      "cld": 5,
+      "evtId": 67,
+      "newsId": null,
+      "required": 55,
+      "forbidden": null,
+      "newsForbidden": null
+    },
+    {
+      "id": 68,
+      "name": "Erreur",
+      "desc": "Echec Réseau.",
+      "cld": 5,
+      "evtId": 68,
+      "newsId": null,
+      "required": 58,
+      "forbidden": null,
+      "newsForbidden": null
+    },
+    {
+      "id": 69,
+      "name": "Erreur",
+      "desc": "Echec Réseau.",
+      "cld": 5,
+      "evtId": 69,
+      "newsId": null,
+      "required": 59,
+      "forbidden": null,
+      "newsForbidden": null
+    },
+    {
+      "id": 70,
+      "name": "Bourse de l'emploi",
+      "desc": "Découvrez quel métier est fait pour vous et reprenez votre vie en main!",
+      "cld": 45,
+      "evtId": 70,
+      "newsId": null,
+      "required": [
+        14,
+        50
+      ],
+      "forbidden": null,
+      "newsForbidden": null
+    },
+    {
+      "id": 71,
+      "name": "L'Autre Vérité",
+      "desc": "Nos Smartphones nous espionnent ! La police a accès à tout votre historique de navigation ! Votre mère aussi !  #IlsSontPartout",
+      "cld": 60,
+      "evtId": 71,
+      "newsId": null,
+      "required": 57,
+      "forbidden": 59,
+      "newsForbidden": null
+    },
+    {
+      "id": 72,
+      "name": "Kokoro",
+      "desc": "Doki Doki! C'est le bruit du coeur qui bat pour vous sur Kokoro ! Téléchargez l'application, faites des rencontres, trouvez l'amour, recommencez !",
+      "cld": 10,
+      "evtId": 72,
+      "newsId": null,
+      "required": 60,
+      "forbidden": [
+        29,
+        62,
+        63,
+        64
+      ],
+      "newsForbidden": null
+    },
+    {
+      "id": 73,
+      "name": "Kokoro",
+      "desc": "Doki Doki! Personne ne vous a envoyé de Kokoro. Adoptez Kokoro Premium pour envoyer des Kokoro.",
+      "cld": 10,
+      "evtId": 73,
+      "newsId": null,
+      "required": [
+        29,
+        14
+      ],
+      "forbidden": null,
+      "newsForbidden": null
+    },
+    {
+      "id": 74,
+      "name": "Kokoro",
+      "desc": "Doki Doki! Promotion sur l'offre Kokoro Premium cette semaine seulement ! Dépêchez-vous !",
+      "cld": 20,
+      "evtId": 74,
+      "newsId": null,
+      "required": [
+        29,
+        65
+      ],
+      "forbidden": null,
+      "newsForbidden": null
+    },
+    {
+      "id": 75,
+      "name": "Kokoro Premium",
+      "desc": "Doki Doki! Personne n'a répondu à vos Kokoro. Adoptez Kokoro Gold pour lever la limite max de Kokoro.",
+      "cld": 10,
+      "evtId": 75,
+      "newsId": null,
+      "required": 62,
+      "forbidden": null,
+      "newsForbidden": null
+    },
+    {
+      "id": 76,
+      "name": "Kokoro Premium",
+      "desc": "Doki Doki! Promotion sur l'offre Kokoro Gold aujourd'hui seulement ! Dépêchez-vous !",
+      "cld": 20,
+      "evtId": 76,
+      "newsId": null,
+      "required": [
+        62,
+        66
+      ],
+      "forbidden": null,
+      "newsForbidden": null
+    },
+    {
+      "id": 77,
+      "name": "Kokoro Gold",
+      "desc": "Doki Doki! Toujours personne n'a répondu à vos Kokoro. Adoptez Kokoro Platinium pour matcher à tous les coups.",
+      "cld": 10,
+      "evtId": 77,
+      "newsId": null,
+      "required": 63,
+      "forbidden": null,
+      "newsForbidden": null
+    },
+    {
+      "id": 78,
+      "name": "Kokoro Gold",
+      "desc": "Doki Doki! Promotion sur l'offre Kokoro Platinium pour un instant seulement ! Dépêchez-vous !",
+      "cld": 20,
+      "evtId": 78,
+      "newsId": null,
+      "required": [
+        63,
+        67
+      ],
+      "forbidden": null,
+      "newsForbidden": null
+    },
+    {
+      "id": 79,
+      "name": "Kokoro Platinium",
+      "desc": "Doki Doki! Votre escort se présentera chez vous ce soir à 21h. Kokoro vous souhaite une très bonne soirée.",
+      "cld": 60,
+      "evtId": 79,
+      "newsId": null,
+      "required": [
+        64,
+        67
+      ],
+      "forbidden": 14,
+      "newsForbidden": null
+    },
+    {
+      "id": 80,
+      "name": "Bourse de l'emploi",
+      "desc": "Community Manager. Votre mission : incarner la marque  Larroze-Dombasle sur les réseaux sociaux et la faire passer pour quelqu’un d’à peu près fréquentable.",
+      "cld": 10,
+      "evtId": 80,
+      "newsId": null,
+      "required": [
+        14,
+        61
+      ],
+      "forbidden": [
+        65,
+        102
+      ],
+      "newsForbidden": null
+    },
+    {
+      "id": 81,
+      "name": "Bourse de l'emploi",
+      "desc": "Lobbyiste. Entre Bruxelles et Washington, vous remettrez la démocratie dans le droit chemin quand elle semble oublier les intérêts de Larroze-Dombasle.",
+      "cld": 30,
+      "evtId": 81,
+      "newsId": null,
+      "required": [
+        61,
+        62,
+        65
+      ],
+      "forbidden": 66,
+      "newsForbidden": null
+    },
+    {
+      "id": 82,
+      "name": "Bourse de l'emploi",
+      "desc": "Head Marketing. Votre mission : vendre votre âme au diable en leasing au profit de Larroze-Dombasle, activer l’obsolescence programmée à la fin du contrat, et la lui vendre une seconde fois.",
+      "cld": 60,
+      "evtId": 82,
+      "newsId": null,
+      "required": [
+        61,
+        63,
+        66
+      ],
+      "forbidden": 67,
+      "newsForbidden": null
+    },
+    {
+      "id": 83,
+      "name": "Brandr",
+      "desc": "Une nouvelle personne vous suit sur les réseaux.",
+      "cld": 5,
+      "evtId": 83,
+      "newsId": null,
+      "required": 65,
+      "forbidden": null,
+      "newsForbidden": null
+    },
+    {
+      "id": 84,
+      "name": "Kokoro",
+      "desc": "Doki doki! Cindy69 vous a envoyé un Kokoro. Ouvrez l'application pour découvrir son profil.",
+      "cld": 30,
+      "evtId": 84,
+      "newsId": null,
+      "required": [
+        29,
+        60,
+        68
+      ],
+      "forbidden": 30,
+      "newsForbidden": null
+    },
+    {
+      "id": 85,
+      "name": "Kokoro",
+      "desc": "Doki doki! MarcoInShape vous a envoyé un Dikupiku. Ouvrez l'application pour découvrir son profil.",
+      "cld": 15,
+      "evtId": 85,
+      "newsId": null,
+      "required": [
+        29,
+        30
+      ],
+      "forbidden": null,
+      "newsForbidden": null
+    },
+    {
+      "id": 86,
+      "name": "Kokoro",
+      "desc": "Êtes-vous sûrs de vouloir désinstaller Kokoro ? Votre profil ne sera pas supprimé et vos données toujours exploitées.",
+      "cld": 45,
+      "evtId": 86,
+      "newsId": null,
+      "required": [
+        68,
+        29,
+        36
+      ],
+      "forbidden": null,
+      "newsForbidden": null
+    },
+    {
+      "id": 87,
+      "name": "Horoscope",
+      "desc": "Amour : Les hommes sont tous des connards, mais au moins celui-là n'a pas l'air d'un serial killer. Foncez!",
+      "cld": 45,
+      "evtId": 87,
+      "newsId": null,
+      "required": [
+        68,
+        30
+      ],
+      "forbidden": [
+        36,
+        49
+      ],
+      "newsForbidden": null
+    },
+    {
+      "id": 88,
+      "name": "Promotion",
+      "desc": "Promo sur les alliances ! Pour deux alliances achetées, la troisième offerte!",
+      "cld": 60,
+      "evtId": 88,
+      "newsId": null,
+      "required": [
+        68,
+        31
+      ],
+      "forbidden": null,
+      "newsForbidden": null
+    },
+    {
+      "id": 89,
+      "name": "Tara Tuto",
+      "desc": "Comment savoir si vous êtes heureuse dans votre couple ? Le test infaillible ! (Sponsorisé par Kokoro)",
+      "cld": 45,
+      "evtId": 89,
+      "newsId": null,
+      "required": [
+        68,
+        36
+      ],
+      "forbidden": 45,
+      "newsForbidden": null
+    },
+    {
+      "id": 90,
+      "name": "Kokoro",
+      "desc": "Doki Doki! C'est le bruit du coeur qui bat pour vous sur Kokoro ! Téléchargez l'application, faites des rencontres, trouvez l'amour, recommencez !",
+      "cld": 30,
+      "evtId": 90,
+      "newsId": null,
+      "required": [
+        45,
+        36
+      ],
+      "forbidden": 29,
+      "newsForbidden": null
+    },
+    {
+      "id": 91,
+      "name": "Kokoro",
+      "desc": "Doki doki! Tania666 vous a envoyé un Kokoro. Ouvrez l'application pour découvrir son profil.",
+      "cld": 30,
+      "evtId": 91,
+      "newsId": null,
+      "required": [
+        29,
+        36
+      ],
+      "forbidden": 30,
+      "newsForbidden": null
+    },
+    {
+      "id": 92,
+      "name": "Kokoro",
+      "desc": "Doki doki! Votre mari vous a envoyé un Kokoro. Il a l'air en colère.",
+      "cld": 45,
+      "evtId": 92,
+      "newsId": null,
+      "required": [
+        29,
+        30,
+        36
+      ],
+      "forbidden": 49,
+      "newsForbidden": null
+    },
+    {
+      "id": 93,
+      "name": "Tara Tuto",
+      "desc": "Top 10 lieux insolites pour des rencontres adultères. Votre mari va détester le quatrième.",
+      "cld": 20,
+      "evtId": 93,
+      "newsId": null,
+      "required": [
+        30,
+        36
+      ],
+      "forbidden": null,
+      "newsForbidden": null
+    },
+    {
+      "id": 94,
+      "name": "Horoscope",
+      "desc": "Amour : Quand on tombe de cheval, il faut vite se remettre en selle. Celui-là a l'air vaguement décent, pourquoi chercher plus loin ?",
+      "cld": 60,
+      "evtId": 94,
+      "newsId": null,
+      "required": [
+        30,
+        49
+      ],
+      "forbidden": null,
+      "newsForbidden": null
+    },
+    {
+      "id": 95,
+      "name": "Sondage",
+      "desc": "Le Parti Visionnaire donné gagnant à 55% face au Parti Nostalgique.",
+      "cld": 30,
+      "evtId": 95,
+      "newsId": 5,
+      "required": [
+        68,
+        69
+      ],
+      "forbidden": null,
+      "newsForbidden": 6
+    },
+    {
+      "id": 96,
+      "name": "Sondage",
+      "desc": "Le Parti Nostalgique toujours en tête des sondage mais le Parti Visionnaire remonte doucement.",
+      "cld": 30,
+      "evtId": 96,
+      "newsId": 5,
+      "required": [
+        68,
+        69
+      ],
+      "forbidden": null,
+      "newsForbidden": 6
+    },
+    {
+      "id": 97,
+      "name": "Sondage",
+      "desc": "Le Parti Nostalgique reprend la tête des sondages, devançant le Parti Visionnaire de deux points.",
+      "cld": 30,
+      "evtId": 97,
+      "newsId": 5,
+      "required": [
+        68,
+        70
+      ],
+      "forbidden": null,
+      "newsForbidden": 6
+    },
+    {
+      "id": 98,
+      "name": "Sondage",
+      "desc": "Le Parti Nostalgique et le Parti Visionnaire au coude à coude ! Tout peut encore basculer!",
+      "cld": 30,
+      "evtId": 98,
+      "newsId": null,
+      "required": 68,
+      "forbidden": null,
+      "newsForbidden": 5
+    },
+    {
+      "id": 99,
+      "name": "Larroze-Dombasle",
+      "desc": "Communiqué : Larroze-Dombasle, le monde d'après-demain dès demain.",
+      "cld": 10,
+      "evtId": 99,
+      "newsId": null,
+      "required": [
+        68,
+        69
+      ],
+      "forbidden": null,
+      "newsForbidden": null
+    },
+    {
+      "id": 100,
+      "name": "Larroze-Dombasle",
+      "desc": "Communiqué : Larroze-Dombasle, plus d'un siècle d'expertise au service des traditions.",
+      "cld": 10,
+      "evtId": 100,
+      "newsId": null,
+      "required": [
+        68,
+        70
+      ],
+      "forbidden": null,
+      "newsForbidden": null
+    },
+    {
+      "id": 101,
+      "name": "Tara Tuto",
+      "desc": "Comment j'ai retrouvé le corps de mes 14ans. La vidéo Avant-Après. (Sponso Clinique Larroze-Dombasle)",
+      "cld": 20,
+      "evtId": 101,
+      "newsId": null,
+      "required": [
+        26,
+        71
+      ],
+      "forbidden": 72,
+      "newsForbidden": null
+    },
+    {
+      "id": 102,
+      "name": "Larroze-Dombasle",
+      "desc": "Promotion dans votre Clinique Larroze-Dombasle : Pour deux sens acheté le troisième offert.",
+      "cld": 20,
+      "evtId": 102,
+      "newsId": null,
+      "required": [
+        26,
+        72
+      ],
+      "forbidden": 73,
+      "newsForbidden": null
+    },
+    {
+      "id": 103,
+      "name": "Larroze-Dombasle",
+      "desc": "La vie, ça n'a pas de prix. Mais l'immortalité oui. Abandonnez vos biens et votre existence matérielle à la clinique Larroze-Dombasle et devenez un être de pure data.",
+      "cld": 15,
+      "evtId": 103,
+      "newsId": null,
+      "required": [
+        73,
+        74
+      ],
+      "forbidden": null,
+      "newsForbidden": null
+    },
+    {
+      "id": 104,
+      "name": "Infobourse",
+      "desc": "Si nous avions vraiment des tuyaux, on ne les partagerait pas avec vous.",
+      "cld": 5,
+      "evtId": 104,
+      "newsId": null,
+      "required": 71,
+      "forbidden": 73,
+      "newsForbidden": null
+    },
+    {
+      "id": 105,
+      "name": "Trash Pistache",
+      "desc": "Exclusif: Qui est vraiment Julie Cora, la tradeuse la plus sexy de Wall Street ? Découvrez-le dans notre dossier inédit.",
+      "cld": 5,
+      "evtId": 105,
+      "newsId": null,
+      "required": 72,
+      "forbidden": null,
+      "newsForbidden": null
+    },
+    {
+      "id": 106,
+      "name": "*Huitième Sens*",
+      "desc": "Les actions TumbaLata vont grimper en flèche. C'est le moment d'acheter.",
+      "cld": 15,
+      "evtId": 106,
+      "newsId": null,
+      "required": [
+        71,
+        73,
+        26
+      ],
+      "forbidden": null,
+      "newsForbidden": null
+    },
+    {
+      "id": 107,
+      "name": "Inconnu",
+      "desc": "nblocks = nblocks ? : 1;\ngroup_info = kmalloc(sizeof(*group_info) + nblocks*sizeof(gid_t *), GFP_USER);\nif (!group_info) return NULL;",
+      "cld": 3,
+      "evtId": 107,
+      "newsId": null,
+      "required": 75,
+      "forbidden": null,
+      "newsForbidden": 8
+    },
+    {
+      "id": 108,
+      "name": "TumbaLata",
+      "desc": "Les DinoCars sont de retours !  50% mécanique 50% jurassique 100% nostalgiques ! Retrouvez la licence de votre enfance et fuyez vos responsabilités d'adulte !",
+      "cld": 30,
+      "evtId": 108,
+      "newsId": 1,
+      "required": [
+        2,
+        12
+      ],
+      "forbidden": null,
+      "newsForbidden": 2
+    },
+    {
+      "id": 109,
+      "name": "Parti Visionnaire",
+      "desc": "Les casques VR devraient être remboursés par la sécu ! Pour une réalité plus virtuelle, votez Isaac Nodule (Parti Visionnaire).",
+      "cld": 30,
+      "evtId": 109,
+      "newsId": 5,
+      "required": 2,
+      "forbidden": 70,
+      "newsForbidden": 6
+    },
+    {
+      "id": 110,
+      "name": "Parti Nostalgique",
+      "desc": "Ils veulent changer nos jeux, mais nous ne les laisserons pas faire ! Pour des jeux vidéo moins politiques, votez Mélanie Jonquille (Parti Nostalgique).",
+      "cld": 30,
+      "evtId": 110,
+      "newsId": 5,
+      "required": 2,
+      "forbidden": 69,
+      "newsForbidden": 6
+    },
+    {
+      "id": 111,
+      "name": "Offre d’emploi",
+      "desc": "Insurgé. Armé de votre seul courage, vous renverserez le système pour instaurer une nouvelle société plus juste et plus durable.",
+      "cld": 30,
+      "evtId": 111,
+      "newsId": 8,
+      "required": 2000,
+      "forbidden": 76,
+      "newsForbidden": null
+    },
+    {
+      "id": 112,
+      "name": "Univ. Jean Frimas",
+      "desc": "Rappel aux étudiants : Les tables et chaises pour la barricade sont à venir chercher sur le campus entre 9h et 17h. Gants recommandés.",
+      "cld": 5,
+      "evtId": 112,
+      "newsId": 8,
+      "required": 12,
+      "forbidden": 76,
+      "newsForbidden": null
+    },
+    {
+      "id": 113,
+      "name": "Tara Tuto",
+      "desc": "Des cocktails molotov maison 100% récup' ! Vous allez faire fureur à la manif' !",
+      "cld": 5,
+      "evtId": 113,
+      "newsId": 8,
+      "required": 4,
+      "forbidden": 76,
+      "newsForbidden": null
+    },
+    {
+      "id": 114,
+      "name": "Rubex",
+      "desc": "Eterduements ? Dez qui coule ? C'est la faute au gouverdebent ! Ayez le réflèxe Banif ! Banif, le rebède bagique pour tout a... Atchiiiii!",
+      "cld": 10,
+      "evtId": 114,
+      "newsId": 2000,
+      "required": 10,
+      "forbidden": 76,
+      "newsForbidden": null
+    },
+    {
+      "id": 115,
+      "name": "Parti Visionnaire",
+      "desc": "Le musée de demain sera numérique ou ne sera pas. Pour de l'art plus moderne, votez Isaac Nodule (Parti Visionnaire).",
+      "cld": 30,
+      "evtId": 115,
+      "newsId": 5,
+      "required": 23,
+      "forbidden": [
+        70,
+        88
+      ],
+      "newsForbidden": 6
+    },
+    {
+      "id": 116,
+      "name": "Parti Nostalgique",
+      "desc": "L'Art n'a pas vocation à provoquer. Pour une avant-garde comme avant, votez Mélanie Jonquille (Parti Nostalgique).",
+      "cld": 30,
+      "evtId": 116,
+      "newsId": 5,
+      "required": 23,
+      "forbidden": [
+        69,
+        88
+      ],
+      "newsForbidden": 6
+    },
+    {
+      "id": 117,
+      "name": "Offre d’emploi",
+      "desc": "Insurgé. Armé de votre seul courage, vous renverserez le système pour instaurer une nouvelle société plus juste et plus durable.",
+      "cld": 30,
+      "evtId": 117,
+      "newsId": 8,
+      "required": 14,
+      "forbidden": 76,
+      "newsForbidden": null
+    },
+    {
+      "id": 118,
+      "name": "Horoscope",
+      "desc": "Travail : Renverser le système n'est pas un travail facile tous les jours. N'oubliez pas de prendre des pauses et de vous hydrater.",
+      "cld": 30,
+      "evtId": 118,
+      "newsId": 8,
+      "required": 23,
+      "forbidden": [
+        76,
+        14
+      ],
+      "newsForbidden": null
+    },
+    {
+      "id": 119,
+      "name": "Univ. Jean Frimas",
+      "desc": "Rappel aux étudiants : Les tables et chaises pour la barricade sont à venir chercher sur le campus entre 9h et 17h. Gants recommandés.",
+      "cld": 5,
+      "evtId": 119,
+      "newsId": 8,
+      "required": 12,
+      "forbidden": 76,
+      "newsForbidden": null
+    },
+    {
+      "id": 120,
+      "name": "Rubex",
+      "desc": "Eterduements ? Dez qui coule ? C'est la faute au gouverdebent ! Ayez le réflèxe Banif ! Banif, le rebède bagique pour tout a... Atchiiiii!",
+      "cld": 5,
+      "evtId": 120,
+      "newsId": 8,
+      "required": 10,
+      "forbidden": 76,
+      "newsForbidden": null
+    },
+    {
+      "id": 121,
+      "name": "TumbaLata",
+      "desc": "Envie de rien ? Blasé de tout? Téléchargez DinoCars Country sur votre mobile et découvrez le vrai pouvoir des énergies fossiles !",
+      "cld": 30,
+      "evtId": 121,
+      "newsId": 1,
+      "required": 14,
+      "forbidden": 2,
+      "newsForbidden": 2
+    },
+    {
+      "id": 122,
+      "name": "Parti Visionnaire",
+      "desc": "Soutenez la loi Prothèses Pour Tous. Pour des articulations moins rouillées, votez Isaac Nodule (Parti Visionnaire).",
+      "cld": 30,
+      "evtId": 122,
+      "newsId": 5,
+      "required": 27,
+      "forbidden": 70,
+      "newsForbidden": 6
+    },
+    {
+      "id": 123,
+      "name": "Parti Nostalgique",
+      "desc": "Vivre ? Mourir ? Après tout, on s'en fiche ! Pour une angoisse moins existentielle, votez Mélanie Jonquille (Parti Nostalgique).",
+      "cld": 30,
+      "evtId": 123,
+      "newsId": 5,
+      "required": 27,
+      "forbidden": 69,
+      "newsForbidden": 6
+    },
+    {
+      "id": 124,
+      "name": "Les Plaisirs Démodés",
+      "desc": "C'est le retour des sans-culottes ! À vos masques et à vos fouets, ce soir la vieillesse est dans la rue !",
+      "cld": 5,
+      "evtId": 124,
+      "newsId": 8,
+      "required": 27,
+      "forbidden": 76,
+      "newsForbidden": null
+    },
+    {
+      "id": 125,
+      "name": "Kokoro",
+      "desc": "Doki Doki ! La Révolution vous a envoyé un Kokoro. Sortez dans la rue pour découvrir son profil.",
+      "cld": 5,
+      "evtId": 125,
+      "newsId": 8,
+      "required": 27,
+      "forbidden": [
+        76,
+        34
+      ],
+      "newsForbidden": null
+    },
+    {
+      "id": 126,
+      "name": "Parti Visionnaire",
+      "desc": "Les enfants sont les adultes de demain. Pour des slogans toujours plus consensuels, votez Isaac Nodule (Parti Visionnaire).",
+      "cld": 30,
+      "evtId": 126,
+      "newsId": 5,
+      "required": 46,
+      "forbidden": 70,
+      "newsForbidden": 6
+    },
+    {
+      "id": 127,
+      "name": "Parti Nostalgique",
+      "desc": "A leur âge, une gameboy et de pokemons et on était contents. Pour des enfants moins pourri-gâtés, votez Mélanie Jonquille (Parti Nostalgique).",
+      "cld": 30,
+      "evtId": 127,
+      "newsId": 5,
+      "required": 46,
+      "forbidden": 69,
+      "newsForbidden": 6
+    },
+    {
+      "id": 128,
+      "name": "Horloge Biologique",
+      "desc": "Ici l'horloge biologique parlante. Au quatrième top il sera exactement l'heure de la révolution.",
+      "cld": 5,
+      "evtId": 128,
+      "newsId": 8,
+      "required": 35,
+      "forbidden": 76,
+      "newsForbidden": null
+    },
+    {
+      "id": 129,
+      "name": "Horoscope",
+      "desc": "Amour : Votre longue période de célibat arrive à son terme : L'élu-e de votre coeur vous attend sur la barricade. Sortez couvert.",
+      "cld": 5,
+      "evtId": 129,
+      "newsId": 8,
+      "required": 49,
+      "forbidden": 76,
+      "newsForbidden": null
+    },
+    {
+      "id": 130,
+      "name": "Horoscope",
+      "desc": "Santé : Vous êtes victime d'un petit coup de mou, heureusement, le doux parfum de la révolution saura vous remettre du baume au coeur.",
+      "cld": 5,
+      "evtId": 130,
+      "newsId": 8,
+      "required": 35,
+      "forbidden": 76,
+      "newsForbidden": null
+    },
+    {
+      "id": 131,
+      "name": "TumbaLata",
+      "desc": "Le vrombissement rassurant du moteur, les plumes duveteuses du raptor... Laissez DinoCars Country vous faire oublier les tracas de votre vie quotidienne, car bientôt : vous n'aurez plus de vie quotidienne.",
+      "cld": 30,
+      "evtId": 131,
+      "newsId": 1,
+      "required": 35,
+      "forbidden": 2,
+      "newsForbidden": 2
+    },
+    {
+      "id": 132,
+      "name": "Parti Visionnaire",
+      "desc": "La green tech sera notre salut ! Pour une scalabilité plus disruptive, votez Isaac Nodule (Parti Visionnaire).",
+      "cld": 30,
+      "evtId": 132,
+      "newsId": 5,
+      "required": 50,
+      "forbidden": 69,
+      "newsForbidden": 6
+    },
+    {
+      "id": 133,
+      "name": "Parti Nostalgique",
+      "desc": "Il n'y a plus de saisons ! Pour un rechauffement moins climatique, votez Mélanie Jonquille (Parti Nostalgique).",
+      "cld": 30,
+      "evtId": 133,
+      "newsId": 5,
+      "required": 50,
+      "forbidden": 70,
+      "newsForbidden": 6
+    },
+    {
+      "id": 134,
+      "name": "Erreur",
+      "desc": "Echec Société. Veuillez réessayer.",
+      "cld": 5,
+      "evtId": 134,
+      "newsId": 8,
+      "required": 55,
+      "forbidden": null,
+      "newsForbidden": null
+    },
+    {
+      "id": 135,
+      "name": "Tara Tuto",
+      "desc": "Des cocktails molotov maison 100% récup' ! Vous allez faire fureur à la manif' !",
+      "cld": 5,
+      "evtId": 135,
+      "newsId": 8,
+      "required": 50,
+      "forbidden": 76,
+      "newsForbidden": null
+    },
+    {
+      "id": 136,
+      "name": "TumbaLata",
+      "desc": "Blabla effondrement, blabla extinction de l'espèce... Vous savez qui d'autre a été menacé d'extinction ? Les DinoCars ! Pourtant il débarquent sur votre mobile !",
+      "cld": 30,
+      "evtId": 136,
+      "newsId": 1,
+      "required": 50,
+      "forbidden": 2,
+      "newsForbidden": 2
+    },
+    {
+      "id": 137,
+      "name": "TumbaLata",
+      "desc": "Vous croyiez la coke addictive ? Attendez d'essayer DinoCars Country ! Laissez votre cerveau reptilien prendre le volant et abandonnez vos mauvaises habitudes sur le bord de la route.",
+      "cld": 30,
+      "evtId": 137,
+      "newsId": 1,
+      "required": 54,
+      "forbidden": 2,
+      "newsForbidden": 2
+    },
+    {
+      "id": 138,
+      "name": "Sondage",
+      "desc": "Le Parti Nostalgique et le Parti Visionnaire au coude à coude ! Tout peut encore basculer!",
+      "cld": 30,
+      "evtId": 138,
+      "newsId": 5,
+      "required": 66,
+      "forbidden": null,
+      "newsForbidden": 6
+    },
+    {
+      "id": 139,
+      "name": "Parti Visionnaire",
+      "desc": "Les sexbots ont des sentiments aussi ! Pour de l'amour moins charnel, votez Isaac Nodule (Parti Visionnaire).",
+      "cld": 30,
+      "evtId": 139,
+      "newsId": 5,
+      "required": 60,
+      "forbidden": [
+        70,
+        68
+      ],
+      "newsForbidden": 6
+    },
+    {
+      "id": 140,
+      "name": "Parti Nostalgique",
+      "desc": "Quand on pense qu'avant on ne leur laissait même pas le choix... Pour des femmes moins difficiles, votez Mélanie Jonquille (Parti Nostalgique).",
+      "cld": 30,
+      "evtId": 140,
+      "newsId": 5,
+      "required": 60,
+      "forbidden": 69,
+      "newsForbidden": 6
+    },
+    {
+      "id": 141,
+      "name": "Horoscope",
+      "desc": "Amour : Votre longue période de célibat arrive à son terme : L'élu-e de votre coeur vous attend sur la barricade. Sortez couvert.",
+      "cld": 5,
+      "evtId": 141,
+      "newsId": 8,
+      "required": 60,
+      "forbidden": 76,
+      "newsForbidden": null
+    },
+    {
+      "id": 142,
+      "name": "Kokoro",
+      "desc": "Doki Doki ! La Révolution vous a envoyé un Kokoro. Sortez dans la rue pour découvrir son profil.",
+      "cld": 5,
+      "evtId": 142,
+      "newsId": 8,
+      "required": 63,
+      "forbidden": 76,
+      "newsForbidden": null
+    },
+    {
+      "id": 143,
+      "name": "Sondage",
+      "desc": "64% des sondés se disent favorables à la Révolution, 29% très favorables et 14% sont déjà en train de la faire.",
+      "cld": 5,
+      "evtId": 143,
+      "newsId": 8,
+      "required": 67,
+      "forbidden": 76,
+      "newsForbidden": null
+    },
+    {
+      "id": 144,
+      "name": "Sondage",
+      "desc": "64% des sondés se disent favorables à la Révolution, 29% très favorables et 14% sont déjà en train de la faire.",
+      "cld": 5,
+      "evtId": 144,
+      "newsId": 8,
+      "required": 68,
+      "forbidden": 76,
+      "newsForbidden": null
+    },
+    {
+      "id": 145,
+      "name": "Kokoro",
+      "desc": "Doki Doki ! La Révolution vous a envoyé un Kokoro. Sortez dans la rue pour découvrir son profil.",
+      "cld": 5,
+      "evtId": 145,
+      "newsId": 8,
+      "required": 29,
+      "forbidden": 76,
+      "newsForbidden": null
+    },
+    {
+      "id": 146,
+      "name": "TumbaLata",
+      "desc": "\"À quoi tu penses bébé ?\" Vous ne l'avouerez jamais, mais vous pensez à vos DinoCars. Ça tombe bien : Vous pouvez désormais les retrouver sur mobile ! DinoCars Country, Vous ne vous serez jamais autant amusés sous la couette !",
+      "cld": 30,
+      "evtId": 146,
+      "newsId": 1,
+      "required": [
+        36,
+        68
+      ],
+      "forbidden": 2,
+      "newsForbidden": 2
+    },
+    {
+      "id": 147,
+      "name": "Parti Visionnaire",
+      "desc": "La lutte des classes, c'est complètement dépassé. Pour des prolétaires moins visibles, votez Isaac Nodule (Parti Visionnaire).",
+      "cld": 30,
+      "evtId": 147,
+      "newsId": 5,
+      "required": 26,
+      "forbidden": 70,
+      "newsForbidden": 6
+    },
+    {
+      "id": 148,
+      "name": "Parti Nostalgique",
+      "desc": "Avant, on savait respecter les riches. Pour des privilèges plus régalien, votez Mélanie Jonquille (Parti Nostalgique).",
+      "cld": 30,
+      "evtId": 148,
+      "newsId": 5,
+      "required": 26,
+      "forbidden": 69,
+      "newsForbidden": 6
+    },
+    {
+      "id": 149,
+      "name": "Inconnu",
+      "desc": "if(Revolution==true) System(Smash)",
+      "cld": 3,
+      "evtId": 149,
+      "newsId": 8,
+      "required": 75,
+      "forbidden": 76,
+      "newsForbidden": null
+    },
+    {
+      "id": 150,
+      "name": "Horoscope",
+      "desc": "Travail : Renverser le système n'est pas un travail facile tous les jours. N'oubliez pas de prendre des pauses et de vous hydrater.",
+      "cld": 5,
+      "evtId": 150,
+      "newsId": 8,
+      "required": 71,
+      "forbidden": 76,
+      "newsForbidden": null
+    },
+    {
+      "id": 151,
+      "name": "Tara Tuto",
+      "desc": "Mes dix pires acouchements. Je vous donne tous les détails. Âmes sensibles s'abstenir.",
+      "cld": 45,
+      "evtId": 151,
+      "newsId": null,
+      "required": [
+        35,
+        77
+      ],
+      "forbidden": 43,
+      "newsForbidden": null
+    },
+    {
+      "id": 152,
+      "name": "Tara Tuto",
+      "desc": "Mes dix pires acouchements. Je vous donne tous les détails. Âmes sensibles s'abstenir.",
+      "cld": 45,
+      "evtId": 152,
+      "newsId": null,
+      "required": [
+        35,
+        78
+      ],
+      "forbidden": 43,
+      "newsForbidden": null
+    },
+    {
+      "id": 153,
+      "name": "Bourse de l'emploi",
+      "desc": "Community Manager. Votre mission : incarner la studio Tumbalata sur les réseaux sociaux et répondre rapidement aux gamers en fury",
+      "cld": 45,
+      "evtId": 153,
+      "newsId": null,
+      "required": [
+        14,
+        13
+      ],
+      "forbidden": [
+        65,
+        2
+      ],
+      "newsForbidden": null
+    },
+    {
+      "id": 154,
+      "name": "Kokoro Platinium",
+      "desc": "Doki Doki! Votre escort se présentera chez vous ce soir à 21h. Kokoro vous souhaite une très bonne soirée.",
+      "cld": 30,
+      "evtId": 154,
+      "newsId": null,
+      "required": 64,
+      "forbidden": 67,
+      "newsForbidden": null
+    },
+    {
+      "id": 155,
+      "name": "TumbaLata",
+      "desc": "Envie de rien ? Blasé de tout? Téléchargez DinoCars Country sur votre mobile et découvrez le vrai pouvoir des énergies fossiles !",
+      "cld": 30,
+      "evtId": 155,
+      "newsId": null,
+      "required": [
+        65,
+        3
+      ],
+      "forbidden": 2,
+      "newsForbidden": null
+    },
+    {
+      "id": 156,
+      "name": "Univ. Jean Frimas",
+      "desc": "L'université tient à remercier publiquement M. De la Villardière pour sa généreuse donation. Grâce à lui, l'amphi B pourra être chauffé six jours par an.",
+      "cld": 30,
+      "evtId": 156,
+      "newsId": null,
+      "required": [
+        80,
+        81
+      ],
+      "forbidden": null,
+      "newsForbidden": null
+    },
+    {
+      "id": 157,
+      "name": "Horoscope",
+      "desc": "Argent : Tout va bien se passer.",
+      "cld": 5,
+      "evtId": 157,
+      "newsId": null,
+      "required": 81,
+      "forbidden": null,
+      "newsForbidden": null
+    },
+    {
+      "id": 158,
+      "name": "Direction Générale des Finances Publiques",
+      "desc": "Découvrez votre nouvel espace de déclaration en ligne, et payez vos impots en un clic.",
+      "cld": 20,
+      "evtId": 158,
+      "newsId": null,
+      "required": 83,
+      "forbidden": 82,
+      "newsForbidden": null
+    },
+    {
+      "id": 159,
+      "name": "MaPetiteBrocante.com",
+      "desc": "Société offshore à Guernesay cherche investisseurs. Pas sérieux s'abstenir.",
+      "cld": 20,
+      "evtId": 159,
+      "newsId": null,
+      "required": 83,
+      "forbidden": 82,
+      "newsForbidden": null
+    },
+    {
+      "id": 160,
+      "name": "Infobourse",
+      "desc": "Si nous avions vraiment des tuyaux, on ne les partagerait pas avec vous.",
+      "cld": 10,
+      "evtId": 160,
+      "newsId": null,
+      "required": [
+        82,
+        83
+      ],
+      "forbidden": 88,
+      "newsForbidden": null
+    },
+    {
+      "id": 161,
+      "name": "L'Autre Vérité",
+      "desc": "Le Déluge approche, Joey l'a prédit. Seuls les justes seront sauvés. #ArcheDeJoey",
+      "cld": 20,
+      "evtId": 161,
+      "newsId": null,
+      "required": [
+        82,
+        83
+      ],
+      "forbidden": 88,
+      "newsForbidden": null
+    },
+    {
+      "id": 162,
+      "name": "L'Autre Vérité",
+      "desc": "Le Déluge est imminent. Seuls les justes seront sauvés. Aidez à financer l'Arche de Joey pour en faire partie. #ArcheDeJoey",
+      "cld": 20,
+      "evtId": 162,
+      "newsId": null,
+      "required": 84,
+      "forbidden": 88,
+      "newsForbidden": null
+    },
+    {
+      "id": 163,
+      "name": "Horoscope",
+      "desc": "Argent: C'est le moment d'investir ! N'écoutez pas les conseils des financiers qui n'en veulent qu'à votre argent, suivez votre instinct !",
+      "cld": 20,
+      "evtId": 163,
+      "newsId": null,
+      "required": 84,
+      "forbidden": 88,
+      "newsForbidden": null
+    },
+    {
+      "id": 164,
+      "name": "Succubator",
+      "desc": "Vous avez l'argent, ils ont les idées. Investissez dans les GAFAM du futur et devenez un Business Archangel.",
+      "cld": 20,
+      "evtId": 164,
+      "newsId": null,
+      "required": 84,
+      "forbidden": 88,
+      "newsForbidden": null
+    },
+    {
+      "id": 165,
+      "name": "Breaking News",
+      "desc": "L'ouragan Kylian poursuit ses ravages à Haïti, qui compte déjà près d'un million de délogés. Un appel internationnal aux dons a été lancé.",
+      "cld": 20,
+      "evtId": 165,
+      "newsId": null,
+      "required": 84,
+      "forbidden": 88,
+      "newsForbidden": null
+    },
+    {
+      "id": 166,
+      "name": "MaPetiteBrocante.com",
+      "desc": "Fins de mois difficiles ? Revendez votre château sur MaPetiteBrocante.com et faites de la place dans vos placards !",
+      "cld": 10,
+      "evtId": 166,
+      "newsId": null,
+      "required": [
+        86,
+        85
+      ],
+      "forbidden": 88,
+      "newsForbidden": null
+    },
+    {
+      "id": 167,
+      "name": "MaPetiteBrocante.com",
+      "desc": "Fins de mois difficiles ? Revendez votre yacht sur MaPetiteBrocante.com et faites de la place dans vos placards !",
+      "cld": 10,
+      "evtId": 167,
+      "newsId": null,
+      "required": [
+        87,
+        85
+      ],
+      "forbidden": 88,
+      "newsForbidden": null
+    },
+    {
+      "id": 168,
+      "name": "Erreur",
+      "desc": "Echec Réseau.",
+      "cld": 5,
+      "evtId": 168,
+      "newsId": null,
+      "required": 88,
+      "forbidden": null,
+      "newsForbidden": 8
+    },
+    {
+      "id": 169,
+      "name": "TumbaLata",
+      "desc": "GigaPack : Débloquez tous les DinoCars et toutes leurs options de customisation pour 800 cristaux de lune ! Offre valable aujourd'hui seulement !",
+      "cld": 10,
+      "evtId": 169,
+      "newsId": 1,
+      "required": 84,
+      "forbidden": 2,
+      "newsForbidden": 2
+    },
+    {
+      "id": 170,
+      "name": "Parti Visionnaire",
+      "desc": "À bas l'Etat Providence! Pour des déclarations moins fiscales, soutenez la campagne d'Isaac Nodule (Parti Visionnaire).",
+      "cld": 10,
+      "evtId": 170,
+      "newsId": 5,
+      "required": 84,
+      "forbidden": [
+        70,
+        88
+      ],
+      "newsForbidden": 6
+    },
+    {
+      "id": 171,
+      "name": "Parti Nostalgique",
+      "desc": "Assez de la haine des riches ! Pour des impôts moins progressifs, soutenez la campagne de Mélanie Jonquille (Parti Nostalgique).",
+      "cld": 10,
+      "evtId": 171,
+      "newsId": 5,
+      "required": 84,
+      "forbidden": [
+        69,
+        88
+      ],
+      "newsForbidden": 6
+    },
+    {
+      "id": 172,
+      "name": "Infobourse",
+      "desc": "Le cours de la révolution continue de grimper en flèche, si ce n'est pas déjà fait, c'est le moment où jamais d'acheter !",
+      "cld": 5,
+      "evtId": 172,
+      "newsId": 8,
+      "required": 84,
+      "forbidden": 76,
+      "newsForbidden": null
+    },
+    {
+      "id": 173,
+      "name": "Erreur",
+      "desc": "Echec Société. Veuillez réessayer.",
+      "cld": 5,
+      "evtId": 173,
+      "newsId": 8,
+      "required": 88,
+      "forbidden": null,
+      "newsForbidden": null
+    },
+    {
+      "id": 174,
+      "name": "Succubator",
+      "desc": "Besoin d'un coup de pouce pour lancer votre startup ? Rejoignez notre incubateur et profitez de notre réseau professionnel étendu pour tisser votre toile.",
+      "cld": 20,
+      "evtId": 174,
+      "newsId": null,
+      "required": 90,
+      "forbidden": [
+        101,
+        91,
+        21
+      ],
+      "newsForbidden": null
+    },
+    {
+      "id": 175,
+      "name": "Recrute1talent.com",
+      "desc": "Candidature au poste d'assistante. Femme. 25 ans. Bac+3. Expérience : 3 ans. Passions : Physique quantique, philatélie, saut à l'élastique. Qualité principale : Polyvalente.",
+      "cld": 10,
+      "evtId": 175,
+      "newsId": null,
+      "required": 91,
+      "forbidden": null,
+      "newsForbidden": null
+    },
+    {
+      "id": 176,
+      "name": "Recrute1talent.com",
+      "desc": "Candidature au poste d'assistant. Homme. 22 ans. Bac. Expérience : Aucune. Passions : Anime, jeux vidéo, memes. Qualité principale : La confiance en soi.",
+      "cld": 10,
+      "evtId": 176,
+      "newsId": null,
+      "required": 91,
+      "forbidden": null,
+      "newsForbidden": null
+    },
+    {
+      "id": 177,
+      "name": "Recrute1talent.com",
+      "desc": "Candidature au poste d'assistante. Femme. 46 ans. Bac+2. Expérience : 15 ans. Passions : Vidéos de chats, télé-crochet, littérature érotique. Qualité principale : La franchise.",
+      "cld": 10,
+      "evtId": 177,
+      "newsId": null,
+      "required": 91,
+      "forbidden": null,
+      "newsForbidden": null
+    },
+    {
+      "id": 178,
+      "name": "Recrute1talent.com",
+      "desc": "Candidature au poste de développeur. Homme. 19 ans. Autodidacte. Expérience : 8 startups. Passion : Réussir. Qualité principale : Très haut QI.",
+      "cld": 10,
+      "evtId": 178,
+      "newsId": null,
+      "required": 92,
+      "forbidden": null,
+      "newsForbidden": null
+    },
+    {
+      "id": 179,
+      "name": "Recrute1talent.com",
+      "desc": "Candidature au poste de développeur. Homme. 58 ans. Bac +5. Expérience : 35 ans. Passion : Travailler dur. Qualité principale : Deséspéré.",
+      "cld": 10,
+      "evtId": 179,
+      "newsId": null,
+      "required": 92,
+      "forbidden": null,
+      "newsForbidden": null
+    },
+    {
+      "id": 180,
+      "name": "Recrute1talent.com",
+      "desc": "Candidature au poste de CM. NB. 24 ans. Bac+3. Expérience : 1.5 ans. Passions : Lecture, ASMR, qi gong. Qualité principale: Le calme.",
+      "cld": 10,
+      "evtId": 180,
+      "newsId": null,
+      "required": 93,
+      "forbidden": null,
+      "newsForbidden": null
+    },
+    {
+      "id": 181,
+      "name": "Recrute1talent.com",
+      "desc": "Candidature au poste de Community Manager. Femme. 34 ans. Bac+5. Expériences : Variées. Passions : Diverses. Qualité principale: La précision.",
+      "cld": 10,
+      "evtId": 181,
+      "newsId": null,
+      "required": 93,
+      "forbidden": null,
+      "newsForbidden": null
+    },
+    {
+      "id": 182,
+      "name": "Recrute1talent.com",
+      "desc": "Candidature au poste de comptable. Sexe et âge non renseignés. Expérience : Sous NDA. Passions : Non communiqué. Qualité principale : La discrétion.",
+      "cld": 10,
+      "evtId": 182,
+      "newsId": null,
+      "required": 95,
+      "forbidden": null,
+      "newsForbidden": null
+    },
+    {
+      "id": 183,
+      "name": "Recrute1talent.com",
+      "desc": "Candidature au poste de comptable. Femme. 41 ans. Expérience : Salut c'est Karen de l'école tu te souviens ? J'ai appris que ça marchait bien pour toi. Moi c'est un peu la galè...",
+      "cld": 10,
+      "evtId": 183,
+      "newsId": null,
+      "required": 95,
+      "forbidden": null,
+      "newsForbidden": null
+    },
+    {
+      "id": 184,
+      "name": "Recrute1talent.com",
+      "desc": "Candidature au poste de DRH. Femme. 38 ans. Bac+3. Expérience : 4 plans sociaux. Passions : Rejeter des CV, briser des vies. Qualité principale : L'écoute.",
+      "cld": 10,
+      "evtId": 184,
+      "newsId": null,
+      "required": 96,
+      "forbidden": null,
+      "newsForbidden": null
+    },
+    {
+      "id": 185,
+      "name": "Recrute1talent.com",
+      "desc": "Candidature au poste de DRH. Femme. 32 ans. Bac+8. Expérience : 12 ans. Passions : Psychologie, bénévolat, géopolitique. Qualité Principale : L'honnêteté.",
+      "cld": 10,
+      "evtId": 185,
+      "newsId": null,
+      "required": 96,
+      "forbidden": null,
+      "newsForbidden": null
+    },
+    {
+      "id": 186,
+      "name": "Succubator",
+      "desc": "Un petit coup de trac avant l'entrée en bourse ? Laissez nos conseillers financiers vous guider dans la cour des grands.",
+      "cld": 30,
+      "evtId": 186,
+      "newsId": null,
+      "required": 97,
+      "forbidden": null,
+      "newsForbidden": null
+    },
+    {
+      "id": 187,
+      "name": "Direction Générale des Finances Publiques",
+      "desc": "Votre société fait plus d'un million d'euros de bénéfice ? Remplissez ce formulaire pour bénéficier de votre crédit d'impot aux grandes entreprises.",
+      "cld": 20,
+      "evtId": 187,
+      "newsId": null,
+      "required": 98,
+      "forbidden": null,
+      "newsForbidden": null
+    },
+    {
+      "id": 188,
+      "name": "Succubator",
+      "desc": "Les charges sociales vous etouffent ? Profitez de notre expertise pour trouver les travailleurs les moins chers tout autour du monde.",
+      "cld": 20,
+      "evtId": 188,
+      "newsId": null,
+      "required": 98,
+      "forbidden": null,
+      "newsForbidden": null
+    },
+    {
+      "id": 189,
+      "name": "Ministère du Travail",
+      "desc": "Découvrez la rupture non conventionelle introduite par la Loi Travail III. La rupture non conventionelle n'est pas un licenciement. C'est tellement mieux.",
+      "cld": 15,
+      "evtId": 189,
+      "newsId": null,
+      "required": 99,
+      "forbidden": null,
+      "newsForbidden": null
+    },
+    {
+      "id": 190,
+      "name": "MaPetiteBrocante.com",
+      "desc": "Casseurs de grève professionnels. Efficaces et discrets. Tarifs très avantageux. Satisfaits ou remboursés.",
+      "cld": 20,
+      "evtId": 190,
+      "newsId": null,
+      "required": 99,
+      "forbidden": null,
+      "newsForbidden": null
+    },
+    {
+      "id": 191,
+      "name": "Parti Visionnaire",
+      "desc": "La lutte des classes, c'est complètement dépassé. Pour des prolétaires moins visibles, votez Isaac Nodule (Parti Visionnaire).",
+      "cld": 10,
+      "evtId": 191,
+      "newsId": 5,
+      "required": 101,
+      "forbidden": 70,
+      "newsForbidden": 6
+    },
+    {
+      "id": 192,
+      "name": "Parti Nostalgique",
+      "desc": "Avant, on savait respecter les riches. Pour des privilèges plus régalien, votez Mélanie Jonquille (Parti Nostalgique).",
+      "cld": 10,
+      "evtId": 192,
+      "newsId": 5,
+      "required": 101,
+      "forbidden": 69,
+      "newsForbidden": 6
+    },
+    {
+      "id": 193,
+      "name": "Les Plaisirs Démodés",
+      "desc": "Le cours de la révolution continue de grimper en flèche, si ce n'est pas déjà fait, c'est le moment où jamais d'acheter !",
+      "cld": 5,
+      "evtId": 193,
+      "newsId": 8,
+      "required": 101,
+      "forbidden": 76,
+      "newsForbidden": null
+    },
+    {
+      "id": 194,
+      "name": "Watheure",
+      "desc": "Ding ! C'est l'heure de boire un verre d'eau.",
+      "cld": 5,
+      "evtId": 194,
+      "newsId": null,
+      "required": [
+        14,
+        90
+      ],
+      "forbidden": null,
+      "newsForbidden": null
+    },
+    {
+      "id": 195,
+      "name": "Horoscope",
+      "desc": "Travail : la chance vous sourit, c'est le moment de tout miser dans un nouveau projet.",
+      "cld": 45,
+      "evtId": 195,
+      "newsId": null,
+      "required": [
+        8,
+        17
+      ],
+      "forbidden": null,
+      "newsForbidden": null
+    },
+    {
+      "id": 196,
+      "name": "L'Autre Vérité",
+      "desc": "Vous aussi vous en avez assez des mensonges, des manipulations ? Rejoignez-nous, et devenez enfin maître de votre destin. #ArcheDeJoey",
+      "cld": 45,
+      "evtId": 196,
+      "newsId": null,
+      "required": [
+        8,
+        23
+      ],
+      "forbidden": 88,
+      "newsForbidden": null
+    },
+    {
+      "id": 197,
+      "name": "BestLife",
+      "desc": "En l'absence de signes de vie de votre part, et en vertu des articles 224 et 448 de nos Conditions d'Utilisations, nous nous voyons contraint de suspendre votre compte jusqu'à nouvel ordre. Il sera conservé sur nos serveurs jusqu'à la fin des temps et réactivé sur simple demande de votre part.",
+      "cld": 1,
+      "evtId": 197,
+      "newsId": null,
+      "required": 88,
+      "forbidden": null,
+      "newsForbidden": null
+    },
+    {
+      "id": 198,
+      "name": "BestLife",
+      "desc": "En l'absence de signes de vie de votre part, et en vertu des articles 224 et 448 de nos Conditions d'Utilisations, nous nous voyons contraint de suspendre votre compte jusqu'à nouvel ordre. Il sera conservé sur nos serveurs jusqu'à la fin des temps et réactivé sur simple demande de votre part.",
+      "cld": 1,
+      "evtId": 198,
+      "newsId": null,
+      "required": 58,
+      "forbidden": null,
+      "newsForbidden": null
+    },
+    {
+      "id": 199,
+      "name": "BestLife",
+      "desc": "En l'absence de signes de vie de votre part, et en vertu des articles 224 et 448 de nos Conditions d'Utilisations, nous nous voyons contraint de suspendre votre compte jusqu'à nouvel ordre. Il sera conservé sur nos serveurs jusqu'à la fin des temps et réactivé sur simple demande de votre part.",
+      "cld": 1,
+      "evtId": 199,
+      "newsId": null,
+      "required": 34,
+      "forbidden": null,
+      "newsForbidden": null
+    },
+    {
+      "id": 200,
+      "name": "BestLife",
+      "desc": "En l'absence de signes de vie de votre part, et en vertu des articles 224 et 448 de nos Conditions d'Utilisations, nous nous voyons contraint de suspendre votre compte jusqu'à nouvel ordre. Il sera conservé sur nos serveurs jusqu'à la fin des temps et réactivé sur simple demande de votre part.",
+      "cld": 1,
+      "evtId": 200,
+      "newsId": null,
+      "required": 102,
       "forbidden": null,
       "newsForbidden": null
     }
