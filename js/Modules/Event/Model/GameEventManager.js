@@ -2,7 +2,6 @@ class GameEventManager {
     constructor() {
         this.__recoManager = new RecoEventManager(this);
         this.__nativeManager = new NativeEventManager(this);
-        this.__macroManager = new MacroEventManager(this);
     }
 
     init() {
@@ -18,8 +17,5 @@ class GameEventManager {
     }
     get nativeManager() {
         return this.__nativeManager;
-    }
-    get macroManager() {
-        return this.__macroManager;
     }
 }
