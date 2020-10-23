@@ -1,4 +1,4 @@
 RewriteEngine on
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ http://lazylittlehumans.com/game.html [L]
+RewriteRule ^(.*)$ http://lazylittlehumans.com/fr/game.html [L]
