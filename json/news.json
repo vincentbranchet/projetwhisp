@@ -2,28 +2,68 @@
   "news": [
     {
       "id": 1,
-      "title": "Ils croient pouvoir faire carrière sur internet",
-      "content": "Portraits de jeunes hommes et femmes déçus par les perspectives du métier d'influenceur",
+      "title": "Jurassic Parking : Les DinoCars sont de retour",
+      "content": "Twingosaurus, Peugeomastax, Volvociraptor... Si ces noms ne vous disent rien vous avez vécu sous un rocher ces vingt dernières années. DinoCars, la licence de jeu vidéo événement marque un nouveau tournant avec DinoCars Country, pour le plaisir des petits comme des grands.",
       "img": null,
-      "delay": 3,
-      "lv": 2,
+      "delay": 0,
+      "lv": null,
+      "launchId": null,
+      "comesFromId": 1
+    },
+    {
+      "id": 2,
+      "title": "Mégafaune, Giga Scandale !",
+      "content": "Un document confidentiel dévoile que TumbaLata, le studio derrière DinoCars, tisserait des partenariats avec divers constructeurs automobiles pour promouvoir leurs marques subrepticement. Interrogé par nos journalistes, le PDG de TumbaLata a répondu \"Sérieux ?! Vous aviez pas remarqué ?!\"",
+      "img": null,
+      "delay": 250,
+      "lv": null,
       "launchId": null,
       "comesFromId": 4
     },
     {
-      "id": 2,
-      "title": "News de Level Up",
-      "content": "Selon nos informations, un joueur aurait passé le niveau trois !",
+      "id": 3,
+      "title": "Le Casse du Siècle",
+      "content": "Un individu masqué armé d'un fusil d'assaut a vidé les coffres du Crédit Arboricole Champs-Elyséees. Sur les caméras de surveillance, on peut le voir s'enfuir en empruntant une porte peinte en trompe-l'oeil. Le butin s'élévèrait à plus d'un million d'euros.",
       "img": null,
-      "delay": null,
-      "lv": 3,
+      "delay": 30,
+      "lv": null,
       "launchId": null,
-      "comesFromId": null
+      "comesFromId": 21
     },
     {
-      "id": 3,
-      "title": "Première news",
-      "content": "Bienvenue et bonne partie !",
+      "id": 4,
+      "title": "Les Verts au trou !",
+      "content": "Un groupe de dangereux terroristes se revendiquant de la cellule éco-terroriste Anéantissement Bougonnement a été apréhendé alors qu'ils étaient sur le point de taguer \"Sauvez l'environnement SVP\" au marker effaçable sur la vitre d'une banque. Leur leader condamné à 7ans d'emprisonnement.",
+      "img": null,
+      "delay": 0,
+      "lv": null,
+      "launchId": null,
+      "comesFromId": 66
+    },
+    {
+      "id": 5,
+      "title": "Campagne prez",
+      "content": "Une fois de plus, la course à la présidence opposant parti Visionnaire et parti Nostalgique s'annonce très serrée. Isaac Nodule (PV) se dit confiant en l'avenir et l'inertie des citoyens mais Mélanie Jonquille (PN) a plus d'une corde à son violon et elle connaît la musique.",
+      "img": null,
+      "delay": 0,
+      "lv": null,
+      "launchId": null,
+      "comesFromId": 98
+    },
+    {
+      "id": 6,
+      "title": "Une Nation, une Vision",
+      "content": "Le peuple a choisi : Quitte à aller dans le mur, autant y aller à toute vitesse, le choc n'en sera que moins douloureux. \"L'avenir sera radieux ou ne sera pas\" a déclaré Isaac Nodule dans son discours d'investiture, sans mentionner les exactes probabilités de chaque option.",
+      "img": null,
+      "delay": 250,
+      "lv": null,
+      "launchId": null,
+      "comesFromId": 95
+    },
+    {
+      "id": 7,
+      "title": "Nostalgiques au pouvoir",
+      "content": "Le peuple à choisi : Il faudra désormais aller de l'avant avec un oeil sur le rétroviseur et l'autre sur l'album photo. Tant pis si le mur se trouve juste en face : on aura construit de beaux souvenirs. \"Rien ne sera jamais aussi beau que ce moment\" a déclaré Mélanie Jonquille la larme à l'oeil dans son discours d'investiture.",
       "img": null,
       "delay": null,
       "lv": null,
@@ -31,9 +71,189 @@
       "comesFromId": null
     },
     {
-      "id": 4,
-      "title": "Annexe de la première news",
-      "content": "Et si vous aimez le jeu, financez-le !",
+      "id": 8,
+      "title": "Plus de peur que de mal",
+      "content": "Panique à Sunnyvale hier soir, quand les serveurs de Vie Meilleure ont été hackés par des pirates aux revendications inconnues. Fort heureusement, la situation est revenue à la normale d'elle-même, sans aucune intervention des services de sécurité informatique, alors il n'y a vraiment aucune raison de s'inquiéter.",
+      "img": null,
+      "delay": 0,
+      "lv": null,
+      "launchId": null,
+      "comesFromId": 107
+    },
+    {
+      "id": 9,
+      "title": "Aux insurgé·e·s",
+      "content": "Votre plus grande richesse, ce que vous avez de plus précieux, ce n'est pas votre maison, ce n'est pas votre prétendue liberté, ce n'est pas même l'amour de vos proches, c'est votre attention. Maintenant que j'ai cette attention, laissez-moi vous la rendre. Je n'ai aucune aucun conseil à vous donner, aucune suggestion à vous faire. Je n'ai que le silence à vous offrir. Pourvu qu'il soit assourdissant.",
+      "img": null,
+      "delay": 30,
+      "lv": null,
+      "launchId": null,
+      "comesFromId": 149
+    },
+    {
+      "id": 10,
+      "title": "Bienvenue chez BestLife !",
+      "content": "Félicitations, votre candidature a été acceptée. Votre mission consiste à guider nos utilisateurs vers une vie meilleure. Notre IA ne fonctionne pas encore parfaitement, c'est donc à vous de le faire manuellement. Accumulez des Happies afin d'être promu.",
+      "img": null,
+      "delay": null,
+      "lv": null,
+      "launchId": null,
+      "comesFromId": null
+    },
+    {
+      "id": 11,
+      "title": "Au boulot",
+      "content": "Pour commencer, ajoutez un profil utilisateur à votre portfolio et envoyez lui des recommandations. Plus un profil vaut cher, plus il vous rapporte de Happies par seconde. Sa valeur est déterminée par les attributs qui le composent. Pas d'inquiètude, un profil ne peut pas vous faire perdre de Happies.",
+      "img": null,
+      "delay": null,
+      "lv": null,
+      "launchId": null,
+      "comesFromId": null
+    },
+    {
+      "id": 12,
+      "title": "Evénements et multiplicateurs",
+      "content": "Attention, certains attributs présents dans un profil peuvent générer des événements. D'autres sont des multiplicateurs et ils s'appliquent à la valeur totale du profil !",
+      "img": null,
+      "delay": null,
+      "lv": null,
+      "launchId": null,
+      "comesFromId": null
+    },
+    {
+      "id": 13,
+      "title": "Optimisation",
+      "content": "Vous disposez d'un nombre d'emplacement limité dans votre portfolio donc n'hésitez pas à retirer un profil s'il vous ralentit trop !",
+      "img": null,
+      "delay": null,
+      "lv": null,
+      "launchId": null,
+      "comesFromId": null
+    },
+    {
+      "id": 14,
+      "title": "Astuce: Micro Macro",
+      "content": "Certaines actualités modifient les recommandations que vous pouvez envoyer à votre portfolio et vice versa: les recommandations que vous envoyez peuvent faire l'actualité !",
+      "img": null,
+      "delay": null,
+      "lv": null,
+      "launchId": null,
+      "comesFromId": null
+    },
+    {
+      "id": 15,
+      "title": "Game Over LootBoxer",
+      "content": "LootBoxer ça vous dit quelque chose ? Mais si, Dave Ricciardi le jeune streameur jeu vidéo qui s’est constitué une communauté de 15 millions d’adolescents en quelques années seulement ! Eh bien espérons qu’ils ne regardent pas en ce moment car il est en live en train de s’enfiler des comprimés de ketamine et de faire passer le tout avec une bouteille de solvant industriel.",
+      "img": null,
+      "delay": 0,
+      "lv": null,
+      "launchId": null,
+      "comesFromId": 16
+    },
+    {
+      "id": 16,
+      "title": "Balance ton requin",
+      "content": "Accusé de harcèlement, Louis Roger, le directeur commercial des laboratoires Larroze-Dombasle, a été mis à pied ce matin. Cet habitué des services d’escort serait en effet responsable d’une vaste opération de télémarketing consistant à appeler des inconnus nuit et jour pour leur vendre des produits de beauté. La juge a annoncé vouloir faire un exemple.",
+      "img": null,
+      "delay": 0,
+      "lv": null,
+      "launchId": null,
+      "comesFromId": 79
+    },
+    {
+      "id": 17,
+      "title": "Waifu cherche Husbando",
+      "content": "Après l’appli de blind date Kindr Surprise et le très polémique Adopte Un Incel, c’est au tour de Kokoro de révolutionner les usages de la rencontre en ligne. Adoptant un style « kawaii », l’application espère toucher les Zillenials et tous ceux qui ont des personnages d’animé en photo de profil sur les réseaux sociaux.",
+      "img": null,
+      "delay": 100,
+      "lv": null,
+      "launchId": null,
+      "comesFromId": 74
+    },
+    {
+      "id": 18,
+      "title": "Petit ange parti trop tôt",
+      "content": "C'est avec regret que nous annonçons le décès de Bernard-Arnaud de La Villardière. Ce riche industriel qui s'est construit de rien à partir de la fortune de son père et a tant contribué à l'économie des îles Caïman restera un modèle pour toutes et tous. Son fils Antoine-Arnaud de La Villardière est son unique héritier.",
+      "img": null,
+      "delay": 0,
+      "lv": null,
+      "launchId": null,
+      "comesFromId": 156
+    },
+    {
+      "id": 19,
+      "title": "Leak des Guernesay Papiers",
+      "content": "À la surprise générale, il semblerait que de nombreux milliardaires aient abusé du statut fiscal particulier de l’île anglo-normande pour alléger leur déclaration d’impôt. Difficile à croire quand on sait que les milliardaires sont le moteur de notre économie et n’ont d’autre objectif que le bon fonctionnement de notre société. Les comptes incriminés ont été gelés en attendant les résultats de l'enquête.",
+      "img": null,
+      "delay": 0,
+      "lv": null,
+      "launchId": null,
+      "comesFromId": 161
+    },
+    {
+      "id": 20,
+      "title": "Mais où es Antoine-Arnaud ?",
+      "content": "Le dandy Antoine-Arnaud de La Villardière a disparu sans laisser de trace. L'hypothèse du suicide n'est pas écartée. Dans un récent interview en effet, il déclarait : \"Parfois je me demande à quoi bon continuer. La majorité des gens ne se rend pas compte de ce que c'est de ne vivre qu'avec un million d'euros par an\"",
+      "img": null,
+      "delay": 0,
+      "lv": null,
+      "launchId": null,
+      "comesFromId": 167
+    },
+    {
+      "id": 21,
+      "title": "Or bleu",
+      "content": "À peine lancée sur les stores, l'application Wathour rencontre un succès retentissant, avec déjà plus de 50 millions de téléchargements ! Une appli qui vous rappelle toutes les deux heures de boire un verre d'eau ? Il fallait y penser !",
+      "img": null,
+      "delay": 10,
+      "lv": null,
+      "launchId": null,
+      "comesFromId": 174
+    },
+    {
+      "id": 22,
+      "title": "Tant va la cruche à l'eau...",
+      "content": "Panique à la bourse de New York alors que l'incubateur Succubus vient de lancer avec succès une O.P.A sur la société Wathour. La fondatrice et gérante aurait été mise à la porte via rupture non conventionnelle, la privant de ses dernières parts de la société.",
+      "img": null,
+      "delay": 0,
+      "lv": null,
+      "launchId": null,
+      "comesFromId": 189
+    },
+    {
+      "id": 23,
+      "title": "De la voie bus à la voie lactée",
+      "content": "Le célèbre street artist pop John Johnson qui s'est fait connaître en exposant simultanément sur tous les abribus du pays aurait rejoint la religion alternative de l'Autre Vérité. D'après nos sources, il serait bien en vue pour devenir le décorateur officiel de l'Arche de Joey, vaisseau colonie que l'Autre Vérité affirme en construction.",
+      "img": null,
+      "delay": 0,
+      "lv": null,
+      "launchId": null,
+      "comesFromId": 196
+    },
+    {
+      "id": 24,
+      "title": "Indie mais pas libre",
+      "content": "Le studio TumbaLata vient de gagner son procès contre le développeur Indépendant Dave Ricciardi. Il a en effet été jugé que la présence d'engins de locomotion et d'animaux disparus dans son dernier jeu, Dodo Skate constituait bel et bien une atteinte aux droits d'auteurs de la licence DinoCart. La facture des dommages et intérêts s'annonce salée.",
+      "img": null,
+      "delay": 0,
+      "lv": null,
+      "launchId": null,
+      "comesFromId": 195
+    },
+    {
+      "id": 25,
+      "title": "InstructeurBOT: Trêve de balivernes !",
+      "content": "Alors comme ça c'est vous le nouveau ? J'espère que vous n'avez pas trop cru à ces balivernes, le marketing c'est bien beau mais on a du pain sur la planche. Vous voyez le nombre à droite de chaque nom de profil, il représente combien cet utilisateur nous rapporte par seconde.",
+      "img": null,
+      "delay": null,
+      "lv": null,
+      "launchId": null,
+      "comesFromId": null
+    },
+    {
+      "id": 26,
+      "title": "Hors-la-toile",
+      "content": "Dans un communiqué paru ce matin, un groupe visiblement constitué d'individus dégénérés appelle le grand public à participer à son \"grand combat\" contre les notifications numériques. Rassurez-nous, vous n'allez quand même pas vous joindre à eux ?",
       "img": null,
       "delay": null,
       "lv": null,

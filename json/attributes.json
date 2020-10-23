@@ -1,65 +1,820 @@
 {
   "attributes": [
     {
-      "id": 1,
-      "name": "Cool",
-      "value": 10,
+      "id": "1",
+      "name": "Ado",
+      "value": 700,
+      "events": 0,
+      "isMult": 0,
+      "multRate": 0
+    },
+    {
+      "id": "2",
+      "name": "Gamer",
+      "value": -50,
+      "events": 25,
+      "isMult": 0,
+      "multRate": 0
+    },
+    {
+      "id": "3",
+      "name": "Sociable",
+      "value": 500,
+      "events": 0,
+      "isMult": 0,
+      "multRate": 0
+    },
+    {
+      "id": "4",
+      "name": "Influenceur",
+      "value": 2500,
+      "events": 0,
+      "isMult": 0,
+      "multRate": 0
+    },
+    {
+      "id": "5",
+      "name": "Anonyme",
+      "value": 0,
+      "events": 0,
+      "isMult": 1,
+      "multRate": 1
+    },
+    {
+      "id": "6",
+      "name": "Alcool",
+      "value": -50,
+      "events": 0,
+      "isMult": 0,
+      "multRate": 0
+    },
+    {
+      "id": "7",
+      "name": "Populaire",
+      "value": 0,
+      "events": 0,
+      "isMult": 1,
+      "multRate": 2
+    },
+    {
+      "id": "8",
+      "name": "Star",
+      "value": 0,
+      "events": 0,
+      "isMult": 1,
+      "multRate": 4
+    },
+    {
+      "id": "9",
+      "name": "Drogues dures",
+      "value": -25,
+      "events": 0,
+      "isMult": 0,
+      "multRate": 0
+    },
+    {
+      "id": "10",
+      "name": "Rhume",
+      "value": -50,
+      "events": 19,
+      "isMult": 0,
+      "multRate": 0
+    },
+    {
+      "id": "11",
+      "name": "Trainwreck",
+      "value": -1500,
+      "events": 27,
+      "isMult": 0,
+      "multRate": 0
+    },
+    {
+      "id": "12",
+      "name": "Etudiant",
+      "value": 800,
+      "events": 2,
+      "isMult": 0,
+      "multRate": 0
+    },
+    {
+      "id": "13",
+      "name": "Marketing",
+      "value": 500,
+      "events": 0,
+      "isMult": 0,
+      "multRate": 0
+    },
+    {
+      "id": "14",
+      "name": "Sans emploi",
+      "value": -1000,
       "events": 1,
       "isMult": 0,
       "multRate": 0
     },
     {
-      "id": 2,
-      "name": "Employé",
+      "id": "15",
+      "name": "Testeur",
+      "value": 2650,
+      "events": 0,
+      "isMult": 0,
+      "multRate": 0
+    },
+    {
+      "id": "16",
+      "name": "Monetization manager",
+      "value": 4750,
+      "events": 0,
+      "isMult": 0,
+      "multRate": 0
+    },
+    {
+      "id": "17",
+      "name": "Indie",
+      "value": 3400,
+      "events": 0,
+      "isMult": 0,
+      "multRate": 0
+    },
+    {
+      "id": "18",
+      "name": "Petite frappe",
+      "value": -150,
+      "events": 0,
+      "isMult": 0,
+      "multRate": 0
+    },
+    {
+      "id": "19",
+      "name": "Créatif",
+      "value": 850,
+      "events": 0,
+      "isMult": 0,
+      "multRate": 0
+    },
+    {
+      "id": "20",
+      "name": "Bidasse",
+      "value": 800,
+      "events": 3,
+      "isMult": 0,
+      "multRate": 0
+    },
+    {
+      "id": "21",
+      "name": "Dépressif",
+      "value": 0,
+      "events": 0,
+      "isMult": 1,
+      "multRate": 0.5
+    },
+    {
+      "id": "22",
+      "name": "Braqueur",
+      "value": -250,
+      "events": 16,
+      "isMult": 0,
+      "multRate": 0
+    },
+    {
+      "id": "23",
+      "name": "Artiste",
+      "value": 1000,
+      "events": 3,
+      "isMult": 0,
+      "multRate": 0
+    },
+    {
+      "id": "24",
+      "name": "Design",
+      "value": 300,
+      "events": 0,
+      "isMult": 0,
+      "multRate": 0
+    },
+    {
+      "id": "25",
+      "name": "Modélisateur 3D",
+      "value": 2500,
+      "events": 0,
+      "isMult": 0,
+      "multRate": 0
+    },
+    {
+      "id": "26",
+      "name": "Millionaire",
+      "value": 0,
+      "events": 0,
+      "isMult": 1,
+      "multRate": 5
+    },
+    {
+      "id": "27",
+      "name": "Senior",
+      "value": 0,
+      "events": 0,
+      "isMult": 1,
+      "multRate": 0.8
+    },
+    {
+      "id": "28",
+      "name": "Veuf",
+      "value": 0,
+      "events": 0,
+      "isMult": 0,
+      "multRate": 0
+    },
+    {
+      "id": "29",
+      "name": "Dating",
       "value": 100,
-      "events": 1,
+      "events": 0,
       "isMult": 0,
       "multRate": 0
     },
     {
-      "id": 3,
-      "name": "Compétent",
+      "id": "30",
+      "name": "Crush",
+      "value": 100,
+      "events": 0,
+      "isMult": 0,
+      "multRate": 0
+    },
+    {
+      "id": "31",
+      "name": "En couple",
+      "value": 500,
+      "events": 0,
+      "isMult": 0,
+      "multRate": 0
+    },
+    {
+      "id": "32",
+      "name": "En trouple",
+      "value": 2500,
+      "events": 8,
+      "isMult": 0,
+      "multRate": 0
+    },
+    {
+      "id": "33",
+      "name": "Infarctus",
+      "value": -1000,
+      "events": 9,
+      "isMult": 0,
+      "multRate": 0
+    },
+    {
+      "id": "34",
+      "name": "Décès",
+      "value": 0,
+      "events": 0,
+      "isMult": 1,
+      "multRate": 0
+    },
+    {
+      "id": "35",
+      "name": "Hypocondriaque",
+      "value": -50,
+      "events": [
+        6,
+        28
+      ],
+      "isMult": 0,
+      "multRate": 0
+    },
+    {
+      "id": "36",
+      "name": "Marié",
+      "value": 550,
+      "events": 21,
+      "isMult": 0,
+      "multRate": 0
+    },
+    {
+      "id": "37",
+      "name": "Vendeur",
+      "value": 2000,
+      "events": 20,
+      "isMult": 0,
+      "multRate": 0
+    },
+    {
+      "id": "38",
+      "name": "Grippe chevaline",
+      "value": -500,
+      "events": 0,
+      "isMult": 0,
+      "multRate": 0
+    },
+    {
+      "id": "39",
+      "name": "Cancer du coude",
+      "value": -1000,
+      "events": 0,
+      "isMult": 0,
+      "multRate": 0
+    },
+    {
+      "id": "40",
+      "name": "Mort cérébral",
+      "value": 0,
+      "events": 0,
+      "isMult": 1,
+      "multRate": 0
+    },
+    {
+      "id": "41",
+      "name": "En rémission",
+      "value": 0,
+      "events": 0,
+      "isMult": 1,
+      "multRate": 1
+    },
+    {
+      "id": "42",
+      "name": "Enceinte",
+      "value": 500,
+      "events": 7,
+      "isMult": 0,
+      "multRate": 0
+    },
+    {
+      "id": "43",
+      "name": "Stress",
+      "value": -50,
+      "events": 0,
+      "isMult": 0,
+      "multRate": 0
+    },
+    {
+      "id": "44",
+      "name": "Burn out",
+      "value": 0,
+      "events": 20,
+      "isMult": 1,
+      "multRate": 0.5
+    },
+    {
+      "id": "45",
+      "name": "Tensions",
+      "value": -50,
+      "events": 14,
+      "isMult": 0,
+      "multRate": 0
+    },
+    {
+      "id": "46",
+      "name": "1 Enfant",
+      "value": 200,
+      "events": 0,
+      "isMult": 0,
+      "multRate": 0
+    },
+    {
+      "id": "47",
+      "name": "2 Enfants",
+      "value": 500,
+      "events": 28,
+      "isMult": 0,
+      "multRate": 0
+    },
+    {
+      "id": "48",
+      "name": "5 Enfants",
+      "value": 1500,
+      "events": 21,
+      "isMult": 0,
+      "multRate": 0
+    },
+    {
+      "id": "49",
+      "name": "Divorcé",
+      "value": -10,
+      "events": 0,
+      "isMult": 0,
+      "multRate": 0
+    },
+    {
+      "id": "50",
+      "name": "Ecolo",
+      "value": 500,
+      "events": 12,
+      "isMult": 0,
+      "multRate": 0
+    },
+    {
+      "id": "51",
+      "name": "Prof",
+      "value": 2500,
+      "events": 0,
+      "isMult": 0,
+      "multRate": 0
+    },
+    {
+      "id": "52",
+      "name": "Fatigue",
+      "value": -50,
+      "events": 0,
+      "isMult": 0,
+      "multRate": 0
+    },
+    {
+      "id": "53",
+      "name": "Cannabis",
+      "value": -250,
+      "events": 10,
+      "isMult": 0,
+      "multRate": 0
+    },
+    {
+      "id": "54",
+      "name": "Cocaine",
+      "value": -500,
+      "events": 10,
+      "isMult": 0,
+      "multRate": 0
+    },
+    {
+      "id": "55",
+      "name": "Berger",
+      "value": 2000,
+      "events": 0,
+      "isMult": 0,
+      "multRate": 0
+    },
+    {
+      "id": "56",
+      "name": "Eco terroriste",
+      "value": -500,
+      "events": 12,
+      "isMult": 0,
+      "multRate": 0
+    },
+    {
+      "id": "57",
+      "name": "Dealer",
+      "value": -2000,
+      "events": 13,
+      "isMult": 0,
+      "multRate": 0
+    },
+    {
+      "id": "58",
+      "name": "Détenu",
+      "value": 0,
+      "events": 0,
+      "isMult": 1,
+      "multRate": 0.25
+    },
+    {
+      "id": "59",
+      "name": "Déconnecté",
+      "value": 0,
+      "events": 0,
+      "isMult": 1,
+      "multRate": 0
+    },
+    {
+      "id": "60",
+      "name": "Célibataire",
+      "value": 0,
+      "events": 0,
+      "isMult": 0,
+      "multRate": 0
+    },
+    {
+      "id": "61",
+      "name": "Marketing",
       "value": 400,
       "events": 0,
       "isMult": 0,
       "multRate": 0
     },
     {
-      "id": 4,
-      "name": "Riche",
-      "value": 200,
+      "id": "62",
+      "name": "Dating+",
+      "value": 100,
       "events": 0,
       "isMult": 0,
       "multRate": 0
     },
     {
-      "id": 5,
-      "name": "Marié.e",
-      "value": 150,
+      "id": "63",
+      "name": "Dating++",
+      "value": 250,
       "events": 0,
       "isMult": 0,
       "multRate": 0
     },
     {
-      "id": 6,
-      "name": "Super Cool",
-      "value": 200,
-      "events": 0,
-      "isMult": 1,
-      "multRate": 10
-    },
-    {
-      "id": 7,
-      "name": "Nouveau Job",
+      "id": "64",
+      "name": "Dating+++",
       "value": 600,
       "events": 0,
       "isMult": 0,
       "multRate": 0
     },
     {
-      "id": 8,
-      "name": "Spawn",
-      "value": 50,
+      "id": "65",
+      "name": "CM",
+      "value": 500,
+      "events": 25,
+      "isMult": 0,
+      "multRate": 0
+    },
+    {
+      "id": "66",
+      "name": "Lobbyiste",
+      "value": 4500,
+      "events": 0,
+      "isMult": 0,
+      "multRate": 0
+    },
+    {
+      "id": "67",
+      "name": "Dircom",
+      "value": 12000,
+      "events": 0,
+      "isMult": 0,
+      "multRate": 0
+    },
+    {
+      "id": "68",
+      "name": "Parlementaire",
+      "value": 12000,
+      "events": 0,
+      "isMult": 0,
+      "multRate": 0
+    },
+    {
+      "id": "69",
+      "name": "Nostalgique",
+      "value": 500,
+      "events": 0,
+      "isMult": 0,
+      "multRate": 0
+    },
+    {
+      "id": "70",
+      "name": "Visionnaire",
+      "value": 500,
+      "events": 0,
+      "isMult": 0,
+      "multRate": 0
+    },
+    {
+      "id": "71",
+      "name": "Trader",
+      "value": 16000,
+      "events": 0,
+      "isMult": 0,
+      "multRate": 0
+    },
+    {
+      "id": "72",
+      "name": "Chirurgie plastique",
+      "value": 2500,
+      "events": 0,
+      "isMult": 0,
+      "multRate": 0
+    },
+    {
+      "id": "73",
+      "name": "Transhumaine",
+      "value": 5000,
+      "events": 0,
+      "isMult": 0,
+      "multRate": 0
+    },
+    {
+      "id": "74",
+      "name": "Milliardaire",
+      "value": 0,
+      "events": 0,
+      "isMult": 1,
+      "multRate": 10
+    },
+    {
+      "id": "75",
+      "name": "Pure data",
+      "value": 1,
+      "events": 0,
+      "isMult": 0,
+      "multRate": 0
+    },
+    {
+      "id": "76",
+      "name": "Insurgé",
+      "value": 100000,
+      "events": 0,
+      "isMult": 0,
+      "multRate": 0
+    },
+    {
+      "id": "77",
+      "name": "Enceinte",
+      "value": 500,
+      "events": 23,
+      "isMult": 0,
+      "multRate": 0
+    },
+    {
+      "id": "78",
+      "name": "Enceinte",
+      "value": 500,
+      "events": 24,
+      "isMult": 0,
+      "multRate": 0
+    },
+    {
+      "id": "79",
+      "name": "Has been",
+      "value": 0,
+      "events": 0,
+      "isMult": 1,
+      "multRate": 0.5
+    },
+    {
+      "id": "80",
+      "name": "Etudiant",
+      "value": 800,
+      "events": 2,
+      "isMult": 0,
+      "multRate": 0
+    },
+    {
+      "id": "81",
+      "name": "Fils à papa",
+      "value": 8000,
+      "events": 0,
+      "isMult": 0,
+      "multRate": 0
+    },
+    {
+      "id": "82",
+      "name": "Optimisé fiscalement",
+      "value": 1500,
+      "events": 0,
+      "isMult": 0,
+      "multRate": 0
+    },
+    {
+      "id": "83",
+      "name": "Milliardaire",
+      "value": 0,
+      "events": 0,
+      "isMult": 1,
+      "multRate": 10
+    },
+    {
+      "id": "84",
+      "name": "Multimillionaire",
+      "value": 0,
+      "events": 0,
+      "isMult": 1,
+      "multRate": 8
+    },
+    {
+      "id": "85",
+      "name": "Millionaire",
+      "value": 0,
+      "events": 0,
+      "isMult": 1,
+      "multRate": 5
+    },
+    {
+      "id": "86",
+      "name": "Chateau",
+      "value": 10000,
+      "events": 0,
+      "isMult": 0,
+      "multRate": 0
+    },
+    {
+      "id": "87",
+      "name": "Yacht",
+      "value": 12500,
+      "events": 0,
+      "isMult": 0,
+      "multRate": 0
+    },
+    {
+      "id": "88",
+      "name": "Disparu",
+      "value": 0,
+      "events": 0,
+      "isMult": 1,
+      "multRate": 0
+    },
+    {
+      "id": "89",
+      "name": "Ile privée",
+      "value": 25000,
+      "events": 0,
+      "isMult": 0,
+      "multRate": 0
+    },
+    {
+      "id": "90",
+      "name": "Entrepreneur",
+      "value": 4500,
+      "events": 0,
+      "isMult": 0,
+      "multRate": 0
+    },
+    {
+      "id": "91",
+      "name": "Micro entreprise",
+      "value": 2000,
+      "events": 0,
+      "isMult": 0,
+      "multRate": 0
+    },
+    {
+      "id": "92",
+      "name": "TPE",
+      "value": 3000,
+      "events": 0,
+      "isMult": 0,
+      "multRate": 0
+    },
+    {
+      "id": "93",
+      "name": "TPE*",
+      "value": 5000,
+      "events": 0,
+      "isMult": 0,
+      "multRate": 0
+    },
+    {
+      "id": "94",
+      "name": "TPE**",
+      "value": 7000,
+      "events": 0,
+      "isMult": 0,
+      "multRate": 0
+    },
+    {
+      "id": "95",
+      "name": "PME",
+      "value": 15000,
+      "events": 0,
+      "isMult": 0,
+      "multRate": 0
+    },
+    {
+      "id": "96",
+      "name": "PME*",
+      "value": 20000,
+      "events": 0,
+      "isMult": 0,
+      "multRate": 0
+    },
+    {
+      "id": "97",
+      "name": "PME**",
+      "value": 30000,
+      "events": 0,
+      "isMult": 0,
+      "multRate": 0
+    },
+    {
+      "id": "98",
+      "name": "SA",
+      "value": 50000,
+      "events": 0,
+      "isMult": 0,
+      "multRate": 0
+    },
+    {
+      "id": "99",
+      "name": "SA*",
+      "value": 80000,
+      "events": 0,
+      "isMult": 0,
+      "multRate": 0
+    },
+    {
+      "id": "100",
+      "name": "SA**",
+      "value": 100000,
+      "events": 0,
+      "isMult": 0,
+      "multRate": 0
+    },
+    {
+      "id": "101",
+      "name": "PDG",
+      "value": 15000,
+      "events": 0,
+      "isMult": 0,
+      "multRate": 0
+    },
+    {
+      "id": "102",
+      "name": "Procès",
+      "value": -450,
       "events": 0,
       "isMult": 0,
       "multRate": 0
