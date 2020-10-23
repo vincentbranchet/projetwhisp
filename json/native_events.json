@@ -2,7 +2,7 @@
   "native_events": [
     {
       "id": 1,
-      "name": "[Sans emploi]",
+      "name": "[Unemployed]",
       "delay": 60,
       "required": 14,
       "toDelete": null,
@@ -10,7 +10,7 @@
     },
     {
       "id": 2,
-      "name": "[Etudiant]",
+      "name": "[Student]",
       "delay": 60,
       "required": 12,
       "toDelete": null,
@@ -18,7 +18,7 @@
     },
     {
       "id": 3,
-      "name": "[Bidasse] + [Artiste]",
+      "name": "[Grunt] + [Artist]",
       "delay": 30,
       "required": [
         20,
@@ -30,8 +30,8 @@
     {
       "id": 4,
       "name": [
-        "Star",
-        "influenceur pop Alcool"
+        "Alcohol pop star",
+        "influencer"
       ],
       "delay": 60,
       "required": 200,
@@ -40,7 +40,7 @@
     },
     {
       "id": 5,
-      "name": "Star Drogues dures",
+      "name": "Star Hard Drugs",
       "delay": 120,
       "required": 200,
       "toDelete": [
@@ -51,7 +51,7 @@
     },
     {
       "id": 6,
-      "name": "[Hypocondriaque]",
+      "name": "[Hypocondriac]",
       "delay": 30,
       "required": 35,
       "toDelete": null,
@@ -59,7 +59,7 @@
     },
     {
       "id": 7,
-      "name": "[Enceinte]",
+      "name": "[Pregnant]",
       "delay": 120,
       "required": 42,
       "toDelete": 42,
@@ -67,7 +67,7 @@
     },
     {
       "id": 8,
-      "name": "[En trouple]",
+      "name": "[In trouple]",
       "delay": 40,
       "required": 32,
       "toDelete": null,
@@ -75,7 +75,7 @@
     },
     {
       "id": 9,
-      "name": "[Infarctus]",
+      "name": "[Infarction]",
       "delay": 40,
       "required": 33,
       "toDelete": null,
@@ -102,7 +102,7 @@
     },
     {
       "id": 12,
-      "name": "Eco terroriste",
+      "name": "Eco terrorist",
       "delay": 100,
       "required": 200,
       "toDelete": [
@@ -147,7 +147,7 @@
     },
     {
       "id": 16,
-      "name": "[Braqueur]",
+      "name": "[Robber]",
       "delay": 30,
       "required": 22,
       "toDelete": 22,
@@ -180,7 +180,7 @@
     },
     {
       "id": 19,
-      "name": "Rhume",
+      "name": "Cold",
       "delay": 120,
       "required": 200,
       "toDelete": 10,
@@ -188,7 +188,7 @@
     },
     {
       "id": 20,
-      "name": "[Vendeuse] + [Burn out]",
+      "name": "[Saleswoman] + [Burn out]",
       "delay": 40,
       "required": [
         37,
@@ -202,7 +202,7 @@
     },
     {
       "id": 21,
-      "name": "[Mariée] + [5 enfants]",
+      "name": "[Married] + [5 children]",
       "delay": 60,
       "required": [
         36,
@@ -213,7 +213,7 @@
     },
     {
       "id": 22,
-      "name": "[Mariée] + [Tensions]",
+      "name": "[Married] + [Tensions]",
       "delay": 60,
       "required": [
         36,
@@ -227,7 +227,7 @@
     },
     {
       "id": 23,
-      "name": "[Enceinte]",
+      "name": "[Pregnant]",
       "delay": 120,
       "required": [
         46,
@@ -241,7 +241,7 @@
     },
     {
       "id": 24,
-      "name": "[Enceinte]",
+      "name": "[Pregnant]",
       "delay": 120,
       "required": [
         47,
@@ -255,7 +255,7 @@
     },
     {
       "id": 25,
-      "name": "[CM] + [Gamer]",
+      "name": "[Community Manager] + [Gamer]",
       "delay": 45,
       "required": [
         65,
@@ -282,7 +282,7 @@
     },
     {
       "id": 28,
-      "name": "[Hypocondriaque]",
+      "name": "[Hypocondriac]",
       "delay": 30,
       "required": [
         35,

@@ -2,7 +2,7 @@
   "attributes": [
     {
       "id": "1",
-      "name": "Ado",
+      "name": "Teen",
       "value": 700,
       "events": 0,
       "isMult": 0,
@@ -26,7 +26,7 @@
     },
     {
       "id": "4",
-      "name": "Influenceur",
+      "name": "Influencer",
       "value": 2500,
       "events": 0,
       "isMult": 0,
@@ -34,7 +34,7 @@
     },
     {
       "id": "5",
-      "name": "Anonyme",
+      "name": "Anonymous",
       "value": 0,
       "events": 0,
       "isMult": 1,
@@ -42,7 +42,7 @@
     },
     {
       "id": "6",
-      "name": "Alcool",
+      "name": "Alcohol",
       "value": -50,
       "events": 0,
       "isMult": 0,
@@ -50,7 +50,7 @@
     },
     {
       "id": "7",
-      "name": "Populaire",
+      "name": "Popular",
       "value": 0,
       "events": 0,
       "isMult": 1,
@@ -66,7 +66,7 @@
     },
     {
       "id": "9",
-      "name": "Drogues dures",
+      "name": "Hard drugs",
       "value": -25,
       "events": 0,
       "isMult": 0,
@@ -74,7 +74,7 @@
     },
     {
       "id": "10",
-      "name": "Rhume",
+      "name": "Cold",
       "value": -50,
       "events": 19,
       "isMult": 0,
@@ -90,7 +90,7 @@
     },
     {
       "id": "12",
-      "name": "Etudiant",
+      "name": "Student",
       "value": 800,
       "events": 2,
       "isMult": 0,
@@ -106,7 +106,7 @@
     },
     {
       "id": "14",
-      "name": "Sans emploi",
+      "name": "Unemployed",
       "value": -1000,
       "events": 1,
       "isMult": 0,
@@ -114,7 +114,7 @@
     },
     {
       "id": "15",
-      "name": "Testeur",
+      "name": "Tester",
       "value": 2650,
       "events": 0,
       "isMult": 0,
@@ -138,7 +138,7 @@
     },
     {
       "id": "18",
-      "name": "Petite frappe",
+      "name": "Thug",
       "value": -150,
       "events": 0,
       "isMult": 0,
@@ -146,7 +146,7 @@
     },
     {
       "id": "19",
-      "name": "Créatif",
+      "name": "Creative",
       "value": 850,
       "events": 0,
       "isMult": 0,
@@ -154,7 +154,7 @@
     },
     {
       "id": "20",
-      "name": "Bidasse",
+      "name": "Grunt",
       "value": 800,
       "events": 3,
       "isMult": 0,
@@ -162,7 +162,7 @@
     },
     {
       "id": "21",
-      "name": "Dépressif",
+      "name": "Depressive",
       "value": 0,
       "events": 0,
       "isMult": 1,
@@ -170,7 +170,7 @@
     },
     {
       "id": "22",
-      "name": "Braqueur",
+      "name": "Robber",
       "value": -250,
       "events": 16,
       "isMult": 0,
@@ -178,8 +178,8 @@
     },
     {
       "id": "23",
-      "name": "Artiste",
-      "value": 1000,
+      "name": "Artist",
+      "value": 1250,
       "events": 3,
       "isMult": 0,
       "multRate": 0
@@ -194,7 +194,7 @@
     },
     {
       "id": "25",
-      "name": "Modélisateur 3D",
+      "name": "3D Modeler",
       "value": 2500,
       "events": 0,
       "isMult": 0,
@@ -218,7 +218,7 @@
     },
     {
       "id": "28",
-      "name": "Veuf",
+      "name": "Widower",
       "value": 0,
       "events": 0,
       "isMult": 0,
@@ -242,7 +242,7 @@
     },
     {
       "id": "31",
-      "name": "En couple",
+      "name": "In a relationship with",
       "value": 500,
       "events": 0,
       "isMult": 0,
@@ -250,7 +250,7 @@
     },
     {
       "id": "32",
-      "name": "En trouple",
+      "name": "In trouple",
       "value": 2500,
       "events": 8,
       "isMult": 0,
@@ -258,7 +258,7 @@
     },
     {
       "id": "33",
-      "name": "Infarctus",
+      "name": "Infarction",
       "value": -1000,
       "events": 9,
       "isMult": 0,
@@ -266,7 +266,7 @@
     },
     {
       "id": "34",
-      "name": "Décès",
+      "name": "Death",
       "value": 0,
       "events": 0,
       "isMult": 1,
@@ -274,7 +274,7 @@
     },
     {
       "id": "35",
-      "name": "Hypocondriaque",
+      "name": "Hypocondriac",
       "value": -50,
       "events": [
         6,
@@ -285,7 +285,7 @@
     },
     {
       "id": "36",
-      "name": "Marié",
+      "name": "Married",
       "value": 550,
       "events": 21,
       "isMult": 0,
@@ -293,7 +293,7 @@
     },
     {
       "id": "37",
-      "name": "Vendeur",
+      "name": "Seller",
       "value": 2000,
       "events": 20,
       "isMult": 0,
@@ -301,7 +301,7 @@
     },
     {
       "id": "38",
-      "name": "Grippe chevaline",
+      "name": "Horse flu",
       "value": -500,
       "events": 0,
       "isMult": 0,
@@ -309,7 +309,7 @@
     },
     {
       "id": "39",
-      "name": "Cancer du coude",
+      "name": "Elbow cancer",
       "value": -1000,
       "events": 0,
       "isMult": 0,
@@ -317,7 +317,7 @@
     },
     {
       "id": "40",
-      "name": "Mort cérébral",
+      "name": "Brain death",
       "value": 0,
       "events": 0,
       "isMult": 1,
@@ -325,7 +325,7 @@
     },
     {
       "id": "41",
-      "name": "En rémission",
+      "name": "In remission",
       "value": 0,
       "events": 0,
       "isMult": 1,
@@ -333,7 +333,7 @@
     },
     {
       "id": "42",
-      "name": "Enceinte",
+      "name": "Pregnant",
       "value": 500,
       "events": 7,
       "isMult": 0,
@@ -365,7 +365,7 @@
     },
     {
       "id": "46",
-      "name": "1 Enfant",
+      "name": "1 Child",
       "value": 200,
       "events": 0,
       "isMult": 0,
@@ -373,7 +373,7 @@
     },
     {
       "id": "47",
-      "name": "2 Enfants",
+      "name": "2 Children",
       "value": 500,
       "events": 28,
       "isMult": 0,
@@ -381,7 +381,7 @@
     },
     {
       "id": "48",
-      "name": "5 Enfants",
+      "name": "5 Children",
       "value": 1500,
       "events": 21,
       "isMult": 0,
@@ -389,7 +389,7 @@
     },
     {
       "id": "49",
-      "name": "Divorcé",
+      "name": "Divorced",
       "value": -10,
       "events": 0,
       "isMult": 0,
@@ -397,7 +397,7 @@
     },
     {
       "id": "50",
-      "name": "Ecolo",
+      "name": "Green",
       "value": 500,
       "events": 12,
       "isMult": 0,
@@ -405,7 +405,7 @@
     },
     {
       "id": "51",
-      "name": "Prof",
+      "name": "Teacher",
       "value": 2500,
       "events": 0,
       "isMult": 0,
@@ -437,7 +437,7 @@
     },
     {
       "id": "55",
-      "name": "Berger",
+      "name": "Sheperd",
       "value": 2000,
       "events": 0,
       "isMult": 0,
@@ -445,7 +445,7 @@
     },
     {
       "id": "56",
-      "name": "Eco terroriste",
+      "name": "Eco terrorist",
       "value": -500,
       "events": 12,
       "isMult": 0,
@@ -461,7 +461,7 @@
     },
     {
       "id": "58",
-      "name": "Détenu",
+      "name": "Detained",
       "value": 0,
       "events": 0,
       "isMult": 1,
@@ -469,7 +469,7 @@
     },
     {
       "id": "59",
-      "name": "Déconnecté",
+      "name": "Disconnected",
       "value": 0,
       "events": 0,
       "isMult": 1,
@@ -477,7 +477,7 @@
     },
     {
       "id": "60",
-      "name": "Célibataire",
+      "name": "Single",
       "value": 0,
       "events": 0,
       "isMult": 0,
@@ -517,7 +517,7 @@
     },
     {
       "id": "65",
-      "name": "CM",
+      "name": "Community Manager",
       "value": 500,
       "events": 25,
       "isMult": 0,
@@ -525,7 +525,7 @@
     },
     {
       "id": "66",
-      "name": "Lobbyiste",
+      "name": "Lobbyist",
       "value": 4500,
       "events": 0,
       "isMult": 0,
@@ -533,7 +533,7 @@
     },
     {
       "id": "67",
-      "name": "Dircom",
+      "name": "Head Marketing",
       "value": 12000,
       "events": 0,
       "isMult": 0,
@@ -541,7 +541,7 @@
     },
     {
       "id": "68",
-      "name": "Parlementaire",
+      "name": "Parliamentary",
       "value": 12000,
       "events": 0,
       "isMult": 0,
@@ -549,7 +549,7 @@
     },
     {
       "id": "69",
-      "name": "Nostalgique",
+      "name": "Nostalgic",
       "value": 500,
       "events": 0,
       "isMult": 0,
@@ -557,7 +557,7 @@
     },
     {
       "id": "70",
-      "name": "Visionnaire",
+      "name": "Visionary",
       "value": 500,
       "events": 0,
       "isMult": 0,
@@ -573,7 +573,7 @@
     },
     {
       "id": "72",
-      "name": "Chirurgie plastique",
+      "name": "Plastic surgery",
       "value": 2500,
       "events": 0,
       "isMult": 0,
@@ -589,7 +589,7 @@
     },
     {
       "id": "74",
-      "name": "Milliardaire",
+      "name": "Billionaire",
       "value": 0,
       "events": 0,
       "isMult": 1,
@@ -605,7 +605,7 @@
     },
     {
       "id": "76",
-      "name": "Insurgé",
+      "name": "Insurgent",
       "value": 100000,
       "events": 0,
       "isMult": 0,
@@ -613,7 +613,7 @@
     },
     {
       "id": "77",
-      "name": "Enceinte",
+      "name": "Pregnant",
       "value": 500,
       "events": 23,
       "isMult": 0,
@@ -621,7 +621,7 @@
     },
     {
       "id": "78",
-      "name": "Enceinte",
+      "name": "Pregnant",
       "value": 500,
       "events": 24,
       "isMult": 0,
@@ -637,7 +637,7 @@
     },
     {
       "id": "80",
-      "name": "Etudiant",
+      "name": "Student",
       "value": 800,
       "events": 2,
       "isMult": 0,
@@ -645,7 +645,7 @@
     },
     {
       "id": "81",
-      "name": "Fils à papa",
+      "name": "Daddy's boy",
       "value": 8000,
       "events": 0,
       "isMult": 0,
@@ -653,7 +653,7 @@
     },
     {
       "id": "82",
-      "name": "Optimisé fiscalement",
+      "name": "Tax optimized",
       "value": 1500,
       "events": 0,
       "isMult": 0,
@@ -661,7 +661,7 @@
     },
     {
       "id": "83",
-      "name": "Milliardaire",
+      "name": "Billionaire",
       "value": 0,
       "events": 0,
       "isMult": 1,
@@ -685,7 +685,7 @@
     },
     {
       "id": "86",
-      "name": "Chateau",
+      "name": "Castle",
       "value": 10000,
       "events": 0,
       "isMult": 0,
@@ -701,7 +701,7 @@
     },
     {
       "id": "88",
-      "name": "Disparu",
+      "name": "Faded away",
       "value": 0,
       "events": 0,
       "isMult": 1,
@@ -709,7 +709,7 @@
     },
     {
       "id": "89",
-      "name": "Ile privée",
+      "name": "Private island",
       "value": 25000,
       "events": 0,
       "isMult": 0,
@@ -725,7 +725,7 @@
     },
     {
       "id": "91",
-      "name": "Micro entreprise",
+      "name": "Microbusiness",
       "value": 2000,
       "events": 0,
       "isMult": 0,
@@ -733,7 +733,7 @@
     },
     {
       "id": "92",
-      "name": "TPE",
+      "name": "Very Small Firm",
       "value": 3000,
       "events": 0,
       "isMult": 0,
@@ -741,7 +741,7 @@
     },
     {
       "id": "93",
-      "name": "TPE*",
+      "name": "Very Small Firm*",
       "value": 5000,
       "events": 0,
       "isMult": 0,
@@ -749,7 +749,7 @@
     },
     {
       "id": "94",
-      "name": "TPE**",
+      "name": "Very Small Firm**",
       "value": 7000,
       "events": 0,
       "isMult": 0,
@@ -757,7 +757,7 @@
     },
     {
       "id": "95",
-      "name": "PME",
+      "name": "SME",
       "value": 15000,
       "events": 0,
       "isMult": 0,
@@ -765,7 +765,7 @@
     },
     {
       "id": "96",
-      "name": "PME*",
+      "name": "SME *",
       "value": 20000,
       "events": 0,
       "isMult": 0,
@@ -773,7 +773,7 @@
     },
     {
       "id": "97",
-      "name": "PME**",
+      "name": "SME **",
       "value": 30000,
       "events": 0,
       "isMult": 0,
@@ -781,7 +781,7 @@
     },
     {
       "id": "98",
-      "name": "SA",
+      "name": "Large Company",
       "value": 50000,
       "events": 0,
       "isMult": 0,
@@ -789,7 +789,7 @@
     },
     {
       "id": "99",
-      "name": "SA*",
+      "name": "Large Company*",
       "value": 80000,
       "events": 0,
       "isMult": 0,
@@ -797,7 +797,7 @@
     },
     {
       "id": "100",
-      "name": "SA**",
+      "name": "Large Company**",
       "value": 100000,
       "events": 0,
       "isMult": 0,
@@ -805,7 +805,7 @@
     },
     {
       "id": "101",
-      "name": "PDG",
+      "name": "CEO",
       "value": 15000,
       "events": 0,
       "isMult": 0,
@@ -813,7 +813,7 @@
     },
     {
       "id": "102",
-      "name": "Procès",
+      "name": "Trial",
       "value": -450,
       "events": 0,
       "isMult": 0,

@@ -3,8 +3,8 @@
     {
       "id": 1,
       "name": "Tumbalata",
-      "desc": "\"Ha le bouffon, il a pas de DinoCars !\" Ne fais surtout pas comme ce gros loser : retrouve tes DinoCars préférés dans DinoCars Country et défie tes amis pour contribuer à la pression sociale qui pèse déjà sur eux !",
-      "cld": 30,
+      "desc": "\"Ha the retard, he has no DinoCars!\" Above all, don't be like this big loser: find your favorite DinoCars in DinoCars Country and challenge your friends to contribute to the social pressure that already weighs on them!",
+      "cld": 20,
       "evtId": 1,
       "newsId": null,
       "required": 1,
@@ -14,7 +14,7 @@
     {
       "id": 2,
       "name": "Tara Tuto",
-      "desc": "Deviens streameur jeu vidéo en 13 étapes. La huitième va te surprendre. Like & suscribe pour plus du tutos.",
+      "desc": "Become a video game streamer in 13 easy steps. The eighth will surprise you. Like & subscribe for more tutorials.",
       "cld": 45,
       "evtId": 2,
       "newsId": null,
@@ -28,8 +28,8 @@
     {
       "id": 3,
       "name": "Lil'Punch",
-      "desc": "Eh toi ! Oui, toi ! Tu veux connaître le secret pour passer des soirées bien vénères et emballer à tous les coups ? Alors écoute les conseil de ton pote Lil' Punch",
-      "cld": 20,
+      "desc": "Hey you! Yes you ! Do you want to know the secret to spending crazy parties and flirting like a boss? So listen to your friend Lil 'Punch's advice",
+      "cld": 10,
       "evtId": 3,
       "newsId": null,
       "required": [
@@ -42,7 +42,7 @@
     {
       "id": 4,
       "name": "Tara Tuto",
-      "desc": "Quel jeu streamer pour élargir sa fanbase ? Je vous livre mon top 5. (Sponsorisé par DinoCars.)",
+      "desc": "Which game should you stream to expand your fanbase? I give you my top 5. (Sponsored by DinoCars.)",
       "cld": 60,
       "evtId": 4,
       "newsId": null,
@@ -56,7 +56,7 @@
     {
       "id": 5,
       "name": "Promotion",
-      "desc": "Besoin d'un coup de pouce pour atteindre les 10M d'abonnés? Offrez-vous les services de Tara Tuto. Mention: 2000€ Featuring: 10000€ Clash: 25000€.",
+      "desc": "Need a boost to reach 10M subscribers? Treat yourself to the services of Tara Tuto. Mention: € 2,000 Featuring: € 10,000 Clash: € 25,000.",
       "cld": 100,
       "evtId": 5,
       "newsId": null,
@@ -70,8 +70,8 @@
     {
       "id": 6,
       "name": "Breaking News",
-      "desc": "Une étude américaine établit un lien entre consommation d'alcool et pose d'appareil dentaire. Boire ou sourire, il va falloir choisir.",
-      "cld": 30,
+      "desc": "An American study establishes a link between alcohol consumption and dental appliance. Drink or smile, you have to choose.",
+      "cld": 20,
       "evtId": 6,
       "newsId": null,
       "required": [
@@ -84,8 +84,8 @@
     {
       "id": 7,
       "name": "Breaking News",
-      "desc": "Une étude néerlandaise établit un lien entre consommation d'alcool et supression de permis. Boire ou conduire, il va falloir choisir.",
-      "cld": 30,
+      "desc": "A Dutch study establishes a link between alcohol consumption and license waivers. Drink or drive, you have to choose.",
+      "cld": 5,
       "evtId": 7,
       "newsId": null,
       "required": 6,
@@ -95,7 +95,7 @@
     {
       "id": 8,
       "name": "Tara Tuto",
-      "desc": "Mes top tips pour arrêter la cocaïne. Like & suscribe pour plus du tutos",
+      "desc": "My top tips for quitting cocaine. Like & subscribe for more tutorials",
       "cld": 45,
       "evtId": 8,
       "newsId": null,
@@ -106,8 +106,8 @@
     {
       "id": 9,
       "name": "Rubex",
-      "desc": "Barre de boucher votre dez qui coule ? Ayez le réflèxe Rubex ! Rubex, le rebède bagique pour tout a... Atchiiiii!",
-      "cld": 20,
+      "desc": "Tired of your stuffy doze? Have the Rubex reflex! Rubex, the bagic rebedy for everything ... Atchiiiii!",
+      "cld": 5,
       "evtId": 9,
       "newsId": null,
       "required": 10,
@@ -117,7 +117,7 @@
     {
       "id": 10,
       "name": "Tara Tuto",
-      "desc": "Comment j'ai fait mon comeback après le meltdown de mes 11ans. Une vidéo un peu spéciale.",
+      "desc": "How I made my comeback after the meltdown of my 11 years old. A somewhat special video.",
       "cld": 45,
       "evtId": 10,
       "newsId": null,
@@ -127,9 +127,9 @@
     },
     {
       "id": 11,
-      "name": "Univ. Jean Frimas",
-      "desc": "Jeune bachelier ? Venez réchauffer les bancs de l'Université Jean Frimas. Ils en ont bien besoin.",
-      "cld": 45,
+      "name": "Pendleton College",
+      "desc": "Young bachelor? Come and warm up the benches of Pendleton College. They really need it.",
+      "cld": 20,
       "evtId": 11,
       "newsId": null,
       "required": 1,
@@ -141,8 +141,8 @@
     },
     {
       "id": 12,
-      "name": "Univ. Jean Frimas",
-      "desc": "Rappel aux étudiants : À l'approche des partiels de fin d'année, la B.U. Jean Frimas sera exceptionnellement ouverte tous les soirs jusqu'à 4h du matin. Prenez un duvet.",
+      "name": "Pendleton College",
+      "desc": "Reminder to students: As the end of year exams approach, the library Pendleton will be exceptionally open every evening until 4 a.m. Take a sleeping bag.",
       "cld": 100,
       "evtId": 12,
       "newsId": null,
@@ -155,8 +155,8 @@
     },
     {
       "id": 13,
-      "name": "Bourse de l'emploi",
-      "desc": "Testeur Jeu Vidéo. Au sein du studio TumbaLata, vous serez (mal) payé à jouer aux prochains jeux de la licence DinoCars™ en boucle 40h par semaine (hors période de crunch).",
+      "name": "Job exchange",
+      "desc": "Video Game Tester. Within the TumbaLata studio, you will be (poorly) paid to play the next games of the DinoCars™ license in a loop 40 hours per week (excluding crunch period).",
       "cld": 45,
       "evtId": 13,
       "newsId": null,
@@ -169,8 +169,8 @@
     },
     {
       "id": 14,
-      "name": "Bourse de l'emploi",
-      "desc": "Monetization Manager. Au sein du studio TumbaLata, vous aurez pour tâche de rendre les jeux DinoCars™ moins bons, et par conséquent plus rentables.",
+      "name": "Job exchange",
+      "desc": "Monetization Manager. Within the TumbaLata studio, you will be tasked with making DinoCars™ games less good, and therefore more profitable.",
       "cld": 60,
       "evtId": 14,
       "newsId": null,
@@ -184,8 +184,8 @@
     },
     {
       "id": 15,
-      "name": "Univ. Jean Frimas",
-      "desc": "Votre carrière semble stagner ? Découvrez les formations professionnelles de l'Université Jean Frimas. Diplômes équivalence Bac+3°C.",
+      "name": "Pendleton College",
+      "desc": "Does your career seem to be stagnating? Discover the professional training courses at Pendleton College. Diplomas equivalent to Bac + 3 ° C.",
       "cld": 45,
       "evtId": 15,
       "newsId": null,
@@ -195,8 +195,8 @@
     },
     {
       "id": 16,
-      "name": "Trash Pistache",
-      "desc": "Exclusif : Découvez les photos choc de la nouvelle star du net dans notre dossier spécial. Sa vie, son ex, ses plus honteux souvenirs : son ami d'enfance nous dit tout!",
+      "name": "Sunday Trash",
+      "desc": "Exclusive: Discover the shocking photos of the new internet star in our special file. His life, his ex, his most shameful memories: his childhood friend tells us everything!",
       "cld": 30,
       "evtId": 16,
       "newsId": null,
@@ -210,7 +210,7 @@
     {
       "id": 17,
       "name": "Tara Tuto",
-      "desc": "Comment j'ai tout plaqué le jour de mes 9 ans pour réaliser mon rêve d'enfant. Abonne-toi et active la cloche.",
+      "desc": "How I gave up everything on my 9th birthday to make my childhood dream come true. Subscribe and activate the bell.",
       "cld": 60,
       "evtId": 17,
       "newsId": null,
@@ -221,7 +221,7 @@
     {
       "id": 18,
       "name": "Tara Tuto",
-      "desc": "(Sponso) Le secret de mon succès - Comment j'ai vendu mon âme à mon seigneur et maître Belzebuth.",
+      "desc": "(Sponso) The secret of my success - How I sold my soul to my lord and master Belzebuth.",
       "cld": 100,
       "evtId": 18,
       "newsId": null,
@@ -234,8 +234,8 @@
     },
     {
       "id": 19,
-      "name": "Armée de Terre",
-      "desc": "L'Armée de Terre recrute. Combattez pour la paix ! Obéissez pour la liberté ! Tuez pour la vie !",
+      "name": "Land Force",
+      "desc": "The Army is recruiting. Fight for peace! Obey for freedom! Kill for life!",
       "cld": 5,
       "evtId": 19,
       "newsId": null,
@@ -248,8 +248,8 @@
     },
     {
       "id": 20,
-      "name": "Armée de Terre",
-      "desc": "A marcher longtemps, on finit par faire beaucoup de chemin.",
+      "name": "Land Force",
+      "desc": "By walking for a long time, you end up going a long way.",
       "cld": 5,
       "evtId": 20,
       "newsId": null,
@@ -260,7 +260,7 @@
     {
       "id": 21,
       "name": "Horoscope",
-      "desc": "Argent : De nouvelles opportunités vous attendent au tournant, c'est le moment de tout plaquer et de voler de vos propres ailes.",
+      "desc": "Money: New opportunities await you around the corner, it's time to drop everything and stand on your own.",
       "cld": 10,
       "evtId": 21,
       "newsId": null,
@@ -273,8 +273,8 @@
     },
     {
       "id": 22,
-      "name": "Bourse de l'emploi",
-      "desc": "Découvrez quel métier est fait pour vous, et regardez l'Intelligence Artificielle le faire disparaître sous vos yeux.",
+      "name": "Job exchange",
+      "desc": "Find out which profession is right for you, and watch Artificial Intelligence make it disappear before your eyes.",
       "cld": 5,
       "evtId": 22,
       "newsId": null,
@@ -285,7 +285,7 @@
     {
       "id": 23,
       "name": "Tara Tuto",
-      "desc": "Comment peindre la Joconde en moins de 30mn chrono. C'est plus difficile que ça en a l'air !",
+      "desc": "How to paint the Mona Lisa in less than 30mn flat. It's harder than it sounds!",
       "cld": 5,
       "evtId": 23,
       "newsId": null,
@@ -295,8 +295,8 @@
     },
     {
       "id": 24,
-      "name": "Univ. Jean Frimas",
-      "desc": "Votre carrière semble stagner ? Découvrez les formations professionnelles de l'Université Jean Frimas. Diplômes équivalence Bac+3°C.",
+      "name": "Pendleton College",
+      "desc": "Does your career seem to be stagnating? Discover the professional training courses at Pendleton College. Diplomas equivalent to Bac + 3 ° C.",
       "cld": null,
       "evtId": 24,
       "newsId": null,
@@ -306,8 +306,8 @@
     },
     {
       "id": 25,
-      "name": "Univ. Jean Frimas",
-      "desc": "Votre carrière semble stagner ? Découvrez les formations professionnelles de l'Université Jean Frimas. Diplômes équivalence Bac+3°C.",
+      "name": "Pendleton College",
+      "desc": "Does your career seem to be stagnating? Discover the professional training courses at Pendleton College. Diplomas equivalent to Bac + 3 ° C.",
       "cld": 10,
       "evtId": 25,
       "newsId": null,
@@ -323,9 +323,9 @@
     },
     {
       "id": 26,
-      "name": "Bourse à l'emploi",
-      "desc": "Modélisateur 3D. Au sein du studio TumbaLata, vous modéliserez chaque jour des voitures-dinosaures pour la licence DinoCars™, et en ferez des cauchemars chaque nuit.",
-      "cld": 30,
+      "name": "Job market",
+      "desc": "3D modeler. In the TumbaLata studio, you will model dinosaur cars for the DinoCars ™ license every day, and have nightmares of them every night.",
+      "cld": 15,
       "evtId": 26,
       "newsId": null,
       "required": [
@@ -338,7 +338,7 @@
     {
       "id": 27,
       "name": "Horoscope",
-      "desc": "Travail :  Vous avez le sentiment d'être dans l'impasse, mais ce n'est que passager. N'abandonnez jamais. Les grandes choses prennent du temps.",
+      "desc": "Work: You have the feeling that you have reached an impasse, but it is only temporary. Never give up. Great things take time.",
       "cld": 10,
       "evtId": 27,
       "newsId": null,
@@ -352,8 +352,8 @@
     {
       "id": 28,
       "name": "Tara Tuto",
-      "desc": "Comment j'ai tout plaqué le jour de mes 9 ans pour réaliser mon rêve d'enfant. Abonne-toi et active la cloche.",
-      "cld": 30,
+      "desc": "How I gave up everything on my 9th birthday to make my childhood dream come true. Subscribe and activate the bell.",
+      "cld": 15,
       "evtId": 28,
       "newsId": null,
       "required": 25,
@@ -363,8 +363,8 @@
     {
       "id": 29,
       "name": "Tara Tuto",
-      "desc": "Comment shipper son premier jeu vidéo sans budget marketing. La méthode infaillible !",
-      "cld": 45,
+      "desc": "How to ship your first video game without a marketing budget. The foolproof method!",
+      "cld": 20,
       "evtId": 29,
       "newsId": null,
       "required": [
@@ -377,8 +377,8 @@
     {
       "id": 30,
       "name": "Promotion",
-      "desc": "Vous êtes important. Il faut que ça se sâche : Votre produit ou message sur tous les abribus du pays à prix cassé !",
-      "cld": 60,
+      "desc": "You are important. It has to get loose: Your product or message on all bus shelters in the country at a knockdown price!",
+      "cld": 20,
       "evtId": 30,
       "newsId": null,
       "required": [
@@ -392,8 +392,8 @@
     {
       "id": 31,
       "name": "Promotion",
-      "desc": "Vous êtes important. Il faut que ça se sâche : Votre produit ou message sur tous les grattes ciels de la ville !",
-      "cld": 100,
+      "desc": "You are important. It has to get loose: Your product or message on all the city skyscrapers!",
+      "cld": 30,
       "evtId": 31,
       "newsId": null,
       "required": [
@@ -406,9 +406,9 @@
     },
     {
       "id": 32,
-      "name": "Univ. Jean Frimas",
-      "desc": "Rappel aux étudiants : À l'approche des partiels de fin d'année, la B.U. Jean Frimas sera exceptionnellement ouverte tous les soirs jusqu'à 4h du matin. Prenez un duvet.",
-      "cld": 45,
+      "name": "Pendleton College",
+      "desc": "Reminder to students: As the end of year exams approach, the library Pendleton will be exceptionally open every evening until 4 a.m. Take a sleeping bag.",
+      "cld": 15,
       "evtId": 32,
       "newsId": null,
       "required": [
@@ -420,8 +420,8 @@
     },
     {
       "id": 33,
-      "name": "Inconnu",
-      "desc": "Fwd: Fwd: tr: Fr : TR : IMPORTANT : J'ai vraiment besoin de ton aide...",
+      "name": "Unknown",
+      "desc": "Fwd: Fwd: tr: Fr: TR: IMPORTANT: I ​​really need your help ...",
       "cld": 5,
       "evtId": 33,
       "newsId": null,
@@ -432,7 +432,7 @@
     {
       "id": 34,
       "name": "Kokoro",
-      "desc": "Doki Doki! C'est le bruit du coeur qui bat pour vous sur Kokoro ! Téléchargez l'application, faites des rencontres, trouvez l'amour, recommencez !",
+      "desc": "Doki Doki! It's the sound of the heart beating for you on Kokoro! Download the app, meet people, find love, start over!",
       "cld": 5,
       "evtId": 34,
       "newsId": null,
@@ -446,7 +446,7 @@
     {
       "id": 35,
       "name": "Kokoro",
-      "desc": "Doki doki! Anatole41 vous a envoyé un Dikupiku. Ouvrez l'application pour découvrir son profil.",
+      "desc": "Doki doki! Anatole41 sent you a Dikupiku. Open the app to discover his profile.",
       "cld": 5,
       "evtId": 35,
       "newsId": null,
@@ -463,8 +463,8 @@
     {
       "id": 36,
       "name": "Kokoro",
-      "desc": "Doki doki! Anatole41 a réagi à votre Frontonudo <3",
-      "cld": 10,
+      "desc": "Doki doki! Anatole41 reacted to your Frontonudo <3",
+      "cld": 5,
       "evtId": 36,
       "newsId": null,
       "required": [
@@ -477,8 +477,8 @@
     {
       "id": 37,
       "name": "Kokoro",
-      "desc": "Doki doki! Mademoiselle_Fernande vous a envoyé un Kokoro. Ouvrez l'application pour découvrir son profil.",
-      "cld": 10,
+      "desc": "Doki doki! Mademoiselle_Fernande sent you a Kokoro. Open the app to discover his profile.",
+      "cld": 5,
       "evtId": 37,
       "newsId": null,
       "required": [
@@ -492,8 +492,8 @@
     {
       "id": 38,
       "name": "Kokoro",
-      "desc": "Doki doki! Mademoiselle_Fernande a réagi à votre Frontonudo ;p",
-      "cld": 20,
+      "desc": "Doki doki! Mademoiselle_Fernande reacted to your Frontonudo; p",
+      "cld": 10,
       "evtId": 38,
       "newsId": null,
       "required": [
@@ -506,9 +506,9 @@
     },
     {
       "id": 39,
-      "name": "Les Plaisirs Démodés",
-      "desc": "Reçu de votre commande sur Les Plaisir Démodés.",
-      "cld": 20,
+      "name": "Old-fashioned Pleasures",
+      "desc": "Receipt of your order on Old-fashioned Pleasures.",
+      "cld": 5,
       "evtId": 39,
       "newsId": null,
       "required": [
@@ -520,9 +520,9 @@
     },
     {
       "id": 40,
-      "name": "Les Plaisirs Démodés",
-      "desc": "-40% sur les harnais Les Plaisirs Démodés avec le code promo ChacunSonTour. Plaisir d'offrir, joie de recevoir.",
-      "cld": 20,
+      "name": "Old-fashioned Pleasures",
+      "desc": "-40% on Old-fashioned Pleasures harnesses with the TousSonTour promo code. The pleasure of giving, the joy of receiving.",
+      "cld": 5,
       "evtId": 40,
       "newsId": null,
       "required": 32,
@@ -532,8 +532,8 @@
     {
       "id": 41,
       "name": "Promotion",
-      "desc": "Un être vous manque ? Dites-le avec des fleurs ! Chez Roni Fleur, le premier chrysantème est offert*. *Offre soumise à condition, voir modalités en magasin.",
-      "cld": 20,
+      "desc": "Are you missing a being? Say it with flowers ! At Roni Flower, the first chrysanthemum is offered *. * Offer subject to conditions, see terms in store.",
+      "cld": 5,
       "evtId": 41,
       "newsId": null,
       "required": [
@@ -545,9 +545,9 @@
     },
     {
       "id": 42,
-      "name": "Les Plaisirs Démodés",
-      "desc": "Le palpitant qui fatigue ? Commandez dès aujourd'hui le kit Cardio Les Plaisirs Démodés. La meilleure façon de joindre l'utile à l'agréable.",
-      "cld": 20,
+      "name": "Old-fashioned Pleasures",
+      "desc": "Your heart is tiresome? Order the Old-fashioned Pleasures Cardio kit today. The best way to combine business with pleasure.",
+      "cld": 5,
       "evtId": 42,
       "newsId": null,
       "required": [
@@ -560,8 +560,8 @@
     {
       "id": 43,
       "name": "Breaking News",
-      "desc": "La grippe chevaline continue de faire des ravages dans les troupeaux du Kazakhstan. L'OMS se dit inquiète d'une possible transmission vers l'homme.",
-      "cld": 20,
+      "desc": "Horse flu continues to wreak havoc in herds in Kazakhstan. WHO is worried about possible transmission to humans.",
+      "cld": 10,
       "evtId": 43,
       "newsId": null,
       "required": [
@@ -574,8 +574,8 @@
     {
       "id": 44,
       "name": "Horoscope",
-      "desc": "Santé : Cette petite boule au coude vous inquiète. Peut-être devriez-vous consulter ?",
-      "cld": 30,
+      "desc": "Health: That little lump on your elbow worries you. Maybe you should consult?",
+      "cld": 20,
       "evtId": 44,
       "newsId": null,
       "required": 38,
@@ -584,9 +584,9 @@
     },
     {
       "id": 45,
-      "name": "L'Autre Vérité",
-      "desc": "Êtes-vous sûrs d'être bien vivants ? Qu'est-ce qui vous prouve que vous n'êtes pas dans le coma, en train de rêver cette \"réalité\" ? #OuvrezLesYeux",
-      "cld": 40,
+      "name": "The Other Truth",
+      "desc": "Are you sure you are alive and well? What proves to you that you are not in a coma, dreaming about this \"reality\"? #Open your eyes",
+      "cld": 30,
       "evtId": 45,
       "newsId": null,
       "required": 39,
@@ -595,9 +595,9 @@
     },
     {
       "id": 46,
-      "name": "L'Autre Vérité",
-      "desc": "L'eau tiède : ce remède multiusage naturel et gratuit que les médecins veulent vous cacher. #AltMedecine",
-      "cld": 20,
+      "name": "The Other Truth",
+      "desc": "Lukewarm water: that free, natural, multipurpose remedy that doctors want to hide from you. #AltMedicine",
+      "cld": 10,
       "evtId": 46,
       "newsId": null,
       "required": 40,
@@ -606,8 +606,8 @@
     },
     {
       "id": 47,
-      "name": "Horloge Biologique",
-      "desc": "Ici l'horloge biologique parlante. Au quatrième top il sera exactement 32 ans et 0 enfant.",
+      "name": "Biological clock",
+      "desc": "Here is the speaking biological clock. At the fourth top he will be exactly 32 years old and 0 child.",
       "cld": 45,
       "evtId": 47,
       "newsId": null,
@@ -625,8 +625,8 @@
     },
     {
       "id": 48,
-      "name": "Horloge Biologique",
-      "desc": "Ici l'horloge biologique parlante. Au quatrième top il sera exactement 34 ans et un seul enfant.",
+      "name": "Biological clock",
+      "desc": "Here is the speaking biological clock. At the fourth top he will be exactly 34 years old and only one child.",
       "cld": 45,
       "evtId": 48,
       "newsId": null,
@@ -642,8 +642,8 @@
     },
     {
       "id": 49,
-      "name": "Horloge Biologique",
-      "desc": "Ici l'horloge biologique parlante. Au quatrième top il sera exactement 36 ans et deux enfants.",
+      "name": "Biological clock",
+      "desc": "Here is the speaking biological clock. In the fourth top he will be exactly 36 years old and two children.",
       "cld": 45,
       "evtId": 49,
       "newsId": null,
@@ -659,8 +659,8 @@
     },
     {
       "id": 50,
-      "name": "Horloge Biologique",
-      "desc": "Ici l'horloge biologique parlante. Au quatrième top il sera exactement 38 ans et beaucoup trop d'enfants.",
+      "name": "Biological clock",
+      "desc": "Here is the speaking biological clock. In the fourth top he will be exactly 38 years old and far too many children.",
       "cld": 45,
       "evtId": 50,
       "newsId": null,
@@ -677,7 +677,7 @@
     {
       "id": 51,
       "name": "Tara Tuto",
-      "desc": "Mes dix pires acouchements. Je vous donne tous les détails. Âmes sensibles s'abstenir.",
+      "desc": "My ten worst childbirths. I'll give you all the details. Sensitive souls refrain.",
       "cld": 30,
       "evtId": 51,
       "newsId": null,
@@ -691,7 +691,7 @@
     {
       "id": 52,
       "name": "Horoscope",
-      "desc": "Santé : Tout ne se passe pas toujours comme on l'aurait souhaité. Préparez-vous à quelques déconvenues.",
+      "desc": "Health: Everything does not always go as we would have liked. Prepare for some setbacks.",
       "cld": 30,
       "evtId": 52,
       "newsId": null,
@@ -704,8 +704,8 @@
     },
     {
       "id": 53,
-      "name": "Clinique St. Kevin",
-      "desc": "Les résultats de l'échographie sont là : Félicitations ! Ce sont des triplés !",
+      "name": "St. Kevin Clinic",
+      "desc": "The echography results are here: Congratulations! These are triplets!",
       "cld": 30,
       "evtId": 53,
       "newsId": null,
@@ -718,8 +718,8 @@
     },
     {
       "id": 54,
-      "name": "L'Autre Vérité",
-      "desc": "Les vaccins sont des armes biologiques destinées à éradiquer les maladies infectieuses ! #PasteurAvaitRaison",
+      "name": "The Other Truth",
+      "desc": "Vaccines are biological weapons designed to eradicate infectious diseases! #PasteurHaveReason",
       "cld": 3,
       "evtId": 54,
       "newsId": null,
@@ -730,8 +730,8 @@
     {
       "id": 55,
       "name": "Horoscope",
-      "desc": "Travail : Il y a de la promotion dans l'air ! Accrochez-vous, car vos efforts seront bientôt récompensés",
-      "cld": 20,
+      "desc": "Work: There is promotion in the air! Hang in there, because your efforts will soon be rewarded",
+      "cld": 10,
       "evtId": 55,
       "newsId": null,
       "required": 37,
@@ -744,8 +744,8 @@
     {
       "id": 56,
       "name": "Horoscope",
-      "desc": "Travail : Il y a de la promotion dans l'air ! Accrochez-vous, car vos efforts seront bientôt récompensés",
-      "cld": 20,
+      "desc": "Work: There is promotion in the air! Hang in there, because your efforts will soon be rewarded",
+      "cld": 10,
       "evtId": 56,
       "newsId": null,
       "required": [
@@ -757,9 +757,9 @@
     },
     {
       "id": 57,
-      "name": "Bourse de l'emploi",
-      "desc": "Découvrez quel métier aurait pu être fait pour vous si vous aviez dix ans de moins.",
-      "cld": 20,
+      "name": "Job exchange",
+      "desc": "Find out what job might have been right for you if you were ten years younger.",
+      "cld": 10,
       "evtId": 57,
       "newsId": null,
       "required": [
@@ -772,7 +772,7 @@
     {
       "id": 58,
       "name": "123Quizz",
-      "desc": "Petit coup de blues ou dépression chronique ? Faites le test !",
+      "desc": "Little blues or chronic depression? Take the test!",
       "cld": 30,
       "evtId": 58,
       "newsId": null,
@@ -785,9 +785,9 @@
     },
     {
       "id": 59,
-      "name": "Météo",
-      "desc": "La cannicule se poursuit tandis que la température atteint un seuil jamais égalé en 140 ans.",
-      "cld": 30,
+      "name": "Weather forecast",
+      "desc": "The cannicule continues as the temperature reaches a threshold never equaled in 140 years.",
+      "cld": 20,
       "evtId": 59,
       "newsId": null,
       "required": 50,
@@ -800,9 +800,9 @@
     },
     {
       "id": 60,
-      "name": "Communiqué",
-      "desc": "A tous les professeurs de l'Education Nationale, nous tenions à vous rappeler qu'on vous méprise toujours autant. Bisous. Le Ministère.",
-      "cld": 30,
+      "name": "Communicated",
+      "desc": "To all the teachers of National Education, we wanted to remind you that we still despise you as much. Kisses. The Ministry.",
+      "cld": 20,
       "evtId": 60,
       "newsId": null,
       "required": 51,
@@ -814,8 +814,8 @@
     },
     {
       "id": 61,
-      "name": "MaPetiteBrocante.com",
-      "desc": "Vend graines de chanvre bio. Qualité supérieure. Prix à discuter.",
+      "name": "MyFleaMarket.com",
+      "desc": "Sells organic hemp seeds. Superior quality. Price negotiable.",
       "cld": 45,
       "evtId": 61,
       "newsId": null,
@@ -831,8 +831,8 @@
     },
     {
       "id": 62,
-      "name": "MaPetiteBrocante.com",
-      "desc": "Vend plants de coca. A récupérer sur place. Discrètement.",
+      "name": "MyFleaMarket.com",
+      "desc": "Sells coca plants. To be collected on site. Discreetly.",
       "cld": 45,
       "evtId": 62,
       "newsId": null,
@@ -848,8 +848,8 @@
     },
     {
       "id": 63,
-      "name": "Vidéo",
-      "desc": "La vie dans les abysses. Sources hydrothermales, bioluminescence : Les secrets des créatures des profondeurs.",
+      "name": "Video",
+      "desc": "Life in the Abyss. Hydrothermal vents, bioluminescence: Secrets of the creatures of the deep.",
       "cld": 20,
       "evtId": 63,
       "newsId": null,
@@ -865,8 +865,8 @@
     },
     {
       "id": 64,
-      "name": "Vidéo",
-      "desc": "Bataille EPIQUE Lion Vs Hippopotame VS Boa Constrictor ! [Vrai Combat]",
+      "name": "Video",
+      "desc": "EPIC Battle Lion Vs Hippopotamus VS Boa Constrictor! [True Combat]",
       "cld": 20,
       "evtId": 64,
       "newsId": null,
@@ -882,8 +882,8 @@
     },
     {
       "id": 65,
-      "name": "MaPetiteBrocante.com",
-      "desc": "Vend troupeau de chèvres alpines. Bon état, très peu servi.",
+      "name": "MyFleaMarket.com",
+      "desc": "Sells herd of alpine goats. Good condition, very little used.",
       "cld": 60,
       "evtId": 65,
       "newsId": null,
@@ -897,8 +897,8 @@
     },
     {
       "id": 66,
-      "name": "Anéantissement Bougonnement",
-      "desc": "Face au suicide écologique, une seule solution : la désobéissance gentille ! A vos bombes (serpentin) ! Collectif Anéantissement Bougonnement (AB).",
+      "name": "Burgeoning Revolution",
+      "desc": "Faced with ecological suicide, only one solution: gentle disobedience! To your bombs (serpentine)! Collective Burgeoning Revolution.",
       "cld": 100,
       "evtId": 66,
       "newsId": null,
@@ -912,8 +912,8 @@
     },
     {
       "id": 67,
-      "name": "Erreur",
-      "desc": "Echec Réseau.",
+      "name": "Error",
+      "desc": "Network failure.",
       "cld": 5,
       "evtId": 67,
       "newsId": null,
@@ -923,8 +923,8 @@
     },
     {
       "id": 68,
-      "name": "Erreur",
-      "desc": "Echec Réseau.",
+      "name": "Error",
+      "desc": "Network failure.",
       "cld": 5,
       "evtId": 68,
       "newsId": null,
@@ -934,8 +934,8 @@
     },
     {
       "id": 69,
-      "name": "Erreur",
-      "desc": "Echec Réseau.",
+      "name": "Error",
+      "desc": "Network failure.",
       "cld": 5,
       "evtId": 69,
       "newsId": null,
@@ -945,8 +945,8 @@
     },
     {
       "id": 70,
-      "name": "Bourse de l'emploi",
-      "desc": "Découvrez quel métier est fait pour vous et reprenez votre vie en main!",
+      "name": "Job exchange",
+      "desc": "Find out which profession is right for you and take charge of your life!",
       "cld": 45,
       "evtId": 70,
       "newsId": null,
@@ -959,8 +959,8 @@
     },
     {
       "id": 71,
-      "name": "L'Autre Vérité",
-      "desc": "Nos Smartphones nous espionnent ! La police a accès à tout votre historique de navigation ! Votre mère aussi !  #IlsSontPartout",
+      "name": "The Other Truth",
+      "desc": "Our Smartphones are spying on us! The police have access to all of your browsing history! Your mother too! #They are everywhere",
       "cld": 60,
       "evtId": 71,
       "newsId": null,
@@ -971,7 +971,7 @@
     {
       "id": 72,
       "name": "Kokoro",
-      "desc": "Doki Doki! C'est le bruit du coeur qui bat pour vous sur Kokoro ! Téléchargez l'application, faites des rencontres, trouvez l'amour, recommencez !",
+      "desc": "Doki Doki! It's the sound of the heart beating for you on Kokoro! Download the app, meet people, find love, start over!",
       "cld": 10,
       "evtId": 72,
       "newsId": null,
@@ -987,7 +987,7 @@
     {
       "id": 73,
       "name": "Kokoro",
-      "desc": "Doki Doki! Personne ne vous a envoyé de Kokoro. Adoptez Kokoro Premium pour envoyer des Kokoro.",
+      "desc": "Doki Doki! Nobody sent you Kokoro. Adopt Kokoro Premium to send Kokoro.",
       "cld": 10,
       "evtId": 73,
       "newsId": null,
@@ -1001,8 +1001,8 @@
     {
       "id": 74,
       "name": "Kokoro",
-      "desc": "Doki Doki! Promotion sur l'offre Kokoro Premium cette semaine seulement ! Dépêchez-vous !",
-      "cld": 20,
+      "desc": "Doki Doki! Discount on the Kokoro Premium offer this week only! Hurry up!",
+      "cld": 10,
       "evtId": 74,
       "newsId": null,
       "required": [
@@ -1015,7 +1015,7 @@
     {
       "id": 75,
       "name": "Kokoro Premium",
-      "desc": "Doki Doki! Personne n'a répondu à vos Kokoro. Adoptez Kokoro Gold pour lever la limite max de Kokoro.",
+      "desc": "Doki Doki! No one responded to your Kokoro. Adopt Kokoro Gold to raise the max limit of Kokoro.",
       "cld": 10,
       "evtId": 75,
       "newsId": null,
@@ -1026,8 +1026,8 @@
     {
       "id": 76,
       "name": "Kokoro Premium",
-      "desc": "Doki Doki! Promotion sur l'offre Kokoro Gold aujourd'hui seulement ! Dépêchez-vous !",
-      "cld": 20,
+      "desc": "Doki Doki! Discount on the Kokoro Gold offer today only! Hurry up!",
+      "cld": 10,
       "evtId": 76,
       "newsId": null,
       "required": [
@@ -1040,7 +1040,7 @@
     {
       "id": 77,
       "name": "Kokoro Gold",
-      "desc": "Doki Doki! Toujours personne n'a répondu à vos Kokoro. Adoptez Kokoro Platinium pour matcher à tous les coups.",
+      "desc": "Doki Doki! Still no one answered your Kokoro. Adopt Kokoro Platinium to match every time.",
       "cld": 10,
       "evtId": 77,
       "newsId": null,
@@ -1051,8 +1051,8 @@
     {
       "id": 78,
       "name": "Kokoro Gold",
-      "desc": "Doki Doki! Promotion sur l'offre Kokoro Platinium pour un instant seulement ! Dépêchez-vous !",
-      "cld": 20,
+      "desc": "Doki Doki! Discount on the Kokoro Platinium offer for one moment only! Hurry up!",
+      "cld": 10,
       "evtId": 78,
       "newsId": null,
       "required": [
@@ -1065,7 +1065,7 @@
     {
       "id": 79,
       "name": "Kokoro Platinium",
-      "desc": "Doki Doki! Votre escort se présentera chez vous ce soir à 21h. Kokoro vous souhaite une très bonne soirée.",
+      "desc": "Doki Doki! Your escort will arrive at your home this evening at 9 p.m. Kokoro wishes you a very good evening.",
       "cld": 60,
       "evtId": 79,
       "newsId": null,
@@ -1078,8 +1078,8 @@
     },
     {
       "id": 80,
-      "name": "Bourse de l'emploi",
-      "desc": "Community Manager. Votre mission : incarner la marque  Larroze-Dombasle sur les réseaux sociaux et la faire passer pour quelqu’un d’à peu près fréquentable.",
+      "name": "Job exchange",
+      "desc": "Community Manager. Your mission: to embody the Larroze-Dombasle brand on social media and pass it off as someone you can hang out with.",
       "cld": 10,
       "evtId": 80,
       "newsId": null,
@@ -1095,9 +1095,9 @@
     },
     {
       "id": 81,
-      "name": "Bourse de l'emploi",
-      "desc": "Lobbyiste. Entre Bruxelles et Washington, vous remettrez la démocratie dans le droit chemin quand elle semble oublier les intérêts de Larroze-Dombasle.",
-      "cld": 30,
+      "name": "Job exchange",
+      "desc": "Lobbyist. Between Brussels and Washington, you will put democracy back on the right track when it seems to forget the interests of Larroze-Dombasle.",
+      "cld": 20,
       "evtId": 81,
       "newsId": null,
       "required": [
@@ -1110,9 +1110,9 @@
     },
     {
       "id": 82,
-      "name": "Bourse de l'emploi",
-      "desc": "Head Marketing. Votre mission : vendre votre âme au diable en leasing au profit de Larroze-Dombasle, activer l’obsolescence programmée à la fin du contrat, et la lui vendre une seconde fois.",
-      "cld": 60,
+      "name": "Job exchange",
+      "desc": "Head Marketing. Your mission: to lease your soul to the devil for the benefit of Larroze-Dombasle, activate planned obsolescence at the end of the contract, and sell it to him a second time.",
+      "cld": 45,
       "evtId": 82,
       "newsId": null,
       "required": [
@@ -1126,7 +1126,7 @@
     {
       "id": 83,
       "name": "Brandr",
-      "desc": "Une nouvelle personne vous suit sur les réseaux.",
+      "desc": "A new person follows you on the networks.",
       "cld": 5,
       "evtId": 83,
       "newsId": null,
@@ -1137,8 +1137,8 @@
     {
       "id": 84,
       "name": "Kokoro",
-      "desc": "Doki doki! Cindy69 vous a envoyé un Kokoro. Ouvrez l'application pour découvrir son profil.",
-      "cld": 30,
+      "desc": "Doki doki! Cindy69 sent you a Kokoro. Open the app to discover her profile.",
+      "cld": 20,
       "evtId": 84,
       "newsId": null,
       "required": [
@@ -1152,7 +1152,7 @@
     {
       "id": 85,
       "name": "Kokoro",
-      "desc": "Doki doki! MarcoInShape vous a envoyé un Dikupiku. Ouvrez l'application pour découvrir son profil.",
+      "desc": "Doki doki! MarcoInShape sent you a Dikupiku. Open the app to discover his profile.",
       "cld": 15,
       "evtId": 85,
       "newsId": null,
@@ -1166,8 +1166,8 @@
     {
       "id": 86,
       "name": "Kokoro",
-      "desc": "Êtes-vous sûrs de vouloir désinstaller Kokoro ? Votre profil ne sera pas supprimé et vos données toujours exploitées.",
-      "cld": 45,
+      "desc": "Are you sure you want to uninstall Kokoro? Your profile will not be deleted and your data will still be used.",
+      "cld": 30,
       "evtId": 86,
       "newsId": null,
       "required": [
@@ -1181,8 +1181,8 @@
     {
       "id": 87,
       "name": "Horoscope",
-      "desc": "Amour : Les hommes sont tous des connards, mais au moins celui-là n'a pas l'air d'un serial killer. Foncez!",
-      "cld": 45,
+      "desc": "Love: Men are all assholes, but at least this one doesn't look like a serial killer. Go for it!",
+      "cld": 30,
       "evtId": 87,
       "newsId": null,
       "required": [
@@ -1198,8 +1198,8 @@
     {
       "id": 88,
       "name": "Promotion",
-      "desc": "Promo sur les alliances ! Pour deux alliances achetées, la troisième offerte!",
-      "cld": 60,
+      "desc": "Promo on wedding rings! For two wedding rings purchased, the third one offered!",
+      "cld": 45,
       "evtId": 88,
       "newsId": null,
       "required": [
@@ -1212,8 +1212,8 @@
     {
       "id": 89,
       "name": "Tara Tuto",
-      "desc": "Comment savoir si vous êtes heureuse dans votre couple ? Le test infaillible ! (Sponsorisé par Kokoro)",
-      "cld": 45,
+      "desc": "How do you know if you are happy in a relationship? The foolproof test! (Sponsored by Kokoro)",
+      "cld": 30,
       "evtId": 89,
       "newsId": null,
       "required": [
@@ -1226,8 +1226,8 @@
     {
       "id": 90,
       "name": "Kokoro",
-      "desc": "Doki Doki! C'est le bruit du coeur qui bat pour vous sur Kokoro ! Téléchargez l'application, faites des rencontres, trouvez l'amour, recommencez !",
-      "cld": 30,
+      "desc": "Doki Doki! It's the sound of the heart beating for you on Kokoro! Download the app, meet people, find love, start over!",
+      "cld": 20,
       "evtId": 90,
       "newsId": null,
       "required": [
@@ -1240,8 +1240,8 @@
     {
       "id": 91,
       "name": "Kokoro",
-      "desc": "Doki doki! Tania666 vous a envoyé un Kokoro. Ouvrez l'application pour découvrir son profil.",
-      "cld": 30,
+      "desc": "Doki doki! Tania666 sent you a Kokoro. Open the app to discover his profile.",
+      "cld": 20,
       "evtId": 91,
       "newsId": null,
       "required": [
@@ -1254,7 +1254,7 @@
     {
       "id": 92,
       "name": "Kokoro",
-      "desc": "Doki doki! Votre mari vous a envoyé un Kokoro. Il a l'air en colère.",
+      "desc": "Doki doki! Your husband sent you a Kokoro. He looks angry.",
       "cld": 45,
       "evtId": 92,
       "newsId": null,
@@ -1269,7 +1269,7 @@
     {
       "id": 93,
       "name": "Tara Tuto",
-      "desc": "Top 10 lieux insolites pour des rencontres adultères. Votre mari va détester le quatrième.",
+      "desc": "Top 10 unusual places for adulterous encounters. Your husband is going to hate the fourth.",
       "cld": 20,
       "evtId": 93,
       "newsId": null,
@@ -1283,7 +1283,7 @@
     {
       "id": 94,
       "name": "Horoscope",
-      "desc": "Amour : Quand on tombe de cheval, il faut vite se remettre en selle. Celui-là a l'air vaguement décent, pourquoi chercher plus loin ?",
+      "desc": "Love: When you fall from your horse, you have to get back in the saddle quickly. This one looks vaguely decent, why look any further?",
       "cld": 60,
       "evtId": 94,
       "newsId": null,
@@ -1296,8 +1296,8 @@
     },
     {
       "id": 95,
-      "name": "Sondage",
-      "desc": "Le Parti Visionnaire donné gagnant à 55% face au Parti Nostalgique.",
+      "name": "Survey",
+      "desc": "The Visionary Party will win 55% against the Nostalgic Party.",
       "cld": 30,
       "evtId": 95,
       "newsId": 5,
@@ -1310,8 +1310,8 @@
     },
     {
       "id": 96,
-      "name": "Sondage",
-      "desc": "Le Parti Nostalgique toujours en tête des sondage mais le Parti Visionnaire remonte doucement.",
+      "name": "Survey",
+      "desc": "The Nostalgic Party still at the top of the polls but the Visionary Party is rising slowly.",
       "cld": 30,
       "evtId": 96,
       "newsId": 5,
@@ -1324,8 +1324,8 @@
     },
     {
       "id": 97,
-      "name": "Sondage",
-      "desc": "Le Parti Nostalgique reprend la tête des sondages, devançant le Parti Visionnaire de deux points.",
+      "name": "Survey",
+      "desc": "The Nostalgic Party takes the lead in the polls, ahead of the Visionary Party by two points.",
       "cld": 30,
       "evtId": 97,
       "newsId": 5,
@@ -1338,8 +1338,8 @@
     },
     {
       "id": 98,
-      "name": "Sondage",
-      "desc": "Le Parti Nostalgique et le Parti Visionnaire au coude à coude ! Tout peut encore basculer!",
+      "name": "Survey",
+      "desc": "The Nostalgic Party and the Visionary Party shoulder to shoulder! Everything can still change!",
       "cld": 30,
       "evtId": 98,
       "newsId": null,
@@ -1350,8 +1350,8 @@
     {
       "id": 99,
       "name": "Larroze-Dombasle",
-      "desc": "Communiqué : Larroze-Dombasle, le monde d'après-demain dès demain.",
-      "cld": 10,
+      "desc": "Press release: Larroze-Dombasle, the world after tomorrow from tomorrow.",
+      "cld": 5,
       "evtId": 99,
       "newsId": null,
       "required": [
@@ -1364,8 +1364,8 @@
     {
       "id": 100,
       "name": "Larroze-Dombasle",
-      "desc": "Communiqué : Larroze-Dombasle, plus d'un siècle d'expertise au service des traditions.",
-      "cld": 10,
+      "desc": "Press release: Larroze-Dombasle, more than a century of expertise in the service of traditions.",
+      "cld": 5,
       "evtId": 100,
       "newsId": null,
       "required": [
@@ -1378,8 +1378,8 @@
     {
       "id": 101,
       "name": "Tara Tuto",
-      "desc": "Comment j'ai retrouvé le corps de mes 14ans. La vidéo Avant-Après. (Sponso Clinique Larroze-Dombasle)",
-      "cld": 20,
+      "desc": "How I found the body of my 14 years old back. The Before-After video. (Sponso Clinic Larroze-Dombasle)",
+      "cld": 30,
       "evtId": 101,
       "newsId": null,
       "required": [
@@ -1392,8 +1392,8 @@
     {
       "id": 102,
       "name": "Larroze-Dombasle",
-      "desc": "Promotion dans votre Clinique Larroze-Dombasle : Pour deux sens acheté le troisième offert.",
-      "cld": 20,
+      "desc": "Promotion in your Larroze-Dombasle Clinic: For two senses, buy the third one free.",
+      "cld": 45,
       "evtId": 102,
       "newsId": null,
       "required": [
@@ -1406,8 +1406,8 @@
     {
       "id": 103,
       "name": "Larroze-Dombasle",
-      "desc": "La vie, ça n'a pas de prix. Mais l'immortalité oui. Abandonnez vos biens et votre existence matérielle à la clinique Larroze-Dombasle et devenez un être de pure data.",
-      "cld": 15,
+      "desc": "Life is priceless. But immortality yes. Give up your goods and your material existence at the Larroze-Dombasle clinic and become a being of pure data.",
+      "cld": 100,
       "evtId": 103,
       "newsId": null,
       "required": [
@@ -1420,8 +1420,8 @@
     {
       "id": 104,
       "name": "Infobourse",
-      "desc": "Si nous avions vraiment des tuyaux, on ne les partagerait pas avec vous.",
-      "cld": 5,
+      "desc": "If we really had tips, we wouldn't share them with you.",
+      "cld": 10,
       "evtId": 104,
       "newsId": null,
       "required": 71,
@@ -1430,9 +1430,9 @@
     },
     {
       "id": 105,
-      "name": "Trash Pistache",
-      "desc": "Exclusif: Qui est vraiment Julie Cora, la tradeuse la plus sexy de Wall Street ? Découvrez-le dans notre dossier inédit.",
-      "cld": 5,
+      "name": "Pistachio Trash",
+      "desc": "Exclusive: Who really is Julie Cora, the sexiest trader on Wall Street? Find out in our unique file.",
+      "cld": 10,
       "evtId": 105,
       "newsId": null,
       "required": 72,
@@ -1441,9 +1441,9 @@
     },
     {
       "id": 106,
-      "name": "*Huitième Sens*",
-      "desc": "Les actions TumbaLata vont grimper en flèche. C'est le moment d'acheter.",
-      "cld": 15,
+      "name": "* Eighth Sense *",
+      "desc": "TumbaLata shares will soar. It's time to buy.",
+      "cld": 60,
       "evtId": 106,
       "newsId": null,
       "required": [
@@ -1456,7 +1456,7 @@
     },
     {
       "id": 107,
-      "name": "Inconnu",
+      "name": "Unknown",
       "desc": "nblocks = nblocks ? : 1;\ngroup_info = kmalloc(sizeof(*group_info) + nblocks*sizeof(gid_t *), GFP_USER);\nif (!group_info) return NULL;",
       "cld": 3,
       "evtId": 107,
@@ -1468,7 +1468,7 @@
     {
       "id": 108,
       "name": "TumbaLata",
-      "desc": "Les DinoCars sont de retours !  50% mécanique 50% jurassique 100% nostalgiques ! Retrouvez la licence de votre enfance et fuyez vos responsabilités d'adulte !",
+      "desc": "The DinoCars are back! 50% mechanical 50% Jurassic 100% nostalgic! Find the license of your childhood and escape your adult responsibilities!",
       "cld": 30,
       "evtId": 108,
       "newsId": 1,
@@ -1481,8 +1481,8 @@
     },
     {
       "id": 109,
-      "name": "Parti Visionnaire",
-      "desc": "Les casques VR devraient être remboursés par la sécu ! Pour une réalité plus virtuelle, votez Isaac Nodule (Parti Visionnaire).",
+      "name": "Visionary Party",
+      "desc": "VR helmets should be reimbursed by the health security! For a more virtual reality, vote for Isaac Nodule (Visionary Party).",
       "cld": 30,
       "evtId": 109,
       "newsId": 5,
@@ -1492,8 +1492,8 @@
     },
     {
       "id": 110,
-      "name": "Parti Nostalgique",
-      "desc": "Ils veulent changer nos jeux, mais nous ne les laisserons pas faire ! Pour des jeux vidéo moins politiques, votez Mélanie Jonquille (Parti Nostalgique).",
+      "name": "Nostalgic Party",
+      "desc": "They want to change our games, but we won't let them! For less political video games, vote for Mélanie Jonquille (Nostalgic Party).",
       "cld": 30,
       "evtId": 110,
       "newsId": 5,
@@ -1503,8 +1503,8 @@
     },
     {
       "id": 111,
-      "name": "Offre d’emploi",
-      "desc": "Insurgé. Armé de votre seul courage, vous renverserez le système pour instaurer une nouvelle société plus juste et plus durable.",
+      "name": "Job offer",
+      "desc": "Insurgent. Armed with your own courage, you will overthrow the system to establish a new, fairer and more sustainable society.",
       "cld": 30,
       "evtId": 111,
       "newsId": 8,
@@ -1514,8 +1514,8 @@
     },
     {
       "id": 112,
-      "name": "Univ. Jean Frimas",
-      "desc": "Rappel aux étudiants : Les tables et chaises pour la barricade sont à venir chercher sur le campus entre 9h et 17h. Gants recommandés.",
+      "name": "Pendleton College",
+      "desc": "Reminder to students: Tables and chairs for the barricade must be collected from the campus between 9 a.m. and 5 p.m. Gloves recommended.",
       "cld": 5,
       "evtId": 112,
       "newsId": 8,
@@ -1526,7 +1526,7 @@
     {
       "id": 113,
       "name": "Tara Tuto",
-      "desc": "Des cocktails molotov maison 100% récup' ! Vous allez faire fureur à la manif' !",
+      "desc": "100% recycled house molotov cocktails! You will be all the rage at the demonstration!",
       "cld": 5,
       "evtId": 113,
       "newsId": 8,
@@ -1537,7 +1537,7 @@
     {
       "id": 114,
       "name": "Rubex",
-      "desc": "Eterduements ? Dez qui coule ? C'est la faute au gouverdebent ! Ayez le réflèxe Banif ! Banif, le rebède bagique pour tout a... Atchiiiii!",
+      "desc": "Extermination? Dez flowing? It is the fault of the gouverdebent! Have the Banif reflex! Banif, the bagique rebède for everything ... Atchiiiii!",
       "cld": 10,
       "evtId": 114,
       "newsId": 2000,
@@ -1547,8 +1547,8 @@
     },
     {
       "id": 115,
-      "name": "Parti Visionnaire",
-      "desc": "Le musée de demain sera numérique ou ne sera pas. Pour de l'art plus moderne, votez Isaac Nodule (Parti Visionnaire).",
+      "name": "Visionary Party",
+      "desc": "The museum of tomorrow will be digital or it will not be. For more modern art, vote for Isaac Nodule (Visionary Party).",
       "cld": 30,
       "evtId": 115,
       "newsId": 5,
@@ -1561,8 +1561,8 @@
     },
     {
       "id": 116,
-      "name": "Parti Nostalgique",
-      "desc": "L'Art n'a pas vocation à provoquer. Pour une avant-garde comme avant, votez Mélanie Jonquille (Parti Nostalgique).",
+      "name": "Nostalgic Party",
+      "desc": "Art is not intended to provoke. For an avant-garde like before, vote for Mélanie Jonquille (Nostalgic Party).",
       "cld": 30,
       "evtId": 116,
       "newsId": 5,
@@ -1575,8 +1575,8 @@
     },
     {
       "id": 117,
-      "name": "Offre d’emploi",
-      "desc": "Insurgé. Armé de votre seul courage, vous renverserez le système pour instaurer une nouvelle société plus juste et plus durable.",
+      "name": "Job offer",
+      "desc": "Insurgent. Armed with your own courage, you will overthrow the system to establish a new, fairer and more sustainable society.",
       "cld": 30,
       "evtId": 117,
       "newsId": 8,
@@ -1587,7 +1587,7 @@
     {
       "id": 118,
       "name": "Horoscope",
-      "desc": "Travail : Renverser le système n'est pas un travail facile tous les jours. N'oubliez pas de prendre des pauses et de vous hydrater.",
+      "desc": "Work: Reversing the system is not an easy job every day. Remember to take breaks and hydrate yourself.",
       "cld": 30,
       "evtId": 118,
       "newsId": 8,
@@ -1600,8 +1600,8 @@
     },
     {
       "id": 119,
-      "name": "Univ. Jean Frimas",
-      "desc": "Rappel aux étudiants : Les tables et chaises pour la barricade sont à venir chercher sur le campus entre 9h et 17h. Gants recommandés.",
+      "name": "Pendleton College",
+      "desc": "Reminder to students: Tables and chairs for the barricade must be collected from the campus between 9 a.m. and 5 p.m. Gloves recommended.",
       "cld": 5,
       "evtId": 119,
       "newsId": 8,
@@ -1612,7 +1612,7 @@
     {
       "id": 120,
       "name": "Rubex",
-      "desc": "Eterduements ? Dez qui coule ? C'est la faute au gouverdebent ! Ayez le réflèxe Banif ! Banif, le rebède bagique pour tout a... Atchiiiii!",
+      "desc": "Extermination? Dez flowing? It is the fault of the gouverdebent! Have the Banif reflex! Banif, the bagique rebède for everything ... Atchiiiii!",
       "cld": 5,
       "evtId": 120,
       "newsId": 8,
@@ -1623,7 +1623,7 @@
     {
       "id": 121,
       "name": "TumbaLata",
-      "desc": "Envie de rien ? Blasé de tout? Téléchargez DinoCars Country sur votre mobile et découvrez le vrai pouvoir des énergies fossiles !",
+      "desc": "Desire for nothing ? Bored of everything? Download DinoCars Country on your mobile and discover the true power of fossil fuels!",
       "cld": 30,
       "evtId": 121,
       "newsId": 1,
@@ -1633,8 +1633,8 @@
     },
     {
       "id": 122,
-      "name": "Parti Visionnaire",
-      "desc": "Soutenez la loi Prothèses Pour Tous. Pour des articulations moins rouillées, votez Isaac Nodule (Parti Visionnaire).",
+      "name": "Visionary Party",
+      "desc": "Support the Prostheses For All law. For less rusty joints, vote for Isaac Nodule (Visionary Party).",
       "cld": 30,
       "evtId": 122,
       "newsId": 5,
@@ -1644,8 +1644,8 @@
     },
     {
       "id": 123,
-      "name": "Parti Nostalgique",
-      "desc": "Vivre ? Mourir ? Après tout, on s'en fiche ! Pour une angoisse moins existentielle, votez Mélanie Jonquille (Parti Nostalgique).",
+      "name": "Nostalgic Party",
+      "desc": "Live ? Pass away ? After all, we don't care! For less existential angst, vote for Mélanie Jonquille (Nostalgic Party).",
       "cld": 30,
       "evtId": 123,
       "newsId": 5,
@@ -1655,8 +1655,8 @@
     },
     {
       "id": 124,
-      "name": "Les Plaisirs Démodés",
-      "desc": "C'est le retour des sans-culottes ! À vos masques et à vos fouets, ce soir la vieillesse est dans la rue !",
+      "name": "Old-fashioned pleasures",
+      "desc": "It's the return of the sans-culottes! To your masks and your whips, this evening old age is in the streets!",
       "cld": 5,
       "evtId": 124,
       "newsId": 8,
@@ -1667,7 +1667,7 @@
     {
       "id": 125,
       "name": "Kokoro",
-      "desc": "Doki Doki ! La Révolution vous a envoyé un Kokoro. Sortez dans la rue pour découvrir son profil.",
+      "desc": "Doki Doki! The Revolution sent you a Kokoro. Take to the streets to find his profile.",
       "cld": 5,
       "evtId": 125,
       "newsId": 8,
@@ -1680,8 +1680,8 @@
     },
     {
       "id": 126,
-      "name": "Parti Visionnaire",
-      "desc": "Les enfants sont les adultes de demain. Pour des slogans toujours plus consensuels, votez Isaac Nodule (Parti Visionnaire).",
+      "name": "Visionary Party",
+      "desc": "Children are the adults of tomorrow. For ever more consensual slogans, vote for Isaac Nodule (Visionary Party).",
       "cld": 30,
       "evtId": 126,
       "newsId": 5,
@@ -1691,8 +1691,8 @@
     },
     {
       "id": 127,
-      "name": "Parti Nostalgique",
-      "desc": "A leur âge, une gameboy et de pokemons et on était contents. Pour des enfants moins pourri-gâtés, votez Mélanie Jonquille (Parti Nostalgique).",
+      "name": "Nostalgic Party",
+      "desc": "At their age, a gameboy and pokemons and we were happy. For less spoiled children, vote for Mélanie Jonquille (Nostalgic Party).",
       "cld": 30,
       "evtId": 127,
       "newsId": 5,
@@ -1702,8 +1702,8 @@
     },
     {
       "id": 128,
-      "name": "Horloge Biologique",
-      "desc": "Ici l'horloge biologique parlante. Au quatrième top il sera exactement l'heure de la révolution.",
+      "name": "Biological clock",
+      "desc": "Here is the speaking biological clock. At the fourth top it will be exactly the hour of the revolution.",
       "cld": 5,
       "evtId": 128,
       "newsId": 8,
@@ -1714,7 +1714,7 @@
     {
       "id": 129,
       "name": "Horoscope",
-      "desc": "Amour : Votre longue période de célibat arrive à son terme : L'élu-e de votre coeur vous attend sur la barricade. Sortez couvert.",
+      "desc": "Love: Your long period of celibacy is coming to an end: The chosen one of your heart awaits you on the barricade. Go out well wrapped up, go out warmly dressed.",
       "cld": 5,
       "evtId": 129,
       "newsId": 8,
@@ -1725,7 +1725,7 @@
     {
       "id": 130,
       "name": "Horoscope",
-      "desc": "Santé : Vous êtes victime d'un petit coup de mou, heureusement, le doux parfum de la révolution saura vous remettre du baume au coeur.",
+      "desc": "Health: You are the victim of a little slack, fortunately, the sweet scent of the revolution will restore balm to your heart.",
       "cld": 5,
       "evtId": 130,
       "newsId": 8,
@@ -1736,7 +1736,7 @@
     {
       "id": 131,
       "name": "TumbaLata",
-      "desc": "Le vrombissement rassurant du moteur, les plumes duveteuses du raptor... Laissez DinoCars Country vous faire oublier les tracas de votre vie quotidienne, car bientôt : vous n'aurez plus de vie quotidienne.",
+      "desc": "The reassuring roar of the engine, the fluffy feathers of the raptor ... Let DinoCars Country make you forget the worries of your daily life, because soon: you will have no more everyday life.",
       "cld": 30,
       "evtId": 131,
       "newsId": 1,
@@ -1746,8 +1746,8 @@
     },
     {
       "id": 132,
-      "name": "Parti Visionnaire",
-      "desc": "La green tech sera notre salut ! Pour une scalabilité plus disruptive, votez Isaac Nodule (Parti Visionnaire).",
+      "name": "Visionary Party",
+      "desc": "Green tech will be our salvation! For more disruptive scalability, vote for Isaac Nodule (Visionary Party).",
       "cld": 30,
       "evtId": 132,
       "newsId": 5,
@@ -1757,8 +1757,8 @@
     },
     {
       "id": 133,
-      "name": "Parti Nostalgique",
-      "desc": "Il n'y a plus de saisons ! Pour un rechauffement moins climatique, votez Mélanie Jonquille (Parti Nostalgique).",
+      "name": "Nostalgic Party",
+      "desc": "There are no more seasons! For less climatic warming, vote for Mélanie Jonquille (Nostalgic Party).",
       "cld": 30,
       "evtId": 133,
       "newsId": 5,
@@ -1768,8 +1768,8 @@
     },
     {
       "id": 134,
-      "name": "Erreur",
-      "desc": "Echec Société. Veuillez réessayer.",
+      "name": "Error",
+      "desc": "Company failure. Try Again.",
       "cld": 5,
       "evtId": 134,
       "newsId": 8,
@@ -1780,7 +1780,7 @@
     {
       "id": 135,
       "name": "Tara Tuto",
-      "desc": "Des cocktails molotov maison 100% récup' ! Vous allez faire fureur à la manif' !",
+      "desc": "100% recycled house molotov cocktails! You will be all the rage at the demonstration!",
       "cld": 5,
       "evtId": 135,
       "newsId": 8,
@@ -1791,7 +1791,7 @@
     {
       "id": 136,
       "name": "TumbaLata",
-      "desc": "Blabla effondrement, blabla extinction de l'espèce... Vous savez qui d'autre a été menacé d'extinction ? Les DinoCars ! Pourtant il débarquent sur votre mobile !",
+      "desc": "Blah collapse, blah blah species extinction ... Do you know who else was threatened with extinction? The DinoCars! Yet they land on your mobile!",
       "cld": 30,
       "evtId": 136,
       "newsId": 1,
@@ -1802,7 +1802,7 @@
     {
       "id": 137,
       "name": "TumbaLata",
-      "desc": "Vous croyiez la coke addictive ? Attendez d'essayer DinoCars Country ! Laissez votre cerveau reptilien prendre le volant et abandonnez vos mauvaises habitudes sur le bord de la route.",
+      "desc": "Did you think coke was addictive? Wait until you try DinoCars Country! Let your reptilian brain take the wheel and give up your bad habits by the side of the road.",
       "cld": 30,
       "evtId": 137,
       "newsId": 1,
@@ -1812,8 +1812,8 @@
     },
     {
       "id": 138,
-      "name": "Sondage",
-      "desc": "Le Parti Nostalgique et le Parti Visionnaire au coude à coude ! Tout peut encore basculer!",
+      "name": "Survey",
+      "desc": "The Nostalgic Party and the Visionary Party shoulder to shoulder! Everything can still change!",
       "cld": 30,
       "evtId": 138,
       "newsId": 5,
@@ -1823,8 +1823,8 @@
     },
     {
       "id": 139,
-      "name": "Parti Visionnaire",
-      "desc": "Les sexbots ont des sentiments aussi ! Pour de l'amour moins charnel, votez Isaac Nodule (Parti Visionnaire).",
+      "name": "Visionary Party",
+      "desc": "Sexbots have feelings too! For less carnal love, vote for Isaac Nodule (Visionary Party).",
       "cld": 30,
       "evtId": 139,
       "newsId": 5,
@@ -1837,8 +1837,8 @@
     },
     {
       "id": 140,
-      "name": "Parti Nostalgique",
-      "desc": "Quand on pense qu'avant on ne leur laissait même pas le choix... Pour des femmes moins difficiles, votez Mélanie Jonquille (Parti Nostalgique).",
+      "name": "Nostalgic Party",
+      "desc": "When you think that before, we didn't even give them a choice ... For less difficult women, vote Mélanie Jonquille (Nostalgic Party).",
       "cld": 30,
       "evtId": 140,
       "newsId": 5,
@@ -1849,7 +1849,7 @@
     {
       "id": 141,
       "name": "Horoscope",
-      "desc": "Amour : Votre longue période de célibat arrive à son terme : L'élu-e de votre coeur vous attend sur la barricade. Sortez couvert.",
+      "desc": "Love: Your long period of celibacy is coming to an end: The chosen one of your heart awaits you on the barricade. Go out well wrapped up, go out warmly dressed.",
       "cld": 5,
       "evtId": 141,
       "newsId": 8,
@@ -1860,7 +1860,7 @@
     {
       "id": 142,
       "name": "Kokoro",
-      "desc": "Doki Doki ! La Révolution vous a envoyé un Kokoro. Sortez dans la rue pour découvrir son profil.",
+      "desc": "Doki Doki! The Revolution sent you a Kokoro. Take to the streets to find his profile.",
       "cld": 5,
       "evtId": 142,
       "newsId": 8,
@@ -1870,8 +1870,8 @@
     },
     {
       "id": 143,
-      "name": "Sondage",
-      "desc": "64% des sondés se disent favorables à la Révolution, 29% très favorables et 14% sont déjà en train de la faire.",
+      "name": "Survey",
+      "desc": "64% of those polled say they are in favor of the Revolution, 29% very favorable and 14% are already doing it.",
       "cld": 5,
       "evtId": 143,
       "newsId": 8,
@@ -1881,8 +1881,8 @@
     },
     {
       "id": 144,
-      "name": "Sondage",
-      "desc": "64% des sondés se disent favorables à la Révolution, 29% très favorables et 14% sont déjà en train de la faire.",
+      "name": "Survey",
+      "desc": "64% of those polled say they are in favor of the Revolution, 29% very favorable and 14% are already doing it.",
       "cld": 5,
       "evtId": 144,
       "newsId": 8,
@@ -1893,7 +1893,7 @@
     {
       "id": 145,
       "name": "Kokoro",
-      "desc": "Doki Doki ! La Révolution vous a envoyé un Kokoro. Sortez dans la rue pour découvrir son profil.",
+      "desc": "Doki Doki! The Revolution sent you a Kokoro. Take to the streets to find his profile.",
       "cld": 5,
       "evtId": 145,
       "newsId": 8,
@@ -1904,7 +1904,7 @@
     {
       "id": 146,
       "name": "TumbaLata",
-      "desc": "\"À quoi tu penses bébé ?\" Vous ne l'avouerez jamais, mais vous pensez à vos DinoCars. Ça tombe bien : Vous pouvez désormais les retrouver sur mobile ! DinoCars Country, Vous ne vous serez jamais autant amusés sous la couette !",
+      "desc": "\"What are you thinking baby?\" You'll never admit it, but you think about your DinoCars. That's good: you can now find them on mobile! DinoCars Country, You will never have had so much fun under the covers!",
       "cld": 30,
       "evtId": 146,
       "newsId": 1,
@@ -1917,8 +1917,8 @@
     },
     {
       "id": 147,
-      "name": "Parti Visionnaire",
-      "desc": "La lutte des classes, c'est complètement dépassé. Pour des prolétaires moins visibles, votez Isaac Nodule (Parti Visionnaire).",
+      "name": "Visionary Party",
+      "desc": "The class struggle is completely over. For less visible proletarians, vote Isaac Nodule (Visionary Party).",
       "cld": 30,
       "evtId": 147,
       "newsId": 5,
@@ -1928,8 +1928,8 @@
     },
     {
       "id": 148,
-      "name": "Parti Nostalgique",
-      "desc": "Avant, on savait respecter les riches. Pour des privilèges plus régalien, votez Mélanie Jonquille (Parti Nostalgique).",
+      "name": "Nostalgic Party",
+      "desc": "Before, we knew how to respect the rich. For more regal privileges, vote for Mélanie Jonquille (Nostalgic Party).",
       "cld": 30,
       "evtId": 148,
       "newsId": 5,
@@ -1939,7 +1939,7 @@
     },
     {
       "id": 149,
-      "name": "Inconnu",
+      "name": "Unknown",
       "desc": "if(Revolution==true) System(Smash)",
       "cld": 3,
       "evtId": 149,
@@ -1951,7 +1951,7 @@
     {
       "id": 150,
       "name": "Horoscope",
-      "desc": "Travail : Renverser le système n'est pas un travail facile tous les jours. N'oubliez pas de prendre des pauses et de vous hydrater.",
+      "desc": "Work: Reversing the system is not an easy job every day. Remember to take breaks and hydrate yourself.",
       "cld": 5,
       "evtId": 150,
       "newsId": 8,
@@ -1962,7 +1962,7 @@
     {
       "id": 151,
       "name": "Tara Tuto",
-      "desc": "Mes dix pires acouchements. Je vous donne tous les détails. Âmes sensibles s'abstenir.",
+      "desc": "My ten worst deliveries. I'll give you all the details. Sensitive souls refrain.",
       "cld": 45,
       "evtId": 151,
       "newsId": null,
@@ -1976,7 +1976,7 @@
     {
       "id": 152,
       "name": "Tara Tuto",
-      "desc": "Mes dix pires acouchements. Je vous donne tous les détails. Âmes sensibles s'abstenir.",
+      "desc": "My ten worst deliveries. I'll give you all the details. Sensitive souls refrain.",
       "cld": 45,
       "evtId": 152,
       "newsId": null,
@@ -1989,8 +1989,8 @@
     },
     {
       "id": 153,
-      "name": "Bourse de l'emploi",
-      "desc": "Community Manager. Votre mission : incarner la studio Tumbalata sur les réseaux sociaux et répondre rapidement aux gamers en fury",
+      "name": "Job exchange",
+      "desc": "Community Manager. Your mission: embody the Tumbalata studio on social networks and respond quickly to gamers in fury",
       "cld": 45,
       "evtId": 153,
       "newsId": null,
@@ -2007,7 +2007,7 @@
     {
       "id": 154,
       "name": "Kokoro Platinium",
-      "desc": "Doki Doki! Votre escort se présentera chez vous ce soir à 21h. Kokoro vous souhaite une très bonne soirée.",
+      "desc": "Doki Doki! Your escort will arrive at your home this evening at 9 p.m. Kokoro wishes you a very good evening.",
       "cld": 30,
       "evtId": 154,
       "newsId": null,
@@ -2018,7 +2018,7 @@
     {
       "id": 155,
       "name": "TumbaLata",
-      "desc": "Envie de rien ? Blasé de tout? Téléchargez DinoCars Country sur votre mobile et découvrez le vrai pouvoir des énergies fossiles !",
+      "desc": "Desire for nothing ? Bored of everything? Download DinoCars Country on your mobile and discover the true power of fossil fuels!",
       "cld": 30,
       "evtId": 155,
       "newsId": null,
@@ -2031,9 +2031,9 @@
     },
     {
       "id": 156,
-      "name": "Univ. Jean Frimas",
-      "desc": "L'université tient à remercier publiquement M. De la Villardière pour sa généreuse donation. Grâce à lui, l'amphi B pourra être chauffé six jours par an.",
-      "cld": 30,
+      "name": "Pendleton College",
+      "desc": "The university would like to publicly thank Mr. De la Villardière for his generous donation. Thanks to it, amphi B can be heated six days a year.",
+      "cld": 100,
       "evtId": 156,
       "newsId": null,
       "required": [
@@ -2046,7 +2046,7 @@
     {
       "id": 157,
       "name": "Horoscope",
-      "desc": "Argent : Tout va bien se passer.",
+      "desc": "Money: Everything will be fine.",
       "cld": 5,
       "evtId": 157,
       "newsId": null,
@@ -2056,9 +2056,9 @@
     },
     {
       "id": 158,
-      "name": "Direction Générale des Finances Publiques",
-      "desc": "Découvrez votre nouvel espace de déclaration en ligne, et payez vos impots en un clic.",
-      "cld": 20,
+      "name": "General Directorate of Public Finance",
+      "desc": "Discover your new online declaration space, and pay your taxes in one click.",
+      "cld": 45,
       "evtId": 158,
       "newsId": null,
       "required": 83,
@@ -2067,9 +2067,9 @@
     },
     {
       "id": 159,
-      "name": "MaPetiteBrocante.com",
-      "desc": "Société offshore à Guernesay cherche investisseurs. Pas sérieux s'abstenir.",
-      "cld": 20,
+      "name": "MyFleaMarket.com",
+      "desc": "Offshore company in Guernesay is looking for investors. Not serious refrain.",
+      "cld": 45,
       "evtId": 159,
       "newsId": null,
       "required": 83,
@@ -2078,8 +2078,8 @@
     },
     {
       "id": 160,
-      "name": "Infobourse",
-      "desc": "Si nous avions vraiment des tuyaux, on ne les partagerait pas avec vous.",
+      "name": "Infomarket",
+      "desc": "If we really had tips, we wouldn't share them with you.",
       "cld": 10,
       "evtId": 160,
       "newsId": null,
@@ -2092,9 +2092,9 @@
     },
     {
       "id": 161,
-      "name": "L'Autre Vérité",
-      "desc": "Le Déluge approche, Joey l'a prédit. Seuls les justes seront sauvés. #ArcheDeJoey",
-      "cld": 20,
+      "name": "The Other Truth",
+      "desc": "The Flood is approaching, Joey predicted it. Only the righteous will be saved. #ArcheDeJoey",
+      "cld": 30,
       "evtId": 161,
       "newsId": null,
       "required": [
@@ -2106,9 +2106,9 @@
     },
     {
       "id": 162,
-      "name": "L'Autre Vérité",
-      "desc": "Le Déluge est imminent. Seuls les justes seront sauvés. Aidez à financer l'Arche de Joey pour en faire partie. #ArcheDeJoey",
-      "cld": 20,
+      "name": "The Other Truth",
+      "desc": "The Flood is imminent. Only the righteous will be saved. Help fund Joey's Ark to be a part of it. #ArcheDeJoey",
+      "cld": 30,
       "evtId": 162,
       "newsId": null,
       "required": 84,
@@ -2118,8 +2118,8 @@
     {
       "id": 163,
       "name": "Horoscope",
-      "desc": "Argent: C'est le moment d'investir ! N'écoutez pas les conseils des financiers qui n'en veulent qu'à votre argent, suivez votre instinct !",
-      "cld": 20,
+      "desc": "Money: Now is the time to invest! Do not listen to the advice of financiers who want only your money, follow your instinct!",
+      "cld": 30,
       "evtId": 163,
       "newsId": null,
       "required": 84,
@@ -2129,8 +2129,8 @@
     {
       "id": 164,
       "name": "Succubator",
-      "desc": "Vous avez l'argent, ils ont les idées. Investissez dans les GAFAM du futur et devenez un Business Archangel.",
-      "cld": 20,
+      "desc": "You have the money, they have the ideas. Invest in the GAFAMs of the future and become a Business Archangel.",
+      "cld": 30,
       "evtId": 164,
       "newsId": null,
       "required": 84,
@@ -2140,8 +2140,8 @@
     {
       "id": 165,
       "name": "Breaking News",
-      "desc": "L'ouragan Kylian poursuit ses ravages à Haïti, qui compte déjà près d'un million de délogés. Un appel internationnal aux dons a été lancé.",
-      "cld": 20,
+      "desc": "Hurricane Kylian continues to wreak havoc in Haiti, which already has nearly a million displaced persons. An international appeal for donations has been launched.",
+      "cld": 30,
       "evtId": 165,
       "newsId": null,
       "required": 84,
@@ -2150,9 +2150,9 @@
     },
     {
       "id": 166,
-      "name": "MaPetiteBrocante.com",
-      "desc": "Fins de mois difficiles ? Revendez votre château sur MaPetiteBrocante.com et faites de la place dans vos placards !",
-      "cld": 10,
+      "name": "MyFleaMarket.com",
+      "desc": "Difficult end of the month? Resell your castle on MyFleaMarket.com and make room in your cupboards!",
+      "cld": 30,
       "evtId": 166,
       "newsId": null,
       "required": [
@@ -2164,9 +2164,9 @@
     },
     {
       "id": 167,
-      "name": "MaPetiteBrocante.com",
-      "desc": "Fins de mois difficiles ? Revendez votre yacht sur MaPetiteBrocante.com et faites de la place dans vos placards !",
-      "cld": 10,
+      "name": "MyFleaMarket.com",
+      "desc": "Difficult end of the month? Resell your yacht on MyFleaMarket.com and make room in your cupboards!",
+      "cld": 30,
       "evtId": 167,
       "newsId": null,
       "required": [
@@ -2178,8 +2178,8 @@
     },
     {
       "id": 168,
-      "name": "Erreur",
-      "desc": "Echec Réseau.",
+      "name": "Error",
+      "desc": "Network failure.",
       "cld": 5,
       "evtId": 168,
       "newsId": null,
@@ -2190,8 +2190,8 @@
     {
       "id": 169,
       "name": "TumbaLata",
-      "desc": "GigaPack : Débloquez tous les DinoCars et toutes leurs options de customisation pour 800 cristaux de lune ! Offre valable aujourd'hui seulement !",
-      "cld": 10,
+      "desc": "GigaPack: Unlock all DinoCars and all their customization options for 800 moon crystals! Offer valid today only !",
+      "cld": 30,
       "evtId": 169,
       "newsId": 1,
       "required": 84,
@@ -2200,9 +2200,9 @@
     },
     {
       "id": 170,
-      "name": "Parti Visionnaire",
-      "desc": "À bas l'Etat Providence! Pour des déclarations moins fiscales, soutenez la campagne d'Isaac Nodule (Parti Visionnaire).",
-      "cld": 10,
+      "name": "Visionary Party",
+      "desc": "Down with the Welfare State! For less tax declarations, support the campaign of Isaac Nodule (Visionary Party).",
+      "cld": 30,
       "evtId": 170,
       "newsId": 5,
       "required": 84,
@@ -2214,9 +2214,9 @@
     },
     {
       "id": 171,
-      "name": "Parti Nostalgique",
-      "desc": "Assez de la haine des riches ! Pour des impôts moins progressifs, soutenez la campagne de Mélanie Jonquille (Parti Nostalgique).",
-      "cld": 10,
+      "name": "Nostalgic Party",
+      "desc": "Enough of the hatred of the rich! For less progressive taxes, support the campaign of Mélanie Jonquille (Nostalgic Party).",
+      "cld": 30,
       "evtId": 171,
       "newsId": 5,
       "required": 84,
@@ -2229,7 +2229,7 @@
     {
       "id": 172,
       "name": "Infobourse",
-      "desc": "Le cours de la révolution continue de grimper en flèche, si ce n'est pas déjà fait, c'est le moment où jamais d'acheter !",
+      "desc": "The course of the revolution continues to skyrocket, if it hasn't already, now is the time to buy!",
       "cld": 5,
       "evtId": 172,
       "newsId": 8,
@@ -2239,8 +2239,8 @@
     },
     {
       "id": 173,
-      "name": "Erreur",
-      "desc": "Echec Société. Veuillez réessayer.",
+      "name": "Error",
+      "desc": "Company failure. Try Again.",
       "cld": 5,
       "evtId": 173,
       "newsId": 8,
@@ -2251,8 +2251,8 @@
     {
       "id": 174,
       "name": "Succubator",
-      "desc": "Besoin d'un coup de pouce pour lancer votre startup ? Rejoignez notre incubateur et profitez de notre réseau professionnel étendu pour tisser votre toile.",
-      "cld": 20,
+      "desc": "Need a helping hand to launch your startup? Join our incubator and take advantage of our extensive professional network to weave your web.",
+      "cld": 30,
       "evtId": 174,
       "newsId": null,
       "required": 90,
@@ -2265,9 +2265,9 @@
     },
     {
       "id": 175,
-      "name": "Recrute1talent.com",
-      "desc": "Candidature au poste d'assistante. Femme. 25 ans. Bac+3. Expérience : 3 ans. Passions : Physique quantique, philatélie, saut à l'élastique. Qualité principale : Polyvalente.",
-      "cld": 10,
+      "name": "Hire1talent.com",
+      "desc": "Application for the post of assistant. Women. 25 years. Tray 3. Experience: 3 years. Passions: Quantum physics, philately, bungee jumping. Main quality: Versatile.",
+      "cld": 45,
       "evtId": 175,
       "newsId": null,
       "required": 91,
@@ -2276,9 +2276,9 @@
     },
     {
       "id": 176,
-      "name": "Recrute1talent.com",
-      "desc": "Candidature au poste d'assistant. Homme. 22 ans. Bac. Expérience : Aucune. Passions : Anime, jeux vidéo, memes. Qualité principale : La confiance en soi.",
-      "cld": 10,
+      "name": "Hire1talent.com",
+      "desc": "Application for the post of assistant. Man. 22 years old. Bac. Experience: None. Passions: Anime, video games, memes. Main quality: Self-confidence.",
+      "cld": 45,
       "evtId": 176,
       "newsId": null,
       "required": 91,
@@ -2287,9 +2287,9 @@
     },
     {
       "id": 177,
-      "name": "Recrute1talent.com",
-      "desc": "Candidature au poste d'assistante. Femme. 46 ans. Bac+2. Expérience : 15 ans. Passions : Vidéos de chats, télé-crochet, littérature érotique. Qualité principale : La franchise.",
-      "cld": 10,
+      "name": "Hire1talent.com",
+      "desc": "Application for the post of assistant. Women. 46 years. Bac + 2. Experience: 15 years. Passions: Videos of cats, tele-hook, erotic literature. Main quality: Franchise.",
+      "cld": 45,
       "evtId": 177,
       "newsId": null,
       "required": 91,
@@ -2298,9 +2298,9 @@
     },
     {
       "id": 178,
-      "name": "Recrute1talent.com",
-      "desc": "Candidature au poste de développeur. Homme. 19 ans. Autodidacte. Expérience : 8 startups. Passion : Réussir. Qualité principale : Très haut QI.",
-      "cld": 10,
+      "name": "Hire1talent.com",
+      "desc": "Application for the position of developer. Man. 19 years old. Self-taught. Experience: 8 startups. Passion: To succeed. Main quality: Very high IQ.",
+      "cld": 45,
       "evtId": 178,
       "newsId": null,
       "required": 92,
@@ -2309,9 +2309,9 @@
     },
     {
       "id": 179,
-      "name": "Recrute1talent.com",
-      "desc": "Candidature au poste de développeur. Homme. 58 ans. Bac +5. Expérience : 35 ans. Passion : Travailler dur. Qualité principale : Deséspéré.",
-      "cld": 10,
+      "name": "Hire1talent.com",
+      "desc": "Application for the position of developer. Man. 58 years old. Bac +5. Experience: 35 years. Passion: Work hard. Main quality: Desperate.",
+      "cld": 45,
       "evtId": 179,
       "newsId": null,
       "required": 92,
@@ -2320,9 +2320,9 @@
     },
     {
       "id": 180,
-      "name": "Recrute1talent.com",
-      "desc": "Candidature au poste de CM. NB. 24 ans. Bac+3. Expérience : 1.5 ans. Passions : Lecture, ASMR, qi gong. Qualité principale: Le calme.",
-      "cld": 10,
+      "name": "Hire1talent.com",
+      "desc": "Application for the post of CM. NB. 24 years. Tray 3. Experience: 1.5 years. Passions: Reading, ASMR, qi gong. Main quality: Calm.",
+      "cld": 45,
       "evtId": 180,
       "newsId": null,
       "required": 93,
@@ -2331,9 +2331,9 @@
     },
     {
       "id": 181,
-      "name": "Recrute1talent.com",
-      "desc": "Candidature au poste de Community Manager. Femme. 34 ans. Bac+5. Expériences : Variées. Passions : Diverses. Qualité principale: La précision.",
-      "cld": 10,
+      "name": "Hire1talent.com",
+      "desc": "Application for the position of Community Manager. Women. 34 years old. Bac + 5. Experiences: Varied. Passions: Various. Main quality: Precision.",
+      "cld": 45,
       "evtId": 181,
       "newsId": null,
       "required": 93,
@@ -2342,9 +2342,9 @@
     },
     {
       "id": 182,
-      "name": "Recrute1talent.com",
-      "desc": "Candidature au poste de comptable. Sexe et âge non renseignés. Expérience : Sous NDA. Passions : Non communiqué. Qualité principale : La discrétion.",
-      "cld": 10,
+      "name": "Hire1talent.com",
+      "desc": "Application for the position of accountant. Gender and age not specified. Experience: Under NDA. Passions: Not communicated. Main quality: Discretion.",
+      "cld": 45,
       "evtId": 182,
       "newsId": null,
       "required": 95,
@@ -2353,9 +2353,9 @@
     },
     {
       "id": 183,
-      "name": "Recrute1talent.com",
-      "desc": "Candidature au poste de comptable. Femme. 41 ans. Expérience : Salut c'est Karen de l'école tu te souviens ? J'ai appris que ça marchait bien pour toi. Moi c'est un peu la galè...",
-      "cld": 10,
+      "name": "Hire1talent.com",
+      "desc": "Application for the position of accountant. Women. 41 years. Experience: Hi this is Karen from school, remember? I learned that it works well for you. Me it's a bit of a hassle ...",
+      "cld": 45,
       "evtId": 183,
       "newsId": null,
       "required": 95,
@@ -2364,9 +2364,9 @@
     },
     {
       "id": 184,
-      "name": "Recrute1talent.com",
-      "desc": "Candidature au poste de DRH. Femme. 38 ans. Bac+3. Expérience : 4 plans sociaux. Passions : Rejeter des CV, briser des vies. Qualité principale : L'écoute.",
-      "cld": 10,
+      "name": "Hire1talent.com",
+      "desc": "Application for the position of HRD. Women. 38 years old. Tray 3. Experience: 4 social plans. Passions: Rejecting CVs, destroying lives. Main quality: Listening.",
+      "cld": 45,
       "evtId": 184,
       "newsId": null,
       "required": 96,
@@ -2375,9 +2375,9 @@
     },
     {
       "id": 185,
-      "name": "Recrute1talent.com",
-      "desc": "Candidature au poste de DRH. Femme. 32 ans. Bac+8. Expérience : 12 ans. Passions : Psychologie, bénévolat, géopolitique. Qualité Principale : L'honnêteté.",
-      "cld": 10,
+      "name": "Hire1talent.com",
+      "desc": "Application for the position of HRD. Women. 32 years old. Bac + 8. Experience: 12 years. Passions: Psychology, volunteering, geopolitics. Main Quality: Honesty.",
+      "cld": 45,
       "evtId": 185,
       "newsId": null,
       "required": 96,
@@ -2387,8 +2387,8 @@
     {
       "id": 186,
       "name": "Succubator",
-      "desc": "Un petit coup de trac avant l'entrée en bourse ? Laissez nos conseillers financiers vous guider dans la cour des grands.",
-      "cld": 30,
+      "desc": "A little bit of stage fright before the IPO? Let our financial advisors guide you through the big leagues.",
+      "cld": 60,
       "evtId": 186,
       "newsId": null,
       "required": 97,
@@ -2397,9 +2397,9 @@
     },
     {
       "id": 187,
-      "name": "Direction Générale des Finances Publiques",
-      "desc": "Votre société fait plus d'un million d'euros de bénéfice ? Remplissez ce formulaire pour bénéficier de votre crédit d'impot aux grandes entreprises.",
-      "cld": 20,
+      "name": "Public Finance",
+      "desc": "Does your company make more than a million euros in profit? Fill out this form to claim your large business tax credit.",
+      "cld": 30,
       "evtId": 187,
       "newsId": null,
       "required": 98,
@@ -2409,8 +2409,8 @@
     {
       "id": 188,
       "name": "Succubator",
-      "desc": "Les charges sociales vous etouffent ? Profitez de notre expertise pour trouver les travailleurs les moins chers tout autour du monde.",
-      "cld": 20,
+      "desc": "Are you choking on payroll taxes? Take advantage of our expertise to find the cheapest workers all around the world.",
+      "cld": 30,
       "evtId": 188,
       "newsId": null,
       "required": 98,
@@ -2419,9 +2419,9 @@
     },
     {
       "id": 189,
-      "name": "Ministère du Travail",
-      "desc": "Découvrez la rupture non conventionelle introduite par la Loi Travail III. La rupture non conventionelle n'est pas un licenciement. C'est tellement mieux.",
-      "cld": 15,
+      "name": "Ministry of Labour",
+      "desc": "Find out about the unconventional break introduced by the Labor Law III. Unconventional termination is not a dismissal. It is so much better.",
+      "cld": 60,
       "evtId": 189,
       "newsId": null,
       "required": 99,
@@ -2430,9 +2430,9 @@
     },
     {
       "id": 190,
-      "name": "MaPetiteBrocante.com",
-      "desc": "Casseurs de grève professionnels. Efficaces et discrets. Tarifs très avantageux. Satisfaits ou remboursés.",
-      "cld": 20,
+      "name": "MyFleaMarket.com",
+      "desc": "Professional strike breakers. Efficient and discreet. Very advantageous rates. Satisfied or reimbursed.",
+      "cld": 30,
       "evtId": 190,
       "newsId": null,
       "required": 99,
@@ -2441,9 +2441,9 @@
     },
     {
       "id": 191,
-      "name": "Parti Visionnaire",
-      "desc": "La lutte des classes, c'est complètement dépassé. Pour des prolétaires moins visibles, votez Isaac Nodule (Parti Visionnaire).",
-      "cld": 10,
+      "name": "Visionary Party",
+      "desc": "The class struggle is completely over. For less visible proletarians, vote Isaac Nodule (Visionary Party).",
+      "cld": 30,
       "evtId": 191,
       "newsId": 5,
       "required": 101,
@@ -2452,9 +2452,9 @@
     },
     {
       "id": 192,
-      "name": "Parti Nostalgique",
-      "desc": "Avant, on savait respecter les riches. Pour des privilèges plus régalien, votez Mélanie Jonquille (Parti Nostalgique).",
-      "cld": 10,
+      "name": "Nostalgic Party",
+      "desc": "Before, we knew how to respect the rich. For more regal privileges, vote for Mélanie Jonquille (Nostalgic Party).",
+      "cld": 30,
       "evtId": 192,
       "newsId": 5,
       "required": 101,
@@ -2463,8 +2463,8 @@
     },
     {
       "id": 193,
-      "name": "Les Plaisirs Démodés",
-      "desc": "Le cours de la révolution continue de grimper en flèche, si ce n'est pas déjà fait, c'est le moment où jamais d'acheter !",
+      "name": "Old-fashioned pleasures",
+      "desc": "The course of the revolution continues to skyrocket, if it hasn't already, now is the time to buy!",
       "cld": 5,
       "evtId": 193,
       "newsId": 8,
@@ -2474,8 +2474,8 @@
     },
     {
       "id": 194,
-      "name": "Watheure",
-      "desc": "Ding ! C'est l'heure de boire un verre d'eau.",
+      "name": "Wathour",
+      "desc": "Ding! It's time for a drink of water.",
       "cld": 5,
       "evtId": 194,
       "newsId": null,
@@ -2489,7 +2489,7 @@
     {
       "id": 195,
       "name": "Horoscope",
-      "desc": "Travail : la chance vous sourit, c'est le moment de tout miser dans un nouveau projet.",
+      "desc": "Work: luck smiles on you, it's time to put everything into a new project.",
       "cld": 45,
       "evtId": 195,
       "newsId": null,
@@ -2502,8 +2502,8 @@
     },
     {
       "id": 196,
-      "name": "L'Autre Vérité",
-      "desc": "Vous aussi vous en avez assez des mensonges, des manipulations ? Rejoignez-nous, et devenez enfin maître de votre destin. #ArcheDeJoey",
+      "name": "The Other Truth",
+      "desc": "Are you also tired of lies, manipulations? Join us, and finally become master of your destiny. #ArcheDeJoey",
       "cld": 45,
       "evtId": 196,
       "newsId": null,
@@ -2517,7 +2517,7 @@
     {
       "id": 197,
       "name": "BestLife",
-      "desc": "En l'absence de signes de vie de votre part, et en vertu des articles 224 et 448 de nos Conditions d'Utilisations, nous nous voyons contraint de suspendre votre compte jusqu'à nouvel ordre. Il sera conservé sur nos serveurs jusqu'à la fin des temps et réactivé sur simple demande de votre part.",
+      "desc": "In the absence of signs of life from you, and under articles 224 and 448 of our Terms of Use, we are forced to suspend your account until further notice. It will be kept on our servers until the end of time and reactivated on request from you.",
       "cld": 1,
       "evtId": 197,
       "newsId": null,
@@ -2528,7 +2528,7 @@
     {
       "id": 198,
       "name": "BestLife",
-      "desc": "En l'absence de signes de vie de votre part, et en vertu des articles 224 et 448 de nos Conditions d'Utilisations, nous nous voyons contraint de suspendre votre compte jusqu'à nouvel ordre. Il sera conservé sur nos serveurs jusqu'à la fin des temps et réactivé sur simple demande de votre part.",
+      "desc": "In the absence of signs of life from you, and under articles 224 and 448 of our Terms of Use, we are forced to suspend your account until further notice. It will be kept on our servers until the end of time and reactivated on request from you.",
       "cld": 1,
       "evtId": 198,
       "newsId": null,
@@ -2539,7 +2539,7 @@
     {
       "id": 199,
       "name": "BestLife",
-      "desc": "En l'absence de signes de vie de votre part, et en vertu des articles 224 et 448 de nos Conditions d'Utilisations, nous nous voyons contraint de suspendre votre compte jusqu'à nouvel ordre. Il sera conservé sur nos serveurs jusqu'à la fin des temps et réactivé sur simple demande de votre part.",
+      "desc": "In the absence of signs of life from you, and under articles 224 and 448 of our Terms of Use, we are forced to suspend your account until further notice. It will be kept on our servers until the end of time and reactivated on request from you.",
       "cld": 1,
       "evtId": 199,
       "newsId": null,
@@ -2550,11 +2550,22 @@
     {
       "id": 200,
       "name": "BestLife",
-      "desc": "En l'absence de signes de vie de votre part, et en vertu des articles 224 et 448 de nos Conditions d'Utilisations, nous nous voyons contraint de suspendre votre compte jusqu'à nouvel ordre. Il sera conservé sur nos serveurs jusqu'à la fin des temps et réactivé sur simple demande de votre part.",
+      "desc": "In the absence of signs of life from you, and under articles 224 and 448 of our Terms of Use, we are forced to suspend your account until further notice. It will be kept on our servers until the end of time and reactivated on request from you.",
       "cld": 1,
       "evtId": 200,
       "newsId": null,
       "required": 102,
+      "forbidden": null,
+      "newsForbidden": null
+    },
+    {
+      "id": 201,
+      "name": "BestLife",
+      "desc": "In the absence of signs of life from you, and under articles 224 and 448 of our Terms of Use, we are forced to suspend your account until further notice. It will be kept on our servers until the end of time and reactivated on request from you.",
+      "cld": 1,
+      "evtId": 201,
+      "newsId": null,
+      "required": 55,
       "forbidden": null,
       "newsForbidden": null
     }

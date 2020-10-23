@@ -2,8 +2,8 @@
   "reco_events": [
     {
       "id": 1,
-      "name": "TumbaLata",
-      "delay": 30,
+      "name": "Tumbalata",
+      "delay": 20,
       "recoId": 1,
       "newsId": 1,
       "toDelete": null,
@@ -26,7 +26,7 @@
     {
       "id": 3,
       "name": "Lil'Punch",
-      "delay": 20,
+      "delay": 10,
       "recoId": 3,
       "newsId": null,
       "toDelete": null,
@@ -59,7 +59,7 @@
     {
       "id": 6,
       "name": "Breaking News",
-      "delay": 30,
+      "delay": 20,
       "recoId": 6,
       "newsId": null,
       "toDelete": 6,
@@ -69,7 +69,7 @@
     {
       "id": 7,
       "name": "Breaking News",
-      "delay": 30,
+      "delay": 5,
       "recoId": 7,
       "newsId": null,
       "toDelete": 6,
@@ -89,7 +89,7 @@
     {
       "id": 9,
       "name": "Rubex",
-      "delay": 20,
+      "delay": 5,
       "recoId": 9,
       "newsId": null,
       "toDelete": 10,
@@ -108,8 +108,8 @@
     },
     {
       "id": 11,
-      "name": "Univ. Jean Frimas",
-      "delay": 45,
+      "name": "Pendleton College",
+      "delay": 20,
       "recoId": 11,
       "newsId": null,
       "toDelete": 4,
@@ -118,7 +118,7 @@
     },
     {
       "id": 12,
-      "name": "Univ. Jean Frimas",
+      "name": "Pendleton College",
       "delay": 100,
       "recoId": 12,
       "newsId": null,
@@ -134,7 +134,7 @@
     },
     {
       "id": 13,
-      "name": "Bourse de l'emploi",
+      "name": "Job exchange",
       "delay": 45,
       "recoId": 13,
       "newsId": null,
@@ -147,7 +147,7 @@
     },
     {
       "id": 14,
-      "name": "Bourse de l'emploi",
+      "name": "Job exchange",
       "delay": 60,
       "recoId": 14,
       "newsId": null,
@@ -157,7 +157,7 @@
     },
     {
       "id": 15,
-      "name": "Univ. Jean Frimas",
+      "name": "Pendleton College",
       "delay": 45,
       "recoId": 15,
       "newsId": null,
@@ -167,7 +167,7 @@
     },
     {
       "id": 16,
-      "name": "Trash Pistache",
+      "name": "Sunday Trash",
       "delay": 30,
       "recoId": 16,
       "newsId": 15,
@@ -207,7 +207,7 @@
     },
     {
       "id": 19,
-      "name": "Armée de Terre",
+      "name": "Land Force",
       "delay": 5,
       "recoId": 19,
       "newsId": null,
@@ -220,7 +220,7 @@
     },
     {
       "id": 20,
-      "name": "Armée de Terre",
+      "name": "Land Force",
       "delay": 5,
       "recoId": 20,
       "newsId": null,
@@ -243,7 +243,7 @@
     },
     {
       "id": 22,
-      "name": "Bourse de l'emploi",
+      "name": "Job exchange",
       "delay": 5,
       "recoId": 22,
       "newsId": null,
@@ -266,7 +266,7 @@
     },
     {
       "id": 24,
-      "name": "Univ. Jean Frimas",
+      "name": "Pendleton College",
       "delay": null,
       "recoId": 24,
       "newsId": null,
@@ -276,7 +276,7 @@
     },
     {
       "id": 25,
-      "name": "Univ. Jean Frimas",
+      "name": "Pendleton College",
       "delay": 10,
       "recoId": 25,
       "newsId": null,
@@ -286,8 +286,8 @@
     },
     {
       "id": 26,
-      "name": "Bourse de l'emploi",
-      "delay": 30,
+      "name": "Job market",
+      "delay": 15,
       "recoId": 26,
       "newsId": null,
       "toDelete": 14,
@@ -307,7 +307,7 @@
     {
       "id": 28,
       "name": "Tara Tuto",
-      "delay": 30,
+      "delay": 15,
       "recoId": 28,
       "newsId": null,
       "toDelete": 25,
@@ -317,7 +317,7 @@
     {
       "id": 29,
       "name": "Tara Tuto",
-      "delay": 45,
+      "delay": 20,
       "recoId": 29,
       "newsId": null,
       "toDelete": 17,
@@ -327,7 +327,7 @@
     {
       "id": 30,
       "name": "Promotion",
-      "delay": 60,
+      "delay": 20,
       "recoId": 30,
       "newsId": null,
       "toDelete": 5,
@@ -337,7 +337,7 @@
     {
       "id": 31,
       "name": "Promotion",
-      "delay": 100,
+      "delay": 30,
       "recoId": 31,
       "newsId": null,
       "toDelete": 7,
@@ -346,8 +346,8 @@
     },
     {
       "id": 32,
-      "name": "Univ. Jean Frimas",
-      "delay": 45,
+      "name": "Pendleton College",
+      "delay": 15,
       "recoId": 32,
       "newsId": null,
       "toDelete": 12,
@@ -359,7 +359,7 @@
     },
     {
       "id": 33,
-      "name": "Inconnu",
+      "name": "Unknown",
       "delay": 5,
       "recoId": 33,
       "newsId": null,
@@ -390,7 +390,7 @@
     {
       "id": 36,
       "name": "Kokoro",
-      "delay": 10,
+      "delay": 5,
       "recoId": 36,
       "newsId": null,
       "toDelete": 30,
@@ -400,7 +400,7 @@
     {
       "id": 37,
       "name": "Kokoro",
-      "delay": 10,
+      "delay": 5,
       "recoId": 37,
       "newsId": null,
       "toDelete": null,
@@ -410,7 +410,7 @@
     {
       "id": 38,
       "name": "Kokoro",
-      "delay": 20,
+      "delay": 10,
       "recoId": 38,
       "newsId": null,
       "toDelete": [
@@ -423,8 +423,8 @@
     },
     {
       "id": 39,
-      "name": "Les Plaisirs Démodés",
-      "delay": 20,
+      "name": "Old-fashioned Pleasures",
+      "delay": 5,
       "recoId": 39,
       "newsId": null,
       "toDelete": null,
@@ -433,8 +433,8 @@
     },
     {
       "id": 40,
-      "name": "Les Plaisirs Démodés",
-      "delay": 20,
+      "name": "Old-fashioned Pleasures",
+      "delay": 5,
       "recoId": 40,
       "newsId": null,
       "toDelete": null,
@@ -444,7 +444,7 @@
     {
       "id": 41,
       "name": "Promotion",
-      "delay": 20,
+      "delay": 5,
       "recoId": 41,
       "newsId": null,
       "toDelete": null,
@@ -453,8 +453,8 @@
     },
     {
       "id": 42,
-      "name": "Les Plaisirs Démodés",
-      "delay": 20,
+      "name": "Old-fashioned Pleasures",
+      "delay": 5,
       "recoId": 42,
       "newsId": null,
       "toDelete": null,
@@ -464,7 +464,7 @@
     {
       "id": 43,
       "name": "Breaking News",
-      "delay": 20,
+      "delay": 10,
       "recoId": 43,
       "newsId": null,
       "toDelete": null,
@@ -474,7 +474,7 @@
     {
       "id": 44,
       "name": "Horoscope",
-      "delay": 30,
+      "delay": 20,
       "recoId": 44,
       "newsId": null,
       "toDelete": null,
@@ -483,8 +483,8 @@
     },
     {
       "id": 45,
-      "name": "L'Autre Vérité",
-      "delay": 40,
+      "name": "The Other Truth",
+      "delay": 30,
       "recoId": 45,
       "newsId": null,
       "toDelete": null,
@@ -493,8 +493,8 @@
     },
     {
       "id": 46,
-      "name": "L'Autre Vérité",
-      "delay": 20,
+      "name": "The Other Truth",
+      "delay": 10,
       "recoId": 46,
       "newsId": null,
       "toDelete": [
@@ -508,7 +508,7 @@
     },
     {
       "id": 47,
-      "name": "Horloge Biologique",
+      "name": "Biological clock",
       "delay": 45,
       "recoId": 47,
       "newsId": null,
@@ -518,7 +518,7 @@
     },
     {
       "id": 48,
-      "name": "Horloge Biologique",
+      "name": "Biological clock",
       "delay": 45,
       "recoId": 48,
       "newsId": null,
@@ -528,7 +528,7 @@
     },
     {
       "id": 49,
-      "name": "Horloge Biologique",
+      "name": "Biological clock",
       "delay": 45,
       "recoId": 49,
       "newsId": null,
@@ -538,7 +538,7 @@
     },
     {
       "id": 50,
-      "name": "Horloge Biologique",
+      "name": "Biological clock",
       "delay": 45,
       "recoId": 50,
       "newsId": null,
@@ -568,7 +568,7 @@
     },
     {
       "id": 53,
-      "name": "Clinique St. Kevin",
+      "name": "St. Kevin Clinic",
       "delay": 30,
       "recoId": 53,
       "newsId": null,
@@ -578,7 +578,7 @@
     },
     {
       "id": 54,
-      "name": "L'Autre Vérité",
+      "name": "The Other Truth",
       "delay": 3,
       "recoId": 54,
       "newsId": null,
@@ -589,7 +589,7 @@
     {
       "id": 55,
       "name": "Horoscope",
-      "delay": 20,
+      "delay": 10,
       "recoId": 55,
       "newsId": null,
       "toDelete": null,
@@ -599,7 +599,7 @@
     {
       "id": 56,
       "name": "Horoscope",
-      "delay": 20,
+      "delay": 10,
       "recoId": 56,
       "newsId": null,
       "toDelete": 43,
@@ -608,8 +608,8 @@
     },
     {
       "id": 57,
-      "name": "Bourse de l'emploi",
-      "delay": 20,
+      "name": "Job exchange",
+      "delay": 10,
       "recoId": 57,
       "newsId": null,
       "toDelete": null,
@@ -628,8 +628,8 @@
     },
     {
       "id": 59,
-      "name": "Météo",
-      "delay": 30,
+      "name": "Weather forecast",
+      "delay": 20,
       "recoId": 59,
       "newsId": null,
       "toDelete": null,
@@ -638,8 +638,8 @@
     },
     {
       "id": 60,
-      "name": "Communiqué",
-      "delay": 30,
+      "name": "Communicated",
+      "delay": 20,
       "recoId": 60,
       "newsId": null,
       "toDelete": null,
@@ -648,7 +648,7 @@
     },
     {
       "id": 61,
-      "name": "MaPetiteBrocante.com",
+      "name": "MyFleaMarket.com",
       "delay": 45,
       "recoId": 61,
       "newsId": null,
@@ -661,7 +661,7 @@
     },
     {
       "id": 62,
-      "name": "MaPetiteBrocante.com",
+      "name": "MyFleaMarket.com",
       "delay": 45,
       "recoId": 62,
       "newsId": null,
@@ -674,7 +674,7 @@
     },
     {
       "id": 63,
-      "name": "Vidéo",
+      "name": "Video",
       "delay": 20,
       "recoId": 63,
       "newsId": null,
@@ -684,7 +684,7 @@
     },
     {
       "id": 64,
-      "name": "Vidéo",
+      "name": "Video",
       "delay": 20,
       "recoId": 64,
       "newsId": null,
@@ -694,7 +694,7 @@
     },
     {
       "id": 65,
-      "name": "MaPetiteBrocante.com",
+      "name": "MyFleaMarket.com",
       "delay": 60,
       "recoId": 65,
       "newsId": null,
@@ -710,7 +710,7 @@
     },
     {
       "id": 66,
-      "name": "Anéantissement Bougonnement",
+      "name": "Burgeoning Revolution",
       "delay": 100,
       "recoId": 66,
       "newsId": 4,
@@ -728,7 +728,7 @@
     },
     {
       "id": 67,
-      "name": "Erreur",
+      "name": "Error",
       "delay": 5,
       "recoId": 67,
       "newsId": null,
@@ -738,7 +738,7 @@
     },
     {
       "id": 68,
-      "name": "Erreur",
+      "name": "Error",
       "delay": 5,
       "recoId": 68,
       "newsId": null,
@@ -748,7 +748,7 @@
     },
     {
       "id": 69,
-      "name": "Erreur",
+      "name": "Error",
       "delay": 5,
       "recoId": 69,
       "newsId": null,
@@ -758,7 +758,7 @@
     },
     {
       "id": 70,
-      "name": "Bourse de l'emploi",
+      "name": "Job exchange",
       "delay": 45,
       "recoId": 70,
       "newsId": null,
@@ -768,7 +768,7 @@
     },
     {
       "id": 71,
-      "name": "L'Autre Vérité",
+      "name": "The Other Truth",
       "delay": 60,
       "recoId": 71,
       "newsId": null,
@@ -799,7 +799,7 @@
     {
       "id": 74,
       "name": "Kokoro",
-      "delay": 20,
+      "delay": 10,
       "recoId": 74,
       "newsId": 17,
       "toDelete": 29,
@@ -819,7 +819,7 @@
     {
       "id": 76,
       "name": "Kokoro Premium",
-      "delay": 20,
+      "delay": 10,
       "recoId": 76,
       "newsId": null,
       "toDelete": 62,
@@ -839,7 +839,7 @@
     {
       "id": 78,
       "name": "Kokoro Gold",
-      "delay": 20,
+      "delay": 10,
       "recoId": 78,
       "newsId": null,
       "toDelete": 63,
@@ -848,7 +848,7 @@
     },
     {
       "id": 79,
-      "name": "Kokoro Platinum",
+      "name": "Kokoro Platinium",
       "delay": 60,
       "recoId": 79,
       "newsId": 16,
@@ -864,7 +864,7 @@
     },
     {
       "id": 80,
-      "name": "Bourse de l'emploi",
+      "name": "Job exchange",
       "delay": 10,
       "recoId": 80,
       "newsId": null,
@@ -874,8 +874,8 @@
     },
     {
       "id": 81,
-      "name": "Bourse de l'emploi",
-      "delay": 30,
+      "name": "Job exchange",
+      "delay": 20,
       "recoId": 81,
       "newsId": null,
       "toDelete": 65,
@@ -884,8 +884,8 @@
     },
     {
       "id": 82,
-      "name": "Bourse de l'emploi",
-      "delay": 60,
+      "name": "Job exchange",
+      "delay": 45,
       "recoId": 82,
       "newsId": null,
       "toDelete": 66,
@@ -905,7 +905,7 @@
     {
       "id": 84,
       "name": "Kokoro",
-      "delay": 30,
+      "delay": 20,
       "recoId": 84,
       "newsId": null,
       "toDelete": null,
@@ -925,7 +925,7 @@
     {
       "id": 86,
       "name": "Kokoro",
-      "delay": 45,
+      "delay": 30,
       "recoId": 86,
       "newsId": null,
       "toDelete": [
@@ -939,20 +939,17 @@
     {
       "id": 87,
       "name": "Horoscope",
-      "delay": 45,
+      "delay": 30,
       "recoId": 87,
       "newsId": null,
-      "toDelete": [
-        30,
-        60
-      ],
+      "toDelete": 30,
       "toSpawn": 31,
       "isClosure": null
     },
     {
       "id": 88,
       "name": "Promotion",
-      "delay": 60,
+      "delay": 45,
       "recoId": 88,
       "newsId": null,
       "toDelete": [
@@ -965,7 +962,7 @@
     {
       "id": 89,
       "name": "Tara Tuto",
-      "delay": 45,
+      "delay": 30,
       "recoId": 89,
       "newsId": null,
       "toDelete": null,
@@ -975,7 +972,7 @@
     {
       "id": 90,
       "name": "Kokoro",
-      "delay": 30,
+      "delay": 20,
       "recoId": 90,
       "newsId": null,
       "toDelete": null,
@@ -985,7 +982,7 @@
     {
       "id": 91,
       "name": "Kokoro",
-      "delay": 30,
+      "delay": 20,
       "recoId": 91,
       "newsId": null,
       "toDelete": null,
@@ -1027,7 +1024,7 @@
     },
     {
       "id": 95,
-      "name": "Sondage",
+      "name": "Survey",
       "delay": 30,
       "recoId": 95,
       "newsId": 6,
@@ -1037,7 +1034,7 @@
     },
     {
       "id": 96,
-      "name": "Sondage",
+      "name": "Survey",
       "delay": 30,
       "recoId": 96,
       "newsId": null,
@@ -1047,7 +1044,7 @@
     },
     {
       "id": 97,
-      "name": "Sondage",
+      "name": "Survey",
       "delay": 30,
       "recoId": 97,
       "newsId": null,
@@ -1057,7 +1054,7 @@
     },
     {
       "id": 98,
-      "name": "Sondage",
+      "name": "Survey",
       "delay": 30,
       "recoId": 98,
       "newsId": 5,
@@ -1067,8 +1064,8 @@
     },
     {
       "id": 99,
-      "name": "Communiqué",
-      "delay": 10,
+      "name": "Larroze-Dombasle",
+      "delay": 5,
       "recoId": 99,
       "newsId": null,
       "toDelete": null,
@@ -1077,8 +1074,8 @@
     },
     {
       "id": 100,
-      "name": "Communiqué",
-      "delay": 10,
+      "name": "Larroze-Dombasle",
+      "delay": 5,
       "recoId": 100,
       "newsId": null,
       "toDelete": null,
@@ -1088,7 +1085,7 @@
     {
       "id": 101,
       "name": "Tara Tuto",
-      "delay": 20,
+      "delay": 30,
       "recoId": 101,
       "newsId": null,
       "toDelete": null,
@@ -1098,7 +1095,7 @@
     {
       "id": 102,
       "name": "Larroze-Dombasle",
-      "delay": 20,
+      "delay": 45,
       "recoId": 102,
       "newsId": null,
       "toDelete": null,
@@ -1108,7 +1105,7 @@
     {
       "id": 103,
       "name": "Larroze-Dombasle",
-      "delay": 15,
+      "delay": 100,
       "recoId": 103,
       "newsId": null,
       "toDelete": [
@@ -1124,7 +1121,7 @@
     {
       "id": 104,
       "name": "Infobourse",
-      "delay": 5,
+      "delay": 10,
       "recoId": 104,
       "newsId": null,
       "toDelete": null,
@@ -1133,8 +1130,8 @@
     },
     {
       "id": 105,
-      "name": "Trash Pistache",
-      "delay": 5,
+      "name": "Pistachio Trash",
+      "delay": 10,
       "recoId": 105,
       "newsId": null,
       "toDelete": null,
@@ -1143,8 +1140,8 @@
     },
     {
       "id": 106,
-      "name": "*Huitième Sens*",
-      "delay": 15,
+      "name": "* Eighth Sense *",
+      "delay": 60,
       "recoId": 106,
       "newsId": null,
       "toDelete": 26,
@@ -1153,7 +1150,7 @@
     },
     {
       "id": 107,
-      "name": "Inconnu",
+      "name": "Unknown",
       "delay": 3,
       "recoId": 107,
       "newsId": 8,
@@ -1173,7 +1170,7 @@
     },
     {
       "id": 109,
-      "name": "Parti Visionnaire",
+      "name": "Visionary Party",
       "delay": 30,
       "recoId": 109,
       "newsId": null,
@@ -1183,7 +1180,7 @@
     },
     {
       "id": 110,
-      "name": "Parti Nostalgique",
+      "name": "Nostalgic Party",
       "delay": 30,
       "recoId": 110,
       "newsId": null,
@@ -1193,7 +1190,7 @@
     },
     {
       "id": 111,
-      "name": "Offre d’emploi",
+      "name": "Job offer",
       "delay": 30,
       "recoId": 111,
       "newsId": null,
@@ -1203,7 +1200,7 @@
     },
     {
       "id": 112,
-      "name": "Univ. Jean Frimas",
+      "name": "Pendleton College",
       "delay": 5,
       "recoId": 112,
       "newsId": null,
@@ -1233,7 +1230,7 @@
     },
     {
       "id": 115,
-      "name": "Parti Visionnaire",
+      "name": "Visionary Party",
       "delay": 30,
       "recoId": 115,
       "newsId": null,
@@ -1243,7 +1240,7 @@
     },
     {
       "id": 116,
-      "name": "Parti Nostalgique",
+      "name": "Nostalgic Party",
       "delay": 30,
       "recoId": 116,
       "newsId": null,
@@ -1253,7 +1250,7 @@
     },
     {
       "id": 117,
-      "name": "Offre d’emploi",
+      "name": "Job offer",
       "delay": 30,
       "recoId": 117,
       "newsId": null,
@@ -1273,7 +1270,7 @@
     },
     {
       "id": 119,
-      "name": "Univ. Jean Frimas",
+      "name": "Pendleton College",
       "delay": 5,
       "recoId": 119,
       "newsId": null,
@@ -1303,7 +1300,7 @@
     },
     {
       "id": 122,
-      "name": "Parti Visionnaire",
+      "name": "Visionary Party",
       "delay": 30,
       "recoId": 122,
       "newsId": null,
@@ -1313,7 +1310,7 @@
     },
     {
       "id": 123,
-      "name": "Parti Nostalgique",
+      "name": "Nostalgic Party",
       "delay": 30,
       "recoId": 123,
       "newsId": null,
@@ -1323,7 +1320,7 @@
     },
     {
       "id": 124,
-      "name": "Les Plaisirs Démodés",
+      "name": "Old-fashioned pleasures",
       "delay": 5,
       "recoId": 124,
       "newsId": null,
@@ -1343,7 +1340,7 @@
     },
     {
       "id": 126,
-      "name": "Parti Visionnaire",
+      "name": "Visionary Party",
       "delay": 30,
       "recoId": 126,
       "newsId": null,
@@ -1353,7 +1350,7 @@
     },
     {
       "id": 127,
-      "name": "Parti Nostalgique",
+      "name": "Nostalgic Party",
       "delay": 30,
       "recoId": 127,
       "newsId": null,
@@ -1363,7 +1360,7 @@
     },
     {
       "id": 128,
-      "name": "Horloge Biologique",
+      "name": "Biological clock",
       "delay": 5,
       "recoId": 128,
       "newsId": null,
@@ -1403,7 +1400,7 @@
     },
     {
       "id": 132,
-      "name": "Parti Visionnaire",
+      "name": "Visionary Party",
       "delay": 30,
       "recoId": 132,
       "newsId": null,
@@ -1413,7 +1410,7 @@
     },
     {
       "id": 133,
-      "name": "Parti Nostalgique",
+      "name": "Nostalgic Party",
       "delay": 30,
       "recoId": 133,
       "newsId": null,
@@ -1423,7 +1420,7 @@
     },
     {
       "id": 134,
-      "name": "Erreur",
+      "name": "Error",
       "delay": 5,
       "recoId": 134,
       "newsId": null,
@@ -1471,7 +1468,7 @@
     },
     {
       "id": 138,
-      "name": "Sondage",
+      "name": "Survey",
       "delay": 30,
       "recoId": 138,
       "newsId": null,
@@ -1481,7 +1478,7 @@
     },
     {
       "id": 139,
-      "name": "Parti Visionnaire",
+      "name": "Visionary Party",
       "delay": 30,
       "recoId": 139,
       "newsId": null,
@@ -1491,7 +1488,7 @@
     },
     {
       "id": 140,
-      "name": "Parti Nostalgique",
+      "name": "Nostalgic Party",
       "delay": 30,
       "recoId": 140,
       "newsId": null,
@@ -1521,7 +1518,7 @@
     },
     {
       "id": 143,
-      "name": "Sondage",
+      "name": "Survey",
       "delay": 5,
       "recoId": 143,
       "newsId": null,
@@ -1531,7 +1528,7 @@
     },
     {
       "id": 144,
-      "name": "Sondage",
+      "name": "Survey",
       "delay": 5,
       "recoId": 144,
       "newsId": null,
@@ -1561,7 +1558,7 @@
     },
     {
       "id": 147,
-      "name": "Parti Visionnaire",
+      "name": "Visionary Party",
       "delay": 30,
       "recoId": 147,
       "newsId": null,
@@ -1571,7 +1568,7 @@
     },
     {
       "id": 148,
-      "name": "Parti Nostalgique",
+      "name": "Nostalgic Party",
       "delay": 30,
       "recoId": 148,
       "newsId": null,
@@ -1581,7 +1578,7 @@
     },
     {
       "id": 149,
-      "name": "Inconnu",
+      "name": "Unknown",
       "delay": 3,
       "recoId": 149,
       "newsId": 9,
@@ -1621,7 +1618,7 @@
     },
     {
       "id": 153,
-      "name": "Bourse de l'emploi",
+      "name": "Job exchange",
       "delay": 45,
       "recoId": 153,
       "newsId": null,
@@ -1654,8 +1651,8 @@
     },
     {
       "id": 156,
-      "name": "Univ. Jean Frimas",
-      "delay": 30,
+      "name": "Pendleton College",
+      "delay": 100,
       "recoId": 156,
       "newsId": 18,
       "toDelete": [
@@ -1682,8 +1679,8 @@
     },
     {
       "id": 158,
-      "name": "Direction Générale des Finances Publiques",
-      "delay": 20,
+      "name": "General Directorate of Public Finance",
+      "delay": 45,
       "recoId": 158,
       "newsId": null,
       "toDelete": 83,
@@ -1692,8 +1689,8 @@
     },
     {
       "id": 159,
-      "name": "MaPetiteBrocante.com",
-      "delay": 20,
+      "name": "MyFleaMarket.com",
+      "delay": 45,
       "recoId": 159,
       "newsId": null,
       "toDelete": null,
@@ -1702,7 +1699,7 @@
     },
     {
       "id": 160,
-      "name": "Infobourse",
+      "name": "Infomarket",
       "delay": 10,
       "recoId": 160,
       "newsId": null,
@@ -1712,8 +1709,8 @@
     },
     {
       "id": 161,
-      "name": "L'Autre Vérité",
-      "delay": 20,
+      "name": "The Other Truth",
+      "delay": 30,
       "recoId": 161,
       "newsId": 19,
       "toDelete": 83,
@@ -1722,8 +1719,8 @@
     },
     {
       "id": 162,
-      "name": "L'Autre Vérité",
-      "delay": 20,
+      "name": "The Other Truth",
+      "delay": 30,
       "recoId": 162,
       "newsId": null,
       "toDelete": 84,
@@ -1733,7 +1730,7 @@
     {
       "id": 163,
       "name": "Horoscope",
-      "delay": 20,
+      "delay": 30,
       "recoId": 163,
       "newsId": null,
       "toDelete": 84,
@@ -1743,7 +1740,7 @@
     {
       "id": 164,
       "name": "Succubator",
-      "delay": 20,
+      "delay": 30,
       "recoId": 164,
       "newsId": null,
       "toDelete": 84,
@@ -1753,7 +1750,7 @@
     {
       "id": 165,
       "name": "Breaking News",
-      "delay": 20,
+      "delay": 30,
       "recoId": 165,
       "newsId": null,
       "toDelete": 84,
@@ -1762,8 +1759,8 @@
     },
     {
       "id": 166,
-      "name": "MaPetiteBrocante.com",
-      "delay": 10,
+      "name": "MyFleaMarket.com",
+      "delay": 30,
       "recoId": 166,
       "newsId": null,
       "toDelete": [
@@ -1775,8 +1772,8 @@
     },
     {
       "id": 167,
-      "name": "MaPetiteBrocante.com",
-      "delay": 10,
+      "name": "MyFleaMarket.com",
+      "delay": 30,
       "recoId": 167,
       "newsId": 20,
       "toDelete": [
@@ -1791,7 +1788,7 @@
     },
     {
       "id": 168,
-      "name": "Erreur",
+      "name": "Error",
       "delay": 5,
       "recoId": 168,
       "newsId": null,
@@ -1802,7 +1799,7 @@
     {
       "id": 169,
       "name": "TumbaLata",
-      "delay": 10,
+      "delay": 30,
       "recoId": 169,
       "newsId": null,
       "toDelete": 84,
@@ -1811,8 +1808,8 @@
     },
     {
       "id": 170,
-      "name": "Parti Visionnaire",
-      "delay": 10,
+      "name": "Visionary Party",
+      "delay": 30,
       "recoId": 170,
       "newsId": null,
       "toDelete": 69,
@@ -1821,8 +1818,8 @@
     },
     {
       "id": 171,
-      "name": "Parti Nostalgique",
-      "delay": 10,
+      "name": "Nostalgic Party",
+      "delay": 30,
       "recoId": 171,
       "newsId": null,
       "toDelete": 70,
@@ -1841,7 +1838,7 @@
     },
     {
       "id": 173,
-      "name": "Erreur",
+      "name": "Error",
       "delay": 5,
       "recoId": 173,
       "newsId": null,
@@ -1852,7 +1849,7 @@
     {
       "id": 174,
       "name": "Succubator",
-      "delay": 20,
+      "delay": 30,
       "recoId": 174,
       "newsId": 21,
       "toDelete": null,
@@ -1861,8 +1858,8 @@
     },
     {
       "id": 175,
-      "name": "Recrute1talent.com",
-      "delay": 10,
+      "name": "Hire1talent.com",
+      "delay": 45,
       "recoId": 175,
       "newsId": null,
       "toDelete": 91,
@@ -1874,8 +1871,8 @@
     },
     {
       "id": 176,
-      "name": "Recrute1talent.com",
-      "delay": 10,
+      "name": "Hire1talent.com",
+      "delay": 45,
       "recoId": 176,
       "newsId": null,
       "toDelete": 91,
@@ -1887,8 +1884,8 @@
     },
     {
       "id": 177,
-      "name": "Recrute1talent.com",
-      "delay": 10,
+      "name": "Hire1talent.com",
+      "delay": 45,
       "recoId": 177,
       "newsId": null,
       "toDelete": 91,
@@ -1900,8 +1897,8 @@
     },
     {
       "id": 178,
-      "name": "Recrute1talent.com",
-      "delay": 10,
+      "name": "Hire1talent.com",
+      "delay": 45,
       "recoId": 178,
       "newsId": null,
       "toDelete": 92,
@@ -1910,8 +1907,8 @@
     },
     {
       "id": 179,
-      "name": "Recrute1talent.com",
-      "delay": 10,
+      "name": "Hire1talent.com",
+      "delay": 45,
       "recoId": 179,
       "newsId": null,
       "toDelete": 92,
@@ -1920,8 +1917,8 @@
     },
     {
       "id": 180,
-      "name": "Recrute1talent.com",
-      "delay": 10,
+      "name": "Hire1talent.com",
+      "delay": 45,
       "recoId": 180,
       "newsId": null,
       "toDelete": 93,
@@ -1930,8 +1927,8 @@
     },
     {
       "id": 181,
-      "name": "Recrute1talent.com",
-      "delay": 10,
+      "name": "Hire1talent.com",
+      "delay": 45,
       "recoId": 181,
       "newsId": null,
       "toDelete": 93,
@@ -1940,8 +1937,8 @@
     },
     {
       "id": 182,
-      "name": "Recrute1talent.com",
-      "delay": 10,
+      "name": "Hire1talent.com",
+      "delay": 45,
       "recoId": 182,
       "newsId": null,
       "toDelete": 95,
@@ -1950,8 +1947,8 @@
     },
     {
       "id": 183,
-      "name": "Recrute1talent.com",
-      "delay": 10,
+      "name": "Hire1talent.com",
+      "delay": 45,
       "recoId": 183,
       "newsId": null,
       "toDelete": 95,
@@ -1960,8 +1957,8 @@
     },
     {
       "id": 184,
-      "name": "Recrute1talent.com",
-      "delay": 10,
+      "name": "Hire1talent.com",
+      "delay": 45,
       "recoId": 184,
       "newsId": null,
       "toDelete": 96,
@@ -1970,8 +1967,8 @@
     },
     {
       "id": 185,
-      "name": "Recrute1talent.com",
-      "delay": 10,
+      "name": "Hire1talent.com",
+      "delay": 45,
       "recoId": 185,
       "newsId": null,
       "toDelete": 96,
@@ -1981,7 +1978,7 @@
     {
       "id": 186,
       "name": "Succubator",
-      "delay": 30,
+      "delay": 60,
       "recoId": 186,
       "newsId": null,
       "toDelete": 97,
@@ -1990,8 +1987,8 @@
     },
     {
       "id": 187,
-      "name": "Direction Générale des Finances Publiques",
-      "delay": 20,
+      "name": "Public Finance",
+      "delay": 30,
       "recoId": 187,
       "newsId": null,
       "toDelete": 98,
@@ -2001,7 +1998,7 @@
     {
       "id": 188,
       "name": "Succubator",
-      "delay": 20,
+      "delay": 30,
       "recoId": 188,
       "newsId": null,
       "toDelete": 98,
@@ -2010,8 +2007,8 @@
     },
     {
       "id": 189,
-      "name": "Ministère du Travail",
-      "delay": 15,
+      "name": "Ministry of Labour",
+      "delay": 60,
       "recoId": 189,
       "newsId": 22,
       "toDelete": [
@@ -2026,8 +2023,8 @@
     },
     {
       "id": 190,
-      "name": "MaPetiteBrocante.com",
-      "delay": 20,
+      "name": "MyFleaMarket.com",
+      "delay": 30,
       "recoId": 190,
       "newsId": null,
       "toDelete": null,
@@ -2036,8 +2033,8 @@
     },
     {
       "id": 191,
-      "name": "Parti Visionnaire",
-      "delay": 10,
+      "name": "Visionary Party",
+      "delay": 30,
       "recoId": 191,
       "newsId": null,
       "toDelete": 69,
@@ -2046,8 +2043,8 @@
     },
     {
       "id": 192,
-      "name": "Parti Nostalgique",
-      "delay": 10,
+      "name": "Nostalgic Party",
+      "delay": 30,
       "recoId": 192,
       "newsId": null,
       "toDelete": 70,
@@ -2056,7 +2053,7 @@
     },
     {
       "id": 193,
-      "name": "Les Plaisirs Démodés",
+      "name": "Old-fashioned pleasures",
       "delay": 5,
       "recoId": 193,
       "newsId": null,
@@ -2066,7 +2063,7 @@
     },
     {
       "id": 194,
-      "name": "Watheure",
+      "name": "Wathour",
       "delay": 5,
       "recoId": 194,
       "newsId": null,
@@ -2089,7 +2086,7 @@
     },
     {
       "id": 196,
-      "name": "L'Autre Vérité",
+      "name": "The Other Truth",
       "delay": 45,
       "recoId": 196,
       "newsId": 23,
