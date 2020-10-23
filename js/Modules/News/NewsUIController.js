@@ -25,7 +25,7 @@ class NewsUIController extends ControllerChild {
 
         // print layout
         htmltitle = document.createElement("div");
-        htmltitle.innerText = "Actualités";
+        htmltitle.innerText = "News";
         $(htmltitle).addClass("newsTitle");
 
         htmlSep = document.createElement("div");
@@ -125,7 +125,7 @@ class NewsUIController extends ControllerChild {
         const absoluteTimePassed = Math.abs(this.__controller.__app.__appController.gameTime - evt.date);
         const minutesPassed = Math.ceil(absoluteTimePassed / (1000 * 60));
         
-        htmlTime.innerHTML = "Il y a "  + minutesPassed + " minute(s)";
+        htmlTime.innerHTML = minutesPassed + " minute(s) ago";
         $(htmlTime).addClass("contentDate");
 
         return htmlTime;

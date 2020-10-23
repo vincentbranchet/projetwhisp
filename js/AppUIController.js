@@ -141,11 +141,11 @@ class AppUIController extends AppChild {
         return function() {
             self.deletePopUp();
             self.printPopUp(`<p>Lazy Little Humans (v0.1 - 16/09/2020)</p>
-            <p><br />Vincent Branchet - Développement
-            <br />Pierre Corbinais - Écriture
+            <p><br />Vincent Branchet - Development
+            <br />Pierre Corbinais - Writing
             <br />Alexis Moroz - Design
             <br />Charles Klipfel - UI/UX
-            <br />Jeremy Moirano - Intégration/Équilibrage</p>
+            <br />Jeremy Moirano - Integration/Balance</p>
             jeremy.moirano@gmail.com`, 2)
             self.__app.__appController.pause(self.__app.__appController.__stopMainLoop);
         }
@@ -255,7 +255,7 @@ class AppUIController extends AppChild {
         }
         else if(end == 1) {
         // end screen
-            confirmButton.innerText = "Crédits";
+            confirmButton.innerText = "Credits";
             $(confirmButton).addClass("popUpButton button");
     
             (function(self) {
@@ -264,7 +264,7 @@ class AppUIController extends AppChild {
         }
         else if(end == 0) {
         // lv up & 'you can't do this' pop ups
-            confirmButton.innerText = "Continuer";
+            confirmButton.innerText = "Continue";
             $(confirmButton).addClass("popUpButton button");
     
             (function(self) {
