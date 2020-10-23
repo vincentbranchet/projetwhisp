@@ -34,7 +34,7 @@ class AppController extends AppChild {
 
         // game start popUp
         this.popUp(`<p>Ceci est une démo.</p>
-        <p>Cette expérience est une version de démonstration, condensée de manière à être jouée rapidement en une seule session. Dans sa version finale, le jeu sera comportera un équilibrage plus progressif, davantage de fonctionnalités ainsi qu’une direction artistique (beaucoup) plus riche.</p>`, 0);
+        <p>Cette expérience est une version de démonstration, condensée de manière à être jouée rapidement en une seule session. Dans sa version finale, le jeu comportera un équilibrage plus progressif, davantage de fonctionnalités ainsi qu’une direction artistique (beaucoup) plus riche.</p>`, 0);
     }
 
     mainLoop(tFrame) {
