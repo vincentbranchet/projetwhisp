@@ -290,12 +290,6 @@ class AppUIController extends AppChild {
 
         // resume game
         this.__app.__appController.resume();
-
-        if(this.__activePage == "shop_profile") {
-            return;
-        }
-        else 
-            this.toNews();
     }
 
     fadeIn(elt) {
