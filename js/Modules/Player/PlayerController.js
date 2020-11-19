@@ -23,7 +23,7 @@ class PlayerController extends AppChild {
             this.__app.__UIController.toPortfolio();
         }
         else {
-            this.__app.__appController.popUp("<p>Votre portfolio est déjà complet.</p><p>Retirez un profil ou montez en grade.</p>", 0);
+            this.__app.__appController.popUp("<p>Your portfolio is full.</p><p>Remove one profile or level up.</p>", 0);
         }
     }
 

@@ -58,7 +58,7 @@ class NativeEventController extends EventControllerChild {
         this.__controller.__nativeController.scanToLaunch();
         
         // UI feedback
-        this.__controller.__app.__notificationController.print("Le profil de " + profile.name + " a été modifié suite à un événement.", event);
+        this.__controller.__app.__notificationController.print(profile.name + "'s profile was changed due to an event.", event);
         this.__controller.__app.__UIController.__newsUIController.notify();
         this.__controller.__app.__UIController.__newsUIController.refresh();
     }
