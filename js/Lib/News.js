@@ -43,6 +43,9 @@ class News {
     get comesFromId() {
         return this.__comesFromId;
     }
+    get wasPrinted() {
+        return this.__wasPrinted;
+    }
     get date() {
         return this.__date;
     }
