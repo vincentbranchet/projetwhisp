@@ -10,6 +10,7 @@ class Profile {
         this.__launchedReco = []; // currently running unsolved reco events
         this.__launchedNative = [];
         this.__isClosed = 0; // deactivated state after closure recommandation
+        this.__hasNew = false; // UI notification in portfolio when something happens
     }
 
     init(...attIds) {
@@ -58,6 +59,9 @@ class Profile {
     set isClosed(bool) {
         this.__isClosed = bool;
     }
+    set hasNew(bool) {
+        this.__hasNew = bool;
+    }
 
     get attributes() {
         return this.__attributes;
@@ -88,5 +92,8 @@ class Profile {
     }
     get isClosed() {
         return this.__isClosed;
+    }
+    get hasNew() {
+        return this.__hasNew;
     }
 }

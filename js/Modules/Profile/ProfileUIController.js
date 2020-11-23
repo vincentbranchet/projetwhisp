@@ -75,7 +75,7 @@ class ProfileUIController extends ControllerChild {
     printInShop(profileId) {
         var self = this;
         const profile = this.__controller.__app.__shopManager.getFromId(profileId);
-        let htmlSellButton, htmlTitle, htmlSep, htmlAttWrapper, htmlTotal, totalName, totalValue;
+        let htmlBuyButton, htmlTitle, htmlSep, htmlAttWrapper, htmlBackButton;
 
         htmlTitle = document.createElement("div");
         htmlTitle.innerText = profile.name + " (" + this.__controller.formatNumber(profile.value) + "/s" + ")";
@@ -86,18 +86,28 @@ class ProfileUIController extends ControllerChild {
 
         htmlAttWrapper = this.getAttributesOf(profileId, "shop");
 
-        htmlSellButton = document.createElement("div");
-        htmlSellButton.innerText = "Ajouter";
-        $(htmlSellButton).addClass("profileBuyButton button profile_" + profileId);
+        htmlBackButton = document.createElement("div");
+        htmlBackButton.innerText = "X";
+        $(htmlBackButton).addClass("profileSellButton button profile_" + profileId);
 
         (function(self) {
-            htmlSellButton.addEventListener("click", self.clickToBuy(self));
+            htmlBackButton.addEventListener("click", self.clickToBackInShop(self));
+        }(self));
+
+
+        htmlBuyButton = document.createElement("div");
+        htmlBuyButton.innerText = "Ajouter";
+        $(htmlBuyButton).addClass("profileBuyButton button profile_" + profileId);
+
+        (function(self) {
+            htmlBuyButton.addEventListener("click", self.clickToBuy(self));
         }(self));
 
 
         this.__profileVitrineWrapper.append(htmlTitle);
         this.__profileVitrineWrapper.append(htmlSep);
-        this.__profileVitrineWrapper.append(htmlSellButton);
+        this.__profileVitrineWrapper.append(htmlBuyButton);
+        this.__profileVitrineWrapper.append(htmlBackButton);
         this.__profileVitrineWrapper.append(htmlAttWrapper);
     }
 
@@ -106,6 +116,8 @@ class ProfileUIController extends ControllerChild {
         var self = this;
         let htmlTitle, htmlSep, htmlMenuWrapper, htmlAttButton, htmlRecoButton, htmlHistButton, htmlSellButton;
         const profile = this.__controller.__app.__portfolioManager.getFromId(profileId);
+
+        profile.hasNew = false;
 
         htmlTitle = document.createElement("div");
         htmlTitle.innerText = profile.name + " (" + this.__controller.formatNumber(profile.value) + "/s" + ")";
@@ -139,7 +151,7 @@ class ProfileUIController extends ControllerChild {
         }(self));
 
         htmlSellButton = document.createElement("div");
-        htmlSellButton.innerText = "Retirer";
+        htmlSellButton.innerText = "X";
         $(htmlSellButton).addClass("profileSellButton button profile_" + profileId);
 
         (function(self) {
@@ -414,10 +426,18 @@ class ProfileUIController extends ControllerChild {
     clickToSell(self) {
 
         return function() {
-            const profileId = this.className.split("_")[1];
-            self.__controller.__app.__playerController.sell(profileId);
+            self.__controller.toPortfolio();
+            self.__controller.__portfolioUIController.update();
         }
     }
+    
+    clickToBackInShop(self) {
+
+        return function() {
+            self.__controller.toShop();
+        }
+    }
+
 
     clickToBuy(self) {
 

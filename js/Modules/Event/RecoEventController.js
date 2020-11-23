@@ -100,6 +100,9 @@ class RecoEventController extends EventControllerChild {
 
         // scan newly changed profile for native events to launch
         this.__controller.__nativeController.scanToLaunch();
+
+        // change profile state
+        profile.hasNew = true;
     
         // UI feedback
         this.__controller.__app.__UIController.__newsUIController.refresh();

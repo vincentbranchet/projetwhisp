@@ -56,6 +56,9 @@ class NativeEventController extends EventControllerChild {
 
         // scan newly changed profile for native events to launch
         this.__controller.__nativeController.scanToLaunch();
+
+        // change profile state
+        profile.hasNew = true;
         
         // UI feedback
         this.__controller.__app.__notificationController.print("Le profil de " + profile.name + " a été modifié suite à un événement.", event);

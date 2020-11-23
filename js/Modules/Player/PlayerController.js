@@ -10,7 +10,7 @@ class PlayerController extends AppChild {
         if(profile instanceof Profile && this.__app.__portfolioManager.used < this.__app.__portfolioManager.slots) {
 
             this.__app.__portfolioController.add(profile);
-            this.__app.__shopController.remove(profile);
+            this.__app.__shopController.removeAll();
 
             this.__app.__eventController.__nativeController.scanToLaunch();
             this.__app.__eventController.__recoController.scan();

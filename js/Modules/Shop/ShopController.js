@@ -46,6 +46,10 @@ class ShopController extends AppChild {
         }
     }
 
+    removeAll() {        
+        this.__app.__shopManager.inShop = [];
+    }
+
     get selectProfile() {
         return this.__selectProfile;
     }

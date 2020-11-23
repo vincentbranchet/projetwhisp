@@ -7,7 +7,7 @@ class PortfolioUIController extends ControllerChild {
 
     update() {
         var self = this;
-        let htmlSlot, htmlProfile, htmlTitle, htmlSep, htmlContent, htmlProfileName, htmlProfileValue, htmlSlotFill, htmlLinkToShop;
+        let htmlSlot, htmlProfile, htmlTitle, htmlSep, htmlContent, htmlProfileName, htmlProfileValue, htmlSlotFill, htmlLinkToShop, htmlSlotNotif;
 
         // clear wrapper
         this.clear();
@@ -48,11 +48,27 @@ class PortfolioUIController extends ControllerChild {
                 htmlProfileName = document.createElement("div");
                 htmlProfileName.innerText = profile.name;
                 $(htmlProfileName).addClass("slotProfileName");
+
+                htmlSlotNotif = document.createElement("span");
+                const styles = {
+                    "font-size": "0.8em",
+                    "position": "absolute",
+                    "font-weight": "bold",
+                    "top": "40%",
+                    "left": "1%"
+                };
+        
+                if(profile.hasNew) $(htmlSlotNotif).text("NEW");
+                else $(htmlSlotNotif).text("");
+                $(htmlSlotNotif).css(styles);
+                $(htmlSlotNotif).addClass("slotNotif");
+
                 htmlProfileValue = document.createElement("div");
                 htmlProfileValue.innerText = this.__controller.formatNumber(profile.value) + "/s";
                 $(htmlProfileValue).addClass("slotProfileValue");
     
                 $(htmlProfile).append(htmlProfileName);
+                $(htmlProfile).append(htmlSlotNotif);
                 $(htmlProfile).append(htmlProfileValue);
 
                 if(profile.launchedReco.length > 0) {
@@ -74,6 +90,7 @@ class PortfolioUIController extends ControllerChild {
             else {
                 htmlLinkToShop = document.createElement("div");
                 $(htmlLinkToShop).addClass("emptySlotLink button");
+                htmlLinkToShop.innerText = "Ajouter un profil";;
 
                 (function(self) {
                     htmlLinkToShop.addEventListener("click", self.clickToShop(self));

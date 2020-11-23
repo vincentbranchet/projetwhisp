@@ -56,6 +56,9 @@ class ShopManager {
     set profiles(profiles) {
         this.__profiles = profiles;
     }
+    set inShop(profiles) {
+        this.__inShop = profiles;
+    }
 
     //getters
     get profiles() {
