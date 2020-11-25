@@ -1,7 +1,7 @@
 /* DOCUMENT - GENERAL */
 @font-face {
     font-family: SpaceGrotesk;
-    src: url("http://localhost/whisp5/fonts/SpaceGrotesk-Regular.woff") format("woff"), url("http://localhost/whisp5/fonts/SpaceGrotesk-Regular.ttf") format("truetype");
+    src: url("fonts/SpaceGrotesk-Regular.woff") format("woff"), url("fonts/SpaceGrotesk-Regular.ttf") format("truetype");
 }
 
 * {
@@ -310,7 +310,7 @@ p {
 .slotNotif {
     position: absolute;
     top: 35%;
-    left: 1%;
+    left: 0.5vw;
     font-weight: bold;
     font-size: 0.8em;
     animation: blinkingText 1.2s infinite;
