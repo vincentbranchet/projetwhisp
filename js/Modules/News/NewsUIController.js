@@ -97,6 +97,12 @@ class NewsUIController extends ControllerChild {
         this.__controller.fadeIn(notifWrapper);
     }
 
+    popUp(news) {
+        const text = "<p>" + news.title + "</p>" + "<p>" + news.content + "</p>";
+
+        this.__controller.printPopUp(text, -1);
+    }
+
     notify() {
         if(this.__isNew == 0) {
 

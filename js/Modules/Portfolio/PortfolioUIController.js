@@ -50,17 +50,9 @@ class PortfolioUIController extends ControllerChild {
                 $(htmlProfileName).addClass("slotProfileName");
 
                 htmlSlotNotif = document.createElement("span");
-                const styles = {
-                    "font-size": "0.8em",
-                    "position": "absolute",
-                    "font-weight": "bold",
-                    "top": "40%",
-                    "left": "1%"
-                };
-        
+
                 if(profile.hasNew) $(htmlSlotNotif).text("NEW");
                 else $(htmlSlotNotif).text("");
-                $(htmlSlotNotif).css(styles);
                 $(htmlSlotNotif).addClass("slotNotif");
 
                 htmlProfileValue = document.createElement("div");

@@ -217,7 +217,7 @@ class ProfileUIController extends ControllerChild {
         htmlTotal = document.createElement("div");
         $(htmlTotal).addClass("attribute total");
         totalName = document.createElement("span");
-        totalName.innerText = "Valeur totale";
+        totalName.innerText = "Total";
         totalValue = document.createElement("span");
         totalValue.innerText = this.__controller.formatNumber(profile.value);
 

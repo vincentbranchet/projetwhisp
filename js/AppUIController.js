@@ -33,6 +33,9 @@ class AppUIController extends AppChild {
         this.__activePage = "portfolio"; // default homepage
         this.__activeProfileId = 0;
         this.__isPaused = 0; // during pop ups
+
+        this.__hasPopUp = false;
+        this.__popQueue = [];
     }
 
     initMenu() {
@@ -129,10 +132,22 @@ class AppUIController extends AppChild {
         }
     }
 
+    clickToChoose(self) {
+    // from pop up
+        return function() {
+            self.deletePopUp();
+            self.toShop();
+            self.__hasPopUp = false;
+            self.checkForPopUps();
+        }
+    }
+
     clickToConfirm(self) {
     // from pop up
         return function() {
             self.deletePopUp();
+            self.__hasPopUp = false;
+            self.checkForPopUps();
         }
     }
 
@@ -140,14 +155,13 @@ class AppUIController extends AppChild {
     // from ending pop up
         return function() {
             self.deletePopUp();
-            self.printPopUp(`<p>Lazy Little Humans (v0.1 - 16/09/2020)</p>
-            <p><br />Vincent Branchet - Développement
+            self.printPopUp(`<p>Happy Little Humans (v0.1 - 16/09/2020)</p>
+            <p><br />Vincent Branchet - Web Dev/GD
             <br />Pierre Corbinais - Écriture
-            <br />Alexis Moroz - Design
-            <br />Charles Klipfel - UI/UX
-            <br />Jeremy Moirano - Intégration/Équilibrage</p>
+            <br />Jeremy Moirano - Production</p>
             jeremy.moirano@gmail.com`, 2)
             self.__app.__appController.pause(self.__app.__appController.__stopMainLoop);
+            self.__hasPopUp = false;
         }
     }
 
@@ -233,54 +247,115 @@ class AppUIController extends AppChild {
         }
     }
 
+    checkForPopUps() {
+        if(this.__popQueue.length > 0)
+            this.printPopUp();
+    }
+
     printPopUp(text, end) {
         var self = this;
+        
         let textWrapper, confirmButton;
 
         textWrapper = document.createElement("div");
-        textWrapper.innerHTML = text;
         $(textWrapper).addClass("popUpText");
-
+        
         confirmButton = document.createElement("div");
 
-        if(end == 2) {
-        // credit screen
-            $(confirmButton).css("display", "none");
-            
-            var creditsLogo = document.createElement("div");
-            $(creditsLogo).addClass("creditsLogoWrapper");
-            $(creditsLogo).prepend("<img id='creditsLogo' src='img/credits_logo.png' />");
+        if(this.__hasPopUp) 
+            this.__popQueue.push({text: text, end: end});
+        else if(this.__popQueue.length > 0) {
 
-            $(textWrapper).css("user-select", "text");
-        }
-        else if(end == 1) {
-        // end screen
-            confirmButton.innerText = "Crédits";
-            $(confirmButton).addClass("popUpButton button");
+            textWrapper.innerHTML = this.__popQueue[0].text;
+
+            if(this.__popQueue[0].end === 0) {
+            // lv up 
+                confirmButton.innerText = "Nouveau profil";
+                $(confirmButton).addClass("popUpButton button");
+        
+                (function(self) {
+                    confirmButton.addEventListener("click", self.clickToChoose(self));
+                }(self));
+            }
+            else if(this.__popQueue[0].end === -1) {
+            // news & native events
+                confirmButton.innerText = "Continuer";
+                $(confirmButton).addClass("popUpButton button");  
     
-            (function(self) {
-                confirmButton.addEventListener("click", self.clickToCredits(self));
-            }(self));
-        }
-        else if(end == 0) {
-        // lv up & 'you can't do this' pop ups
-            confirmButton.innerText = "Continuer";
-            $(confirmButton).addClass("popUpButton button");
+                (function(self) {
+                    confirmButton.addEventListener("click", self.clickToConfirm(self));
+                }(self));
+            }
+
+            this.__popUpWrapper.append(textWrapper);
+            this.__popUpWrapper.append(confirmButton);
     
-            (function(self) {
-                confirmButton.addEventListener("click", self.clickToConfirm(self));
-            }(self));
+            if(typeof creditsLogo !== "undefined") {
+                this.__popUpWrapper.append(creditsLogo);
+            }
+    
+            this.__popUpWrapper.style.display = "flex";
+            this.__opacityLayer.style.display = "block";
+
+            this.__hasPopUp = true;
+
+            this.__hasPopUp = true;
+            this.__popQueue.splice(0, 1);
         }
+        else {
+            textWrapper.innerHTML = text;
+    
+    
+            if(end == 2) {
+            // credit screen
+                $(confirmButton).css("display", "none");
+                
+                var creditsLogo = document.createElement("div");
+                $(creditsLogo).addClass("creditsLogoWrapper");
+                $(creditsLogo).prepend("<img id='creditsLogo' src='img/credits_logo.png' />");
+    
+                $(textWrapper).css("user-select", "text");
+            }
+            else if(end == 1) {
+            // end screen
+                confirmButton.innerText = "Crédits";
+                $(confirmButton).addClass("popUpButton button");
+        
+                (function(self) {
+                    confirmButton.addEventListener("click", self.clickToCredits(self));
+                }(self));
+            }
+            else if(end == 0) {
+            // lv up 
+                confirmButton.innerText = "Nouveau profil";
+                $(confirmButton).addClass("popUpButton button");
+        
+                (function(self) {
+                    confirmButton.addEventListener("click", self.clickToChoose(self));
+                }(self));
+            }
+            else if(end === -1) {
+            // news & native events
+                confirmButton.innerText = "Continuer";
+                $(confirmButton).addClass("popUpButton button");  
+    
+                (function(self) {
+                    confirmButton.addEventListener("click", self.clickToConfirm(self));
+                }(self));
+            }
+      
+            if(typeof creditsLogo !== "undefined") {
+                this.__popUpWrapper.append(creditsLogo);
+            }
+      
+            this.__popUpWrapper.append(textWrapper);
+            this.__popUpWrapper.append(confirmButton);
 
-        this.__popUpWrapper.append(textWrapper);
-        this.__popUpWrapper.append(confirmButton);
+            this.__popUpWrapper.style.display = "flex";
+            this.__opacityLayer.style.display = "block";
 
-        if(typeof creditsLogo !== "undefined") {
-            this.__popUpWrapper.append(creditsLogo);
+            this.__hasPopUp = true;
         }
-
-        this.__popUpWrapper.style.display = "flex";
-        this.__opacityLayer.style.display = "block";
     }
 
     deletePopUp() {
@@ -288,7 +363,7 @@ class AppUIController extends AppChild {
         this.__popUpWrapper.style.display = "none";
         this.__opacityLayer.style.display = "none";
 
-        // resume game
+        // resume game & send player in shop
         this.__app.__appController.resume();
     }
 

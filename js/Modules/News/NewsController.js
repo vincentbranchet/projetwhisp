@@ -20,6 +20,9 @@ class NewsController extends AppChild {
         this.__app.__UIController.__newsUIController.notify();
 
         this.__app.__UIController.__newsUIController.refresh();
+
+        // pop up the news
+        this.__app.__UIController.__newsUIController.popUp(news);
     }
 
     print(newsId) {
