@@ -102,6 +102,10 @@ p {
     opacity: 0.5;
 }
 
+.striked {
+    text-decoration: line-through;
+}
+
 .xpNumbers, .slotProfile {
     position: absolute;
     top: 50%;

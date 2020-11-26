@@ -342,8 +342,9 @@ class ProfileUIController extends ControllerChild {
                     const att = this.__controller.__app.__attributeManager.getFromId(attId);
                     let htmlConseq = document.createElement("div");
 
-                    htmlConseq.innerText = "[" + att.name + "] disparaît";
+                    htmlConseq.innerText = "[" + att.name + "]";
 
+                    $(htmlConseq).addClass("striked");
                     $(htmlConsWrapper).append(htmlConseq);
                 }
             }
@@ -353,7 +354,7 @@ class ProfileUIController extends ControllerChild {
                     const att = this.__controller.__app.__attributeManager.getFromId(attId);
                     let htmlConseq = document.createElement("div");
 
-                    htmlConseq.innerText = "[" + att.name + "] apparaît";
+                    htmlConseq.innerText = "[" + att.name + "]";
 
                     $(htmlConsWrapper).append(htmlConseq);
                 }
@@ -396,8 +397,9 @@ class ProfileUIController extends ControllerChild {
                     const att = this.__controller.__app.__attributeManager.getFromId(attId);
                     let htmlConseq = document.createElement("div");
 
-                    htmlConseq.innerText = "[" + att.name + "] disparaît";
+                    htmlConseq.innerText = "[" + att.name + "]";
 
+                    $(htmlConseq).addClass("striked");
                     $(htmlConsWrapper).append(htmlConseq);
                 }
             }
@@ -407,7 +409,7 @@ class ProfileUIController extends ControllerChild {
                     const att = this.__controller.__app.__attributeManager.getFromId(attId);
                     let htmlConseq = document.createElement("div");
 
-                    htmlConseq.innerText = "[" + att.name + "] apparaît";
+                    htmlConseq.innerText = "[" + att.name + "]";
 
                     $(htmlConsWrapper).append(htmlConseq);
                 }
