@@ -67,13 +67,17 @@ class PortfolioUIController extends ControllerChild {
                 // if profile is on cooldown, don't allow player to click
                     $(htmlProfile).addClass("slotProfile");
                 }
-                else {
-                // if profile is not on cld, allow player to click into profile page
+                else if(!profile.isClosed) {
+                // if profile is not on cld & still open, allow player to click into profile page
                     (function(self) {
                         htmlProfile.addEventListener("click", self.clickToProfile(self));
                     })(self);
         
                     $(htmlProfile).addClass("button slotProfile");
+                }
+                else {
+                    $(htmlProfile).addClass("slotProfile");
+                    $(htmlSlotNotif).text("");
                 }
 
                 $(htmlSlot).append(htmlSlotFill);
@@ -106,18 +110,19 @@ class PortfolioUIController extends ControllerChild {
 
         profiles.forEach(profile => {
 
+            const jQueryProfile = "#profile_" + String(profile.id);
+
             if(profile.launchedReco.length > 0) {
                 const profileEvent = profile.__launchedReco[0];
 
                 const centiCld = (profileEvent.delay * 100) - profileEvent.timer.csDuration;
                 const centiCldPerCent = Math.floor((centiCld / profileEvent.delay * 100)) / 100 + "%";
-                const jQueryProfile = "#profile_" + String(profile.id);
                 
                 $(jQueryProfile).parent().find(".slotFill").css("width", centiCldPerCent);
                 $(jQueryProfile).parent().css("opacity", "0.5");
             }
-            if(profile.isClosed) {
-                self.__controller.__app.__playerController.sell(profile.id);
+            if(profile.isClosed && !$(jQueryProfile).hasClass("deactivated")) {
+                $(jQueryProfile).addClass("deactivated");
             }
         });
     }
