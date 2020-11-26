@@ -106,6 +106,10 @@ p {
     text-decoration: line-through;
 }
 
+.centered {
+    text-align: center;
+}
+
 .xpNumbers, .slotProfile {
     position: absolute;
     top: 50%;
@@ -123,7 +127,7 @@ p {
 }
 
 .creditsLogoWrapper {
-    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 #creditsLogo {
@@ -597,7 +601,7 @@ p {
     }
     
     #creditsLogo {
-        max-width: 10%;
+        max-width: 15%;
     }
 }
 
@@ -672,7 +676,7 @@ p {
     }
 
     #creditsLogo {
-        max-width: 10%;
+        max-width: 15%;
     }
 }
 

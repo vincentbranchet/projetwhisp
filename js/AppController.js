@@ -16,6 +16,12 @@ class AppController extends AppChild {
     init() {
         // lv 1 setup
         const lv = this.__app.__levelsManager.getFromId(1);
+        
+        this.__app.__shopController.updateProfiles();
+        
+        // game start popUp
+        this.popUp(`<p>Ceci est un premier prototype.</p>
+        <p>L’expérience a été condensée de manière à être jouée rapidement en une seule session, tout en présentant le début, le milieu et la fin de partie.</p>`, -1);
 
         if(lv.printId != "" && lv.printId != null && lv.printId != undefined) {
         // if news are to be printed
@@ -27,14 +33,9 @@ class AppController extends AppChild {
             else this.__app.__newsController.print(lv.printId);
         }
 
-        this.__app.__shopController.updateProfiles();
 
         // start game timer
         this.__app.__player.__gameTime.start();
-
-        // game start popUp
-        this.popUp(`<p>Ceci est un premier prototype.</p>
-        <p>L’expérience a été condensée de manière à être jouée rapidement en une seule session, tout en présentant le début, le milieu et la fin de partie.</p>`, -1);
     }
 
     mainLoop(tFrame) {
@@ -112,7 +113,7 @@ class AppController extends AppChild {
 
             if(lv.id == this.__app.__levelsManager.levels[this.__app.__levelsManager.levels.length - 1].id) {
             // if player has reached last lv
-                popUpText = "<p>Fin</p>";
+                popUpText = "<p class='centered'>Fin</p>";
                 endingText = `<p>Merci d’avoir joué à cette démo. La version définitive du jeu comprendra :
                                 <br />- une autre direction artistique
                                 <br />- du dialogue non-interactif (“bark”)

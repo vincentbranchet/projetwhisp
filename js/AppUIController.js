@@ -155,13 +155,17 @@ class AppUIController extends AppChild {
     // from ending pop up
         return function() {
             self.deletePopUp();
-            self.printPopUp(`<p>Happy Little Humans (v0.1 - 16/09/2020)</p>
+            
+            self.__hasPopUp = false;
+
+            self.printPopUp(`<p>HAPPY LITTLE HUMANS</p>
             <p><br />Vincent Branchet - Web Dev/GD
             <br />Pierre Corbinais - Écriture
             <br />Jeremy Moirano - Production</p>
-            jeremy.moirano@gmail.com`, 2)
+            <div class="creditsLogoWrapper"><img id='creditsLogo' src='img/credits_logo.png' /></div>
+            jeremy.moirano@gmail.com`, 2);
+
             self.__app.__appController.pause(self.__app.__appController.__stopMainLoop);
-            self.__hasPopUp = false;
         }
     }
 
@@ -309,12 +313,9 @@ class AppUIController extends AppChild {
             if(end == 2) {
             // credit screen
                 $(confirmButton).css("display", "none");
-                
-                var creditsLogo = document.createElement("div");
-                $(creditsLogo).addClass("creditsLogoWrapper");
-                $(creditsLogo).prepend("<img id='creditsLogo' src='img/credits_logo.png' />");
     
                 $(textWrapper).css("user-select", "text");
+                $(textWrapper).addClass("centered");
             }
             else if(end == 1) {
             // end screen
@@ -342,10 +343,6 @@ class AppUIController extends AppChild {
                 (function(self) {
                     confirmButton.addEventListener("click", self.clickToConfirm(self));
                 }(self));
-            }
-      
-            if(typeof creditsLogo !== "undefined") {
-                this.__popUpWrapper.append(creditsLogo);
             }
       
             this.__popUpWrapper.append(textWrapper);
