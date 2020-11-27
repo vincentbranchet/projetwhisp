@@ -20,8 +20,8 @@ class AppController extends AppChild {
         this.__app.__shopController.updateProfiles();
         
         // game start popUp
-        this.popUp(`<p>Ceci est un premier prototype.</p>
-        <p>L’expérience a été condensée de manière à être jouée rapidement en une seule session, tout en présentant le début, le milieu et la fin de partie.</p>`, -1);
+        this.popUp(`<p>This is an early prototype.</p>
+        <p>The experience was condensed to be played quickly and in one go, while presenting early, mid and late game. Localization was homemade by non-natives.</p>`, -1);
 
         if(lv.printId != "" && lv.printId != null && lv.printId != undefined) {
         // if news are to be printed
@@ -112,16 +112,15 @@ class AppController extends AppChild {
 
             if(lv.id == this.__app.__levelsManager.levels[this.__app.__levelsManager.levels.length - 1].id) {
             // if player has reached last lv
-                popUpText = "<p class='centered'>Fin</p>";
-                endingText = `<p>Merci d’avoir joué à cette démo. La version définitive du jeu comprendra :
-                                <br />- Des visuels et des animations
-                                <br />- Du dialogue "bark"
-                                <br />- Plus de récompenses, plus d'upgrades, plus de contenu !
-                                </p>`;
+                popUpText = "<p class='centered'>End</p>";
+                endingText = `<p>Thanks for playing this demo version, the final one will include:
+                                <br />- Visuals & animations
+                                <br />- Bark dialog
+                                <br />- More rewards, more upgrades, more content!</p>`;
                 end = 1;
             }
             else {
-                popUpText = "<p>Vous avez été promu " + lv.title + "</p>";
+                popUpText = "<p>You were promoted " + lv.title + "</p>";
 
                 if(lv.profiles != "" && lv.profiles != null) {
                 // if lv spawns new shop profiles profiles of CURRENT LV will be added, that's why we increment lv before

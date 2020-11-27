@@ -130,7 +130,7 @@ class ProfileUIController extends ControllerChild {
         $(htmlMenuWrapper).addClass("profileMenuWrapper");
 
         htmlAttButton = document.createElement("div");
-        htmlAttButton.innerText = "Attributs";
+        htmlAttButton.innerText = "Attributes";
         $(htmlAttButton).addClass("profileAttButton button");
         (function(self) {
             htmlAttButton.addEventListener("click", self.clickToAttributes(self, profileId));
@@ -144,7 +144,7 @@ class ProfileUIController extends ControllerChild {
         }(self));
 
         htmlHistButton = document.createElement("div");
-        htmlHistButton.innerText = "Historique";
+        htmlHistButton.innerText = "History";
         $(htmlHistButton).addClass("profileHistButton button");
         (function(self) {
             htmlHistButton.addEventListener("click", self.clickToHistory(self, profileId));
@@ -260,7 +260,7 @@ class ProfileUIController extends ControllerChild {
         else {
             let defaultText = document.createElement("div");
             $(defaultText).addClass("historyEvent");
-            $(defaultText).text("Vous n'avez pas encore envoyé de recommandation à ce profil.");
+            $(defaultText).text("You haven't sent any recommendation to this profile yet.");
             $(htmlHistWrapper).append(defaultText);
         }
         
@@ -323,19 +323,19 @@ class ProfileUIController extends ControllerChild {
         htmlEvtTitle.innerText = evt.name;
 
         htmlEvtDate = document.createElement("div");
-        htmlEvtDate.innerHTML = "Il y a " + minutesPassed + " minutes";
+        htmlEvtDate.innerHTML = minutesPassed + " minutes ago";
         $(htmlEvtDate).addClass("contentDate");
 
         htmlConsWrapper = document.createElement("div");
 
         if(evt.toSpawn.length == 0 && evt.toDelete.length == 0) {
         // if event has no consequences
-            htmlEvtTitle.innerText = "" + evt.name + " donne lieu à un événement, sans conséquences";
+            htmlEvtTitle.innerText = "" + evt.name + " led to av event with no consequences";
         }
         else {
         // if event has consequences
             const result = evt.result >= 0 ? "+" + evt.result : evt.result;
-            htmlEvtTitle.innerText = "" + evt.name + " donne lieu à un événement : " + result;
+            htmlEvtTitle.innerText = "" + evt.name + " led to an event: " + result;
 
             if(evt.toDelete.length != 0) {
                 for(let attId of evt.toDelete) {
@@ -377,7 +377,7 @@ class ProfileUIController extends ControllerChild {
         const minutesPassed = Math.ceil(absoluteTimePassed / (1000 * 60));
 
         htmlEvtDate = document.createElement("div");
-        htmlEvtDate.innerHTML = "Il y a " + minutesPassed + " minutes";
+        htmlEvtDate.innerHTML = minutesPassed + " minutes ago";
         $(htmlEvtDate).addClass("contentDate");
 
         htmlEvtTitle = document.createElement("div");
@@ -386,12 +386,12 @@ class ProfileUIController extends ControllerChild {
 
         if(evt.toSpawn.length == 0 && evt.toDelete.length == 0) {
         // if event has no consequences
-            htmlEvtTitle.innerText = "La recommandation " + evt.name + " n'a pas de conséquences";
+            htmlEvtTitle.innerText = "The recommendation " + evt.name + " has no consequences";
         }
         else {
         // if event has consequences
             const result = evt.result >= 0 ? "+" + evt.result : evt.result;
-            htmlEvtTitle.innerText = "La recommandation " + evt.name + " a des conséquences : " + result;
+            htmlEvtTitle.innerText = "The recommendation " + evt.name + " has consequences: " + result;
 
             if(evt.toDelete.length != 0) {
                 for(let attId of evt.toDelete) {

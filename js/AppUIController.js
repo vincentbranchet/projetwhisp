@@ -160,8 +160,8 @@ class AppUIController extends AppChild {
             self.__hasPopUp = false;
 
             self.printPopUp(`<p>HAPPY LITTLE HUMANS</p>
-            <p><br />Vincent Branchet - Développement
-            <br />Pierre Corbinais - Écriture
+            <p><br />Vincent Branchet - Development
+            <br />Pierre Corbinais - Writing
             <br />Jeremy Moirano - Production
             <br />Alexis Moroz - Design</p>
             <div class="creditsLogoWrapper"><img id='creditsLogo' src='img/credits_logo.png' /></div>
@@ -277,7 +277,7 @@ class AppUIController extends AppChild {
 
             if(this.__popQueue[0].end === 0) {
             // lv up 
-                confirmButton.innerText = "Nouveau profil";
+                confirmButton.innerText = "New profile";
                 $(confirmButton).addClass("popUpButton button");
         
                 (function(self) {
@@ -286,7 +286,7 @@ class AppUIController extends AppChild {
             }
             else if(this.__popQueue[0].end === -1) {
             // news & native events
-                confirmButton.innerText = "Continuer";
+                confirmButton.innerText = "Continue";
                 $(confirmButton).addClass("popUpButton button");  
     
                 (function(self) {
@@ -322,7 +322,7 @@ class AppUIController extends AppChild {
             }
             else if(end == 1) {
             // end screen
-                confirmButton.innerText = "Crédits";
+                confirmButton.innerText = "Credits";
                 $(confirmButton).addClass("popUpButton button");
         
                 (function(self) {
@@ -333,7 +333,7 @@ class AppUIController extends AppChild {
             }
             else if(end == 0) {
             // lv up 
-                confirmButton.innerText = "Nouveau profil";
+                confirmButton.innerText = "New profile";
                 $(confirmButton).addClass("popUpButton button");
         
                 (function(self) {
@@ -342,7 +342,7 @@ class AppUIController extends AppChild {
             }
             else if(end === -1) {
             // news & native events
-                confirmButton.innerText = "Continuer";
+                confirmButton.innerText = "Continue";
                 $(confirmButton).addClass("popUpButton button");  
     
                 (function(self) {

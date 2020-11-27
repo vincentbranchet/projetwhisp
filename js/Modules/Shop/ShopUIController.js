@@ -17,7 +17,7 @@ class ShopUIController extends ControllerChild {
 
         // create & fill title
         htmlTitle = document.createElement("div");
-        htmlTitle.innerText = "Ajouter un profil";
+        htmlTitle.innerText = "Add a profile";
         $(htmlTitle).addClass("shopTitle");
         
         htmlSep = document.createElement("div");
