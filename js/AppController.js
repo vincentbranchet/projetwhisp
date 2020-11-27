@@ -153,6 +153,13 @@ class AppController extends AppChild {
         }
     }
 
+    sellOut() {
+        // when player closes a profile, he gets instant amout of xp = 10% of current lv xp cap
+        let lv = this.__app.__levelsManager.getFromId(this.__app.__player.level);
+
+        this.__app.__player.xp += Math.round(lv.xpCap * 0.1);
+    }
+
     popUp(text, end) {
         this.__app.__UIController.printPopUp(text, end);
         this.pause(this.__stopMainLoop);
