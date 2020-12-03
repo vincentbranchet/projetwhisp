@@ -13,7 +13,7 @@ class NewsManager {
 
             $.getJSON('json/' + this.__fileName + '.json', news => {
 
-                news[this.__sheetName].map(jsonNews => this.create(jsonNews.id, jsonNews.title, jsonNews.content, jsonNews.img, jsonNews.delay, jsonNews.lv, jsonNews.launchId, jsonNews.comesFromId));
+                news[this.__sheetName].map(jsonNews => this.create(jsonNews.id, jsonNews.title, jsonNews.content, jsonNews.img, jsonNews.delay, jsonNews.lv, jsonNews.launchId, jsonNews.comesFromId, jsonNews.isNews));
                 
                 resolve();
             })
@@ -23,8 +23,9 @@ class NewsManager {
         });
     }
 
-    create(id, title, content, img, delay, lv, launchId, comesFromId) {
-        this.__news.push(new News(id, title, content, img, delay, lv, launchId, comesFromId));
+    create(id, title, content, img, delay, lv, launchId, comesFromId, isNews) {
+        this.__news.push(new News(id, title, content, img, delay, lv, launchId, comesFromId, isNews));
+        console.log(this.__news);
     }
 
     getNewsFromId(newsId) {

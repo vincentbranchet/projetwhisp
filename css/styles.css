@@ -313,6 +313,11 @@ p {
     padding: 0 2vw;
 }
 
+.newsLabel {
+    font-size: 0.8em;
+    font-style: italic;
+}
+
 /* BODY - PORTFOLIO */
 
 .slotNotif {

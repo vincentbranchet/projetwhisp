@@ -1,5 +1,5 @@
 class News {
-    constructor(id, title, content, img, delay, lv = 0, launchId = 0, comesFromId = 0) {
+    constructor(id, title, content, img, delay, lv = 0, launchId = 0, comesFromId = 0, isNews = 0) {
         this.__id = id;
         this.__title = title;
         this.__content = content;
@@ -8,6 +8,7 @@ class News {
         this.__lv = lv; // player lv condition
         this.__launchId = launchId; // id of macro event to launch with this news
         this.__comesFromId = comesFromId; // id of event which launched this news
+        this.__isNews = isNews; // 1 : news | 0 : tip, system, etc.
         this.__wasPrinted = 0;
         this.__date = 0;
     }
@@ -42,6 +43,9 @@ class News {
     }
     get comesFromId() {
         return this.__comesFromId;
+    }
+    get isNews() {
+        return this.__isNews;
     }
     get wasPrinted() {
         return this.__wasPrinted;

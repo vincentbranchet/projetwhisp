@@ -98,7 +98,15 @@ class NewsUIController extends ControllerChild {
     }
 
     popUp(news) {
-        const text = "<p>" + news.title + "</p>" + "<p>" + news.content + "</p>";
+        const label = "<span class='newsLabel'>Actualité</span> <br />";
+        let text = "";
+
+        if(news.isNews) {
+            text = label + "<p>" + news.title.toUpperCase() + "</p>" + "<p>" + news.content + "</p>";
+        }
+        else {
+            text = "<p>" + news.title + "</p>" + "<p>" + news.content + "</p>";
+        }
 
         this.__controller.printPopUp(text, -1);
     }
