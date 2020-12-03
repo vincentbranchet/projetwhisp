@@ -87,7 +87,7 @@ class PortfolioUIController extends ControllerChild {
             else {
                 htmlLinkToShop = document.createElement("div");
                 $(htmlLinkToShop).addClass("emptySlotLink button");
-                htmlLinkToShop.innerText = "Nouveau profil";
+                htmlLinkToShop.innerText = "New profile";
 
                 (function(self) {
                     htmlLinkToShop.addEventListener("click", self.clickToShop(self));
