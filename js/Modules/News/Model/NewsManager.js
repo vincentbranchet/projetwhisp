@@ -25,7 +25,6 @@ class NewsManager {
 
     create(id, title, content, img, delay, lv, launchId, comesFromId, isNews) {
         this.__news.push(new News(id, title, content, img, delay, lv, launchId, comesFromId, isNews));
-        console.log(this.__news);
     }
 
     getNewsFromId(newsId) {

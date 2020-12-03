@@ -18,6 +18,7 @@ class NativeEventController extends EventControllerChild {
     resolve(evtId, profileId) {
         let event = this.__controller.__app.__eventManager.__nativeManager.getFromId(evtId);
         let profile = this.__controller.__app.__portfolioManager.getFromId(profileId);
+        const oldValue = profile.value;
 
         // apply effects to profile ; delete and add attributes
         event.toDelete.forEach(id => {
@@ -47,6 +48,7 @@ class NativeEventController extends EventControllerChild {
         event.timer.stop();
         event.timer.reset();
         event.wasResolved = 1;
+        event.result = oldValue - profile.value;
 
         const indexOfEvent = profile.launchedNative.indexOf(event);
         if(indexOfEvent >= 0) {

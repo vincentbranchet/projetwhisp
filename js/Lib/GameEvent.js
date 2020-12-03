@@ -9,6 +9,7 @@ class GameEvent {
         this.__hasLaunched = 0;
         this.__wasResolved = 0;
         this.__resolveDate = 0;
+        this.__result = 0;
     }
 
     addToDelete(...attributes) {
@@ -43,6 +44,9 @@ class GameEvent {
     set resolveDate(date) {
         this.__resolveDate = date;
     }
+    set result(nb) {
+        this.__result = nb;
+    }
 
     get id() {
         return this.__id;
@@ -70,5 +74,8 @@ class GameEvent {
     }
     get resolveDate() {
         return this.__resolveDate;
+    }
+    get result() {
+        return this.__result;
     }
 }

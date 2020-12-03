@@ -334,7 +334,8 @@ class ProfileUIController extends ControllerChild {
         }
         else {
         // if event has consequences
-            htmlEvtTitle.innerText = "" + evt.name + " donne lieu à un événement";
+            const result = evt.result >= 0 ? "+" + evt.result : evt.result;
+            htmlEvtTitle.innerText = "" + evt.name + " donne lieu à un événement : " + result;
 
             if(evt.toDelete.length != 0) {
                 for(let attId of evt.toDelete) {
@@ -389,7 +390,8 @@ class ProfileUIController extends ControllerChild {
         }
         else {
         // if event has consequences
-            htmlEvtTitle.innerText = "La recommandation " + evt.name + " a des conséquences :";
+            const result = evt.result >= 0 ? "+" + evt.result : evt.result;
+            htmlEvtTitle.innerText = "La recommandation " + evt.name + " a des conséquences : " + result;
 
             if(evt.toDelete.length != 0) {
                 for(let attId of evt.toDelete) {

@@ -49,6 +49,7 @@ class RecoEventController extends EventControllerChild {
     resolve(evtId, profileId) {
         let event = this.__controller.__app.__eventManager.__recoManager.getFromId(evtId);
         let profile = this.__controller.__app.__portfolioManager.getFromId(profileId);
+        const oldValue = profile.value;
 
         // apply effects to profile ; add & delete attributes
         event.toDelete.forEach(id => {
@@ -92,6 +93,7 @@ class RecoEventController extends EventControllerChild {
         event.wasResolved = 1;
         event.hasLaunched = 0; // so it can be sent again
         event.resolveDate = new Date();
+        event.result = profile.value - oldValue;
 
         const indexOfEvent = profile.launchedReco.indexOf(event);
         if(indexOfEvent >= 0) {
