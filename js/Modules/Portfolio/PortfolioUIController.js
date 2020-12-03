@@ -78,8 +78,9 @@ class PortfolioUIController extends ControllerChild {
                 else {
                     $(htmlProfile).addClass("slotProfile");
                     $(htmlSlotNotif).text("");
+                    $(htmlProfileValue).text("-/-");
                 }
-
+                
                 $(htmlSlot).append(htmlSlotFill);
                 $(htmlSlot).append(htmlProfile);
             }
