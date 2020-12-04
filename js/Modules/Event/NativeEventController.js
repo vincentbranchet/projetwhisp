@@ -48,7 +48,7 @@ class NativeEventController extends EventControllerChild {
         event.timer.stop();
         event.timer.reset();
         event.wasResolved = 1;
-        event.result = oldValue - profile.value;
+        event.result = profile.value - oldValue;
 
         const indexOfEvent = profile.launchedNative.indexOf(event);
         if(indexOfEvent >= 0) {
