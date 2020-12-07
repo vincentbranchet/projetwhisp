@@ -137,7 +137,7 @@ class ProfileUIController extends ControllerChild {
         }(self));
 
         htmlRecoButton = document.createElement("div");
-        htmlRecoButton.innerText = "Recommandations";
+        htmlRecoButton.innerText = "Notifications";
         $(htmlRecoButton).addClass("profileRecoButton button");
         (function(self) {
             htmlRecoButton.addEventListener("click", self.clickToRecos(self, profileId));
@@ -260,7 +260,7 @@ class ProfileUIController extends ControllerChild {
         else {
             let defaultText = document.createElement("div");
             $(defaultText).addClass("historyEvent");
-            $(defaultText).text("Vous n'avez pas encore envoyé de recommandation à ce profil.");
+            $(defaultText).text("Vous n'avez pas encore envoyé de notification à ce profil.");
             $(htmlHistWrapper).append(defaultText);
         }
         
@@ -386,12 +386,12 @@ class ProfileUIController extends ControllerChild {
 
         if(evt.toSpawn.length == 0 && evt.toDelete.length == 0) {
         // if event has no consequences
-            htmlEvtTitle.innerText = "La recommandation " + evt.name + " n'a pas de conséquences";
+            htmlEvtTitle.innerText = "La notification " + evt.name + " n'a pas de conséquences";
         }
         else {
         // if event has consequences
             const result = evt.result >= 0 ? "+" + evt.result : evt.result;
-            htmlEvtTitle.innerText = "La recommandation " + evt.name + " a des conséquences : " + result;
+            htmlEvtTitle.innerText = "La notification " + evt.name + " a des conséquences : " + result;
 
             if(evt.toDelete.length != 0) {
                 for(let attId of evt.toDelete) {
