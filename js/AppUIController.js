@@ -35,6 +35,7 @@ class AppUIController extends AppChild {
         this.__isPaused = 0; // during pop ups
 
         this.__hasPopUp = false;
+        this.__hasEnded = false;
         this.__popQueue = [];
     }
 
@@ -258,6 +259,7 @@ class AppUIController extends AppChild {
     }
 
     printPopUp(text, end) {
+        console.log(this.__hasEnded);
         var self = this;
         
         let textWrapper, confirmButton;
@@ -269,7 +271,7 @@ class AppUIController extends AppChild {
 
         if(this.__hasPopUp) 
             this.__popQueue.push({text: text, end: end});
-        else if(this.__popQueue.length > 0) {
+        else if(this.__popQueue.length > 0 && this.__hasEnded === false) {
 
             textWrapper.innerHTML = this.__popQueue[0].text;
 
@@ -326,6 +328,8 @@ class AppUIController extends AppChild {
                 (function(self) {
                     confirmButton.addEventListener("click", self.clickToCredits(self));
                 }(self));
+                
+                this.__hasEnded = true;
             }
             else if(end == 0) {
             // lv up 
