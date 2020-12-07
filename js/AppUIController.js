@@ -159,9 +159,10 @@ class AppUIController extends AppChild {
             self.__hasPopUp = false;
 
             self.printPopUp(`<p>HAPPY LITTLE HUMANS</p>
-            <p><br />Vincent Branchet - Web Dev/GD
+            <p><br />Vincent Branchet - Développement
             <br />Pierre Corbinais - Écriture
-            <br />Jeremy Moirano - Production</p>
+            <br />Jeremy Moirano - Production
+            <br />Alexis Moroz - Design</p>
             <div class="creditsLogoWrapper"><img id='creditsLogo' src='img/credits_logo.png' /></div>
             jeremy.moirano@gmail.com`, 2);
 
