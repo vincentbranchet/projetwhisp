@@ -1,4 +1,5 @@
+Header set Access-Control-Allow-Origin "*"
 RewriteEngine on
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ http://lazylittlehumans.com/fr/game.html [L]
+RewriteRule ^(.*)$ http://www.happylittlehumans-game.com/en/game.html [L]
