@@ -114,10 +114,9 @@ class AppController extends AppChild {
             // if player has reached last lv
                 popUpText = "<p class='centered'>Fin</p>";
                 endingText = `<p>Merci d’avoir joué à cette démo. La version définitive du jeu comprendra :
-                                <br />- une autre direction artistique
-                                <br />- du dialogue non-interactif (“bark”)
-                                <br />- un visuel pour chaque actualité
-                                <br />- différentes upgrades
+                                <br />- Des visuels et des animations
+                                <br />- Du dialogue "bark"
+                                <br />- Plus de récompenses, plus d'upgrades, plus de contenu !
                                 </p>`;
                 end = 1;
             }
